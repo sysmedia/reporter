@@ -1,3 +1,4 @@
+
 update t_shop_customer_count set totalCount = 5312681 where year = 2017 and type = '全部' and shop = 888888;
 update t_shop_customer_count set totalCount = 1648566 where year = 2017 and type = '周末' and shop = 888888;
 update t_shop_customer_count set totalCount = 3664115 where year = 2017 and type = '工作日' and shop = 888888;

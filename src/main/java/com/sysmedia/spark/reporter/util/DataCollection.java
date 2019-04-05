@@ -10,9 +10,9 @@ import java.util.HashMap;
 public class DataCollection {
     private static DataBaseConnection conn = new DataBaseConnection();;
     private static String year1 = "2017";
-    private static String month1 = "11";
+    private static String month1 = "1";
     private static String year2 = "2018";
-    private static String month2 = "11";
+    private static String month2 = "1";
     private static String sm = "28";
     private ArrayList<String> yearList = new ArrayList<String>(Arrays.asList(year1, year2));
     private ArrayList<String> typeList = new ArrayList<String>(Arrays.asList("全部", "工作日", "周末"));
@@ -500,17 +500,29 @@ public class DataCollection {
         return result;
     }
 
+    /**
+     * 得到新门店详细信息
+     */
+
+    public String getNewDetailShopInfo(String shop, String column) {
+        String query1 = "SELECT " + column + " FROM `t_new_shop`   where id = " + shop ;
+        String result = conn.getQueryResult(query1);
+        return result;
+    }
+
 
     public static void main(String[] args ) {
         DataCollection collection = new DataCollection();
+        String name = collection.getNewDetailShopInfo("1314", "city");
+        System.out.println("name is " + name);
 ;
-        HashMap<String, String> map =  collection.getCategoryMap("t_pinlei_third", "category3", "saleCount", "888888");
+       /* HashMap<String, String> map =  collection.getCategoryMap("t_pinlei_third", "category3", "saleCount", "888888");
 
         System.out.println(map);
         String query = "2017牙膏全部";
         System.out.println(map.get(query));
          ArrayList<String> shops = collection.getDistinctShopInfo();
-        System.out.println(shops.size());
+        System.out.println(shops.size());*/
 
      //   for(String shop : shops) {
            /* String type = collection.getDetailShopInfo("1801", "type");

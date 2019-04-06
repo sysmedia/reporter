@@ -505,7 +505,7 @@ public class DataCollection {
      */
 
     public String getNewDetailShopInfo(String shop, String column) {
-        String query1 = "SELECT " + column + " FROM `t_new_shop`   where id = " + shop ;
+        String query1 = "SELECT " + column + " FROM `t_new_shop`   where id = '" + shop + "'" ;
         String result = conn.getQueryResult(query1);
         return result;
     }

@@ -10,9 +10,9 @@ import java.util.HashMap;
 public class DataCollection {
     private static DataBaseConnection conn = new DataBaseConnection();;
     private static String year1 = "2017";
-    private static String month1 = "1";
+    private static String month1 = "11";
     private static String year2 = "2018";
-    private static String month2 = "1";
+    private static String month2 = "11";
     private static String sm = "28";
     private ArrayList<String> yearList = new ArrayList<String>(Arrays.asList(year1, year2));
     private ArrayList<String> typeList = new ArrayList<String>(Arrays.asList("全部", "工作日", "周末"));

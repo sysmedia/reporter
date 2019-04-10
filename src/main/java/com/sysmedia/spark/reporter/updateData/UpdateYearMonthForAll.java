@@ -15,6 +15,7 @@ public class UpdateYearMonthForAll {
     public static void  main(String[] args) {
         System.out.println("args length is " + args.length);
         DataBaseConnection conn = new DataBaseConnection();
+        //args sample   1313 2017 04 2017 05 2017 11 2018 11
         String shopId =  args[0];
 
         String old_year1 = args[1];
@@ -33,12 +34,12 @@ public class UpdateYearMonthForAll {
         long start = System.currentTimeMillis();
        for(String table : tableList) {
            sql = "update " + table + " set year = " + new_year1 + " , month = " + new_month1 + " where  " +
-                   " year = " + old_year1 + " and month = " + old_month1;
+                   " year = " + old_year1 + " and month = " + old_month1 ;
            System.out.println(sql);
            conn.update(sql);
 
            sql = "update " + table + " set year = " + new_year2 + " , month = " + new_month2 + " where   " +
-                     "   year = " + old_year2 + " and month = " + old_month2;
+                     "   year = " + old_year2 + " and month = " + old_month2 ;
            System.out.println(sql);
            conn.update(sql);
        }

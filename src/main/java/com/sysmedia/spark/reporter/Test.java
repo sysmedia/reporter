@@ -1,24 +1,17 @@
 package com.sysmedia.spark.reporter;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Properties;
 
 public class Test {
     public static void main(String[] args) throws Exception {
-        InputStream inputStream = Test.class.getClassLoader()
-                .getResourceAsStream("db.properties");
-        Properties properties = new Properties();
-//            从输入字节流读取属性列表（键和元素对）
-        properties.load(inputStream);
-//            用此属性列表中指定的键搜索属性，获取驱动，url，username，password
-        String dirverName = properties.getProperty("driverName");
-        String url = properties.getProperty("url");
-        String username = properties.getProperty("username");
-        String password = properties.getProperty("password");
-        System.out.println(dirverName);
-        System.out.println(url);
-        System.out.println(username);
-        System.out.println(password);
+
+        ArrayList<String> shops = new ArrayList<String>(Arrays.asList("1011","1015","1021","1023","1024","1025","1027","1028","1035","1041","1129","1163","1164","1166","1167","1169","1170","1171","1248","1261","1264","1267","1279","1292","1309","1310","1312","1313","1314","1364","1370","1377","1378","1389","1408","1420","1427","1433","1434","1439","1443","1450","1451","1452","1454","1456","1457","1464","1465","1469","1477","1482","1485","1492","1505","1512","1516","1530","1538","1552","1562","1565","1573","1574","1575","1579","1582","1593","1595","1605","1617","1622","1624","1628","1647","1679","8501","1012","1014","1016","1019","1032","1033","1036","1038","1039","1154","1156","1251","1252","1301","1322","1387","1391","1431","1447","1459","1507","1509","1525","1526","1564","1583","1631","1632","1633","1635","1020","1044","1067","1074","1077","1080","1084","1091","1411","1510","1537","1557","1066","1071","1132","1133","1146","1233","1280","1358","1381","1441","1470","1478","1543","1578","1590","1594","1630","1640","1646","1648","1676","1678","1680","1706","1713"));
+        for(String shop : shops) {
+            System.out.println(shop);
+        }
 
     }
 

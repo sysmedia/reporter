@@ -9,12 +9,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * 2017年11月和2018年11月的支付方式数据不全
- * 找出这些数据不全的便利店
- * 从别的数据导入，补全数据
+ * 2018年11月的支付方式中便利店的现金占比太高
+ * 找出这些数据，按照2017年的数据进行递减
  */
 
-public class ModifyPayType {
+public class DecreaseCashPayType {
     private static String year1 = "2017";
     private static String month1 = "11";
     private static String year2 = "2018";
@@ -22,9 +21,9 @@ public class ModifyPayType {
     private static String sm = "28";
     private static DataBaseConnection conn = new DataBaseConnection();
     private static  DataCollection collection = new DataCollection();
-    private static ArrayList<String> yearList = new ArrayList<String>(Arrays.asList(year1, year2));
-    private static ArrayList<String> typeList = new ArrayList<String>(Arrays.asList("全部", "工作日", "周末"));
-    private static ArrayList<String> payTypeList = new ArrayList<String>(Arrays.asList("现金","微信","支付宝","银行卡","其他"));
+    private static ArrayList<String> yearList = new ArrayList<String>(Arrays.asList(year2));
+    private static ArrayList<String> typeList = new ArrayList<String>(Arrays.asList("全部"));
+    private static ArrayList<String> payTypeList = new ArrayList<String>(Arrays.asList("现金"));
         public static void main(String[] args){
             Random random = new Random();
             ArrayList<String> shops = new ArrayList<String>();
@@ -39,10 +38,9 @@ public class ModifyPayType {
                 shops = new ArrayList<String>(Arrays.asList("1045","1048","1049","1055","1059","1066","1069","1070","1071","1072","1075","1079","1081","1082","1088","1100","1102","1103","1118","1132","1133","1135","1144","1146","1150","1151","1233","1278","1280","1281","1282","1293","1294","1295","1299","1358","1366","1376","1380","1381","1384","1385","1386","1398","1407","1413","1415","1426","1432","1441","1458","1470","1471","1478","1480","1486","1493","1497","1498","1501","1503","1504","1519","1521","1523","1536","1543","1549","1566","1578","1585","1587","1589","1590","1591","1592","1594","1603","1607","1608","1610","1611","1612","1620","1625","1626","1630","1636","1638","1640","1641","1642","1646","1648","1649","1650","1652","1653","1655","1657","1664","1669","1466", "1476"));
                 //shops = new ArrayList<String>(Arrays.asList("1045","1048"));
                 //大卖场73家+ 30家标大
-                list = new ArrayList<String>(Arrays.asList("1011","1477","1015","1021","1023","1024","1025","1027","1028","1035","1041","1129","1163","1164","1166","1167","1169","1170","1171","1248","1261","1264","1267","1279","1292","1309","1310","1312","1313","1314","1364","1370","1377","1378","1389","1408","1420","1427","1433","1434","1439","1443","1450","1451","1452","1454","1456","1457","1464","1465","1469","1477","1482","1485","1492","1505","1512","1516","1530","1538","1552","1562","1565","1573","1574","1575","1579","1582","1593","1595","1617","1624","1628","8501","1020", "1014", "1016", "1019", "1032", "1033","1036","1038","1039","1154","1156","1251","1252","1301","1322","1387","1391","1431","1447","1459","1507","1509","1525","1526","1564","1583","1631","1632","1633","1635"));
+                list = new ArrayList<String>(Arrays.asList("1011","1015","1021","1023","1024","1025","1027","1028","1035","1041","1129","1163","1164","1166","1167","1169","1170","1171","1248","1261","1264","1267","1279","1292","1309","1310","1312","1313","1314","1364","1370","1377","1378","1389","1408","1420","1427","1433","1434","1439","1443","1450","1451","1452","1454","1456","1457","1464","1465","1469","1477","1482","1485","1492","1505","1512","1516","1530","1538","1552","1562","1565","1573","1574","1575","1579","1582","1593","1595","1617","1624","1628","8501","1020", "1014", "1016", "1019", "1032", "1033","1036","1038","1039","1154","1156","1251","1252","1301","1322","1387","1391","1431","1447","1459","1507","1509","1525","1526","1564","1583","1631","1632","1633","1635"));
             }   else {
                 shops = new ArrayList<String>(Arrays.asList(args[0]));
-                list = new ArrayList<String>(Arrays.asList("1011","1477","1015"));
             }
 
             int count = 0;
@@ -56,22 +54,22 @@ public class ModifyPayType {
                         for (String year : yearList) {
                             //取得原来的现金支付数目
                             String number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", shopId, year, type, payType);
-
-                            if (number.equals(" ")) {
-                                //System.out.println(year + " " + shopId + " orig number is null" + number);
-                                if(!shopId.equals(origShopId)){
-                                    System.out.println(shopId + " : " + origShopId);
-                                    origShopId = shopId;
-                                    count++;
-                                    System.out.println("count is " + count);
-                                }
-                                newValue = list.get(count);
-                                number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", newValue, year, type, payType);
-                                String sql = "insert into t_paytype_orig values (" + year + ", 11 , " +
-                                        shopId + ", '" + payType + "'," + number + ",'" + type + "')";
-                                System.out.println("sql is " + sql);
+                            int value = Integer.parseInt(number);
+                            //取得原来的总数
+                            String result = collection.getSumPayInfoByType("t_paytype_orig", "value", shopId, year,type);
+                            if(StringUtils.isEmptyOrWhitespaceOnly(result)) result = "1";
+                            int sum = Integer.parseInt(result);
+                            //计算原来的现金占比
+                            double rate = (double)value / sum * 100;
+                            int newNumber = (int)(value * 0.3);
+                            if(rate > 50) {
+                                System.out.println(year + " rate is " + rate + " number is " + number);
+                                String sql = "update t_paytype_orig set value = " + newNumber + " where "
+                                        + "shop = " + shopId + " and year = " + year + " and month = 11  and payType = '现金' " +
+                                        "and type = '全部'";
+                                System.out.println(sql);
                                 conn.update(sql);
-
+                                count++;
                             }
                         }
                     }

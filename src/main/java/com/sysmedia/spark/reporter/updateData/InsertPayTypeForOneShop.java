@@ -41,13 +41,17 @@ public class InsertPayTypeForOneShop {
 
 
             for(String shopId: shops) {
+                System.out.println("begin to handle " + shopId + " cash data");
                 String payType =  "现金";
                 for (String type : typeList) {
                     for (String year : yearList) {
                         //取得原来的现金支付数目
                         String number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", shopId, year, type, payType);
-                        System.out.println("orig number is " + number);
-                        if(number.equals(" ")) number = "0";
+                        System.out.println(year + "orig number is " + number);
+                        if(number.equals(" ")) {
+
+                            number = "0";
+                        }
 
                         int value = Integer.parseInt(number);
                         //取得原来的总数
@@ -64,7 +68,7 @@ public class InsertPayTypeForOneShop {
                         int newNumber = getNewNumber(rnd, shopId, year, type);
                         String sql = "insert into t_paytype values (" + year + "," + "11, " +
                                 shopId + ", " + "'现金', " + newNumber + "," + "'全部'" + ")";
-                        conn.update(sql);
+                        //conn.update(sql);
                         System.out.println("sql is " + sql);
 
                         //计算工作日rate， new rate + （1~4）的随机数
@@ -73,7 +77,7 @@ public class InsertPayTypeForOneShop {
                         sql = "insert into t_paytype values (" + year + "," + "11, " +
                                 shopId + ", " + "'现金', " + workNumber + "," + "'工作日'" + ")";
                         System.out.println("sql is " + sql);
-                        conn.update(sql);
+                        //conn.update(sql);
 
                         //计算周末rate， new rate + （-1~-4）的随机数
                         double weekendRate = (double)(random.nextInt(300) - 400)/100 + rnd;
@@ -81,7 +85,7 @@ public class InsertPayTypeForOneShop {
                         sql = "insert into t_paytype values (" + year + "," + "11, " +
                                 shopId + ", " + "'现金', " + weekendNumber + "," + "'周末'" + ")";
                         System.out.println("sql is " + sql);
-                        conn.update(sql);
+                        //conn.update(sql);
                     }
                 }
             }

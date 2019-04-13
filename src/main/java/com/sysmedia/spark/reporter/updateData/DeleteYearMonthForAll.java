@@ -6,27 +6,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * update year and month for one shop
+ * 删除 year and month for all shop
  * parameter:  shop, year1, month1, year2, month2
  * 更新单店的数据
  */
 
-public class UpdateYearMonthForAll {
+public class DeleteYearMonthForAll {
     public static void  main(String[] args) {
         System.out.println("args length is " + args.length);
         DataBaseConnection conn = new DataBaseConnection();
-        //args sample   1313 2017 04 2017 05 2017 11 2018 11
-        //1313 2017 02 2018 03 2017 11 2018 11
-        String shopId =  args[0];
 
+        //删除2017年11月数据，把2018年11月数据，更新成2017年11月数据
+        String shopId =  args[0];
+        //1313 2018 19 2017 10
         String old_year1 = args[1];
         String old_month1 = args[2];
         String old_year2 = args[3];
         String old_month2 = args[4];
-        String new_year1 = args[5];
-        String new_month1 = args[6];
-        String new_year2 = args[7];
-        String new_month2 = args[8];
         String sql;
 
         ArrayList<String> tableList = new ArrayList<String>(Arrays.asList("t_shop_count", "t_shop_customer_count",
@@ -34,15 +30,14 @@ public class UpdateYearMonthForAll {
                 "t_pinpai_sale", "t_pinlei_first", "t_pinlei_second", "t_pinlei_third" , "t_paytype"));
         long start = System.currentTimeMillis();
        for(String table : tableList) {
-           sql = "update " + table + " set year = " + new_year1 + " , month = " + new_month1 + " where  " +
-                   " year = " + old_year1 + " and month = " + old_month1 ;
+           sql = "delete from  " + table +   " where  " + " year = " + old_year1 + " and month = " + old_month1 ;
            System.out.println(sql);
            conn.update(sql);
 
-           sql = "update " + table + " set year = " + new_year2 + " , month = " + new_month2 + " where   " +
+           /*sql = "update " + table + " set year = " + old_year1 + " , month = " + old_month1 + " where   " +
                      "   year = " + old_year2 + " and month = " + old_month2 ;
            System.out.println(sql);
-           conn.update(sql);
+           conn.update(sql);*/
        }
         long end = System.currentTimeMillis();
         System.out.println("It costs " + (end - start) / 1000);

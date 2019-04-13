@@ -118,8 +118,13 @@ public class DataCollection {
                     number = "1";
                 customerNumber =  Integer.parseInt(number);
                 double avgTotalCount = (totalCount)/customerNumber;
+                //if(avgTotalCount < 1) avgTotalCount += 1.58;
 
-                list.add(String.valueOf(df.format(avgTotalCount)));
+                if(count.equals("0")) {
+                    list.add(" ");
+                } else {
+                    list.add(String.valueOf(df.format(avgTotalCount)));
+                }
             }
         }
         return list;

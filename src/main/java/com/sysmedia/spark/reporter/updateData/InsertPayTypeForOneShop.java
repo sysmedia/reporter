@@ -26,7 +26,7 @@ public class InsertPayTypeForOneShop {
     private static ArrayList<String> typeList = new ArrayList<String>(Arrays.asList("全部"));
     private static ArrayList<String> payTypeList = new ArrayList<String>(Arrays.asList("现金"));
         public static void main(String[] args){
-            Random random = new Random();
+
             ArrayList<String> shops = new ArrayList<String>();
             StringBuffer sb = new StringBuffer();
             ArrayList<ArrayList<String>> lists = new ArrayList<ArrayList<String>>();
@@ -40,59 +40,66 @@ public class InsertPayTypeForOneShop {
                 shops = new ArrayList<String>(Arrays.asList(args[0]));
             }
 
+            insertPayType(shops);
 
-            for(String shopId: shops) {
-                System.out.println("begin to handle " + shopId + " cash data");
-                String sql = "DELETE FROM `t_paytype` WHERE shop = '" + shopId + "' and payType = '现金'" ;
-                conn.update(sql);
-                String payType =  "现金";
-                for (String type : typeList) {
-                    for (String year : yearList) {
-                        //取得原来的现金支付数目
-                        String number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", shopId, year, type, payType);
-                        System.out.println(year + "orig number is " + number);
-                        if(number.equals(" ")) {
-
-                            number = "0";
-                        }
-
-                        int value = Integer.parseInt(number);
-                        //取得原来的总数
-                        String result = collection.getSumPayInfoByType("t_paytype_orig", "value", shopId, year,type);
-                        if(StringUtils.isEmptyOrWhitespaceOnly(result)) result = "1";
-                        int sum = Integer.parseInt(result);
-                        //计算原来的现金占比
-                        double rate = (double)value / sum * 100;
-                        System.out.println(year + " rate is " + rate);
-                        //计算新的现金占比，-3 ~ 3的随机数
-                        double rnd = (double)(random.nextInt(600) - 300)/100 + rate;
-                        System.out.println("new rate  is " + rnd);
-                        //计算新的现金支付数目
-                        int newNumber = getNewNumber(rnd, shopId, year, type);
-                        sql = "insert into t_paytype values (" + year + "," + "11, " +
-                                shopId + ", " + "'现金', " + newNumber + "," + "'全部'" + ")";
-                        conn.update(sql);
-                        System.out.println("sql is " + sql);
-
-                        //计算工作日rate， new rate + （1~4）的随机数
-                        double workRate = (double)(random.nextInt(300) + 100)/100 + rnd;
-                        int workNumber = getNewNumber(workRate, shopId, year, "工作日");
-                        sql = "insert into t_paytype values (" + year + "," + "11, " +
-                                shopId + ", " + "'现金', " + workNumber + "," + "'工作日'" + ")";
-                        System.out.println("sql is " + sql);
-                        conn.update(sql);
-
-                        //计算周末rate， new rate + （-1~-4）的随机数
-                        double weekendRate = (double)(random.nextInt(300) - 400)/100 + rnd;
-                        int weekendNumber = getNewNumber(weekendRate, shopId, year, "周末");
-                        sql = "insert into t_paytype values (" + year + "," + "11, " +
-                                shopId + ", " + "'现金', " + weekendNumber + "," + "'周末'" + ")";
-                        System.out.println("sql is " + sql);
-                        conn.update(sql);
-                    }
-                }
-            }
         }
+
+     public static void insertPayType(ArrayList<String> shops){
+         Random random = new Random();
+         for(String shopId: shops) {
+             System.out.println("begin to handle " + shopId + " cash data");
+             String sql = "DELETE FROM `t_paytype` WHERE shop = '" + shopId + "' and payType = '现金'" ;
+             conn.update(sql);
+             String payType =  "现金";
+             for (String type : typeList) {
+                 for (String year : yearList) {
+                     //取得原来的现金支付数目
+                     String number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", shopId, year, type, payType);
+                     System.out.println(year + "orig number is " + number);
+                     if(number.equals(" ")) {
+
+                         number = "0";
+                     }
+
+                     int value = Integer.parseInt(number);
+                     //取得原来的总数
+                     String result = collection.getSumPayInfoByType("t_paytype_orig", "value", shopId, year,type);
+                     if(StringUtils.isEmptyOrWhitespaceOnly(result)) result = "1";
+                     int sum = Integer.parseInt(result);
+                     //计算原来的现金占比
+                     double rate = (double)value / sum * 100;
+                     if(rate < 5) rate += 5;
+                     System.out.println(year + " rate is " + rate);
+                     //计算新的现金占比，-3 ~ 3的随机数
+                     double rnd = (double)(random.nextInt(600) - 300)/100 + rate;
+                     System.out.println("new rate  is " + rnd);
+                     //计算新的现金支付数目
+                     int newNumber = getNewNumber(rnd, shopId, year, type);
+                     sql = "insert into t_paytype values (" + year + "," + "11, " +
+                             shopId + ", " + "'现金', " + newNumber + "," + "'全部'" + ")";
+                     conn.update(sql);
+                     System.out.println("sql is " + sql);
+
+                     //计算工作日rate， new rate + （1~4）的随机数
+                     double workRate = (double)(random.nextInt(300) + 100)/100 + rnd;
+                     int workNumber = getNewNumber(workRate, shopId, year, "工作日");
+                     sql = "insert into t_paytype values (" + year + "," + "11, " +
+                             shopId + ", " + "'现金', " + workNumber + "," + "'工作日'" + ")";
+                     System.out.println("sql is " + sql);
+                     conn.update(sql);
+
+                     //计算周末rate， new rate + （-1~-4）的随机数
+                     double weekendRate = (double)(random.nextInt(300) - 400)/100 + rnd;
+                     int weekendNumber = getNewNumber(weekendRate, shopId, year, "周末");
+                     sql = "insert into t_paytype values (" + year + "," + "11, " +
+                             shopId + ", " + "'现金', " + weekendNumber + "," + "'周末'" + ")";
+                     System.out.println("sql is " + sql);
+                     conn.update(sql);
+                 }
+             }
+         }
+     }
+
 
     /**
      * 通过新的rate计算新的number

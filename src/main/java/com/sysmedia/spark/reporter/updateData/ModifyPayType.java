@@ -45,58 +45,52 @@ public class ModifyPayType {
                 shops = new ArrayList<String>(Arrays.asList(args[0]));
                 list = new ArrayList<String>(Arrays.asList("1103","1103","1015"));
             }
+            modifyPayTypeOrig(shops, list);
 
-            int count = 0;
-            String newValue;
-            String origShopId = shops.get(0);
-            for(String shopId: shops) {
-                 System.out.println("begin to handle " + shopId + " cash data");
-                String sql1 = "DELETE FROM `t_paytype_orig` WHERE shop = '" + shopId + "' " ;
-                conn.update(sql1);
-                for(String payType: payTypeList) {
-                    // String payType =  "现金";
-                    for (String type : typeList) {
-                        for (String year : yearList) {
-                            //取得原来的现金支付数目
-                            String number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", shopId, year, type, payType);
+        }
 
-                            if (number.equals(" ")) {
-                                //System.out.println(year + " " + shopId + " orig number is null" + number);
-                                if(!shopId.equals(origShopId)){
-                                    System.out.println(shopId + " : " + origShopId);
-                                    origShopId = shopId;
-                                    count++;
-                                    System.out.println("count is " + count);
-                                }
-                                newValue = list.get(count);
-                                System.out.println("new value is " + newValue);
-                                number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", newValue, year, type, payType);
-                                String sql = "insert into t_paytype_orig values (" + year + ", 11 , " +
-                                        shopId + ", '" + payType + "'," + number + ",'" + type + "')";
-                                System.out.println("sql is " + sql);
-                                conn.update(sql);
+    /**
+     * 根据传入的list
+     * 清除t_paytype_orig的数据，拷贝别的门店数据给这个shopid
+     * @return
+     */
+    public static int modifyPayTypeOrig(ArrayList<String> shops, ArrayList<String> list){
+        int count = 0;
+        String newValue;
+        String origShopId = shops.get(0);
+        for(String shopId: shops) {
+            System.out.println("begin to handle " + shopId + " cash data");
+            String sql1 = "DELETE FROM `t_paytype_orig` WHERE shop = '" + shopId + "' " ;
+            conn.update(sql1);
+            for(String payType: payTypeList) {
+                // String payType =  "现金";
+                for (String type : typeList) {
+                    for (String year : yearList) {
+                        //取得原来的现金支付数目
+                        String number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", shopId, year, type, payType);
 
+                        if (number.equals(" ")) {
+                            //System.out.println(year + " " + shopId + " orig number is null" + number);
+                            if(!shopId.equals(origShopId)){
+                                System.out.println(shopId + " : " + origShopId);
+                                origShopId = shopId;
+                                count++;
+                                System.out.println("count is " + count);
                             }
+                            newValue = list.get(count);
+                            System.out.println("new value is " + newValue);
+                            number = collection.getSinglePayInfoByPayType("t_paytype_orig", "value", newValue, year, type, payType);
+                            String sql = "insert into t_paytype_orig values (" + year + ", 11 , " +
+                                    shopId + ", '" + payType + "'," + number + ",'" + type + "')";
+                            System.out.println("sql is " + sql);
+                            conn.update(sql);
+
                         }
                     }
                 }
             }
-            System.out.println("count is " + count);
         }
-
-    /**
-     * 通过新的rate计算新的number
-     * 输入rate，shopId，year，type（支付方式）
-     * @return
-     */
-    public static int getNewNumber(double rnd, String shopId, String year, String type){
-        //得到现在的总数，不包含现金支付
-        String result = collection.getSumPayInfoByType("t_paytype", "value", shopId, year,type);
-        System.out.println( type + " new sum is " + result);
-        if(StringUtils.isEmptyOrWhitespaceOnly(result)) result = "1";
-        int sum = Integer.parseInt(result);
-        int newCash = (int)((rnd * sum / 100)/(1 - rnd/100));
-        System.out.println(type + "new number is " + newCash);
-        return newCash;
+        System.out.println("count is " + count);
+        return 1;
         }
 }

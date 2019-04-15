@@ -35,9 +35,9 @@ public class CheckCashPayType {
             ArrayList<String> shops1 = new ArrayList<String>(Arrays.asList("1020","1044","1067","1074","1077","1080","1084","1099","1122","1411","1463","1496","1510","1537","1557"));
             shops.addAll(shops1);
             System.out.println(shops.size());
-         //   checkList = getCheckList(shops);
+       //     checkList = getCheckList(shops);
                         //  ModifyPayType.modifyPayTypeOrig(checkList, list);
-        //   InsertPayTypeForOneShop.insertPayType(shops);
+       //    InsertPayTypeForOneShop.insertPayType(shops);
        //     App.genearteReport(checkList);
             App.genearteReport(shops);
 

@@ -40,9 +40,9 @@ public class NewApp {
 
         //ArrayList<String> list1 = new ArrayList<String>(Arrays.asList("1011","1015","1021","1023","1024","1025","1027","1028","1035","1041","1129","1163","1164","1166","1167","1169","1170","1171","1248","1261","1264","1267","1279","1292","1309","1310","1312","1313","1314","1364","1370","1377","1378","1389","1408","1420","1427","1433","1434","1439","1443","1450","1451","1452","1454","1456","1457","1464","1465","1469","1477","1482","1485","1492","1505","1512","1516","1530","1538","1552","1562","1565","1573","1574","1575","1579","1582","1593","1595","1617","1624","1628","8501"));
        list1.addAll(list3);
-      //  ArrayList<String> list4 = new ArrayList<String>(Arrays.asList("1663"));
-      //  list1.removeAll(list4);
-        System.out.println("list 1 size is " + list1.size() + list1);
+        ArrayList<String> list4 = new ArrayList<String>(Arrays.asList("1463"));
+        list1.removeAll(list4);
+        System.out.println("list 1 size is " + list1.size() );
 
        // sql = "SELECT id FROM  `t_new_shop` WHERE city = '重庆市'";
       //  sql = "SELECT id FROM  `t_new_shop` WHERE (`city` =  '广州市' or city = '深圳市' or city = '重庆市' ) AND flag =0 AND TYPE =  '大卖场'";

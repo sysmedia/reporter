@@ -18,7 +18,7 @@ public class UpdateYearMonthForAll {
         //args sample   1313 2017 04 2017 05 2017 11 2018 11
         //1313 2017 02 2018 03 2017 11 2018 11
         String shopId =  args[0];
-
+        //1313 2018 04 2018 05 2017 11 2018 11
         String old_year1 = args[1];
         String old_month1 = args[2];
         String old_year2 = args[3];

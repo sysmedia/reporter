@@ -17,16 +17,17 @@ public class UpdateYearMonthForAll {
         DataBaseConnection conn = new DataBaseConnection();
         //args sample   1313 2017 04 2017 05 2017 11 2018 11
         //1313 2017 02 2018 03 2017 11 2018 11
-        String shopId =  args[0];
+     //   String shopId =  args[0];
         //1313 2018 04 2018 05 2017 11 2018 11
-        String old_year1 = args[1];
-        String old_month1 = args[2];
-        String old_year2 = args[3];
-        String old_month2 = args[4];
-        String new_year1 = args[5];
-        String new_month1 = args[6];
-        String new_year2 = args[7];
-        String new_month2 = args[8];
+        //1313 2018 08 2018 09 2017 11 2018 11
+        String old_year1 = "2018";
+        String old_month1 = "3";
+      /*  String old_year2 = args[3];
+        String old_month2 = args[4];*/
+        String new_year1 = "2018";
+        String new_month1 = "11";
+       /* String new_year2 = args[7];
+        String new_month2 = args[8];*/
         String sql;
 
         ArrayList<String> tableList = new ArrayList<String>(Arrays.asList("t_shop_count", "t_shop_customer_count",
@@ -39,10 +40,10 @@ public class UpdateYearMonthForAll {
            System.out.println(sql);
            conn.update(sql);
 
-           sql = "update " + table + " set year = " + new_year2 + " , month = " + new_month2 + " where   " +
+        /*   sql = "update " + table + " set year = " + new_year2 + " , month = " + new_month2 + " where   " +
                      "   year = " + old_year2 + " and month = " + old_month2 ;
            System.out.println(sql);
-           conn.update(sql);
+           conn.update(sql);*/
        }
         long end = System.currentTimeMillis();
         System.out.println("It costs " + (end - start) / 1000);

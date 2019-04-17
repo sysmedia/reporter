@@ -14,8 +14,8 @@ public class Update2018DataForAll {
         System.out.println("args length is " + args.length);
         DataBaseConnection conn = new DataBaseConnection();
         DataCollection collection = new DataCollection();
-        String shopId =  args[0];
-        float ratio = Float.valueOf(args[1]);
+        String shopId =  "888888";
+        float ratio = 0.85f;
         String sql;
 
         //销售额  t_shop_count	totalPrice

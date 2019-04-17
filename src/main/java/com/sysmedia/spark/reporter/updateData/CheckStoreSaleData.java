@@ -7,14 +7,13 @@ import com.sysmedia.spark.reporter.util.DataCollection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
 
 /**
  * 检查支付方式中便利店的现金占比为0
  * 找出这些数据，进行处理
  */
 
-public class CheckCashPayType {
+public class CheckStoreSaleData {
     private static String year1 = "2017";
     private static String month1 = "11";
     private static String year2 = "2018";
@@ -34,15 +33,11 @@ public class CheckCashPayType {
             //标中15
             ArrayList<String> shops1 = new ArrayList<String>(Arrays.asList("1020","1044","1067","1074","1077","1080","1084","1099","1122","1411","1463","1496","1510","1537","1557"));
             shops.addAll(shops1);
-            //73家大卖场列表
-        //    ArrayList<String> shops = new ArrayList<String>(Arrays.asList("1011","1015","1021","1023","1024","1025","1027","1028","1035","1041","1129","1163","1164","1166","1167","1169","1170","1171","1248","1261","1264","1267","1279","1292","1309","1310","1312","1313","1314","1364","1370","1377","1378","1389","1408","1420","1427","1433","1434","1439","1443","1450","1451","1452","1454","1456","1457","1464","1465","1469","1477","1482","1485","1492","1505","1512","1516","1530","1538","1552","1562","1565","1573","1574","1575","1579","1582","1593","1595","1617","1624","1628","8501"));
 
             System.out.println(shops.size());
-           checkList = getCheckList(shops);
-                        //  ModifyPayType.modifyPayTypeOrig(checkList, list);
-      //     InsertPayTypeForOneShop.insertPayType(checkList);
-        //    App.genearteReport(checkList);
-         //   App.genearteReport(shops);
+       //    checkList = getCheckList(shops);
+         //   App.genearteReport(checkList);
+          App.genearteReport(shops);
 
         }
 
@@ -50,35 +45,31 @@ public class CheckCashPayType {
         ArrayList<String> checkList = new ArrayList<String>();
 
         int count = 0;
+        int count1 = 0;
         String newValue;
         String origShopId = "0";
         for(String shopId: shops) {
-            // System.out.println("begin to handle " + shopId + " cash data");
-            for(String payType: payTypeList) {
-                // String payType =  "现金";
-                for (String type : typeList) {
-                    for (String year : yearList) {
-                        //取得原来的现金支付数目
-                        String number = collection.getSinglePayInfoByPayType("t_paytype", "value", shopId, year, type, payType);
+           //  System.out.println("begin to handle " + shopId + " cash data");
+              //取得2018年全部销售额
+             String number = collection.getSingleLineInfoByType("t_shop_count", "totalPrice", shopId, "2018", "全部");
 
 
-                        if(StringUtils.isEmptyOrWhitespaceOnly(number)) number = "0";
-                        int value = Integer.parseInt(number);
-
-                        if(value <= 0) {
-                            System.out.println(shopId + ":" + year + " paytype is " + payType + " type = " + type + " number is " + number);
-                            if(!shopId.equals(origShopId)){
-                                count++;
-                                checkList.add(shopId);
-                                origShopId = shopId;
-                            }
-
-                        }
-                    }
-                }
+            if(StringUtils.isEmptyOrWhitespaceOnly(number)) number = "0";
+            long value = Long.parseLong(number);
+            if(value>= 2600000) {
+                System.out.println(shopId + ":" + " 2018 year total price is " +  number);
+               UpdateTwoYearDataForOneShop.updateTwoYearSaleDate(shopId, 0.72f);
+                count++;
+                checkList.add(shopId);
+            } else if(value <= 100000){
+                System.out.println(shopId + ":" + " 2018 year total price is " +  number);
+                UpdateTwoYearDataForOneShop.updateTwoYearSaleDate(shopId, 8.19f);
+                count1++;
+                checkList.add(shopId);
             }
         }
         System.out.println("count is " + count);
+        System.out.println("count1 is " + count1);
         System.out.println("list is " + checkList);
         return checkList;
 

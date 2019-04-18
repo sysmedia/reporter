@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : dagong
-Source Server Version : 50560
-Source Host           : 192.168.1.90:3306
+Source Server         : local
+Source Server Version : 50717
+Source Host           : localhost:3306
 Source Database       : tv
 
 Target Server Type    : MYSQL
-Target Server Version : 50560
+Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2019-04-17 15:03:45
+Date: 2019-04-18 12:05:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -45,6 +45,8 @@ CREATE TABLE `ic_user_register_count` (
 -- ----------------------------
 -- Records of ic_user_register_count
 -- ----------------------------
+INSERT INTO `ic_user_register_count` VALUES ('2019-04-17', '2328');
+INSERT INTO `ic_user_register_count` VALUES ('2019-04-18', '3259');
 
 -- ----------------------------
 -- Table structure for ic_user_used_count
@@ -96,6 +98,25 @@ INSERT INTO `ic_user_view_count` VALUES ('2019-04-16', '13', '97');
 INSERT INTO `ic_user_view_count` VALUES ('2019-04-12', '13', '16788');
 INSERT INTO `ic_user_view_count` VALUES ('2019-04-10', '13', '150');
 INSERT INTO `ic_user_view_count` VALUES ('2019-04-14', '13', '8');
+INSERT INTO `ic_user_view_count` VALUES ('2019-04-17', '2', '312');
+INSERT INTO `ic_user_view_count` VALUES ('2019-04-17', '6', '123');
+
+-- ----------------------------
+-- Table structure for t_channel_info
+-- ----------------------------
+DROP TABLE IF EXISTS `t_channel_info`;
+CREATE TABLE `t_channel_info` (
+  `id` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of t_channel_info
+-- ----------------------------
+INSERT INTO `t_channel_info` VALUES ('13', 'BTVi-生活');
+INSERT INTO `t_channel_info` VALUES ('2', '抖音');
+INSERT INTO `t_channel_info` VALUES ('6', '微信');
 
 -- ----------------------------
 -- Table structure for t_media_category_count

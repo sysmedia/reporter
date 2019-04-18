@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class DataCollection {
-    private static DataBaseConnection conn = new DataBaseConnection();;
+    private static DataBaseConnection conn = new DataBaseConnection();
     private static String year1 = "2017";
     private static String month1 = "11";
     private static String year2 = "2018";

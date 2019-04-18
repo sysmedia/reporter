@@ -11,7 +11,7 @@ public class Report {
     public static void main(String[] args) {
         String day = "2019-04-17";
         System.out.println("begin to create new report");
-        String filename = "C:\\project\\tv\\" + "test" + ".xlsx";
+        String filename = "C:\\project\\tv\\" + day + ".xlsx";
         try {
             XSSFWorkbook wb = TVReportUtil.generateTVReport(day);  //创建工作薄
 

@@ -194,4 +194,35 @@ public class ExcelUtil {
         }
     }
 
+    public static int inputSingleLine(XSSFSheet sheet, ArrayList<String> list, XSSFCellStyle cellStyle, int line){
+        XSSFRow row = sheet.createRow(line); //行
+        Cell cell;
+        for(int i = 0; i< list.size(); i++) {
+            cell = row.createCell(i);
+            cell.setCellValue(list.get(i));
+            cell.setCellStyle(cellStyle);
+        }
+        return line + 1;
+    }
+
+    public static int inputMultiLine(XSSFSheet sheet, ArrayList<ArrayList<String>> lists, XSSFCellStyle cellStyle, int line){
+        XSSFRow row ; //行
+        Cell cell;
+        ArrayList<String> list = new ArrayList<String>();
+        String value ;
+        int lastRow = line;
+        for(int j = 0; j < lists.size(); j++) {
+            row = sheet.createRow(line + j);
+            list = lists.get(j);
+            for(int i = 0; i<list.size(); i++) {
+                value = list.get(i);
+                cell = row.createCell(i);
+                cell.setCellValue(value);
+                cell.setCellStyle(cellStyle);
+            }
+            lastRow++;
+        }
+        return lastRow;
+    }
+
 }

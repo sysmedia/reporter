@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : dagong
-Source Server Version : 50560
-Source Host           : 192.168.1.90:3306
+Source Server         : local
+Source Server Version : 50717
+Source Host           : localhost:3306
 Source Database       : tv
 
 Target Server Type    : MYSQL
-Target Server Version : 50560
+Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2019-04-18 14:55:09
+Date: 2019-04-19 13:27:14
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -140,7 +140,9 @@ CREATE TABLE `ic_user_used_count` (
 -- ----------------------------
 -- Records of ic_user_used_count
 -- ----------------------------
-INSERT INTO `ic_user_used_count` VALUES ('1', '1', '1', '2019-04-17', '1', '1', '1', '1');
+INSERT INTO `ic_user_used_count` VALUES ('物美', '1036', '67', '2019-04-17', '食品类', '休闲食品', '面食', '1098');
+INSERT INTO `ic_user_used_count` VALUES ('多点', '9999', '67', '2019-04-17', '食品类', '休闲食品', '面食', '342');
+INSERT INTO `ic_user_used_count` VALUES ('物美', '1313', '66', '2019-04-17', '食品类', '休闲食品', '饮料', '453');
 
 -- ----------------------------
 -- Table structure for ic_user_view_count
@@ -212,6 +214,8 @@ CREATE TABLE `t_media_category_count` (
 -- ----------------------------
 -- Records of t_media_category_count
 -- ----------------------------
+INSERT INTO `t_media_category_count` VALUES ('物美', '1313', '2019-04-17', '食品类', '休闲食品', '饮料', '66', '8569', '1203');
+INSERT INTO `t_media_category_count` VALUES ('多点', '9999', '2019-04-17', '食品类', '休闲食品', '面食', '67', '12659', '2365');
 
 -- ----------------------------
 -- Table structure for t_media_compete_category_count
@@ -233,6 +237,8 @@ CREATE TABLE `t_media_compete_category_count` (
 -- ----------------------------
 -- Records of t_media_compete_category_count
 -- ----------------------------
+INSERT INTO `t_media_compete_category_count` VALUES ('物美', '1313', '2019-04-17', '食品类', '休闲食品', '饮料', '66', '42', '4569', '1126');
+INSERT INTO `t_media_compete_category_count` VALUES ('多点', '9999', '2019-04-17', '食品类', '休闲食品', '面食', '67', '70', '1268', '362');
 
 -- ----------------------------
 -- Table structure for t_new_shop
@@ -652,6 +658,7 @@ INSERT INTO `t_new_shop` VALUES ('9501', '重庆市', '永辉', '大卖场', '�
 INSERT INTO `t_new_shop` VALUES ('9510', '重庆市', '永辉', '大卖场', '永辉(桃源路店)', '1', '1314', '2017', '04', '1314', '2017', '05');
 INSERT INTO `t_new_shop` VALUES ('9517', '重庆市', '永辉', '大卖场', '永辉(爱琴海店)', '1', '1364', '2017', '04', '1364', '2017', '05');
 INSERT INTO `t_new_shop` VALUES ('9532', '重庆市', '永辉', '大卖场', '永辉(喜悦汇店)', '1', '1370', '2017', '04', '1370', '2017', '05');
+INSERT INTO `t_new_shop` VALUES ('9999', '北京', '多点', '网上超市', '网上超市', null, null, null, null, null, null, null);
 INSERT INTO `t_new_shop` VALUES ('9H01', '重庆市', '永辉', '大卖场', '永辉(优选东原D7店)', '1', '1377', '2017', '04', '1377', '2017', '05');
 INSERT INTO `t_new_shop` VALUES ('9H02', '重庆市', '永辉', '大卖场', '永辉(优选洋河店)', '1', '1378', '2017', '04', '1378', '2017', '05');
 INSERT INTO `t_new_shop` VALUES ('9H03', '重庆市', '永辉', '大卖场', '永辉(优选望海花市店)', '1', '1389', '2017', '04', '1389', '2017', '05');

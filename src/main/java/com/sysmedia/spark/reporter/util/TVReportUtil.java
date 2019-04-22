@@ -40,7 +40,7 @@ public class TVReportUtil {
         ArrayList<String> list =
                 new ArrayList<String>(Arrays.asList("日期","超市","门店","一级品类","二级品类","三级品类","本品品牌","竞品品牌","销售额","销售量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
-        String query = "select day, sm,  shop, top_name, mid_name, leaf_name,category, compete_category, saleCount, " +
+        String query = "select day, sm,  shop, pinlei, category, category_name,compete_category, compete_category_name,saleCount, " +
                 "saleamount from t_media_compete_category_count where day = '" + day + "' order by shop";
         ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 10);
 
@@ -52,11 +52,11 @@ public class TVReportUtil {
         XSSFSheet sheet = wb.createSheet("销售量销售额");
         sheet.setDefaultColumnWidth(15);
         ArrayList<String> list =
-                new ArrayList<String>(Arrays.asList("日期","超市","门店","一级品类","二级品类","三级品类","品牌","销售额","销售量"));
+                new ArrayList<String>(Arrays.asList("日期","超市","门店","品类","品牌","商品名称","销售额","销售量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
-        String query = "select day, sm,  shop, top_name, mid_name, leaf_name,category, saleCount, " +
+        String query = "select day, sm,  shop, pinlei, category, name, saleCount, " +
                 "saleamount from t_media_category_count where day = '" + day + "' order by shop";
-        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 9);
+        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 8);
 
         ArrayList<ArrayList<String>> lists = mapShopBrandNameInSaleInfo(results, shopMap,brandMap);
         ExcelUtil.inputMultiLine(sheet, lists, cellStyle, line);
@@ -103,12 +103,12 @@ public class TVReportUtil {
     public static void createRegisterSheet(XSSFWorkbook wb, String  day, XSSFCellStyle cellStyle) {
         XSSFSheet sheet = wb.createSheet("注册");
         sheet.setDefaultColumnWidth(15);
-        ArrayList<String> list = new ArrayList<String>(Arrays.asList("日期","注册量"));
+        ArrayList<String> list = new ArrayList<String>(Arrays.asList("日期","渠道","栏目","注册量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
-        String query = "select register_count from ic_user_register_count where day = '" + day + "'";
+        String query = "select * from ic_user_register_count where day = '" + day + "'";
         String result = conn.getQueryResult(query);
-        list = new ArrayList<String>(Arrays.asList(day,result));
-        ExcelUtil.inputSingleLine(sheet, list, cellStyle, line);
+        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 4);
+        ExcelUtil.inputMultiLine(sheet, results, cellStyle, line);
     }
 
     public static HashMap<String, String> getChannelMap(){
@@ -196,12 +196,16 @@ public class TVReportUtil {
             for(int i = 0; i < 2; i++)
                 result.add(list.get(i));
             String shopName = shopMap.get(list.get(2));
-            result.add(shopName);
-            for(int i = 3; i < 6; i++)
+            if(shopName == null) {
+                result.add(list.get(2));
+            } else {
+                result.add(shopName);
+            }
+           /* for(int i = 3; i < 6; i++)
                 result.add(list.get(i));
             String brandName = brandMap.get(list.get(6));
-            result.add(brandName);
-            for(int i = 7; i < list.size(); i++)
+            result.add(brandName);*/
+            for(int i = 3; i < list.size(); i++)
                 result.add(list.get(i));
             lists.add(result);
         }
@@ -216,14 +220,18 @@ public class TVReportUtil {
             for(int i = 0; i < 2; i++)
                 result.add(list.get(i));
             String shopName = shopMap.get(list.get(2));
-            result.add(shopName);
-            for(int i = 3; i < 6; i++)
+            if(shopName == null) {
+                result.add(list.get(2));
+            } else {
+                result.add(shopName);
+            }
+           /* for(int i = 3; i < 6; i++)
                 result.add(list.get(i));
             String brandName = brandMap.get(list.get(6));
             result.add(brandName);
             String competeBrandName = brandMap.get(list.get(7));
-            result.add(competeBrandName);
-            for(int i = 8; i < list.size(); i++)
+            result.add(competeBrandName);*/
+            for(int i = 3; i < list.size(); i++)
                 result.add(list.get(i));
             lists.add(result);
         }

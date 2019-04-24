@@ -38,11 +38,11 @@ public class TVReportUtil {
         XSSFSheet sheet = wb.createSheet("竞品销售量销售额");
         sheet.setDefaultColumnWidth(15);
         ArrayList<String> list =
-                new ArrayList<String>(Arrays.asList("日期","超市","门店","一级品类","二级品类","三级品类","本品品牌","竞品品牌","销售额","销售量"));
+                new ArrayList<String>(Arrays.asList("日期","超市","门店","品类","本品品牌","竞品品牌","竞品商品","销售额","销售量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
-        String query = "select day, sm,  shop, pinlei, category, category_name,compete_category, compete_category_name,saleCount, " +
+        String query = "select day, sm,  shop, pinlei, category, compete_category, compete_category_name,saleCount, " +
                 "saleamount from t_media_compete_category_count where day = '" + day + "' order by shop";
-        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 10);
+        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 9);
 
         ArrayList<ArrayList<String>> lists = mapShopBrandNameInCompeteSaleInfo(results, shopMap,brandMap);
         ExcelUtil.inputMultiLine(sheet, lists, cellStyle, line);

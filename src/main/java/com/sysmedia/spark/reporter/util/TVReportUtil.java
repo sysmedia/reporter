@@ -41,7 +41,7 @@ public class TVReportUtil {
                 new ArrayList<String>(Arrays.asList("日期","超市","门店","品类","本品品牌","竞品品牌","竞品商品","销售额","销售量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
         String query = "select day, sm,  shop, pinlei, category, compete_category, compete_category_name,saleCount, " +
-                "saleamount from t_media_compete_category_count where day = '" + day + "' order by shop";
+                "saleamount from ic_compete_category_count where day = '" + day + "' order by shop";
         ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 9);
 
         ArrayList<ArrayList<String>> lists = mapShopBrandNameInCompeteSaleInfo(results, shopMap,brandMap);
@@ -55,7 +55,7 @@ public class TVReportUtil {
                 new ArrayList<String>(Arrays.asList("日期","超市","门店","品类","品牌","商品名称","销售额","销售量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
         String query = "select day, sm,  shop, pinlei, category, name, saleCount, " +
-                "saleamount from t_media_category_count where day = '" + day + "' order by shop";
+                "saleamount from ic_category_count where day = '" + day + "' order by shop";
         ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 8);
 
         ArrayList<ArrayList<String>> lists = mapShopBrandNameInSaleInfo(results, shopMap,brandMap);

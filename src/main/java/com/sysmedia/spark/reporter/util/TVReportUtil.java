@@ -66,11 +66,11 @@ public class TVReportUtil {
         XSSFSheet sheet = wb.createSheet("用券");
         sheet.setDefaultColumnWidth(15);
         ArrayList<String> list =
-                new ArrayList<String>(Arrays.asList("日期","超市","门店","一级品类","二级品类","三级品类","品牌","用券量"));
+                new ArrayList<String>(Arrays.asList("日期","超市","门店","一级品类","二级品类","三级品类","品牌","商品名称", "优惠券名称","用券量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
         String query = "select day, market_id,  channel_id, top_cat_name, mid_cat_name, leaf_cat_name,brand_id, " +
-                "used_count from ic_user_used_count where day = '" + day + "' order by used_count";
-        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 8);
+                "product_name, coupon_name, used_count from ic_user_used_count where day = '" + day + "' order by used_count";
+        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 10);
 
         ArrayList<ArrayList<String>> lists = mapShopBrandNameInCouponUsed(results, shopMap,brandMap);
         ExcelUtil.inputMultiLine(sheet, lists, cellStyle, line);
@@ -93,21 +93,21 @@ public class TVReportUtil {
     public static void createBrowseSheet(XSSFWorkbook wb, String  day, XSSFCellStyle cellStyle) {
         XSSFSheet sheet = wb.createSheet("浏览");
         sheet.setDefaultColumnWidth(15);
-        ArrayList<String> list = new ArrayList<String>(Arrays.asList("日期","渠道","栏目","浏览量"));
+        ArrayList<String> list = new ArrayList<String>(Arrays.asList("日期","小时","渠道","栏目","浏览量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
         String query = "select * from ic_user_view_count where day = '" + day + "' order by view_count";
-        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 4);
+        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 5);
         ExcelUtil.inputMultiLine(sheet, results, cellStyle, line);
     }
 
     public static void createRegisterSheet(XSSFWorkbook wb, String  day, XSSFCellStyle cellStyle) {
         XSSFSheet sheet = wb.createSheet("注册");
         sheet.setDefaultColumnWidth(15);
-        ArrayList<String> list = new ArrayList<String>(Arrays.asList("日期","渠道","栏目","注册量"));
+        ArrayList<String> list = new ArrayList<String>(Arrays.asList("日期","小时","渠道","栏目","注册量"));
         int line = ExcelUtil.inputSingleLine(sheet, list, cellStyle, 0);
         String query = "select * from ic_user_register_count where day = '" + day + "'";
         String result = conn.getQueryResult(query);
-        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 4);
+        ArrayList<ArrayList<String>> results = conn.getQueryResultList2(query, 5);
         ExcelUtil.inputMultiLine(sheet, results, cellStyle, line);
     }
 
@@ -176,7 +176,11 @@ public class TVReportUtil {
             for(int i = 0; i < 2; i++)
                 result.add(list.get(i));
             String shopName = shopMap.get(list.get(2));
-            result.add(shopName);
+            if(shopName == null) {
+                result.add(list.get(2));
+            } else {
+                result.add(shopName);
+            }
             for(int i = 3; i < 6; i++)
                 result.add(list.get(i));
             String brandName = brandMap.get(list.get(6));

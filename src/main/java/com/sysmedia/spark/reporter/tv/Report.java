@@ -9,7 +9,7 @@ import java.io.FileOutputStream;
 public class Report {
 
     public static void main(String[] args) {
-        String day = "2019-04-17";
+        String day = "2019-04-25";
         System.out.println("begin to create new report");
         String filename = "C:\\project\\tv\\" + day + ".xlsx";
         try {

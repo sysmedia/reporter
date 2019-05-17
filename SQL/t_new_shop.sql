@@ -1,25 +1,32 @@
-/*
-Navicat MySQL Data Transfer
+-- phpMyAdmin SQL Dump
+-- version 4.0.10.11
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: May 17, 2019 at 06:34 PM
+-- Server version: 5.7.17-log
+-- PHP Version: 5.3.5
 
-Source Server         : localhost
-Source Server Version : 50554
-Source Host           : localhost:3306
-Source Database       : reporter
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
-Target Server Type    : MYSQL
-Target Server Version : 50554
-File Encoding         : 65001
 
-Date: 2019-04-03 22:30:59
-*/
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
-SET FOREIGN_KEY_CHECKS=0;
+--
+-- Database: `reporter2017new`
+--
 
--- ----------------------------
--- Table structure for t_new_shop
--- ----------------------------
-DROP TABLE IF EXISTS `t_new_shop`;
-CREATE TABLE `t_new_shop` (
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_new_shop`
+--
+
+CREATE TABLE IF NOT EXISTS `t_new_shop` (
   `id` varchar(11) CHARACTER SET utf8 NOT NULL,
   `city` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
   `sm` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -35,2172 +42,2183 @@ CREATE TABLE `t_new_shop` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- ----------------------------
--- Records of t_new_shop
--- ----------------------------
-INSERT INTO `t_new_shop` VALUES ('1011', '北京', '物美', '北京大卖场', 'BJHM古城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1012', '北京', '物美', '北京标大', 'BJSM西门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1014', '北京', '物美', '北京标大', 'BJSM八角北里店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1015', '北京', '物美', '北京大卖场', 'BJHM新风店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1016', '北京', '物美', '北京标大', 'BJSM昌平店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1019', '北京', '物美', '北京标大', 'BJSM科大店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1020', '北京', '物美', '北京标中', 'BJSM小云岗店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1021', '北京', '物美', '北京大卖场', 'BJHM云岗店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1023', '北京', '物美', '北京大卖场', 'BJHM新隆店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1024', '北京', '物美', '北京大卖场', 'BJHM北大地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1025', '北京', '物美', '北京大卖场', 'BJHM旧宫店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1027', '北京', '物美', '北京大卖场', 'BJHM建兴店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1028', '北京', '物美', '北京大卖场', 'BJHM天通苑店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1032', '北京', '物美', '北京标大', 'BJSM右安门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1033', '北京', '物美', '北京标大', 'BJSM榆垡店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1035', '北京', '物美', '北京大卖场', 'BJHM潞苑店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1036', '北京', '物美', '北京标大', 'BJSM方庄东', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1038', '北京', '物美', '北京标大', 'BJSM北洼路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1039', '北京', '物美', '北京标大', 'BJSM胜利店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1041', '北京', '物美', '北京大卖场', 'BJHM宋庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1044', '北京', '物美', '北京标中', 'BJSM西永乐店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1045', '北京', '物美', '北京便利店', 'BJCVS高井店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1048', '北京', '物美', '北京便利店', 'BJCVS北路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1049', '北京', '物美', '北京便利店', 'BJCVS锅炉厂店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1055', '北京', '物美', '北京便利店', 'BJCVS金顶街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1058', '北京', '物美', '北京标中', 'BJSM北大店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1059', '北京', '物美', '北京便利店', 'BJCVS装备部店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1067', '北京', '物美', '北京标中', 'BJSM光大店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1068', '北京', '物美', '北京标大', 'BJSM乐园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1069', '北京', '物美', '北京便利店', 'BJCVS马家堡店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1070', '北京', '物美', '北京便利店', 'BJCVS洋桥', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1071', '北京', '物美', '北京便利店', 'BJCVS太平桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1072', '北京', '物美', '北京便利店', 'BJCVS卢沟桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1073', '北京', '物美', '北京标中', 'BJSM长大街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1074', '北京', '物美', '北京标中', 'BJSM新华东店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1075', '北京', '物美', '北京便利店', 'BJCVS北厂店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1077', '北京', '物美', '北京标中', 'BJSM燕南店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1079', '北京', '物美', '北京便利店', 'BJCVS方星园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1080', '北京', '物美', '北京标中', 'BJSM蒲黄榆店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1081', '北京', '物美', '北京便利店', 'BJCVS光华店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1082', '北京', '物美', '北京便利店', 'BJCVS黑山店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1084', '北京', '物美', '北京标中', 'BJSM三家店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1088', '北京', '物美', '北京便利店', 'BJCVS坡头店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1090', '北京', '物美', '北京标中', 'BJSM科大禾谷园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1091', '北京', '物美', '北京标中', 'BJSM北科大店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1099', '北京', '物美', '北京标中', 'BJSM永乐店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1100', '北京', '物美', '北京便利店', 'BJCVS柴厂屯店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1102', '北京', '物美', '北京便利店', 'BJCVS妇幼店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1103', '北京', '物美', '北京便利店', 'BJCVS通糖梨园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1118', '北京', '物美', '北京便利店', 'BJCVS玉桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1122', '北京', '物美', '北京标中', 'BJSM甘棠店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1129', '北京', '物美', '北京大卖场', 'BJHM密云鼓楼店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1132', '北京', '物美', '北京便利店', 'BJCVS四惠店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1133', '北京', '物美', '北京便利店', 'BJCVS和平门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1135', '北京', '物美', '北京便利店', 'BJCVS东四店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1144', '北京', '物美', '北京便利店', 'BJCVS万达店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1146', '北京', '物美', '北京便利店', 'BJCVS民达园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1150', '北京', '物美', '北京便利店', 'BJCVS阔速达店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1151', '北京', '物美', '北京便利店', 'BJCVS财满街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1154', '北京', '物美', '北京标大', 'BJSM崇文门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1156', '北京', '物美', '北京标大', 'BJSM天东店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1163', '北京', '物美', '北京大卖场', 'BJHM惠新店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1164', '北京', '物美', '北京大卖场', 'BJHM志新店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1166', '北京', '物美', '北京大卖场', 'BJHM华天店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1167', '北京', '物美', '北京大卖场', 'BJHM大兴店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1169', '北京', '物美', '北京大卖场', 'BJHM北苑店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1170', '北京', '物美', '北京大卖场', 'BJHM新街口店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1171', '北京', '物美', '北京大卖场', 'BJHM海淀店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1233', '北京', '物美', '北京便利店', 'BJCVS神州数码店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1248', '北京', '物美', '北京大卖场', 'BJHM回龙观东店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1251', '北京', '物美', '北京标大', 'BJSM奥士凯交道口店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1252', '北京', '物美', '北京标大', 'BJSM奥士凯新兴里店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1261', '北京', '物美', '北京大卖场', 'BJHM清河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1264', '北京', '物美', '北京大卖场', 'BJHM万源店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1267', '北京', '物美', '北京大卖场', 'BJHM奥士凯朝内菜市场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1278', '北京', '物美', '北京便利店', 'BJCVS刘家窑店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1279', '北京', '物美', '北京大卖场', 'BJHM通州梨园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1280', '北京', '物美', '北京便利店', 'BJCVS大幸福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1281', '北京', '物美', '北京便利店', 'BJCVS国瑞城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1282', '北京', '物美', '北京便利店', 'BJCVS西花市二店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1284', '北京', '物美', '北京标中', 'BJSM总参店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1292', '北京', '物美', '北京大卖场', 'BJHM新华联家园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1293', '北京', '物美', '北京便利店', 'BJCVS东蒲桥(新)店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1294', '北京', '物美', '北京便利店', 'BJCVS郭庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1295', '北京', '物美', '北京便利店', 'BJCVS正义路(新)店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1299', '北京', '物美', '北京便利店', 'BJCVS湖光店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1301', '北京', '物美', '北京标大', 'BJSM西山枫林店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1304', '北京', '物美', '北京标中', 'BJSM航天大院店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1309', '北京', '物美', '北京大卖场', 'BJHM丰体时代店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1310', '北京', '物美', '北京大卖场', 'BJHM密云果园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1312', '北京', '物美', '北京大卖场', 'BJHM开阳桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1313', '北京', '物美', '北京大卖场', 'BJHM玉蜓桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1314', '北京', '物美', '北京大卖场', 'BJHM枣园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1322', '北京', '物美', '北京标大', 'BJSM五里坨店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1323', '北京', '美廉美', '北京大卖场', 'BJHM花园路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1324', '北京', '美廉美', '北京大卖场', 'BJHM白纸坊店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1325', '北京', '美廉美', '北京大卖场', 'BJHM马家堡店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1326', '北京', '美廉美', '北京标大', 'BJSM角门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1328', '北京', '美廉美', '北京大卖场', 'BJHM德胜门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1330', '北京', '美廉美', '北京大卖场', 'BJHM三里河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1332', '北京', '美廉美', '北京大卖场', 'BJHM和平新城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1333', '北京', '美廉美', '北京大卖场', 'BJHM增光路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1334', '北京', '美廉美', '北京大卖场', 'BJHM安外店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1335', '北京', '美廉美', '北京大卖场', 'BJHM亦庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1336', '北京', '美廉美', '北京大卖场', 'BJHM百旺商城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1337', '北京', '美廉美', '北京大卖场', 'BJHM安宁庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1339', '北京', '美廉美', '北京大卖场', 'BJHM时代风帆店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1340', '北京', '美廉美', '北京大卖场', 'BJHM横一条店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1341', '北京', '美廉美', '北京大卖场', 'BJHM管庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1343', '北京', '美廉美', '北京标大', 'BJSM鲁谷店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1344', '北京', '美廉美', '北京大卖场', 'BJHM新都店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1345', '北京', '美廉美', '北京大卖场', 'BJHM西安门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1347', '北京', '美廉美', '北京大卖场', 'BJHM回龙观店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1349', '北京', '美廉美', '北京大卖场', 'BJHM良庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1350', '北京', '美廉美', '北京大卖场', 'BJHM南口店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1352', '北京', '美廉美', '北京大卖场', 'BJHM新龙店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1353', '北京', '美廉美', '北京大卖场', 'BJHM房山北关店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1354', '北京', '美廉美', '北京大卖场', 'BJHM良乡店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1356', '北京', '美廉美', '北京大卖场', 'BJHM燕山店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1357', '北京', '美廉美', '北京大卖场', 'BJHM燕化星城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1358', '北京', '物美', '北京便利店', 'BJCVS华三店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1362', '北京', '物美', '北京便利店', 'BJCVS十一学校店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1364', '北京', '物美', '北京大卖场', 'BJHM北沙滩店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1365', '北京', '美廉美', '北京大卖场', 'BJHM学清路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1366', '北京', '物美', '北京便利店', 'BJCVS珠江峰景店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1369', '北京', '物美', '北京便利店', 'BJCVS公益西桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1370', '北京', '物美', '北京大卖场', 'BJHM北太平庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1373', '北京', '美廉美', '北京大卖场', 'BJHM顺义店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1376', '北京', '物美', '北京便利店', 'BJCVS国家大剧院店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1377', '北京', '物美', '北京大卖场', 'BJHM方恒国际店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1378', '北京', '物美', '北京大卖场', 'BJHM双峪店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1380', '北京', '物美', '北京便利店', 'BJCVS西下庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1381', '北京', '物美', '北京便利店', 'BJCVS八大处军区店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1384', '北京', '物美', '北京便利店', 'BJCVS方庄桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1385', '北京', '物美', '北京便利店', 'BJCVS光华路SOHO店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1386', '北京', '物美', '北京便利店', 'BJCVS和平里北街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1387', '北京', '物美', '北京标大', 'BJSM龙湖店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1389', '北京', '物美', '北京大卖场', 'BJHM北七家店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1391', '北京', '物美', '北京标大', 'BJSM三间房店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1398', '北京', '物美', '北京便利店', 'BJCVS刘家窑西', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1407', '北京', '物美', '北京便利店', 'BJCVS卢沟晓月店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1408', '北京', '物美', '北京大卖场', 'BJHM物美甘露园', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1411', '北京', '物美', '北京标中', 'BJSM加州小镇店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1413', '北京', '物美', '北京便利店', 'BJCVS现代一店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1415', '北京', '物美', '北京便利店', 'BJCVS现代二店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1420', '北京', '物美', '北京大卖场', 'BJHM西黄村二店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1426', '北京', '物美', '北京便利店', 'BJCVS物美大厦店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1427', '北京', '物美', '北京大卖场', 'BJHM兴华大街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1431', '北京', '物美', '北京标大', 'BJSM温都水城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1432', '北京', '物美', '北京便利店', 'BJCVS创意园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1433', '北京', '物美', '北京大卖场', 'BJHM明光桥西店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1434', '北京', '物美', '北京大卖场', 'BJHM陶然亭店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1439', '北京', '物美', '北京大卖场', 'BJHM京良路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1440', '北京', '物美', '北京标大', 'BJSM金顶阳光', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1441', '北京', '物美', '北京便利店', 'BJCVS天创大厦店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1443', '北京', '物美', '北京大卖场', 'BJHM高米店北店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1445', '北京', '物美', '北京便利店', '台湖爱心超市', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1446', '北京', '物美', '北京便利店', 'BJCVS华电大厦店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1447', '北京', '物美', '北京标大', 'BJSM物美朝阳门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1449', '北京', '物美', '北京便利店', 'BJCVS紫金数码店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1450', '北京', '物美', '北京大卖场', 'BJHM大成国际店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1451', '北京', '物美', '北京大卖场', 'BJHM远洋一方店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1452', '北京', '物美', '北京大卖场', 'BJHM望京东店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1454', '北京', '物美', '北京大卖场', 'BJHM西三旗店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1456', '北京', '物美', '北京大卖场', 'BJHM田村店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1457', '北京', '物美', '北京大卖场', 'BJHM八角游乐园店(太阳岛）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1458', '北京', '物美', '北京便利店', 'BJCVS交大南门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1459', '北京', '物美', '北京标大', 'BJSM远洋山水店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1460', '北京', '物美', '北京便利店', 'BJCVS农行三店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1461', '北京', '物美', '北京便利店', 'BJCVS静安里店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1463', '北京', '物美', '北京标中', 'BJSM总参二店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1464', '北京', '物美', '北京大卖场', 'BJHM土桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1465', '北京', '物美', '北京大卖场', 'BJHM昌平东关店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1466', '北京', '物美', '北京便利店', 'BJCVS瓷器口点', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1467', '北京', '物美', '北京便利店', 'BJCVS总参干休所店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1469', '北京', '物美', '北京大卖场', 'BJHM海子角店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1470', '北京', '物美', '北京便利店', 'BJCVS霍营店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1471', '北京', '物美', '北京便利店', 'BJCVS金隅嘉华店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1476', '北京', '物美', '北京便利店', 'BJCVS盈创店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1477', '北京', '物美', '北京大卖场', 'BJHM联想桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1478', '北京', '物美', '北京便利店', 'BJCVS上地软件园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1479', '北京', '物美', '北京便利店', 'BJCVS西杉店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1480', '北京', '物美', '北京便利店', 'BJCVS钻河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1482', '北京', '物美', '北京大卖场', 'BJHM北苑东店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1485', '北京', '物美', '北京大卖场', 'BJHM泰和园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1486', '北京', '物美', '北京便利店', 'BJCVS公益西桥二店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1492', '北京', '物美', '北京大卖场', 'BJHM后沙峪店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1493', '北京', '物美', '北京便利店', 'BJCVS现代四店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1495', '北京', '物美', '北京便利店', 'BJCVS现代五店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1496', '北京', '物美', '北京标中', 'BJSM大厅店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1497', '北京', '物美', '北京便利店', 'BJCVS沙子口店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1498', '北京', '物美', '北京便利店', 'BJCVS青尚小营店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1501', '北京', '物美', '北京便利店', 'BJCVS东花市店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1503', '北京', '物美', '北京便利店', 'BJCVS上地三街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1504', '北京', '物美', '北京便利店', 'BJCVS东大街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1505', '北京', '物美', '北京大卖场', 'BJHM草桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1507', '北京', '物美', '北京标大', 'BJSM米拉小镇店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1509', '北京', '物美', '北京标大', 'BJSM南海家园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1510', '北京', '物美', '北京标中', 'BJSM北大医学部店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1511', '北京', '物美', '北京便利店', 'BJCVS农发行店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1512', '北京', '物美', '北京大卖场', 'BJHM三旗百汇店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1513', '北京', '物美', '北京便利店', 'BJCVS金融街鑫茂店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1516', '北京', '物美', '北京大卖场', 'BJHM小汤山店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1519', '北京', '物美', '北京便利店', 'BJCVS十字坡店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1521', '北京', '物美', '北京便利店', 'BJCVS小屯路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1523', '北京', '物美', '北京便利店', 'BJCVS上地七街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1525', '北京', '物美', '北京标大', 'BJSM程庄路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1526', '北京', '物美', '北京标大', 'BJSM马驹桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1527', '北京', '物美', '北京便利店', 'BJCVS百子湾店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1528', '北京', '物美', '北京便利店', 'BJCVS文思海辉店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1529', '北京', '物美', '北京便利店', 'BJCVS富凯大厦', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1530', '北京', '物美', '北京大卖场', 'BJHM安河桥北', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1533', '北京', '物美', '北京便利店', 'BJCVS瑞斯康达', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1536', '北京', '物美', '北京便利店', 'BJCVS总参51所', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1537', '北京', '物美', '北京标中', 'BJSM燕郊燕灵路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1538', '北京', '物美', '北京大卖场', 'BJHM冯村店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1540', '北京', '物美', '北京便利店', 'BJCVS英大国际', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1543', '北京', '物美', '北京便利店', 'BJCVS木樨地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1544', '北京', '物美', '北京便利店', '永顺店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1545', '北京', '物美', '北京便利店', 'BJCVS黄庄职业学校', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1547', '北京', '物美', '北京标大', 'BJSM花园东路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1549', '北京', '物美', '北京便利店', 'BJCVS金顶北路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1550', '北京', '物美', '北京便利店', 'BJCVS玲珑天地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1552', '北京', '物美', '北京大卖场', 'BJHM杜家坎店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1554', '北京', '物美', '北京标中', 'BJSM彰化南路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1555', '北京', '物美', '北京标中', 'BJSM石泉店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1556', '北京', '物美', '北京标中', 'BJSM紫金店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1557', '北京', '物美', '北京标中', 'BJSM石门营', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1558', '北京', '物美', '北京便利店', '安美路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1562', '北京', '物美', '北京大卖场', 'BJHM万寿路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1564', '北京', '物美', '北京标大', 'BJSM后沙峪2店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1565', '北京', '物美', '北京大卖场', 'BJHM中信城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1566', '北京', '物美', '北京便利店', '成仪路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1572', '北京', '物美', '北京便利店', '慈云寺北里', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1573', '北京', '物美', '北京大卖场', 'BJHM沙河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1574', '北京', '物美', '北京大卖场', 'BJHM昌平西关店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1575', '北京', '物美', '北京大卖场', 'BJHM次渠店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1576', '北京', '物美', '北京便利店', '西三环中路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1578', '北京', '物美', '北京便利店', '建国门', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1579', '北京', '物美', '北京大卖场', 'BJHM沁山水店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1581', '北京', '物美', '北京便利店', '科兴西路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1582', '北京', '物美', '北京大卖场', 'BJHM光明楼店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1583', '北京', '物美', '北京标大', 'BJSM大兴芦城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1584', '北京', '物美', '北京便利店', '软通动力', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1585', '北京', '物美', '北京便利店', '西集店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1587', '北京', '物美', '北京便利店', '中办店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1589', '北京', '物美', '北京便利店', '小黄庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1590', '北京', '物美', '北京便利店', '朝阳医院', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1591', '北京', '物美', '北京便利店', '防灾学院', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1592', '北京', '物美', '北京便利店', '东坝中路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1593', '北京', '物美', '北京大卖场', 'BJHM大兴龙湖店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1594', '北京', '物美', '北京便利店', '圣八便利店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1595', '北京', '物美', '北京大卖场', 'BJHM富兴国际?', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1603', '北京', '物美', '北京便利店', '苹果园南路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1604', '北京', '物美', '北京便利店', '杜家坎南路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1605', '北京', '物美', '北京大卖场', 'BJHM昌平鼓楼南大街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1607', '北京', '物美', '北京便利店', '阳光新城一店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1608', '北京', '物美', '北京便利店', '阳光新城二店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1610', '北京', '物美', '北京便利店', '广渠门内大街', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1611', '北京', '物美', '北京便利店', '潞苑南里', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1612', '北京', '物美', '北京便利店', '军科院一店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1617', '北京', '物美', '北京大卖场', '大成东店（百子湾）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1620', '北京', '物美', '北京便利店', '黑山大街', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1621', '北京', '物美', '北京大卖场', '河滩店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1622', '北京', '物美', '北京大卖场', '立水桥品超市', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1624', '北京', '物美', '北京大卖场', '密云新中街', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1625', '北京', '物美', '北京便利店', '东土城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1626', '北京', '物美', '北京便利店', '潞苑五街', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1628', '北京', '物美', '北京大卖场', '丽泽桥', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1630', '北京', '物美', '北京便利店', '总参三店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1631', '北京', '物美', '北京标大', '朝阳路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1632', '北京', '物美', '北京标大', '紫竹院店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1633', '北京', '物美', '北京标大', '潘家园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1635', '北京', '物美', '北京标大', '金宝街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1636', '北京', '物美', '北京便利店', '通州新华西街', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1637', '北京', '物美', '北京便利店', '昌平府学路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1638', '北京', '物美', '北京便利店', '前门东路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1640', '北京', '物美', '北京便利店', '印刷学院1店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1641', '北京', '物美', '北京便利店', '印刷学院2店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1642', '北京', '物美', '北京便利店', '印刷学院3店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1644', '北京', '物美', '北京便利店', '国电电力', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1646', '北京', '物美', '北京便利店', '泰康创新中心', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1647', '北京', '物美', '北京大卖场', 'BJHM欣雅汇店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1648', '北京', '物美', '北京便利店', '陆航学院', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1649', '北京', '物美', '北京便利店', '潭柘新区', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1650', '北京', '物美', '北京便利店', '新宫店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1651', '北京', '物美', '北京便利店', '农行南楼店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1652', '北京', '物美', '北京便利店', '燕顺路分店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1653', '北京', '物美', '北京便利店', '燕平路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1655', '北京', '物美', '北京便利店', '惠新西街北口店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1656', '北京', '物美', '北京便利店', '十一亦庄分校店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1657', '北京', '物美', '北京便利店', '鼓楼南街店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1658', '北京', '物美', '北京大卖场', 'BJHM温泉店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1659', '北京', '物美', '北京大卖场', '康庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1660', '北京', '物美', '北京大卖场', '金色漫香苑', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1664', '北京', '物美', '北京便利店', '松榆里店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1665', '北京', '物美', '北京便利店', '国珍大厦', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1666', '北京', '物美', '北京大卖场', '樊羊路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1669', '北京', '物美', '北京便利店', '军区后勤店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1670', '北京', '物美', '北京便利店', '东城金鱼池店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1672', '北京', '物美', '北京便利店', '中保大厦', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1673', '北京', '物美', '北京大卖场', '北京物美通州华业玫瑰店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1675', '北京', '物美', '北京便利店', '莲花池西路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1676', '北京', '物美', '北京便利店', '香山南路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1677', '北京', '物美', '北京便利店', '泰康二店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1678', '北京', '物美', '北京便利店', '望京阿里店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1679', '北京', '物美', '北京大卖场', '华润万象汇店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1680', '北京', '物美', '北京便利店', '农学院房山店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1681', '北京', '物美', '北京便利店', '广和路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1682', '北京', '物美', '北京便利店', '金海国际', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1683', '北京', '物美', '北京便利店', '光彩路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1684', '北京', '物美', '北京便利店', '兴创大厦', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1686', '北京', '物美', '北京便利店', '中信银行', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1687', '北京', '物美', '北京便利店', '北大体育馆店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1688', '北京', '物美', '北京便利店', '北大五四体育场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1689', '北京', '物美', '北京便利店', '西关路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1691', '北京', '物美', '北京大卖场', '庞各庄', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1693', '北京', '物美', '北京便利店', '配送中心', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1694', '北京', '物美', '北京便利店', '宁馨苑店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1695', '北京', '物美', '北京便利店', '泰安路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1697', '北京', '物美', '北京便利店', '昌平阿里', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1698', '北京', '物美', '北京便利店', '竞技大厦', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1699', '北京', '物美', '北京大卖场', '怀柔万达店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1702', '北京', '物美', '北京便利店', '广宁村新', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1703', '北京', '物美', '北京便利店', '昌平东环路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1705', '北京', '物美', '北京便利店', '工商大学东店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1706', '北京', '物美', '北京便利店', '工商大学西店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1707', '北京', '物美', '北京便利店', '防灾学院三店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1708', '北京', '物美', '北京便利店', '北清路农行南楼店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1711', '北京', '物美', '北京便利店', '昌平北城根店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1712', '北京', '物美', '北京便利店', '昌平永安路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1713', '北京', '物美', '北京便利店', '北太平路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1714', '北京', '物美', '北京便利店', '南顶路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1715', '北京', '物美', '北京便利店', '拱辰南大街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1717', '北京', '物美', '北京便利店', '南口北校店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1719', '北京', '物美', '北京便利店', '武警白马路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1720', '北京', '物美', '北京便利店', '动物园新店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1722', '北京', '物美', '北京便利店', '六里桥东', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1723', '北京', '物美', '北京便利店', '唐家岭', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1724', '北京', '物美', '北京大卖场', '昌平南环路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1725', '北京', '物美', '北京便利店', '丰台岳各庄店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1726', '北京', '物美', '北京便利店', '华电煤业店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1727', '北京', '物美', '北京便利店', '太平桥西店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1728', '北京', '物美', '北京便利店', '政法大学', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1732', '北京', '物美', '北京便利店', '金隅科技', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1733', '北京', '物美', '北京便利店', '万明路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1737', '北京', '物美', '北京大卖场', '鲁谷店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1738', '北京', '物美', '北京大卖场', '京港城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1740', '北京', '物美', '北京大卖场', 'BJHM双井店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1748', '北京', '物美', '北京大卖场', 'BJHM孙河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1754', '北京', '物美', '北京大卖场', '顺义马坡店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1789', '北京', '物美', '北京大卖场', 'BJHM崇文门国瑞城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1795', '北京', '物美', '北京大卖场', '衙门口桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1797', '北京', '物美', '北京大卖场', '洋桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1798', '北京', '物美', '北京大卖场', 'BJHM上地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1800', '北京', '物美', '北京大卖场', '双清路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1801', '北京', '物美', '北京大卖场', 'BJHM十里堡店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1804', '北京', '物美', '北京大卖场', 'BJHM安贞店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1807', '北京', '物美', '北京大卖场', '乐天望京店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1808', '北京', '物美', '北京大卖场', '公益西桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1809', '北京', '物美', '北京大卖场', 'BJHM四道口店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1882', '北京', '物美', '北京大卖场', '京平店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('1892', '北京', '物美', '北京大卖场', '窦店北路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('8501', '北京', '物美', '北京大卖场', 'BJHM华茂城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9270', '重庆市', '永辉', '大卖场', '永辉-南岸区崇文店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9284', '重庆市', '永辉', '大卖场', '永辉-渝北区兰馨大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9286', '重庆市', '永辉', '大卖场', '永辉-忠县财富广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9287', '重庆市', '永辉', '大卖场', '永辉-渝北区兴科大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9289', '重庆市', '永辉', '大卖场', '永辉-渝北区红叶路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9290', '重庆市', '永辉', '大卖场', '永辉-南岸区腾龙大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9299', '重庆市', '永辉', '大卖场', '永辉-璧山县金山广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9300', '重庆市', '永辉', '大卖场', '永辉(重庆市永辉生活广场店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9308', '重庆市', '永辉', '大卖场', '永辉-重庆市酉阳县碧津广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9316', '重庆市', '永辉', '大卖场', '永辉-重庆市江津区江洲大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9317', '重庆市', '永辉', '大卖场', '永辉-万州区万达店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9359', '重庆市', '永辉', '大卖场', '永辉-渝北区泰山大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9360', '重庆市', '永辉', '大卖场', '永辉-南岸区茶园金科店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9368', '重庆市', '永辉', '大卖场', '永辉-江北区国奥村店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9369', '重庆市', '永辉', '大卖场', '永辉-南川区渝南大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9384', '重庆市', '永辉', '大卖场', '永辉-九龙坡区华福金科店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9385', '重庆市', '永辉', '大卖场', '永辉-合川区合川宝龙店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9394', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区龙湖仟百汇店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9404', '重庆市', '永辉', '大卖场', '永辉-北碚区双元大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9447', '重庆市', '永辉', '大卖场', '永辉-巴南区巴南万达店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9451', '重庆市', '永辉', '大卖场', '永辉-大渡口区中交丽景店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9456', '重庆市', '永辉', '大卖场', '永辉-重庆渝中区--大坪协信店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9460', '重庆市', '永辉', '大卖场', '永辉-重庆渝北区水木天地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9461', '重庆市', '永辉', '大卖场', '永辉-重庆永川区协信店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9462', '重庆市', '永辉', '大卖场', '永辉(重庆市白市驿店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9467', '重庆市', '永辉', '大卖场', '永辉(重庆市渝州路店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9486', '重庆市', '永辉', '大卖场', '永辉(龙湖时代天街店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9501', '重庆市', '永辉', '大卖场', '永辉(康德中央大街店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9510', '重庆市', '永辉', '大卖场', '永辉(桃源路店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9517', '重庆市', '永辉', '大卖场', '永辉(爱琴海店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9532', '重庆市', '永辉', '大卖场', '永辉(喜悦汇店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9H01', '重庆市', '永辉', '大卖场', '永辉(优选东原D7店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9H02', '重庆市', '永辉', '大卖场', '永辉(优选洋河店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9H03', '重庆市', '永辉', '大卖场', '永辉(优选望海花市店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('9H04', '重庆市', '永辉', '大卖场', '永辉(优选兴茂店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A004', '北京', '超市发', '综合超市', '双榆树', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A006', '北京', '超市发', '生鲜超市', '半壁店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A007', '北京', '超市发', '生鲜超市', '羊坊店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A008', '北京', '超市发', '食品超市', '朗秋园', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A010', '北京', '超市发', '生活超市', '玉海园', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A013', '北京', '超市发', '综合超市', '清河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A016', '北京', '超市发', '食品超市', '农大店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A017', '北京', '超市发', '食品超市', '方圆店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A020', '北京', '超市发', '生鲜超市', '万寿路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A021', '北京', '超市发', '生活超市', '甘家口', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A022', '北京', '超市发', '生鲜超市', '北航店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A023', '北京', '超市发', '社区超市', '四道口', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A026', '北京', '超市发', '综合超市', '玉泉路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A027', '北京', '超市发', '综合超市', '厢红旗', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A031', '北京', '超市发', '生活超市', '科学城', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A034', '北京', '超市发', '生活超市', '清河大楼', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A035', '北京', '超市发', '综合超市', '学院路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A037', '北京', '超市发', '社区超市', '月季园', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A040', '北京', '超市发', '综合超市', '万泉庄', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A042', '北京', '超市发', '食品超市', '魏公村', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A043', '北京', '超市发', '生活超市', '蓝润店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A046', '北京', '超市发', '生活超市', '上地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A050', '北京', '超市发', '食品超市', '美欣店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A053', '北京', '超市发', '食品超市', '曙光花园', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A055', '北京', '超市发', '食品超市', '天通苑东区', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A057', '北京', '超市发', '社区超市', '白颐路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A059', '北京', '超市发', '社区超市', '万柳店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A062', '北京', '超市发', '社区超市', '花园路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A070', '北京', '超市发', '综合超市', '天通苑西区', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A071', '北京', '超市发', '社区超市', '电科院', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A073', '北京', '超市发', '食品超市', '北清路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A074', '北京', '超市发', '社区超市', '蓟门店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A079', '北京', '超市发', '综合超市', '青塔店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A123', '北京', '超市发', '食品超市', '北坞嘉园', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A132', '北京', '超市发', '生鲜超市', '安定门', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A136', '北京', '超市发', '食品超市', '宝盛里', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A185', '北京', '超市发', '食品超市', '溪山嘉园', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A215', '北京', '超市发', '食品超市', '苹果园', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A233', '北京', '超市发', '社区超市', '车道沟', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A234', '北京', '超市发', '社区超市', '图景店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A235', '北京', '超市发', '生鲜超市', '唐家岭', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A236', '北京', '超市发', '生鲜超市', '太舟坞', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A239', '北京', '超市发', '社区超市', '知春里', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A241', '北京', '超市发', '生鲜超市', '苏家坨', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A242', '北京', '超市发', '社区超市', '燕堤南路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A243', '北京', '超市发', '生鲜超市', '鲁疃店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A245', '北京', '超市发', '社区超市', '朱各庄', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A246', '北京', '超市发', '社区超市', '纪检学院店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A248', '北京', '超市发', '生鲜超市', '颐源居', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A301', '北京', '超市发', '食品超市', '夕照寺', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A302', '北京', '超市发', '生活超市', '林萃路', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('A303', '北京', '超市发', '生活超市', '右安门', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C001', '重庆市', '永辉', '大卖场', '永辉-渝北区加州店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C002', '重庆市', '永辉', '大卖场', '永辉-重庆渝北区东和春天店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C003', '重庆市', '永辉', '大卖场', '永辉-重庆江北区观音桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C004', '重庆市', '永辉', '大卖场', '永辉-渝中区大坪店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C005', '重庆市', '永辉', '大卖场', '永辉-九龙坡区西城天街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C007', '重庆市', '永辉', '大卖场', '永辉-江北区五里店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C008', '重庆市', '永辉', '大卖场', '永辉-南岸区四公里店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C009', '重庆市', '永辉', '大卖场', '永辉-渝北区黄泥塝店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C010', '重庆市', '永辉', '大卖场', '永辉-长寿区协信店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C011', '重庆市', '永辉', '大卖场', '永辉-渝北区双龙店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C012', '重庆市', '永辉', '大卖场', '永辉-大渡口区香港城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C013', '重庆市', '永辉', '大卖场', '永辉-梁平县大众店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C014', '重庆市', '永辉', '大卖场', '永辉-南岸区南坪东路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C015', '重庆市', '永辉', '大卖场', '永辉-綦江县河西店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C016', '重庆市', '永辉', '大卖场', '永辉-璧山县时代商都店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C017', '重庆市', '永辉', '大卖场', '永辉-渝北区空港店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C018', '重庆市', '永辉', '大卖场', '永辉-九龙坡区石桥铺店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C019', '重庆市', '永辉', '大卖场', '永辉-万盛区民盛店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C020', '重庆市', '永辉', '大卖场', '永辉-綦江县河东店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C021', '重庆市', '永辉', '大卖场', '永辉-渝中区白象街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C022', '重庆市', '永辉', '大卖场', '永辉-万盛区万盛名都店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C023', '重庆市', '永辉', '大卖场', '永辉-渝中区较场口店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C025', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区天星桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C026', '重庆市', '永辉', '大卖场', '永辉-江北区大石坝店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C027', '重庆市', '永辉', '大卖场', '永辉-万州区王牌路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C028', '重庆市', '永辉', '大卖场', '永辉-渝北区龙头寺店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C029', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区汉渝路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C030', '重庆市', '永辉', '大卖场', '永辉-北碚区天生丽街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C031', '重庆市', '永辉', '大卖场', '永辉-渝北区武陵路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C032', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区童家桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C033', '重庆市', '永辉', '大卖场', '永辉-南岸区弹新街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C034', '重庆市', '永辉', '大卖场', '永辉-江北区建新东路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C035', '重庆市', '永辉', '大卖场', '永辉-万州区国贸广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C036', '重庆市', '永辉', '大卖场', '永辉-开县新天地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C037', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区嘉茂购物中心店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C038', '重庆市', '永辉', '大卖场', '永辉-渝北区宝圣西路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C039', '重庆市', '永辉', '大卖场', '永辉-垫江县西欧花园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C040', '重庆市', '永辉', '大卖场', '永辉-梁平县西池广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C041', '重庆市', '永辉', '大卖场', '永辉-南岸区南湖花园店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C042', '重庆市', '永辉', '大卖场', '永辉-铜梁县广龙明珠店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C043', '重庆市', '永辉', '大卖场', '永辉-江北区金源时代购物中心店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C044', '重庆市', '永辉', '大卖场', '永辉-忠县中博大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C045', '重庆市', '永辉', '大卖场', '永辉-巴南区人民广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C046', '重庆市', '永辉', '大卖场', '永辉-合川区金世纪广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C047', '重庆市', '永辉', '大卖场', '永辉-渝中区人和街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C048', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区新桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C049', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区双碑鼎盛店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C050', '重庆市', '永辉', '大卖场', '永辉-武隆县南城中央广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C051', '重庆市', '永辉', '大卖场', '永辉-南岸区万达广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C052', '重庆市', '永辉', '大卖场', '永辉-南川区南大街店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C053', '重庆市', '永辉', '大卖场', '永辉-大渡口区壹街购物中心店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C054', '重庆市', '永辉', '大卖场', '永辉-北碚区文星湾旺德旺城店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C055', '重庆市', '永辉', '大卖场', '永辉-巴南区土桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C056', '重庆市', '永辉', '大卖场', '永辉-江北区望江店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C057', '重庆市', '永辉', '大卖场', '永辉-荣昌县莲花广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C058', '重庆市', '永辉', '大卖场', '永辉-秀山县秀山店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C059', '重庆市', '永辉', '大卖场', '永辉-巴南区都和广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C060', '重庆市', '永辉', '大卖场', '永辉-九龙坡区石坪桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C061', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区陈家桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C062', '重庆市', '永辉', '大卖场', '永辉-荣昌县沿河中路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C063', '重庆市', '永辉', '大卖场', '永辉-渝北区星湖路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C064', '重庆市', '永辉', '大卖场', '永辉-九龙坡区民生广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C065', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区联芳桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C067', '重庆市', '永辉', '大卖场', '永辉-璧山县青杠店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C068', '重庆市', '永辉', '大卖场', '永辉-渝北区金渝大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C069', '重庆市', '永辉', '大卖场', '永辉-渝北区星光天地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C070', '重庆市', '永辉', '大卖场', '永辉-长寿区盛世桃源店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C071', '重庆市', '永辉', '大卖场', '永辉-渝北区金开大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C072', '重庆市', '永辉', '大卖场', '永辉-大足县国梁店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C073', '重庆市', '永辉', '大卖场', '永辉-南岸区风临路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('C074', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区大学城北路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('J028', '广州市', '嘉荣', '大卖场', '南沙华汇店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('J036', '广州市', '嘉荣', '大卖场', '花都狮岭店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P022', '北京', '卜蜂莲花', '大卖场', '六里桥店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P025', '北京', '卜蜂莲花', '大卖场', '朝阳路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P030', '北京', '卜蜂莲花', '大卖场', '通州店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P035', '北京', '卜蜂莲花', '大卖场', '金源店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P057', '北京', '卜蜂莲花', '大卖场', ' 石佛营店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P059', '北京', '卜蜂莲花', '大卖场', '成府路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P075', '北京', '卜蜂莲花', '大卖场', '北苑店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P101', '广州市', '卜蜂莲花', '大卖场', '三元里店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P102', '广州市', '卜蜂莲花', '大卖场', '天河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P103', '广州市', '卜蜂莲花', '大卖场', '长兴店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P104', '广州市', '卜蜂莲花', '大卖场', '黄石店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P201', '重庆市', '卜蜂莲花', '大卖场', '龙湖店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P202', '重庆市', '卜蜂莲花', '大卖场', '洋河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P203', '重庆市', '卜蜂莲花', '大卖场', '日月光', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('P204', '重庆市', '卜蜂莲花', '大卖场', '煌华店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0009', '广州市', '天福', '便利店', 'D2广州白云嘉禾豪泉天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0172', '广州市', '天福', '便利店', 'D2增城永和天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0325', '广州市', '天福', '便利店', 'C2增城永和新庄新市场天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0528', '广州市', '天福', '便利店', 'C2增城新塘顶好大厦天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0563', '广州市', '天福', '便利店', 'D2广州白云大源福安天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0565', '广州市', '天福', '便利店', 'C2广州海珠海诚天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0566', '广州市', '天福', '便利店', 'C2广州海珠天地荟天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0567', '广州市', '天福', '便利店', '广州白云新市棠兴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0569', '广州市', '天福', '便利店', 'C2广州黄埔宏康天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0571', '广州市', '天福', '便利店', 'C2广州海珠长兴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0573', '广州市', '天福', '便利店', 'Q1广州花都狮岭盘古中路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0575', '广州市', '天福', '便利店', 'D2广州白云京溪梅园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0576', '广州市', '天福', '便利店', '广州黄埔碧山天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0580', '广州市', '天福', '便利店', 'Q1广州花都旗岭河滨路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0581', '广州市', '天福', '便利店', 'D2广州番禺石基华宇天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0598', '广州市', '天福', '便利店', 'C2增城新塘鸿发天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0630', '广州市', '天福', '便利店', 'D2广州白云嘉禾万嘉天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0632', '广州市', '天福', '便利店', '广州天河万泰天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0636', '广州市', '天福', '便利店', 'C2广州海珠石溪天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0649', '广州市', '天福', '便利店', 'D2广州黄埔碧山天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0650', '广州市', '天福', '便利店', 'D2广州白云新市棠兴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0651', '广州市', '天福', '便利店', 'C2广州海珠沥滘天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0698', '广州市', '天福', '便利店', '广州荔湾富力天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0700', '广州市', '天福', '便利店', '广州海珠鹭江易购天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0732', '广州市', '天福', '便利店', '广州天河望月天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0748', '广州市', '天福', '便利店', 'D074广州白云江高升业天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0749', '广州市', '天福', '便利店', '广州白云萧岗宝凯天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0770', '广州市', '天福', '便利店', '广州白云麦地仁仁天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0778', '广州市', '天福', '便利店', '广州天河元岗天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0786', '广州市', '天福', '便利店', '广州番禺石基傍东卓玉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0788', '广州市', '天福', '便利店', '广州人和香港街天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0797', '广州市', '天福', '便利店', 'D032增城新塘发达岭春富天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0829', '广州市', '天福', '便利店', 'D066广州白云萧岗怡心天福*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0876', '广州市', '天福', '便利店', 'Q1增城荔城街园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0892', '广州市', '天福', '便利店', '广州天河林和东路品味天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0898', '广州市', '天福', '便利店', 'D052广州萝岗建兴光电厂行天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0911', '广州市', '天福', '便利店', '广州从化上城湾畔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0918', '广州市', '天福', '便利店', 'D030增城新塘豪亮天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0920', '广州市', '天福', '便利店', '广州白云人和建利天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0951', '广州市', '天福', '便利店', '广州天河长湴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0958', '广州市', '天福', '便利店', '从化雅居乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0977', '广州市', '天福', '便利店', '广州白云金碧新城天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0981', '广州市', '天福', '便利店', '广州萝岗科学城合景天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0986', '广州市', '天福', '便利店', '广州棠下上社村家福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T0995', '广州市', '天福', '便利店', '增城荔城园墩天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1010', '广州市', '天福', '便利店', 'Q017增城荔城莲花天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1011', '广州市', '天福', '便利店', 'D062广州白云三元里松柏胜佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1017', '广州市', '天福', '便利店', '增城新塘西洲天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1021', '广州市', '天福', '便利店', '番禺锦绣生态园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1065', '广州市', '天福', '便利店', '广州花都雅居乐御宾府天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1078', '广州市', '天福', '便利店', '广州白云祥景花园华威天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1082', '广州市', '天福', '便利店', '增城石滩立新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1096', '广州市', '天福', '便利店', '广州花都建设北路御景花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1115', '广州市', '天福', '便利店', 'D042增城新塘沙埔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1172', '广州市', '天福', '便利店', 'Q2广州番禺大石嘉嘉天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1175', '广州市', '天福', '便利店', '增城荔城富宁天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1211', '广州市', '天福', '便利店', '增城新塘大敦天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1221', '广州市', '天福', '便利店', '广州花都狮岭辉煌天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1229', '广州市', '天福', '便利店', '增城荔城城丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1233', '广州市', '天福', '便利店', '增城新塘东坑天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1248', '广州市', '天福', '便利店', '广州花都区新华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1249', '广州市', '天福', '便利店', '增城荔城沙园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1256', '广州市', '天福', '便利店', '白云永泰国交天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1262', '广州市', '天福', '便利店', 'D054广州黄埔埔南路天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1278', '广州市', '天福', '便利店', 'D070广州白云永泰永康天福*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1289', '广州市', '天福', '便利店', '增城新塘大王坑天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1290', '广州市', '天福', '便利店', 'Q136广州海珠石溪天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1291', '广州市', '天福', '便利店', '增城荔城碧桂园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1317', '广州市', '天福', '便利店', '广州花都狮岭益群天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1326', '广州市', '天福', '便利店', '广州黄埔双岗大街崇德里天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1329', '广州市', '天福', '便利店', 'D064广州白云新市海鲜天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1349', '广州市', '天福', '便利店', '广州海珠康乐村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1350', '广州市', '天福', '便利店', '番禺区何贤天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1351', '广州市', '天福', '便利店', '番禺大西路天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1353', '广州市', '天福', '便利店', 'Q130广州番禺北亭天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1386', '广州市', '天福', '便利店', 'Q1增城荔城西城天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1395', '广州市', '天福', '便利店', 'Q1增城增江华立天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1397', '广州市', '天福', '便利店', '广州白云陈田南风天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1403', '广州市', '天福', '便利店', 'Q1广州花都美乐天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1405', '广州市', '天福', '便利店', 'Q128广州番禺大学城穗石天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1406', '广州市', '天福', '便利店', 'Q083广州花都狮岭雄狮天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1418', '广州市', '天福', '便利店', '广州天河棠下天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1419', '广州市', '天福', '便利店', '番禺钟村锦绣花园翠屏苑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1431', '广州市', '天福', '便利店', 'Q01增城朱村文明天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1463', '广州市', '天福', '便利店', 'D2广州番禺钟村五羊茶叶城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1501', '广州市', '天福', '便利店', 'Q079广州花都新华街建设北路天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1542', '广州市', '天福', '便利店', 'Q085广州花都狮岭金狮启荣天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1552', '广州市', '天福', '便利店', 'D2广州白云新市汇侨天福店T*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1569', '广州市', '天福', '便利店', 'Q1增城荔城通园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1585', '广州市', '天福', '便利店', '广州海珠南新天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1666', '广州市', '天福', '便利店', 'D2广州白云嘉禾翔鑫天福店T*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1672', '广州市', '天福', '便利店', 'Q077广州花都新华天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1745', '广州市', '天福', '便利店', '广州海珠区文文天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1777', '广州市', '天福', '便利店', 'D2广州番禺里仁洞天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1786', '广州市', '天福', '便利店', 'Q1增城增江美洋洋天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1796', '广州市', '天福', '便利店', 'C2广州海珠万信天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1833', '广州市', '天福', '便利店', 'C2广州越秀区东山天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1848', '广州市', '天福', '便利店', 'D2广州白云盛美天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1881', '广州市', '天福', '便利店', 'Q000广州番禺钟村解放路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1900', '广州市', '天福', '便利店', 'D2广州白云淼杜天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1901', '广州市', '天福', '便利店', 'Q04广州番禺大石会江地铁站天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1920', '广州市', '天福', '便利店', 'D02广州白云红星天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1930', '广州市', '天福', '便利店', 'D2广州番禺鸣翠苑天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1931', '广州市', '天福', '便利店', 'Q2广州萝岗练发天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1956', '广州市', '天福', '便利店', 'D2广州番禺自在城市花园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1960', '广州市', '天福', '便利店', 'C2广州越秀农讲所天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1961', '广州市', '天福', '便利店', 'Q1增城万达天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1962', '广州市', '天福', '便利店', 'C2广州天河中国移动天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1973', '广州市', '天福', '便利店', 'D2广州番禺钟村望楼岗天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1975', '广州市', '天福', '便利店', 'D2广州白云富嘉天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1977', '广州市', '天福', '便利店', 'Q1增城豪园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1987', '广州市', '天福', '便利店', 'D2广州番禺大石岗东路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T1989', '广州市', '天福', '便利店', 'D2广州白云鸦岗天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2019', '广州市', '天福', '便利店', 'D2广州番禺洛溪地铁口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2032', '广州市', '天福', '便利店', 'C2广州黄埔海警基地天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2039', '广州市', '天福', '便利店', 'D2广州番禺市侨丽骏天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2042', '广州市', '天福', '便利店', 'D2广州白云阿信天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2049', '广州市', '天福', '便利店', 'D2广州番禺市桥车站天福店（合资统管）T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2050', '广州市', '天福', '便利店', 'Q2广州番禺大石牌坊天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2053', '广州市', '天福', '便利店', 'D2广州白云江夏地铁口天福店T*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2055', '广州市', '天福', '便利店', '广州番禺市桥晴晴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2059', '广州市', '天福', '便利店', 'D2广州白云小坪天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2060', '广州市', '天福', '便利店', 'D2广州白云沙涌天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2062', '广州市', '天福', '便利店', 'C2广州海珠台涌天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2070', '广州市', '天福', '便利店', 'D2广州白云西岭天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2075', '广州市', '天福', '便利店', 'D2广州番禺石楼音乐城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2076', '广州市', '天福', '便利店', 'Q1增城锦绣国际天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2079', '广州市', '天福', '便利店', 'D2广州白云鹅掌坦天福店T*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2080', '广州市', '天福', '便利店', 'D2广州白云东平天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2086', '广州市', '天福', '便利店', 'D2广州番禺市桥平康路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2088', '广州市', '天福', '便利店', 'D2广州白云黄庄天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2091', '广州市', '天福', '便利店', 'C2广州天河地铁口天福店T(销）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2092', '广州市', '天福', '便利店', 'Q2广州黄埔李花天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2096', '广州市', '天福', '便利店', 'D2广州番禺城市花园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2102', '广州市', '天福', '便利店', 'Q04广州海珠中山大学一号站天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2106', '广州市', '天福', '便利店', '广州白云大源天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2107', '广州市', '天福', '便利店', 'Q02广州南沙碧桂园天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2111', '广州市', '天福', '便利店', 'D2广州番禺大石神话天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2113', '广州市', '天福', '便利店', 'D2广州白云嘉禾上胜天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2115', '广州市', '天福', '便利店', 'D2广州白云握山天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2116', '广州市', '天福', '便利店', 'D2广州白云白山天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2117', '广州市', '天福', '便利店', 'Q1增城荔城志勇天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2120', '广州市', '天福', '便利店', 'C2荔湾西村地铁口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2123', '广州市', '天福', '便利店', 'Q1从化逸泉映翠天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2127', '广州市', '天福', '便利店', 'Q2广州荔湾金宇花园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2128', '广州市', '天福', '便利店', 'C2广州海珠江海大道天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2129', '广州市', '天福', '便利店', 'D2广州番禺大石植村天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2130', '广州市', '天福', '便利店', 'D2广州番禺大石礼村天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2132', '广州市', '天福', '便利店', 'D2广州白云广丰天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2133', '广州市', '天福', '便利店', 'C2增城新塘宏城汇天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2137', '广州市', '天福', '便利店', 'Q2广州黄埔云埔工业区方达路快乐天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2138', '广州市', '天福', '便利店', 'D2广州白云太和龙归城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2139', '广州市', '天福', '便利店', 'D2广州白云谢家庄天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2140', '广州市', '天福', '便利店', 'D2广州白云新市连元天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2146', '广州市', '天福', '便利店', 'D2广州白云汇侨新城黄沙岗天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2150', '广州市', '天福', '便利店', 'D2广州番禺市桥汀沙村天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2155', '广州市', '天福', '便利店', 'D2广州白云钟落潭良田天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2156', '广州市', '天福', '便利店', 'Q1广州花都新华嘉尔登天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2158', '广州市', '天福', '便利店', 'D2广州番禺厦滘南路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2159', '广州市', '天福', '便利店', 'Q1广州花都新华云山天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2160', '广州市', '天福', '便利店', 'Q2广州黄埔神舟天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2161', '广州市', '天福', '便利店', 'D2广州番禺金怡天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2162', '广州市', '天福', '便利店', 'C2广州天河车陂南天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2163', '广州市', '天福', '便利店', 'D2广州番禺大石文明天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2167', '广州市', '天福', '便利店', 'D02广州天河银锭塘天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2169', '广州市', '天福', '便利店', 'D2广州白云同和榕树头天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2170', '广州市', '天福', '便利店', 'C2广州天河东圃陂东天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2171', '广州市', '天福', '便利店', 'D2广州白云同和雄洲城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2173', '广州市', '天福', '便利店', 'D2广州白云嘉禾望岗地铁站天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2179', '广州市', '天福', '便利店', 'C2广州天河车陂路站天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2183', '广州市', '天福', '便利店', 'C2广州海珠晓港天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2185', '广州市', '天福', '便利店', 'C2增城新塘坭紫天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2188', '广州市', '天福', '便利店', 'D2广州白云江夏政昊天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2190', '广州市', '天福', '便利店', 'D2广州番禺市桥港禺坊天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2191', '广州市', '天福', '便利店', 'Q04广州海珠宝岗路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2192', '广州市', '天福', '便利店', 'C2广州海珠宝业路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2195', '广州市', '天福', '便利店', '广州白云太和大丰天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2196', '广州市', '天福', '便利店', 'D2广州白云嘉禾喜悦天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2197', '广州市', '天福', '便利店', 'C2广州天河龙洞迎龙路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2200', '广州市', '天福', '便利店', 'D2广州白云江夏大塘天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2213', '广州市', '天福', '便利店', 'D2广州番禺石基俊福天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2217', '广州市', '天福', '便利店', 'C2广州越秀金贵天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2219', '广州市', '天福', '便利店', 'C2广州天河体育东路金泽天福店T(JQ)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2225', '广州市', '天福', '便利店', 'D2广州白云石井广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2227', '广州市', '天福', '便利店', '广州海珠晓港中天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2232', '广州市', '天福', '便利店', 'C2广州海珠土华村华洲路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2235', '广州市', '天福', '便利店', 'D2广州白云人和东华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2236', '广州市', '天福', '便利店', 'Q1广州花都狮岭益和天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2237', '广州市', '天福', '便利店', 'D2广州白云夏茅公园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2238', '广州市', '天福', '便利店', 'C2海珠江南大道南丰瀛天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2240', '广州市', '天福', '便利店', 'Q2广州荔湾茶滘路恒朝天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2241', '广州市', '天福', '便利店', 'D2广州番禺大石建华路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2245', '广州市', '天福', '便利店', 'D2广州白云金沙洲沙贝天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2246', '广州市', '天福', '便利店', 'D2广州番禺易发天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2247', '广州市', '天福', '便利店', 'D2广州番禺石基金桥湾天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2248', '广州市', '天福', '便利店', 'D2广州白云太和大源林安天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2249', '广州市', '天福', '便利店', 'C2广州天河东圃旺旺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2258', '广州市', '天福', '便利店', 'C2广州天河棠下汇鑫天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2259', '广州市', '天福', '便利店', 'C2广州海珠康乐天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2260', '广州市', '天福', '便利店', 'C2广州海珠康乐桥品新天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2261', '广州市', '天福', '便利店', 'Q2广州黄埔康南路赢胜天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2262', '广州市', '天福', '便利店', 'D2广州白云永平天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2263', '广州市', '天福', '便利店', 'D2广州白云沙涌金来天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2266', '广州市', '天福', '便利店', 'D2广州番禺市莲石岗东天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2268', '广州市', '天福', '便利店', 'C2广州天河棠德南天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2269', '广州市', '天福', '便利店', 'C2广州越秀农林下路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2270', '广州市', '天福', '便利店', 'C2广州南沙金洲地铁口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2271', '广州市', '天福', '便利店', 'C2广州海珠客运站天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2277', '广州市', '天福', '便利店', 'Q2广州黄埔东联路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2279', '广州市', '天福', '便利店', 'C2增城新塘菜仔园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2280', '广州市', '天福', '便利店', 'D2广州白云太和天骄天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2282', '广州市', '天福', '便利店', 'D2广州白云江夏广云天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2283', '广州市', '天福', '便利店', 'D2广州番禺南郊市场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2285', '广州市', '天福', '便利店', 'C2广州天河车陂地铁口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2289', '广州市', '天福', '便利店', 'C2增城新塘官湖天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2291', '广州市', '天福', '便利店', 'C2增城新塘呀客天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2292', '广州市', '天福', '便利店', 'D2广州番禺禺山广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2296', '广州市', '天福', '便利店', 'C2广州天河荷光路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2297', '广州市', '天福', '便利店', 'D2广州白云远景路顺景天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2298', '广州市', '天福', '便利店', 'C2广州天河九龙城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2302', '广州市', '天福', '便利店', 'C2增城新塘世家天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2303', '广州市', '天福', '便利店', 'D2广州白云环滘金铂天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2305', '广州市', '天福', '便利店', 'C2广州海珠康乐长旺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2308', '广州市', '天福', '便利店', 'D2广州番禺市桥大发天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2316', '广州市', '天福', '便利店', 'D2广州白云嘉禾市场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2320', '广州市', '天福', '便利店', 'D2广州白云嘉禾富安天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2321', '广州市', '天福', '便利店', 'D2广州白云新市海德天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2331', '广州市', '天福', '便利店', 'D2广州白云京溪达成天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2335', '广州市', '天福', '便利店', 'D2广州白云人和地铁口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2336', '广州市', '天福', '便利店', 'Q1广州花都新华雅居乐汇通广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2337', '广州市', '天福', '便利店', 'C2广州天河大片路永旺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2339', '广州市', '天福', '便利店', 'D2广州白云鹤边西周天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2342', '广州市', '天福', '便利店', 'C2广州海珠鹭江旺财天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2343', '广州市', '天福', '便利店', 'Q2广州黄埔宽利天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2347', '广州市', '天福', '便利店', 'C2广州海珠鹭江华荣天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2355', '广州市', '天福', '便利店', 'D2广州白云同和白水塘天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2356', '广州市', '天福', '便利店', 'D2广州番禺大石大涌路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2363', '广州市', '天福', '便利店', 'D2广州番禺朝阳天福店T（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2367', '广州市', '天福', '便利店', 'C2广州天河棠下牌坊天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2368', '广州市', '天福', '便利店', 'D2广州番禺上漖天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2372', '广州市', '天福', '便利店', 'C2广州海珠六顺天福店天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2376', '广州市', '天福', '便利店', 'C2广州天河龙洞民乐天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2377', '广州市', '天福', '便利店', 'B4广州天河龙洞商业街天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2381', '广州市', '天福', '便利店', 'D2广州白云太和南岭龙岗天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2382', '广州市', '天福', '便利店', 'D2广州番禺市莲路金禺龙天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2387', '广州市', '天福', '便利店', 'C2广州荔湾西场地铁天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2392', '广州市', '天福', '便利店', 'D2广州白云嘉禾荷木岭天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2393', '广州市', '天福', '便利店', 'Q2广州白云嘉禾益民天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2397', '广州市', '天福', '便利店', 'Q4广州白云鹤边鹤鸣天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2403', '广州市', '天福', '便利店', 'C4增城新塘德燊天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2406', '广州市', '天福', '便利店', 'Q4广州番禺金亿广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2409', '广州市', '天福', '便利店', 'D2广州番禺市桥星海天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2418', '广州市', '天福', '便利店', 'Q4广州海珠石溪顺发天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2419', '广州市', '天福', '便利店', 'Q1增城荔城云山诗意天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2428', '广州市', '天福', '便利店', 'Q4广州白云嘉禾竹仔园阳光天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2429', '广州市', '天福', '便利店', 'Q4广州南沙四季荟分天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2430', '广州市', '天福', '便利店', 'Q4广州白云人和富和天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2436', '广州市', '天福', '便利店', 'Q4广州天河上社Ｅ家天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2439', '广州市', '天福', '便利店', 'Q4广州番禺大龙昊信天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2448', '广州市', '天福', '便利店', 'Q4广州白云太和彭城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2449', '广州市', '天福', '便利店', 'Q4广州白云长红双和天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2450', '广州市', '天福', '便利店', 'Q2广州白云棠下棠景天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2452', '广州市', '天福', '便利店', 'Q2广州天河龙洞地铁口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2453', '广州市', '天福', '便利店', 'Q2广州白云松柏东街汇客多天福店T(JQ)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2455', '广州市', '天福', '便利店', 'Q1广州花都狮岭城市广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2456', '广州市', '天福', '便利店', 'Q3广州花都新华银燕天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2457', '广州市', '天福', '便利店', 'Q2广州番禺祈福天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2458', '广州市', '天福', '便利店', 'Q4广州越秀广园路天福店T（JQ）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2459', '广州市', '天福', '便利店', 'Q2广州白云松南骏景天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2460', '广州市', '天福', '便利店', '广州番禺石岗天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2461', '广州市', '天福', '便利店', 'Q2广州番禺君御酒店天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2476', '广州市', '天福', '便利店', 'Q2广州番禺奥园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2477', '广州市', '天福', '便利店', 'Q2广州白云清湖村天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2478', '广州市', '天福', '便利店', 'Q2广州白云永泰地铁口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2479', '广州市', '天福', '便利店', 'Q1广州花都新华团结天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2480', '广州市', '天福', '便利店', 'Q2广州海珠文华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2481', '广州市', '天福', '便利店', 'Q2广州番禺大石惠民天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2482', '广州市', '天福', '便利店', 'Q2广州白云鹤边广发天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2483', '广州市', '天福', '便利店', 'Q2广州天河车陂地铁Ｃ出口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2485', '广州市', '天福', '便利店', 'Q2广州海珠江燕路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2486', '广州市', '天福', '便利店', 'Q2广州番禺南村鑫隆天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2489', '广州市', '天福', '便利店', 'Q2广州黄埔荔联天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2550', '广州市', '天福', '便利店', 'Q2广州越秀三育路天福店T(JQ)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2551', '广州市', '天福', '便利店', 'Q2广州白云京溪德裕天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2552', '广州市', '天福', '便利店', 'Q1广州花都狮岭丽莎广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2553', '广州市', '天福', '便利店', 'Q2广州海珠张春元天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2555', '广州市', '天福', '便利店', 'Q1广州花都狮岭益民天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2556', '广州市', '天福', '便利店', 'B2广州白云石井庆丰广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2557', '广州市', '天福', '便利店', 'Q2广州番禺榄塘村景茂天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2558', '广州市', '天福', '便利店', 'Q2广州白云祥岗家旺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2559', '广州市', '天福', '便利店', 'Q2广州白云太和镇大源德鑫天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2560', '广州市', '天福', '便利店', 'Q1广州花都狮岭阳光广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2561', '广州市', '天福', '便利店', 'Q2广州白云沙涌世纪天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2562', '广州市', '天福', '便利店', 'Q2广州天河龙洞北门天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2580', '广州市', '天福', '便利店', 'Q2广州天河长兴路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2581', '广州市', '天福', '便利店', 'Q2广州海珠盈丰路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2582', '广州市', '天福', '便利店', 'Q2广州白云棠溪鸿盛天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2583', '广州市', '天福', '便利店', 'Q2广州海珠翠宝路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2585', '广州市', '天福', '便利店', 'Q2广州白云平沙富力天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2586', '广州市', '天福', '便利店', 'Q2广州白云萧岗光明天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2587', '广州市', '天福', '便利店', 'Q2广州萝岗珠江嘉园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2588', '广州市', '天福', '便利店', 'Q2广州白云嘉禾广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2589', '广州市', '天福', '便利店', 'Q2广州天河中山大道天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2590', '广州市', '天福', '便利店', 'B02广州天河华观路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2591', '广州市', '天福', '便利店', 'B4广州天河石牌东天福店T(CWDS)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2592', '广州市', '天福', '便利店', 'Q1广州花都区狮岭金程天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2593', '广州市', '天福', '便利店', 'B2广州番禺厦滘芒果天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2595', '广州市', '天福', '便利店', 'Q2广州越秀富港天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2606', '广州市', '天福', '便利店', 'Q2广州白云嘉禾七星岗星悦天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2608', '广州市', '天福', '便利店', 'Q2广州番禺洛浦街南浦沿沙天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2609', '广州市', '天福', '便利店', 'Q2广州番禺傍江天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2610', '广州市', '天福', '便利店', 'Q2广州白云永泰永康天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2611', '广州市', '天福', '便利店', 'B4广州天河石马大街天福店T（CWDS）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2612', '广州市', '天福', '便利店', 'Q2广州天河员村东城花苑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2613', '广州市', '天福', '便利店', 'C4广州番禺南大路百世家居天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2615', '广州市', '天福', '便利店', 'B4广州花都狮岭振兴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2616', '广州市', '天福', '便利店', 'Q2广州白云棠溪斯特威天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2637', '广州市', '天福', '便利店', 'Q2广州萝岗迪诺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2639', '广州市', '天福', '便利店', 'Q2增城永和刘慧慧天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2646', '广州市', '天福', '便利店', 'B4广州白云新市乐嘉广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2678', '广州市', '天福', '便利店', 'B2广州番禺沙西幸福天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2679', '广州市', '天福', '便利店', 'B4广州海珠区江南大道南天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2680', '广州市', '天福', '便利店', 'B4广州白云京溪云景天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2681', '广州市', '天福', '便利店', 'B4广州天河盈紫天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2682', '广州市', '天福', '便利店', 'C4广州黄埔下沙天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2683', '广州市', '天福', '便利店', 'B4广州天河学燕街广隆天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2685', '广州市', '天福', '便利店', 'B3广州花都狮岭联合天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2686', '广州市', '天福', '便利店', 'B3广州花都新华公园前天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2687', '广州市', '天福', '便利店', 'B3广州花都狮岭友田天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2689', '广州市', '天福', '便利店', 'C4广州荔湾东方街市天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2690', '广州市', '天福', '便利店', 'B4广州天河车陂荔枝园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2691', '广州市', '天福', '便利店', 'B4广州白云永泰翔云天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2692', '广州市', '天福', '便利店', 'B4广州白云集贤庄百世天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2738', '广州市', '天福', '便利店', 'C4增城新塘星晴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2741', '广州市', '天福', '便利店', 'B2广州天河棠下上社天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2757', '广州市', '天福', '便利店', 'B2广州天河棠东东路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2758', '广州市', '天福', '便利店', 'B1广州花都新华曙光天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2759', '广州市', '天福', '便利店', 'B1广州花都新华桂花天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2760', '广州市', '天福', '便利店', 'B2广州南沙金洲天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2761', '广州市', '天福', '便利店', 'B2广州番禺豪盛天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2762', '广州市', '天福', '便利店', 'Q1广州花都新华碧秀花园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2763', '广州市', '天福', '便利店', 'B2广州白云沙涌景秀天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2765', '广州市', '天福', '便利店', 'B2广州番禺桥富华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2766', '广州市', '天福', '便利店', 'B2广州海珠赤岗天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2767', '广州市', '天福', '便利店', 'B1广州花都新华云港天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2768', '广州市', '天福', '便利店', 'B2广州黄埔汇客多天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2769', '广州市', '天福', '便利店', 'B2广州番禺环城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2770', '广州市', '天福', '便利店', 'B2广州南沙滨海天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2771', '广州市', '天福', '便利店', '广州天河龙洞迎福路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2772', '广州市', '天福', '便利店', 'B1广州花都新华龙珠天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2773', '广州市', '天福', '便利店', 'B2广州黄埔锐丰广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2775', '广州市', '天福', '便利店', 'B2广州白云鹤边鹤龙天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2827', '广州市', '天福', '便利店', 'B2广州天河文昌天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2828', '广州市', '天福', '便利店', 'B2广州海珠万胜围天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2829', '广州市', '天福', '便利店', 'B2广州白云京溪春兰花园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2830', '广州市', '天福', '便利店', 'B1广州花都新华万达天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2831', '广州市', '天福', '便利店', 'B2广州白云同和兴辉天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2832', '广州市', '天福', '便利店', 'B2广州番禺顺鑫天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2833', '广州市', '天福', '便利店', 'B1广州花都狮岭合成天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2835', '广州市', '天福', '便利店', 'B2广州番禺沙溪东华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2836', '广州市', '天福', '便利店', 'B2广州白云人和鸿程天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2837', '广州市', '天福', '便利店', 'B2广州白云钟落潭钟升路天福店T(CWDS)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2838', '广州市', '天福', '便利店', 'B2广州天河世佳天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2839', '广州市', '天福', '便利店', 'B2广州黄埔大沙地天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2840', '广州市', '天福', '便利店', 'C2广州天河兴华DL天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2841', '广州市', '天福', '便利店', 'B02广州天河员村天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2842', '广州市', '天福', '便利店', 'B2广州天河美林天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2843', '广州市', '天福', '便利店', 'B02广州黄埔苏宁天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2845', '广州市', '天福', '便利店', 'B2广州番禺塘步天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2846', '广州市', '天福', '便利店', 'B2广州海珠大塘天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2850', '广州市', '天福', '便利店', 'B2广州白云陈田中街天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2851', '广州市', '天福', '便利店', 'B2广州南沙海傍A出口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2852', '广州市', '天福', '便利店', 'B02广州白云太和敏捷科创天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2853', '广州市', '天福', '便利店', 'B02广州南沙万达广场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2855', '广州市', '天福', '便利店', 'B2广州番禺大石城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2886', '广州市', '天福', '便利店', 'B02广州海珠哇迪天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2888', '广州市', '天福', '便利店', 'B02广州越秀双利天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2889', '广州市', '天福', '便利店', 'B02广州天河水晶天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2891', '广州市', '天福', '便利店', 'B02广州天河友谊天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2892', '广州市', '天福', '便利店', 'C2广州天河玉富天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2893', '广州市', '天福', '便利店', 'B02广州海珠金丰花园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2895', '广州市', '天福', '便利店', 'C2广州荔湾荣立天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2896', '广州市', '天福', '便利店', 'B02广州天河荷光天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2897', '广州市', '天福', '便利店', 'B02广州花都新华秀林天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2898', '广州市', '天福', '便利店', 'B02广州海珠恒铁天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2899', '广州市', '天福', '便利店', 'B02广州黄埔下沙西街天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2900', '广州市', '天福', '便利店', 'B02广州白云彭边纪梵天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2901', '广州市', '天福', '便利店', 'B02广州天河金来天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2902', '广州市', '天福', '便利店', 'D2广州白云夏茅拾社天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2903', '广州市', '天福', '便利店', 'C2广州南沙盛世天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2905', '广州市', '天福', '便利店', 'C2广州天河沙东天福店T（13点后）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2919', '广州市', '天福', '便利店', 'B02广州白云萝岗村中源天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2920', '广州市', '天福', '便利店', 'D1广州白云同和合一天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2921', '广州市', '天福', '便利店', 'C2广州天河百合天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2922', '广州市', '天福', '便利店', 'C2广州天河发江天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2923', '广州市', '天福', '便利店', '广州白云欣凯天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2927', '广州市', '天福', '便利店', 'B02增城新塘东坑天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2928', '广州市', '天福', '便利店', 'B02增城新塘新沙天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2950', '广州市', '天福', '便利店', 'C2增城新塘牛仔城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2979', '广州市', '天福', '便利店', 'D2广州番禺沙圩市场天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2980', '广州市', '天福', '便利店', 'D2广州白云永泰金骊天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2981', '广州市', '天福', '便利店', 'D2广州番禺里仁洞彬彬天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2982', '广州市', '天福', '便利店', 'Q1广州花都花东中花天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2983', '广州市', '天福', '便利店', 'D2广州白云嘉禾望岗德馨天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2985', '广州市', '天福', '便利店', 'C2广州海珠福政天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2986', '广州市', '天福', '便利店', 'C2广州天河星东天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2987', '广州市', '天福', '便利店', 'D2广州白云横滘清平天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2988', '广州市', '天福', '便利店', 'D2广州白云棠溪新鸿运天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2989', '广州市', '天福', '便利店', 'Q1广州花都新华嘉逸华庭天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T2991', '广州市', '天福', '便利店', 'Q1广州花都新华凤华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990239', '深圳市', '天福', '便利店', '深圳福永新田天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990255', '深圳市', '天福', '便利店', 'S459深圳龙岗塞纳时光天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990271', '深圳市', '天福', '便利店', '深圳沙井西环天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990507', '深圳市', '天福', '便利店', '深圳公明锦鸿天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990508', '深圳市', '天福', '便利店', 'S2深圳西乡南昌天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990509', '深圳市', '天福', '便利店', 'J1深圳沙井友诚天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990510', '深圳市', '天福', '便利店', 'S2深圳西乡客隆天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990540', '深圳市', '天福', '便利店', 'J1深圳沙井锦锋天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990542', '深圳市', '天福', '便利店', '深圳福永永福天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990545', '深圳市', '天福', '便利店', 'S2深圳宝安兴旺天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990546', '深圳市', '天福', '便利店', '深圳龙华幸福天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990547', '深圳市', '天福', '便利店', '深圳坂田雨琪天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990720', '深圳市', '天福', '便利店', '深圳大鹏同富天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990721', '深圳市', '天福', '便利店', '深圳横岗西坑宏发天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T990723', '深圳市', '天福', '便利店', '深圳福永阳光天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T991896', '深圳市', '天福', '便利店', 'S1深圳公明东城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992488', '深圳市', '天福', '便利店', 'S1深圳公明祥韵天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992490', '深圳市', '天福', '便利店', 'S1深圳石岩石龙仔天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992491', '深圳市', '天福', '便利店', 'J1深圳沙井嘉濠天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992492', '深圳市', '天福', '便利店', 'S2深圳宝安上川天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992493', '深圳市', '天福', '便利店', 'S1深圳龙华伍屋天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992495', '深圳市', '天福', '便利店', 'S1深圳石岩福景天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992496', '深圳市', '天福', '便利店', 'J1深圳沙井麒麟天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992536', '深圳市', '天福', '便利店', 'J1深圳福永合成业天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992537', '深圳市', '天福', '便利店', 'J1深圳福永桥塘天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992538', '深圳市', '天福', '便利店', 'J1深圳沙井皇朝天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992539', '深圳市', '天福', '便利店', 'S1深圳龙岗蓝钻富盈天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992540', '深圳市', '天福', '便利店', 'S1深圳横岗小林天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992541', '深圳市', '天福', '便利店', 'J1深圳沙井新桥豪苑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992542', '深圳市', '天福', '便利店', 'S1深圳石岩华仔天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992543', '深圳市', '天福', '便利店', 'S1深圳坪地东兴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992545', '深圳市', '天福', '便利店', 'S1深圳光明新学海天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992546', '深圳市', '天福', '便利店', 'S1深圳坂田富佳天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992547', '深圳市', '天福', '便利店', 'S1深圳坂田发达天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992548', '深圳市', '天福', '便利店', 'S1深圳龙华宝湖天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992549', '深圳市', '天福', '便利店', 'S2深圳西乡固戍和谐天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992607', '深圳市', '天福', '便利店', 'S1深圳石岩万信达天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992649', '深圳市', '天福', '便利店', 'S1深圳坪山沙博天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992650', '深圳市', '天福', '便利店', 'S1深圳公明秋园雅苑天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992651', '深圳市', '天福', '便利店', 'S1深圳龙华上油松天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992652', '深圳市', '天福', '便利店', 'S2深圳西乡九五天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992653', '深圳市', '天福', '便利店', 'J1深圳福永世坤天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992655', '深圳市', '天福', '便利店', 'S2深圳西乡鸿业天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992656', '深圳市', '天福', '便利店', 'J1深圳松岗南岸天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992698', '深圳市', '天福', '便利店', 'J1深圳沙井汇聚天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992699', '深圳市', '天福', '便利店', 'S1深圳观澜新田天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992700', '深圳市', '天福', '便利店', 'S1深圳观澜河东天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992701', '深圳市', '天福', '便利店', 'S1深圳龙岗惠民天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992702', '深圳市', '天福', '便利店', 'S2深圳宝安宝民二路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992703', '深圳市', '天福', '便利店', 'J1深圳沙井合一天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992705', '深圳市', '天福', '便利店', 'S2深圳西乡固戍茶树天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992706', '深圳市', '天福', '便利店', 'S2深圳南山世纪天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992707', '深圳市', '天福', '便利店', 'S1深圳龙岗龙福天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992708', '深圳市', '天福', '便利店', 'S2深圳西乡华盛辉天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992709', '深圳市', '天福', '便利店', 'S1深圳大鹏海边天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992783', '深圳市', '天福', '便利店', 'S1深圳大鹏康顺天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992785', '深圳市', '天福', '便利店', 'S2深圳西乡天天天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992786', '深圳市', '天福', '便利店', 'S2深圳西乡固戍超虹天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992788', '深圳市', '天福', '便利店', 'J1深圳松岗平安天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992789', '深圳市', '天福', '便利店', 'S1深圳民治创业天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992790', '深圳市', '天福', '便利店', 'J1深圳沙井幸福天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992791', '深圳市', '天福', '便利店', 'J1深圳松岗琥珀天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992793', '深圳市', '天福', '便利店', 'J1深圳福永新华天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992819', '深圳市', '天福', '便利店', 'S2深圳宝安乐安天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992820', '深圳市', '天福', '便利店', 'S1深圳龙华玉翠天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992821', '深圳市', '天福', '便利店', 'S2深圳南山地铁站天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992822', '深圳市', '天福', '便利店', 'S2深圳西乡固戍红湾天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992823', '深圳市', '天福', '便利店', 'S01深圳公明中记天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992825', '深圳市', '天福', '便利店', 'S1深圳公明榕新天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992826', '深圳市', '天福', '便利店', 'S2深圳宝安灵芝地铁站天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992878', '深圳市', '天福', '便利店', 'S01深圳公明金宝天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992879', '深圳市', '天福', '便利店', 'S1深圳石岩新合发天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992880', '深圳市', '天福', '便利店', 'S01深圳民治万众天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992881', '深圳市', '天福', '便利店', 'J1深圳福永塘尾荔园天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992882', '深圳市', '天福', '便利店', 'S01深圳石岩喜源天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992883', '深圳市', '天福', '便利店', 'J1深圳松岗宏海天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992885', '深圳市', '天福', '便利店', 'S01深圳公明家好天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992930', '深圳市', '天福', '便利店', 'J1深圳福永永红天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992931', '深圳市', '天福', '便利店', 'S1深圳石岩名久天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992932', '深圳市', '天福', '便利店', 'S1深圳龙岗添财天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992933', '深圳市', '天福', '便利店', 'S1深圳龙岗银生天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992935', '深圳市', '天福', '便利店', 'S1深圳公明旭洋天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992936', '深圳市', '天福', '便利店', 'J1深圳松岗友善天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992937', '深圳市', '天福', '便利店', 'S1深圳石岩福景晟睿天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992938', '深圳市', '天福', '便利店', 'S1深圳公明楼村天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992939', '深圳市', '天福', '便利店', 'S1深圳公明美域天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T992940', '深圳市', '天福', '便利店', 'S2深圳宝安盛世天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T995161', '深圳市', '天福', '便利店', '深圳横岗发财天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T995162', '深圳市', '天福', '便利店', '深圳南山增运天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997001', '深圳市', '天福', '便利店', 'S1深圳民治地铁站天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997002', '深圳市', '天福', '便利店', 'S1深圳龙岗南联龙园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997003', '深圳市', '天福', '便利店', 'S2深圳西乡瑞尚居天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997007', '深圳市', '天福', '便利店', 'S1深圳布吉长盛天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997008', '深圳市', '天福', '便利店', 'S000深圳南山西丽天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997009', '深圳市', '天福', '便利店', '深圳布吉西门街天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997010', '深圳市', '天福', '便利店', 'S2深圳罗湖田心天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997011', '深圳市', '天福', '便利店', '深圳福永龙翔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997012', '深圳市', '天福', '便利店', '深圳松岗曙光天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997013', '深圳市', '天福', '便利店', 'S518深圳福田新兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997015', '深圳市', '天福', '便利店', 'S514深圳罗湖湘薇天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997016', '深圳市', '天福', '便利店', '深圳布吉长龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997017', '深圳市', '天福', '便利店', 'J1深圳福永下十围天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997018', '深圳市', '天福', '便利店', '深圳南山永丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997020', '深圳市', '天福', '便利店', '深圳坂田雪象天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997022', '深圳市', '天福', '便利店', '深圳布吉龙岭天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997023', '深圳市', '天福', '便利店', '深圳福永金域豪庭天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997026', '深圳市', '天福', '便利店', '深圳罗湖长排天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997027', '深圳市', '天福', '便利店', '深圳布吉沙塘布天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997028', '深圳市', '天福', '便利店', '深圳沙井大王山诚信天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997029', '深圳市', '天福', '便利店', '深圳罗湖马山天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997030', '深圳市', '天福', '便利店', 'S1深圳龙华鹊山天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997031', '深圳市', '天福', '便利店', '深圳布吉锦绣新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997032', '深圳市', '天福', '便利店', '深圳平湖吉平天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997033', '深圳市', '天福', '便利店', '深圳布吉三联天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997035', '深圳市', '天福', '便利店', 'S2深圳南山俊辉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997036', '深圳市', '天福', '便利店', 'J1深圳松岗罗田天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997038', '深圳市', '天福', '便利店', '深圳坪地振鹏天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997039', '深圳市', '天福', '便利店', 'J1深圳福永芳华天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997041', '深圳市', '天福', '便利店', 'S1深圳布吉龙发天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997042', '深圳市', '天福', '便利店', '深圳布吉吉盛天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997043', '深圳市', '天福', '便利店', '深圳福永湘益天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997045', '深圳市', '天福', '便利店', '深圳福永如意天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997046', '深圳市', '天福', '便利店', '深圳福永新和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997047', '深圳市', '天福', '便利店', '深圳横岗和平天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997048', '深圳市', '天福', '便利店', 'S2深圳松岗天泰天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997049', '深圳市', '天福', '便利店', 'S1深圳石岩新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997050', '深圳市', '天福', '便利店', '深圳横岗贤东天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997051', '深圳市', '天福', '便利店', 'J1深圳福永欢欢天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997052', '深圳市', '天福', '便利店', 'S419深圳观澜锦鲤天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997053', '深圳市', '天福', '便利店', '深圳布吉大靓花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997055', '深圳市', '天福', '便利店', 'S1深圳平湖慧灵天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997056', '深圳市', '天福', '便利店', '深圳福永机场天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997057', '深圳市', '天福', '便利店', '深圳宝安上合天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997058', '深圳市', '天福', '便利店', '深圳福永塘尾金海天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997059', '深圳市', '天福', '便利店', 'S1深圳龙岗金桥天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997060', '深圳市', '天福', '便利店', '深圳沙井美邦天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997061', '深圳市', '天福', '便利店', '深圳沙井东塘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997062', '深圳市', '天福', '便利店', '深圳坂田雅园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997063', '深圳市', '天福', '便利店', '深圳石岩塘头大道繁荣天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997065', '深圳市', '天福', '便利店', '深圳龙华富豪新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997066', '深圳市', '天福', '便利店', 'S1深圳布吉守业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997067', '深圳市', '天福', '便利店', '深圳观澜旭玫天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997068', '深圳市', '天福', '便利店', '深圳龙岗福林天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997069', '深圳市', '天福', '便利店', 'S2深圳宝安好百事天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997070', '深圳市', '天福', '便利店', '深圳龙华谭罗天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997072', '深圳市', '天福', '便利店', '深圳布吉俊业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997073', '深圳市', '天福', '便利店', 'S392深圳宝安宝石天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997075', '深圳市', '天福', '便利店', 'S446深圳宝安布心天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997076', '深圳市', '天福', '便利店', '深圳福永阿王天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997077', '深圳市', '天福', '便利店', '深圳宝安兴华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997078', '深圳市', '天福', '便利店', 'J1深圳福永翠岗天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997079', '深圳市', '天福', '便利店', '深圳宝安流塘三友天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997080', '深圳市', '天福', '便利店', '深圳宝安海乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997081', '深圳市', '天福', '便利店', '深圳龙岗三和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997082', '深圳市', '天福', '便利店', '深圳布吉三联龙颈新村红翻天天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997083', '深圳市', '天福', '便利店', '深圳公明玉律天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997085', '深圳市', '天福', '便利店', '深圳龙岗坪山六联天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997086', '深圳市', '天福', '便利店', 'S1深圳布吉下水径新村文静天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997087', '深圳市', '天福', '便利店', '深圳西乡共乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997088', '深圳市', '天福', '便利店', '深圳松岗富塘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997089', '深圳市', '天福', '便利店', 'S2深圳南山西丽平山天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997090', '深圳市', '天福', '便利店', '深圳福永塘尾万昌隆天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997091', '深圳市', '天福', '便利店', 'S2深圳南山西丽大磡村轩琪天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997092', '深圳市', '天福', '便利店', '深圳龙岗龙富花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997093', '深圳市', '天福', '便利店', '深圳坂田天顺天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997095', '深圳市', '天福', '便利店', '深圳光明圳美同发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997096', '深圳市', '天福', '便利店', 'S2深圳南山西丽文光天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997097', '深圳市', '天福', '便利店', '深圳坂田天安天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997098', '深圳市', '天福', '便利店', 'S331深圳布吉三联出头龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997099', '深圳市', '天福', '便利店', 'S1深圳龙华腾龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971000', '深圳市', '天福', '便利店', 'S1深圳公明启航天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971001', '深圳市', '天福', '便利店', 'S1深圳公明玉律天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971002', '深圳市', '天福', '便利店', 'S2深圳宝安宝福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971003', '深圳市', '天福', '便利店', 'S1深圳龙岗深裕兴天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971005', '深圳市', '天福', '便利店', 'J1深圳福永怀德天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971006', '深圳市', '天福', '便利店', 'S1深圳石岩黎光天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971007', '深圳市', '天福', '便利店', 'S1深圳公明鑫旺天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971008', '深圳市', '天福', '便利店', 'S1深圳公明麒麟天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971009', '深圳市', '天福', '便利店', 'S06深圳福永凤凰小学天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997101', '深圳市', '天福', '便利店', '深圳观澜大水坑劭君天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971010', '深圳市', '天福', '便利店', 'S216深圳福永塘尾得旺天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971011', '深圳市', '天福', '便利店', 'S016深圳松岗山门天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971012', '深圳市', '天福', '便利店', 'J1深圳沙井上南万福天福（T）(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971013', '深圳市', '天福', '便利店', 'J1深圳松岗鑫鑫天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971015', '深圳市', '天福', '便利店', 'S2深圳西乡常盛天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971016', '深圳市', '天福', '便利店', 'S023深圳公明根竹园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971017', '深圳市', '天福', '便利店', 'S360深圳西乡智谷天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971018', '深圳市', '天福', '便利店', 'S1深圳公明圳美家家乐天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971019', '深圳市', '天福', '便利店', 'J1深圳福永白石厦汉永天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997102', '深圳市', '天福', '便利店', '深圳西乡茂业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971020', '深圳市', '天福', '便利店', 'S239深圳龙华腾龙天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971021', '深圳市', '天福', '便利店', 'S146深圳沙井金沙天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971022', '深圳市', '天福', '便利店', 'S2深圳宝安永联天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971023', '深圳市', '天福', '便利店', 'S1深圳平湖裕和天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971025', '深圳市', '天福', '便利店', 'S1深圳公明万家福天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971026', '深圳市', '天福', '便利店', 'S1深圳龙岗南联利源天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971027', '深圳市', '天福', '便利店', '深圳观澜超兴天天旺天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971028', '深圳市', '天福', '便利店', 'S1深圳石岩车站天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971029', '深圳市', '天福', '便利店', 'S1深圳大浪景顺天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997103', '深圳市', '天福', '便利店', '深圳布吉新民天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971030', '深圳市', '天福', '便利店', '深圳公明李松朗天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971031', '深圳市', '天福', '便利店', 'S1深圳坂田光发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971032', '深圳市', '天福', '便利店', 'S048深圳松岗南岸天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971033', '深圳市', '天福', '便利店', 'S1深圳公明塘尾后底园天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971035', '深圳市', '天福', '便利店', 'S156深圳沙井金李天福T(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971036', '深圳市', '天福', '便利店', 'J1深圳松岗鑫鑫天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971037', '深圳市', '天福', '便利店', 'S2深圳西乡黄田草围天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971038', '深圳市', '天福', '便利店', 'S2深圳南山丁头天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971039', '深圳市', '天福', '便利店', 'S1深圳坪山新区坑梓金田风华苑天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971040', '深圳市', '天福', '便利店', 'S2深圳宝安流塘佳豪天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971041', '深圳市', '天福', '便利店', 'S1深圳龙岗南联城南雅筑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971042', '深圳市', '天福', '便利店', 'S1深圳公明新围长乐天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971043', '深圳市', '天福', '便利店', '深圳石岩塘头天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971045', '深圳市', '天福', '便利店', 'S2深圳西乡万菱天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971047', '深圳市', '天福', '便利店', 'J1深圳沙井阳新天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971048', '深圳市', '天福', '便利店', 'S1深圳民治白石龙一区天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971049', '深圳市', '天福', '便利店', 'J1深圳沙井恒源天福T(（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997105', '深圳市', '天福', '便利店', '深圳坂田中心围天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971050', '深圳市', '天福', '便利店', 'S108深圳沙井传承天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971051', '深圳市', '天福', '便利店', 'S1深圳平湖利君天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971052', '深圳市', '天福', '便利店', 'S2深圳西乡铁岗好运来天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971053', '深圳市', '天福', '便利店', 'S1深圳坪山竹坑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971055', '深圳市', '天福', '便利店', 'S1深圳公明塘家王记天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971056', '深圳市', '天福', '便利店', 'S077深圳公明田寮新新天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971057', '深圳市', '天福', '便利店', 'S1深圳公明合水口天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971059', '深圳市', '天福', '便利店', 'S4深圳福永第一外国语学校天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997106', '深圳市', '天福', '便利店', 'S1深圳布吉沙湾蓝天天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971061', '深圳市', '天福', '便利店', 'S1深圳平湖中学天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971062', '深圳市', '天福', '便利店', 'J1深圳松岗盛世天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971063', '深圳市', '天福', '便利店', 'S1深圳公明一兴天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971065', '深圳市', '天福', '便利店', 'S1深圳公明正标天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971066', '深圳市', '天福', '便利店', 'J1深圳沙井龍记天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971067', '深圳市', '天福', '便利店', '深圳福永凤凰学校天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971068', '深圳市', '天福', '便利店', 'S01深圳公明田寮文明天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971069', '深圳市', '天福', '便利店', 'S2深圳西乡金雅园天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997107', '深圳市', '天福', '便利店', 'S112深圳沙井步涌福鑫天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971070', '深圳市', '天福', '便利店', 'S1深圳龙岗飞扬天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971071', '深圳市', '天福', '便利店', 'S2深圳西乡九围天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971072', '深圳市', '天福', '便利店', 'S1深圳坂田麒麟天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971073', '深圳市', '天福', '便利店', 'J1深圳沙井北亭天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971075', '深圳市', '天福', '便利店', 'J1深圳沙井星城天福T(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971076', '深圳市', '天福', '便利店', 'S2深圳西乡鹤州新村天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971077', '深圳市', '天福', '便利店', 'J1深圳福永凤凰天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971078', '深圳市', '天福', '便利店', 'S2深圳西乡固戍佑天天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971079', '深圳市', '天福', '便利店', 'S1深圳石岩塘头路口天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997108', '深圳市', '天福', '便利店', '深圳沙井和一新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971080', '深圳市', '天福', '便利店', 'S1深圳公明东隆天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971081', '深圳市', '天福', '便利店', 'S1深圳观澜金湖湾天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971082', '深圳市', '天福', '便利店', 'S2深圳南山大冲天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971083', '深圳市', '天福', '便利店', 'J1深圳沙井兴华鸿天福*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971085', '深圳市', '天福', '便利店', 'S1深圳龙华汇海天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971086', '深圳市', '天福', '便利店', 'S2深圳西乡共乐天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971087', '深圳市', '天福', '便利店', 'S1深圳布吉三联天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971088', '深圳市', '天福', '便利店', 'S1深圳龙华山咀头天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971089', '深圳市', '天福', '便利店', 'J1深圳福永凤凰天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997109', '深圳市', '天福', '便利店', 'S359深圳布吉宏业新村天福*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971090', '深圳市', '天福', '便利店', 'S2深圳西乡银田天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971091', '深圳市', '天福', '便利店', 'S2深圳南山西丽宝明天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971092', '深圳市', '天福', '便利店', 'S2深圳罗湖莲塘佑米天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971093', '深圳市', '天福', '便利店', 'J1深圳福永恒荣天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971095', '深圳市', '天福', '便利店', 'S1深圳坂田利金城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971097', '深圳市', '天福', '便利店', 'S1深圳民治樟坑天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971098', '深圳市', '天福', '便利店', 'S1深圳公明楼村小学天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971099', '深圳市', '天福', '便利店', 'J1深圳沙井马安山天福店T(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997110', '深圳市', '天福', '便利店', 'S107深圳石岩田心阿牛天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971100', '深圳市', '天福', '便利店', 'S2深圳西乡固戍绵商大厦天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971101', '深圳市', '天福', '便利店', 'S1深圳盐田海滨假日天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971102', '深圳市', '天福', '便利店', 'S2深圳福永福园天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971103', '深圳市', '天福', '便利店', 'S14深圳南山城市花园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971105', '深圳市', '天福', '便利店', 'S2深圳西乡盐田天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971106', '深圳市', '天福', '便利店', 'J1深圳福永桥南地铁口天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971107', '深圳市', '天福', '便利店', 'S1深圳石岩青年天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971108', '深圳市', '天福', '便利店', 'S1深圳龙岗联和天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971109', '深圳市', '天福', '便利店', 'S1深圳龙华乐华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997111', '深圳市', '天福', '便利店', 'S1深圳石岩昌盛天福(大车)T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971110', '深圳市', '天福', '便利店', 'S1深圳公明好根天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971111', '深圳市', '天福', '便利店', 'J1深圳福永仙一品天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971113', '深圳市', '天福', '便利店', 'S1深圳公明雄伟天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971115', '深圳市', '天福', '便利店', 'S2深圳西乡中信领航天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971116', '深圳市', '天福', '便利店', 'S1深圳公明南庄天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971117', '深圳市', '天福', '便利店', 'S1深圳龙华旺中旺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971118', '深圳市', '天福', '便利店', 'S1深圳公明甲子塘天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971119', '深圳市', '天福', '便利店', 'J1深圳沙井千福天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997112', '深圳市', '天福', '便利店', 'S488深圳南山西丽茶光天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971120', '深圳市', '天福', '便利店', 'J1深圳沙井凤凰大厦天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971121', '深圳市', '天福', '便利店', 'S1深圳坂田五和地铁口天福店T（坡）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971122', '深圳市', '天福', '便利店', '深圳布吉恒源天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971123', '深圳市', '天福', '便利店', 'J1深圳沙井鸿鹏天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971126', '深圳市', '天福', '便利店', 'S1深圳大浪同胜小区天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971127', '深圳市', '天福', '便利店', 'S04深圳沙井千禧天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971128', '深圳市', '天福', '便利店', 'S01深圳公明贵源天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971129', '深圳市', '天福', '便利店', 'S2深圳西乡鼎鼎天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997113', '深圳市', '天福', '便利店', '深圳福永福海天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971130', '深圳市', '天福', '便利店', 'S1深圳平湖北门街天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971131', '深圳市', '天福', '便利店', 'S1深圳平湖平园天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971132', '深圳市', '天福', '便利店', 'S1深圳平湖高原天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971133', '深圳市', '天福', '便利店', 'J1深圳沙井新凯佳天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971136', '深圳市', '天福', '便利店', 'S2深圳西乡钟屋天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971137', '深圳市', '天福', '便利店', 'S1深圳公明玉律众兴隆天福店T(带小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971138', '深圳市', '天福', '便利店', 'S1深圳民治岁宝天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971139', '深圳市', '天福', '便利店', 'S1深圳龙岗信息职业技术学院1号天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971140', '深圳市', '天福', '便利店', 'S1深圳龙岗信息职业技术学院2号天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971141', '深圳市', '天福', '便利店', 'S1深圳龙岗信息职业技术学院3号天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971142', '深圳市', '天福', '便利店', 'S1深圳盐田蓝郡西堤天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971143', '深圳市', '天福', '便利店', 'S2深圳宝安流塘阳光旗舰天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971145', '深圳市', '天福', '便利店', '深圳龙华共和天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971146', '深圳市', '天福', '便利店', 'S2深圳沙井万丰天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971147', '深圳市', '天福', '便利店', 'S2深圳西乡固戍宏兴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971148', '深圳市', '天福', '便利店', '深圳西乡盐田金海天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971149', '深圳市', '天福', '便利店', 'S08深圳西乡华侨新村天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997115', '深圳市', '天福', '便利店', 'S2深圳宝安流塘阳光天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971150', '深圳市', '天福', '便利店', 'J1深圳沙井芙蓉天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971152', '深圳市', '天福', '便利店', 'J1深圳松岗福兴天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971153', '深圳市', '天福', '便利店', '深圳南山西丽丽河天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971155', '深圳市', '天福', '便利店', 'S3深圳公明圳美天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971156', '深圳市', '天福', '便利店', 'S1深圳大鹏新区佳兆业天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971157', '深圳市', '天福', '便利店', 'S1深圳观澜华富天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971158', '深圳市', '天福', '便利店', 'S1深圳横岗六约天福天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971159', '深圳市', '天福', '便利店', 'S1深圳公明国文天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997116', '深圳市', '天福', '便利店', '深圳福永马鞍山社区天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971160', '深圳市', '天福', '便利店', 'S1深圳公明易达天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971161', '深圳市', '天福', '便利店', 'S1深圳坂田佳兆业天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971162', '深圳市', '天福', '便利店', 'S06深圳福永桥头青年公寓天福店T(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971163', '深圳市', '天福', '便利店', 'S2深圳宝安上合天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971165', '深圳市', '天福', '便利店', 'S1深圳公明华旺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971166', '深圳市', '天福', '便利店', 'S1深圳石岩官田康平天福店T(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971167', '深圳市', '天福', '便利店', 'S2深圳西乡云轻天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971168', '深圳市', '天福', '便利店', 'S2深圳西乡利群天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971169', '深圳市', '天福', '便利店', 'S1深圳平湖新木天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997117', '深圳市', '天福', '便利店', 'S157深圳石岩塘头又一村天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971170', '深圳市', '天福', '便利店', 'S2深圳西乡荟翠天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971171', '深圳市', '天福', '便利店', 'S2深圳西乡固戍塘西天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971172', '深圳市', '天福', '便利店', 'S1深圳龙岗明光天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971173', '深圳市', '天福', '便利店', 'J1深圳沙井新沙路天福店T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971175', '深圳市', '天福', '便利店', 'S2深圳西乡睿福天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971176', '深圳市', '天福', '便利店', 'S1深圳公明新元天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971177', '深圳市', '天福', '便利店', 'S1深圳坪山帝王天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971178', '深圳市', '天福', '便利店', 'S1深圳横岗龙苑天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971179', '深圳市', '天福', '便利店', 'S1深圳坂田南坑天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997118', '深圳市', '天福', '便利店', 'S353深圳布吉桔子坑蔡兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971180', '深圳市', '天福', '便利店', 'S1深圳平湖宏泰天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971183', '深圳市', '天福', '便利店', 'S1深圳布吉金沙天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971185', '深圳市', '天福', '便利店', 'S1深圳公明思敏天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971186', '深圳市', '天福', '便利店', 'S1深圳横岗供电所天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971187', '深圳市', '天福', '便利店', 'J1深圳福永俊韬天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971188', '深圳市', '天福', '便利店', 'S2深圳宝安上华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971189', '深圳市', '天福', '便利店', 'J1深圳松岗星港城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997119', '深圳市', '天福', '便利店', 'S062深圳松岗树边坑美心天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971190', '深圳市', '天福', '便利店', 'J1深圳福永海鲜天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971191', '深圳市', '天福', '便利店', 'S1深圳龙华油松天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971192', '深圳市', '天福', '便利店', 'S1深圳龙岗惠佳乐天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971193', '深圳市', '天福', '便利店', 'S2深圳宝安布心天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971195', '深圳市', '天福', '便利店', 'J1深圳福永和平天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971196', '深圳市', '天福', '便利店', 'S2深圳西乡固戍春风天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971197', '深圳市', '天福', '便利店', 'S1深圳龙岗添旺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971198', '深圳市', '天福', '便利店', 'S1深圳坪山招商天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997120', '深圳市', '天福', '便利店', 'S511深圳龙岗玛丽天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971200', '深圳市', '天福', '便利店', 'J1深圳福永凤城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971201', '深圳市', '天福', '便利店', 'J1深圳沙井禧园天福店T(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971202', '深圳市', '天福', '便利店', 'S1深圳大浪三合华侨天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971203', '深圳市', '天福', '便利店', 'S1深圳龙岗金龙天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971205', '深圳市', '天福', '便利店', 'S1深圳公明碧桂园天福店T（18点）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971206', '深圳市', '天福', '便利店', 'S1深圳大鹏建设路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971207', '深圳市', '天福', '便利店', 'J1深圳沙井金华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971208', '深圳市', '天福', '便利店', 'S1深圳龙华松和天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971209', '深圳市', '天福', '便利店', 'S1深圳龙岗振华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997121', '深圳市', '天福', '便利店', '深圳松岗鹏飞天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971210', '深圳市', '天福', '便利店', 'S2深圳西乡海城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971211', '深圳市', '天福', '便利店', 'S1深圳横岗永兴天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971212', '深圳市', '天福', '便利店', 'S2深圳宝安翻身天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971213', '深圳市', '天福', '便利店', 'J1深圳福永森公寓天福店T(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971215', '深圳市', '天福', '便利店', 'S1深圳布吉西环路天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971216', '深圳市', '天福', '便利店', 'J1深圳福永儒佳天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971217', '深圳市', '天福', '便利店', 'S2深圳南山西丽茶光天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971218', '深圳市', '天福', '便利店', 'J1深圳沙井维也纳天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971219', '深圳市', '天福', '便利店', 'J1深圳松岗怡情天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997122', '深圳市', '天福', '便利店', '深圳福永和民天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971220', '深圳市', '天福', '便利店', 'S1深圳公明秋谊天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971221', '深圳市', '天福', '便利店', 'S1深圳坪山坑梓天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971222', '深圳市', '天福', '便利店', 'S1深圳布吉夏添天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971223', '深圳市', '天福', '便利店', 'S2深圳西乡固戍研发大厦天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971225', '深圳市', '天福', '便利店', 'S1深圳光明新地中央天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971226', '深圳市', '天福', '便利店', 'S1深圳坂田岗头天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971227', '深圳市', '天福', '便利店', 'S1深圳平湖平吉上苑天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971228', '深圳市', '天福', '便利店', 'S1深圳龙华富康天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971229', '深圳市', '天福', '便利店', 'J1深圳松岗众万佳天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997123', '深圳市', '天福', '便利店', 'J1深圳沙井沙一新村明珠天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971230', '深圳市', '天福', '便利店', 'S2深圳南山向南天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971232', '深圳市', '天福', '便利店', 'S2深圳宝安华美居天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971233', '深圳市', '天福', '便利店', 'S2深圳西乡前程天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971235', '深圳市', '天福', '便利店', 'S1深圳坂田金裕城天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971236', '深圳市', '天福', '便利店', 'S1民治利客多天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971237', '深圳市', '天福', '便利店', 'J1深圳松岗鑫鑫天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971238', '深圳市', '天福', '便利店', 'S1深圳龙岗洪力天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971239', '深圳市', '天福', '便利店', 'S1深圳公明田寮夜市天福店T(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971240', '深圳市', '天福', '便利店', 'J1深圳福永下沙南天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971241', '深圳市', '天福', '便利店', 'S1深圳布吉富璟天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971242', '深圳市', '天福', '便利店', 'S1深圳大浪新百丽天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971243', '深圳市', '天福', '便利店', 'S2深圳宝安创业天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971245', '深圳市', '天福', '便利店', 'S1深圳坪山玉华天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971246', '深圳市', '天福', '便利店', 'S1深圳公明星源天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971247', '深圳市', '天福', '便利店', 'S1深圳石岩宏域天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971248', '深圳市', '天福', '便利店', 'J1深圳沙井青云天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971249', '深圳市', '天福', '便利店', 'S1深圳布吉沙岭天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997125', '深圳市', '天福', '便利店', '深圳南山珠光东香槟天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971250', '深圳市', '天福', '便利店', 'S1深圳平湖柏豪天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T9971251', '深圳市', '天福', '便利店', 'J1深圳沙井京基百纳天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997126', '深圳市', '天福', '便利店', '深圳福永福长天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997127', '深圳市', '天福', '便利店', '深圳观澜大水坑一村吉利店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997128', '深圳市', '天福', '便利店', 'S1深圳龙岗大运天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997129', '深圳市', '天福', '便利店', '深圳宝安西乡鹤洲泰和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997130', '深圳市', '天福', '便利店', '深圳西乡固戍永兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997132', '深圳市', '天福', '便利店', 'S1深圳龙华东环吉祥天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997133', '深圳市', '天福', '便利店', '深圳松岗三少天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997135', '深圳市', '天福', '便利店', '深圳石岩步步旺天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997136', '深圳市', '天福', '便利店', 'S532深圳南山西丽塘朗天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997137', '深圳市', '天福', '便利店', '深圳布吉吉政路教育新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997138', '深圳市', '天福', '便利店', '深圳龙岗南联刘屋南联天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997139', '深圳市', '天福', '便利店', '深圳沙井后亭金鑫天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997140', '深圳市', '天福', '便利店', '深圳大浪谭罗龙鑫天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997141', '深圳市', '天福', '便利店', '深圳公明新围嘉昌天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997142', '深圳市', '天福', '便利店', '深圳龙华人民北路风和日丽天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997143', '深圳市', '天福', '便利店', '深圳松岗南岸村明辉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997145', '深圳市', '天福', '便利店', '深圳沙井海上天园百利西城天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997146', '深圳市', '天福', '便利店', 'S318深圳西乡三围中路天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997147', '深圳市', '天福', '便利店', '深圳龙华大浪新围玲哲天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997148', '深圳市', '天福', '便利店', 'S479深圳龙岗中心城东都花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997149', '深圳市', '天福', '便利店', '深圳石岩龙仔新村龙仔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997150', '深圳市', '天福', '便利店', '深圳西乡鹤洲永丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997151', '深圳市', '天福', '便利店', '深圳石岩上屋园岭达华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997152', '深圳市', '天福', '便利店', 'S1深圳横岗六约牛始埔友好天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997153', '深圳市', '天福', '便利店', '深圳福永塘尾新塘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997155', '深圳市', '天福', '便利店', 'S308深圳福永白石厦东区天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997156', '深圳市', '天福', '便利店', '深圳龙华共和花园共和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997157', '深圳市', '天福', '便利店', '深圳大浪鹊山中兴天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997158', '深圳市', '天福', '便利店', 'S448深圳宝安布心心仪天褔', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997159', '深圳市', '天福', '便利店', 'S334深圳西乡固戍红湾天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997160', '深圳市', '天福', '便利店', '深圳沙井后亭新村奥德城天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997161', '深圳市', '天福', '便利店', '深圳松岗松园大厦生活园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997162', '深圳市', '天福', '便利店', '深圳石岩石景花园石景天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997163', '深圳市', '天福', '便利店', '深圳宝安水口花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997165', '深圳市', '天福', '便利店', 'S507深圳龙岗福宁天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997166', '深圳市', '天福', '便利店', '深圳沙井新桥天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997167', '深圳市', '天福', '便利店', '深圳西乡钟屋天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997168', '深圳市', '天福', '便利店', '深圳松岗花果山天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997169', '深圳市', '天福', '便利店', '深圳龙岗爱联润灏天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997170', '深圳市', '天福', '便利店', '深圳龙华大浪元芬帝一天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997171', '深圳市', '天福', '便利店', '深圳龙华油园畅享天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997172', '深圳市', '天福', '便利店', 'S378深圳西乡鸿兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997173', '深圳市', '天福', '便利店', '深圳公明合水口上屯华诚天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997175', '深圳市', '天福', '便利店', '深圳大浪奥港天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997176', '深圳市', '天福', '便利店', '深圳观澜挂花社区桂花天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997177', '深圳市', '天福', '便利店', '深圳南山西丽龙井天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997178', '深圳市', '天福', '便利店', '深圳观澜大水坑一一天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997179', '深圳市', '天福', '便利店', 'S165深圳石岩麻布好好天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997180', '深圳市', '天福', '便利店', '深圳福永福安天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997181', '深圳市', '天福', '便利店', '深圳公明西田广场天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997182', '深圳市', '天福', '便利店', '深圳大浪三联河背合兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997183', '深圳市', '天福', '便利店', '深圳龙华羊台山庄又一间天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997185', '深圳市', '天福', '便利店', '深圳板田和磡天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997186', '深圳市', '天福', '便利店', '深圳观澜君子布龙兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997187', '深圳市', '天福', '便利店', '深圳龙岗南约来有天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997188', '深圳市', '天福', '便利店', '深圳福永凤凰工业区顺兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997189', '深圳市', '天福', '便利店', '深圳龙华水围鑫磊天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997190', '深圳市', '天福', '便利店', '深圳龙岗南约荣宝天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997192', '深圳市', '天福', '便利店', '深圳民治民乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997193', '深圳市', '天福', '便利店', '深圳宝安开屏市场天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997195', '深圳市', '天福', '便利店', 'S450深圳宝安布心金坊天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997196', '深圳市', '天福', '便利店', '深圳沙井万丰天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997197', '深圳市', '天福', '便利店', '深圳福永兴围天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997198', '深圳市', '天福', '便利店', '深圳沙井亿强天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997199', '深圳市', '天福', '便利店', '深圳福永凤凰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997200', '深圳市', '天福', '便利店', 'S2深圳西乡固戍下围园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997201', '深圳市', '天福', '便利店', '深圳南山西丽官龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997202', '深圳市', '天福', '便利店', '深圳西乡三围欢乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997203', '深圳市', '天福', '便利店', '深圳松岗楼岗楼村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997205', '深圳市', '天福', '便利店', '深圳龙华富联天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997206', '深圳市', '天福', '便利店', '深圳松岗东方天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997208', '深圳市', '天福', '便利店', 'S121深圳石岩上屋双爱天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997209', '深圳市', '天福', '便利店', '深圳布吉德兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997210', '深圳市', '天福', '便利店', 'S1深圳横岗隆盛天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997211', '深圳市', '天福', '便利店', '深圳龙华景华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997212', '深圳市', '天福', '便利店', 'S229深圳龙华郭吓天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997213', '深圳市', '天福', '便利店', 'S207深圳大浪新围伊可禾天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997215', '深圳市', '天福', '便利店', 'S1深圳龙岗罗福天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997216', '深圳市', '天福', '便利店', '深圳龙华清湖顺佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997217', '深圳市', '天福', '便利店', '深圳公明合水口富发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997218', '深圳市', '天福', '便利店', '深圳福永塘尾广场天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997219', '深圳市', '天福', '便利店', '深圳龙岗平南天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997220', '深圳市', '天福', '便利店', 'S1深圳横岗坝心天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997221', '深圳市', '天福', '便利店', 'J1深圳松岗车站天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997222', '深圳市', '天福', '便利店', '深圳观澜大水坑华林天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997223', '深圳市', '天福', '便利店', '深圳松岗恒美天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997225', '深圳市', '天福', '便利店', '深圳沙井上星天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997226', '深圳市', '天福', '便利店', '深圳沙井和一巴黎天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997227', '深圳市', '天福', '便利店', '深圳龙岗龙城兴海天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997228', '深圳市', '天福', '便利店', '深圳龙岗南联鸿达天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997229', '深圳市', '天福', '便利店', '深圳石岩上新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997230', '深圳市', '天福', '便利店', '深圳松岗楼岗忠意天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997231', '深圳市', '天福', '便利店', 'S1深圳公明下南天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997232', '深圳市', '天福', '便利店', 'S1深圳石岩好运来天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997233', '深圳市', '天福', '便利店', 'S1深圳龙岗罗瑞合天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997235', '深圳市', '天福', '便利店', 'S499深圳龙岗南联家园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997236', '深圳市', '天福', '便利店', '深圳横岗臻臻天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997237', '深圳市', '天福', '便利店', 'S1深圳沙井南洞天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997238', '深圳市', '天福', '便利店', '深圳坂田春华四季园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997239', '深圳市', '天福', '便利店', '深圳公明李松朗云亭天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997240', '深圳市', '天福', '便利店', '深圳大浪谭罗盛记天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997241', '深圳市', '天福', '便利店', '深圳龙岗邱屋兴和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997242', '深圳市', '天福', '便利店', '深圳龙华玉翠创新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997243', '深圳市', '天福', '便利店', 'S2深圳宝安流塘金达天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997245', '深圳市', '天福', '便利店', '深圳福永黄田百佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997246', '深圳市', '天福', '便利店', 'S2深圳宝安宝乐乐发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997247', '深圳市', '天福', '便利店', '深圳石岩官田天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997248', '深圳市', '天福', '便利店', '深圳龙岗坑梓光祖天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997249', '深圳市', '天福', '便利店', '深圳龙岗新生美信佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997250', '深圳市', '天福', '便利店', '深圳观澜新田村好佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997251', '深圳市', '天福', '便利店', '深圳龙华赖屋裕丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997252', '深圳市', '天福', '便利店', '深圳西乡南昌乾丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997253', '深圳市', '天福', '便利店', 'S2深圳西乡固戍长江天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997255', '深圳市', '天福', '便利店', 'J1深圳福永美信心天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997256', '深圳市', '天福', '便利店', '深圳龙岗南联龙园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997257', '深圳市', '天福', '便利店', 'S1深圳坂田雪象晟裕天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997258', '深圳市', '天福', '便利店', '深圳龙岗新生水岸新都创龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997259', '深圳市', '天福', '便利店', '深圳龙华景华嘉旺天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997260', '深圳市', '天福', '便利店', '深圳龙岗东大埔顺利天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997261', '深圳市', '天福', '便利店', 'S1深圳龙岗洪围鑫鑫天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997262', '深圳市', '天福', '便利店', '深圳龙华横岭天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997263', '深圳市', '天福', '便利店', '深圳福永福围万茂隆天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997265', '深圳市', '天福', '便利店', 'S289深圳板田长发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997266', '深圳市', '天福', '便利店', 'S538深圳南山西丽白芒福鑫天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997267', '深圳市', '天福', '便利店', '深圳西乡诚信天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997268', '深圳市', '天福', '便利店', '深圳龙岗欧意轩家乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997269', '深圳市', '天福', '便利店', 'S1深圳大浪上横朗天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997270', '深圳市', '天福', '便利店', 'S1深圳观澜田背天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997271', '深圳市', '天福', '便利店', 'J1深圳松岗蚝涌兴和天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997272', '深圳市', '天福', '便利店', '深圳松岗东新佳佳旺天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997273', '深圳市', '天福', '便利店', '深圳西乡麻布老海天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997275', '深圳市', '天福', '便利店', 'S1深圳横岗先进天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997276', '深圳市', '天福', '便利店', '深圳西乡鸣乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997277', '深圳市', '天福', '便利店', 'S410深圳宝安海兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997278', '深圳市', '天福', '便利店', 'S2深圳西乡河西蚝业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997279', '深圳市', '天福', '便利店', 'S307深圳坂田岗头鑫源天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997280', '深圳市', '天福', '便利店', '深圳西乡和乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997281', '深圳市', '天福', '便利店', '深圳龙华盘龙天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997282', '深圳市', '天福', '便利店', 'J1深圳福永机场后瑞金达天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997283', '深圳市', '天福', '便利店', 'S1深圳大浪逸昌天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997285', '深圳市', '天福', '便利店', '深圳民治民乐科弘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997286', '深圳市', '天福', '便利店', 'S1深圳坪地雅骏天福店（8点前）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997287', '深圳市', '天福', '便利店', '深圳南山西丽珠江源天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997288', '深圳市', '天福', '便利店', 'S523深圳坪山睿毅天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997289', '深圳市', '天福', '便利店', 'S358深圳西乡银田百家天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997290', '深圳市', '天福', '便利店', 'S2深圳宝安32区上川深泰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997291', '深圳市', '天福', '便利店', 'S1深圳龙华福茂新村壹壹天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997292', '深圳市', '天福', '便利店', '深圳福永富桥工业区丽君天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997293', '深圳市', '天福', '便利店', 'J1深圳沙井福景天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997295', '深圳市', '天福', '便利店', 'J1深圳松岗桥头毛鹏飞天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997296', '深圳市', '天福', '便利店', 'S1深圳横岗安良天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997297', '深圳市', '天福', '便利店', '深圳龙华香缇雅苑忠义天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997298', '深圳市', '天福', '便利店', 'S2深圳宝安创业一村兴东天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997299', '深圳市', '天福', '便利店', 'S2深圳南山西丽平山一区天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997300', '深圳市', '天福', '便利店', 'S2深圳西乡凤凰岗天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997301', '深圳市', '天福', '便利店', 'S2深圳西乡庄边天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997302', '深圳市', '天福', '便利店', 'S2深圳西乡宏顺天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997303', '深圳市', '天福', '便利店', 'S000深圳松岗洪桥头光明天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997305', '深圳市', '天福', '便利店', '深圳石岩水田新村嘉乐天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997306', '深圳市', '天福', '便利店', '深圳石岩罗祖中新村天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997307', '深圳市', '天福', '便利店', '深圳公明东坑鸿运天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997308', '深圳市', '天福', '便利店', 'S1深圳坂田大发埔嘉怡天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997309', '深圳市', '天福', '便利店', '深圳龙岗爱联卓然天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997310', '深圳市', '天福', '便利店', 'J1深圳松岗塘下涌世海天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997311', '深圳市', '天福', '便利店', 'S1深圳布吉南岭沙湾嘉园天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997312', '深圳市', '天福', '便利店', 'S265深圳民治东泉新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997313', '深圳市', '天福', '便利店', '深圳南山荔芳新荣天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997315', '深圳市', '天福', '便利店', 'S219深圳大浪凯滨新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997316', '深圳市', '天福', '便利店', '深圳龙华南源天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997317', '深圳市', '天福', '便利店', 'S1深圳平湖新风天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997318', '深圳市', '天福', '便利店', '深圳宝安上合滨城新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997319', '深圳市', '天福', '便利店', '深圳福永静英天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997320', '深圳市', '天福', '便利店', '深圳坂田永明天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997321', '深圳市', '天福', '便利店', 'S2深圳西乡铁岗吉祥天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997322', '深圳市', '天福', '便利店', '深圳公明将石社区顺兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997323', '深圳市', '天福', '便利店', '深圳龙岗百川天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997325', '深圳市', '天福', '便利店', '深圳龙华三联锦绣新村阿磊天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997326', '深圳市', '天福', '便利店', '深圳坂田7区华讯天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997327', '深圳市', '天福', '便利店', 'J1深圳沙井上南天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997328', '深圳市', '天福', '便利店', 'S2深圳宝安新城新乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997329', '深圳市', '天福', '便利店', '深圳龙岗三和村益群天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997330', '深圳市', '天福', '便利店', '深圳布吉上水径中联天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997331', '深圳市', '天福', '便利店', 'S537深圳龙岗五联移民新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997332', '深圳市', '天福', '便利店', '深圳西乡盐田沃尔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997333', '深圳市', '天福', '便利店', '深圳龙华元芬天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997335', '深圳市', '天福', '便利店', '深圳龙华大发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997336', '深圳市', '天福', '便利店', '深圳布吉南岭鸿海天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997337', '深圳市', '天福', '便利店', '深圳民治宏发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997338', '深圳市', '天福', '便利店', '深圳龙华水斗泰丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997339', '深圳市', '天福', '便利店', 'S078深圳沙井名苑天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997340', '深圳市', '天福', '便利店', '深圳民治祥发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997341', '深圳市', '天福', '便利店', 'S1深圳龙岗爱联岗贝万荣天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997342', '深圳市', '天福', '便利店', '深圳南山西丽光前天缘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997343', '深圳市', '天福', '便利店', 'S1深圳民治白石龙旺角天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997345', '深圳市', '天福', '便利店', 'S1深圳公明南北通天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997346', '深圳市', '天福', '便利店', 'S2深圳西乡固戍上围园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997347', '深圳市', '天福', '便利店', '深圳福永龙腾阁永润发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997348', '深圳市', '天福', '便利店', '深圳民治阿昊天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997349', '深圳市', '天福', '便利店', 'S034深圳松岗中海天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997350', '深圳市', '天福', '便利店', '深圳布吉丽湖丽和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997351', '深圳市', '天福', '便利店', '深圳坂田南坑金旺角天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997352', '深圳市', '天福', '便利店', 'S2深圳宝安甲岸村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997353', '深圳市', '天福', '便利店', 'S1深圳龙华富泉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997355', '深圳市', '天福', '便利店', 'S1深圳大浪福轩明惠天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997356', '深圳市', '天福', '便利店', 'S1深圳龙岗南联吓岗一村日新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997357', '深圳市', '天福', '便利店', '深圳龙华富联则成天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997358', '深圳市', '天福', '便利店', 'S1深圳民治朝阳四友天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997359', '深圳市', '天福', '便利店', 'J1深圳福永塘尾成海天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997360', '深圳市', '天福', '便利店', 'S1深圳龙华富泉新村龙泉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997361', '深圳市', '天福', '便利店', 'S2深圳宝安有威天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997362', '深圳市', '天福', '便利店', 'S1深圳龙岗家乐源天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997363', '深圳市', '天福', '便利店', '深圳公明泥围新村日佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997365', '深圳市', '天福', '便利店', 'J1深圳福永荔园天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997366', '深圳市', '天福', '便利店', '深圳福永塘尾风塘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997367', '深圳市', '天福', '便利店', 'S017深圳公明顺兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997368', '深圳市', '天福', '便利店', '深圳福田梅林浩萱天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997369', '深圳市', '天福', '便利店', '深圳石岩杰出天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997370', '深圳市', '天福', '便利店', '深圳龙华君发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997371', '深圳市', '天福', '便利店', 'S425深圳观澜创新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997372', '深圳市', '天福', '便利店', '深圳福永同益天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997375', '深圳市', '天福', '便利店', '深圳石岩山城天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997376', '深圳市', '天福', '便利店', 'S160深圳沙井长丰天福（小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997377', '深圳市', '天福', '便利店', 'S2深圳宝安46区怡华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997378', '深圳市', '天福', '便利店', '深圳公明雄发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997379', '深圳市', '天福', '便利店', 'S240深圳福永翠兴和平天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997380', '深圳市', '天福', '便利店', '深圳沙井步涌光临天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997381', '深圳市', '天福', '便利店', '深圳宝安41区乐购天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997382', '深圳市', '天福', '便利店', '深圳龙岗年景天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997383', '深圳市', '天福', '便利店', '深圳西乡瑞村信成天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997385', '深圳市', '天福', '便利店', '深圳宝安23区智宸天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997386', '深圳市', '天福', '便利店', '深圳西乡575天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997387', '深圳市', '天福', '便利店', '深圳松岗中海西岸诚惠达天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997388', '深圳市', '天福', '便利店', '深圳西乡渔业世纪天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997389', '深圳市', '天福', '便利店', 'S1深圳布吉坡头村天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997390', '深圳市', '天福', '便利店', '深圳民治沙田天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997391', '深圳市', '天福', '便利店', '深圳平湖新丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997392', '深圳市', '天福', '便利店', 'S233深圳龙华山咀头绿源天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997393', '深圳市', '天福', '便利店', '深圳西乡固戍文涛天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997395', '深圳市', '天福', '便利店', 'S352深圳西乡固戍宏源天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997396', '深圳市', '天福', '便利店', '深圳福永锦珠天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997397', '深圳市', '天福', '便利店', '深圳西乡固戍南昌创业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997398', '深圳市', '天福', '便利店', '深圳福永兴隆天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997399', '深圳市', '天福', '便利店', 'S296深圳福永兴围兴业天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997400', '深圳市', '天福', '便利店', '深圳大浪百斯特天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997401', '深圳市', '天福', '便利店', 'S014深圳松岗柏峯天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997402', '深圳市', '天福', '便利店', '深圳平湖华丽天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997405', '深圳市', '天福', '便利店', '深圳西乡劳动鑫鑫天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997406', '深圳市', '天福', '便利店', '深圳光明公明南庄天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997407', '深圳市', '天福', '便利店', '深圳西乡共乐百益佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997408', '深圳市', '天福', '便利店', '深圳西乡共乐佳乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997409', '深圳市', '天福', '便利店', 'S2深圳西乡福中福天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997410', '深圳市', '天福', '便利店', 'S095深圳石岩卓越天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997411', '深圳市', '天福', '便利店', '深圳大浪旺嘉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997412', '深圳市', '天福', '便利店', '深圳宝安宝兴花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997413', '深圳市', '天福', '便利店', 'S2深圳福永凤凰三峡天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997415', '深圳市', '天福', '便利店', '深圳布吉业业兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997416', '深圳市', '天福', '便利店', '深圳福永新和宏明天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997417', '深圳市', '天福', '便利店', '深圳公明南庄村南城天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997418', '深圳市', '天福', '便利店', '深圳布吉吉富天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997419', '深圳市', '天福', '便利店', 'S1深圳石岩料坑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997420', '深圳市', '天福', '便利店', 'J1深圳沙井恒晖苑天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997422', '深圳市', '天福', '便利店', 'S1深圳大浪金典天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997423', '深圳市', '天福', '便利店', 'S2深圳南山西丽明乐天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997425', '深圳市', '天福', '便利店', '深圳坂田九八天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997426', '深圳市', '天福', '便利店', '深圳福永万福天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997427', '深圳市', '天福', '便利店', 'S180深圳沙井上南欢乐多天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997428', '深圳市', '天福', '便利店', 'S2深圳西乡黄田华丰天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997429', '深圳市', '天福', '便利店', 'S361深圳布吉木棉湾天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997430', '深圳市', '天福', '便利店', 'S221深圳大浪志霞天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997431', '深圳市', '天福', '便利店', '深圳龙岗南联裕隆天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997432', '深圳市', '天福', '便利店', '深圳龙华盛辉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997433', '深圳市', '天福', '便利店', 'S2深圳西乡劳动村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997435', '深圳市', '天福', '便利店', '深圳福永桥南新村光明天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997436', '深圳市', '天福', '便利店', 'S151深圳石岩应人石新村天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997437', '深圳市', '天福', '便利店', 'S2深圳南山西丽官龙鸿华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997438', '深圳市', '天福', '便利店', '深圳民治创业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997439', '深圳市', '天福', '便利店', 'J1深圳松岗红星民泰天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997440', '深圳市', '天福', '便利店', '深圳观澜阿英天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997441', '深圳市', '天福', '便利店', '深圳大浪永利天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997442', '深圳市', '天福', '便利店', 'S278深圳福永白石厦永安天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997443', '深圳市', '天福', '便利店', '深圳松岗凤梨天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997445', '深圳市', '天福', '便利店', '深圳松岗楼岗天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997446', '深圳市', '天福', '便利店', '深圳松岗益华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997447', '深圳市', '天福', '便利店', 'S189深圳大浪顺欣天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997448', '深圳市', '天福', '便利店', '深圳石岩旺福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997449', '深圳市', '天福', '便利店', '深圳龙华天天福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997450', '深圳市', '天福', '便利店', 'S2深圳宝安流塘开心天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997451', '深圳市', '天福', '便利店', '深圳龙岗黄阁坑中海康城炳坑天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997452', '深圳市', '天福', '便利店', '深圳公明福顺天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997453', '深圳市', '天福', '便利店', '深圳龙岗京兆福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997455', '深圳市', '天福', '便利店', 'S196深圳福永塘尾杰少天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997456', '深圳市', '天福', '便利店', '深圳石岩同富裕诚业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997457', '深圳市', '天福', '便利店', '深圳坪山梓兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997458', '深圳市', '天福', '便利店', '深圳龙华树龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997459', '深圳市', '天福', '便利店', 'S1深圳布吉盈发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997460', '深圳市', '天福', '便利店', 'S421深圳观澜永鸿森天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997461', '深圳市', '天福', '便利店', '深圳石岩惠丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997462', '深圳市', '天福', '便利店', 'S1深圳龙华高坳佳盈天福*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997463', '深圳市', '天福', '便利店', '深圳沙井和二天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997465', '深圳市', '天福', '便利店', '深圳福田海霞天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997466', '深圳市', '天福', '便利店', 'J1深圳福永和平大富天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997467', '深圳市', '天福', '便利店', '深圳公明意合天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997468', '深圳市', '天福', '便利店', 'S119深圳石岩欢乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997469', '深圳市', '天福', '便利店', '深圳公明吉祥天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997471', '深圳市', '天福', '便利店', 'S2深圳西乡盛强天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997472', '深圳市', '天福', '便利店', '深圳龙岗嘉禾天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997473', '深圳市', '天福', '便利店', '深圳南山西丽高职院天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997475', '深圳市', '天福', '便利店', 'S1深圳布吉兴佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997476', '深圳市', '天福', '便利店', '深圳南山西丽转霞天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997477', '深圳市', '天福', '便利店', 'S279深圳民治樟坑新华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997478', '深圳市', '天福', '便利店', '深圳福永吉祥天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997479', '深圳市', '天福', '便利店', 'S498深圳南山安玘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997480', '深圳市', '天福', '便利店', '深圳罗湖草埔欣慰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997481', '深圳市', '天福', '便利店', 'S043深圳公明东坑金日天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997482', '深圳市', '天福', '便利店', '深圳福永龙王庙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997483', '深圳市', '天福', '便利店', '深圳西乡钟屋天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997485', '深圳市', '天福', '便利店', '深圳松岗御岭天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997486', '深圳市', '天福', '便利店', 'S1深圳坂田桥联西天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997487', '深圳市', '天福', '便利店', 'J1深圳沙井辛养天福T(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997488', '深圳市', '天福', '便利店', '深圳福永兴围兴华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997489', '深圳市', '天福', '便利店', 'S01深圳大浪天赐天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997490', '深圳市', '天福', '便利店', '深圳沙井万丰鸿运天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997491', '深圳市', '天福', '便利店', '深圳宝安41区安乐村裕兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997492', '深圳市', '天福', '便利店', 'J1深圳福永善喜天福T(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997493', '深圳市', '天福', '便利店', '深圳松岗塘下涌雄宇天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997495', '深圳市', '天福', '便利店', 'S1深圳民治兴旺天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997496', '深圳市', '天福', '便利店', '深圳龙华民治创业花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997497', '深圳市', '天福', '便利店', 'S536深圳南山西丽白芒合兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997498', '深圳市', '天福', '便利店', '深圳松岗潭头艳桃天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997499', '深圳市', '天福', '便利店', '深圳龙华草埔吓围小学天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997500', '深圳市', '天福', '便利店', '深圳沙井兴泰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997501', '深圳市', '天福', '便利店', 'S475深圳龙岗余岭天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997502', '深圳市', '天福', '便利店', 'S285深圳民治新村如意天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997503', '深圳市', '天福', '便利店', '深圳罗湖超兴旺天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997505', '深圳市', '天福', '便利店', '深圳宝安沙井华兴发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997506', '深圳市', '天福', '便利店', '深圳福永喜多多天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997507', '深圳市', '天福', '便利店', 'S275深圳民治东龙升天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997508', '深圳市', '天福', '便利店', 'S494深圳南山升阳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997509', '深圳市', '天福', '便利店', '深圳福永重美天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997510', '深圳市', '天福', '便利店', '深圳平湖腾铭天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997511', '深圳市', '天福', '便利店', '深圳南山白领天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997512', '深圳市', '天福', '便利店', '深圳沙井驿站天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997513', '深圳市', '天福', '便利店', 'S2深圳西乡固戍社区正奇隆天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997515', '深圳市', '天福', '便利店', '深圳龙华福樟坑国光天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997516', '深圳市', '天福', '便利店', 'S513深圳龙岗双龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997517', '深圳市', '天福', '便利店', 'S101深圳石岩顺意天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997518', '深圳市', '天福', '便利店', 'S2深圳西乡坪洲天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997519', '深圳市', '天福', '便利店', '深圳民治晨阳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997520', '深圳市', '天福', '便利店', '深圳布吉南和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997521', '深圳市', '天福', '便利店', '深圳龙华旺发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997522', '深圳市', '天福', '便利店', '深圳西乡兴达华府天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997523', '深圳市', '天福', '便利店', '深圳龙华大浪金盈天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997525', '深圳市', '天福', '便利店', '深圳龙华民治腾辉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997526', '深圳市', '天福', '便利店', 'S470深圳西乡凤凰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997527', '深圳市', '天福', '便利店', '深圳龙岗爱联嶂背天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997528', '深圳市', '天福', '便利店', 'S2深圳西乡固戍天鑫天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997529', '深圳市', '天福', '便利店', 'J1深圳沙井万丰家豪天福（小车）*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997530', '深圳市', '天福', '便利店', 'S1深圳大浪龙翔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997531', '深圳市', '天福', '便利店', 'S117深圳石岩公学天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997532', '深圳市', '天福', '便利店', '深圳光明圳美佳美天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997533', '深圳市', '天福', '便利店', 'J1深圳松岗万多福天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997535', '深圳市', '天福', '便利店', 'S230深圳福永兴旺天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997537', '深圳市', '天福', '便利店', 'S149深圳石岩宇方天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997539', '深圳市', '天福', '便利店', 'S457深圳龙岗黄阁坑中海康城欣汇天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997540', '深圳市', '天福', '便利店', '深圳松岗朝阳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997541', '深圳市', '天福', '便利店', '深圳宝安福永恒辉天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997542', '深圳市', '天福', '便利店', '深圳宝安龙华大浪祥瑞天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997543', '深圳市', '天福', '便利店', '深圳平湖众鑫天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997545', '深圳市', '天福', '便利店', '深圳公明同富天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997546', '深圳市', '天福', '便利店', '深圳光明公明石围新村东风天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997547', '深圳市', '天福', '便利店', 'S381深圳横岗来福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997548', '深圳市', '天福', '便利店', 'S1深圳平湖辅城喜悦天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997549', '深圳市', '天福', '便利店', '深圳宝安龙华东二新村罗亮天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997550', '深圳市', '天福', '便利店', 'S204深圳福永金阳光天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997551', '深圳市', '天福', '便利店', 'S098深圳沙井坣岗乐福天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997552', '深圳市', '天福', '便利店', '深圳横岗贤合天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997553', '深圳市', '天福', '便利店', 'S2深圳西乡固戍雅丽天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997555', '深圳市', '天福', '便利店', '深圳布吉左庭右院天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997557', '深圳市', '天福', '便利店', 'S133深圳石岩罗租八号天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997558', '深圳市', '天福', '便利店', 'J1深圳沙井上星小山天福T（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997559', '深圳市', '天福', '便利店', '深圳西乡鸿辉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997560', '深圳市', '天福', '便利店', '深圳宝安福永丫丫天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997561', '深圳市', '天福', '便利店', 'S026深圳松岗碧头天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997562', '深圳市', '天福', '便利店', '深圳宝安新村鸿利天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997563', '深圳市', '天福', '便利店', '深圳大浪罗屋围全平烙天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997565', '深圳市', '天福', '便利店', 'S367深圳布吉南湾惠农天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997566', '深圳市', '天福', '便利店', 'S1深圳布吉上水径东区天T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997567', '深圳市', '天福', '便利店', 'S2深圳公明玉律鸿生天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997568', '深圳市', '天福', '便利店', 'S000深圳南山白石洲琪俊天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997569', '深圳市', '天福', '便利店', '深圳西乡固戍顺发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997570', '深圳市', '天福', '便利店', '深圳西乡腾达天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997571', '深圳市', '天福', '便利店', '深圳宝安沙井和福天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997572', '深圳市', '天福', '便利店', '深圳松岗兴隆天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997573', '深圳市', '天福', '便利店', 'S1深圳公明小四天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997575', '深圳市', '天福', '便利店', '深圳福永雄兴天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997576', '深圳市', '天福', '便利店', 'S1深圳布吉宏业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997577', '深圳市', '天福', '便利店', '深圳石岩佳和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997578', '深圳市', '天福', '便利店', 'S259深圳民治福临门天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997579', '深圳市', '天福', '便利店', 'S341深圳布吉吉华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997580', '深圳市', '天福', '便利店', '深圳龙岗好宜家天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997581', '深圳市', '天福', '便利店', 'J1深圳福永塘尾顺利天福T（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997582', '深圳市', '天福', '便利店', 'S1深圳坂田春生天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997583', '深圳市', '天福', '便利店', 'J1深圳沙井文汇天福T（大车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997585', '深圳市', '天福', '便利店', 'S1深圳石岩香象天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997586', '深圳市', '天福', '便利店', 'S1深圳石岩恩斯迈天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997587', '深圳市', '天福', '便利店', 'J1深圳松岗政萱天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997589', '深圳市', '天福', '便利店', 'J1深圳福永麒麟天福T（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997590', '深圳市', '天福', '便利店', '深圳南山西丽宝馨苑天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997591', '深圳市', '天福', '便利店', '深圳西乡固戍双和天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997592', '深圳市', '天福', '便利店', '深圳坂田旺塘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997593', '深圳市', '天福', '便利店', '深圳横岗红润天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997595', '深圳市', '天福', '便利店', '深圳罗湖鹏程天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997596', '深圳市', '天福', '便利店', '深圳公明顺景天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997597', '深圳市', '天福', '便利店', 'S1深圳石岩福民天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997598', '深圳市', '天福', '便利店', 'S2深圳沙井永发天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997599', '深圳市', '天福', '便利店', 'S328深圳西乡固戍合作创业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997600', '深圳市', '天福', '便利店', 'S2深圳西乡固戍享业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997601', '深圳市', '天福', '便利店', 'J1深圳福永新和二村天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997602', '深圳市', '天福', '便利店', 'J1深圳福永天美天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997603', '深圳市', '天福', '便利店', '深圳石岩同福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997605', '深圳市', '天福', '便利店', 'S1深圳龙华博进天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997606', '深圳市', '天福', '便利店', '深圳石岩英才天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997607', '深圳市', '天福', '便利店', '深圳南山西丽心悦天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997609', '深圳市', '天福', '便利店', '深圳布吉心灵天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997610', '深圳市', '天福', '便利店', '深圳横岗双龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997611', '深圳市', '天福', '便利店', '深圳坪地文华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997612', '深圳市', '天福', '便利店', 'J1深圳福永红运天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997613', '深圳市', '天福', '便利店', '深圳福永凤凰南区天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997615', '深圳市', '天福', '便利店', 'S1深圳龙岗九州家园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997616', '深圳市', '天福', '便利店', '深圳公明冠城天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997617', '深圳市', '天福', '便利店', '深圳福永益晖天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997618', '深圳市', '天福', '便利店', 'S1深圳石岩富华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997619', '深圳市', '天福', '便利店', 'S000深圳沙井南埔路佳福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997620', '深圳市', '天福', '便利店', 'S1深圳平湖白鸽湖天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997621', '深圳市', '天福', '便利店', 'S1深圳公明佳乐天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997622', '深圳市', '天福', '便利店', '深圳公明琴峯天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997623', '深圳市', '天福', '便利店', '深圳民治民乐一区天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997625', '深圳市', '天福', '便利店', 'S201深圳大浪吉祥天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997626', '深圳市', '天福', '便利店', 'S467深圳龙岗爱联蒲鹏天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997628', '深圳市', '天福', '便利店', '深圳西乡后瑞天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997629', '深圳市', '天福', '便利店', '深圳南山大新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997630', '深圳市', '天福', '便利店', '深圳大浪金盈新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997631', '深圳市', '天福', '便利店', 'S2深圳沙井上寮天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997632', '深圳市', '天福', '便利店', 'S1深圳龙华弓村天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997633', '深圳市', '天福', '便利店', '深圳南山西丽华华明天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997635', '深圳市', '天福', '便利店', '深圳沙井惠佳天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997636', '深圳市', '天福', '便利店', '深圳民治创业1号天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997637', '深圳市', '天福', '便利店', 'S1深圳龙岗岗贝天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997638', '深圳市', '天福', '便利店', '深圳福永林记天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997639', '深圳市', '天福', '便利店', '深圳石岩创福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997640', '深圳市', '天福', '便利店', '深圳福永新时代天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997641', '深圳市', '天福', '便利店', 'S003深圳公明怀松天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997642', '深圳市', '天福', '便利店', 'J1深圳福永凤凰真美天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997643', '深圳市', '天福', '便利店', 'J1深圳福永凤凰旭升天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997645', '深圳市', '天福', '便利店', 'J1深圳沙井和一得宝天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997646', '深圳市', '天福', '便利店', 'S1深圳大浪芸熙天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997647', '深圳市', '天福', '便利店', '深圳龙岗新秀天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997648', '深圳市', '天福', '便利店', '深圳宝安流塘诚信天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997649', '深圳市', '天福', '便利店', 'S210深圳福永育龙天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997650', '深圳市', '天福', '便利店', 'S1深圳大浪宏达天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997651', '深圳市', '天福', '便利店', '深圳龙华誉星天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997652', '深圳市', '天福', '便利店', '深圳福永凤城花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997653', '深圳市', '天福', '便利店', '深圳西乡固戍丰稔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997655', '深圳市', '天福', '便利店', '深圳龙岗永新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997656', '深圳市', '天福', '便利店', 'S1深圳龙岗好运来天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997658', '深圳市', '天福', '便利店', 'S1深圳石岩惠源天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997659', '深圳市', '天福', '便利店', 'S2深圳福田佳佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997660', '深圳市', '天福', '便利店', 'J1深圳沙井步涌盛华天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997661', '深圳市', '天福', '便利店', 'S388深圳西乡永兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997662', '深圳市', '天福', '便利店', '深圳西乡盐田天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997663', '深圳市', '天福', '便利店', '深圳固戍永旺天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997665', '深圳市', '天福', '便利店', '深圳宝安辉煌天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997666', '深圳市', '天福', '便利店', 'S2深圳福永华丰天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997667', '深圳市', '天福', '便利店', '深圳福永塘尾创业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997668', '深圳市', '天福', '便利店', 'S1深圳石岩创新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997670', '深圳市', '天福', '便利店', 'S1深圳龙岗追尚生活天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997671', '深圳市', '天福', '便利店', '深圳坂田亿源通店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997672', '深圳市', '天福', '便利店', 'S1深圳坂田黄军山天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997673', '深圳市', '天福', '便利店', 'S1深圳坂田佳永天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997675', '深圳市', '天福', '便利店', 'S2深圳沙井民主天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997676', '深圳市', '天福', '便利店', 'S473深圳龙岗广发天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997677', '深圳市', '天福', '便利店', '深圳光明新区公明丰明店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997678', '深圳市', '天福', '便利店', '深圳石岩晗晗乐店(小店)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997679', '深圳市', '天福', '便利店', '深圳龙岗南联陈屋店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997680', '深圳市', '天福', '便利店', 'S063深圳公明塘家天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997681', '深圳市', '天福', '便利店', '深圳松岗东方店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997682', '深圳市', '天福', '便利店', '深圳光明新区公明元山店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997683', '深圳市', '天福', '便利店', 'S203深圳大浪华霆天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997685', '深圳市', '天福', '便利店', 'S1深圳公明兴隆天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997686', '深圳市', '天福', '便利店', 'S1深圳横岗伯乐天福店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997687', '深圳市', '天福', '便利店', 'S000深圳南山宏发店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997688', '深圳市', '天福', '便利店', '深圳公明东盛店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997689', '深圳市', '天福', '便利店', 'S194深圳福永塘尾雄雄店(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997690', '深圳市', '天福', '便利店', 'S2深圳西乡固戍南昌公园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997691', '深圳市', '天福', '便利店', '深圳松岗南边头店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997692', '深圳市', '天福', '便利店', 'S000深圳松岗晨远天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997693', '深圳市', '天福', '便利店', 'S2深圳西乡固戍天顺天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997695', '深圳市', '天福', '便利店', 'S1深圳龙华雪峰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997696', '深圳市', '天福', '便利店', '深圳宝安后瑞百佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997697', '深圳市', '天福', '便利店', 'S1深圳横岗大康天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997698', '深圳市', '天福', '便利店', '深圳沙井怡心天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997699', '深圳市', '天福', '便利店', '深圳福永俊发天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997700', '深圳市', '天福', '便利店', 'S512深圳罗湖国贸店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997701', '深圳市', '天福', '便利店', 'S179深圳大浪谭罗伟业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997702', '深圳市', '天福', '便利店', 'S396深圳宝安富华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997703', '深圳市', '天福', '便利店', 'S170深圳沙井南洞新兴天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997705', '深圳市', '天福', '便利店', 'S1深圳民治街道西头天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997706', '深圳市', '天福', '便利店', 'S089深圳公明玉律顺兴天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997708', '深圳市', '天福', '便利店', '深圳宝安熙龙湾天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997709', '深圳市', '天福', '便利店', 'S1深圳公明广源天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997710', '深圳市', '天福', '便利店', 'S1深圳布吉黄金天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997711', '深圳市', '天福', '便利店', '深圳西乡固戍南昌村二店天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997712', '深圳市', '天福', '便利店', 'S276深圳福永白石厦清华天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997713', '深圳市', '天福', '便利店', 'J1深圳福永塘尾业勇天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997715', '深圳市', '天福', '便利店', '深圳公明阳光天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997716', '深圳市', '天福', '便利店', '深圳西乡双龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997717', '深圳市', '天福', '便利店', '深圳福永桥头万佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997718', '深圳市', '天福', '便利店', 'S1深圳民治逸秀天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997719', '深圳市', '天福', '便利店', '深圳平湖昌平天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997720', '深圳市', '天福', '便利店', '深圳沙井马鞍山梓洋天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997721', '深圳市', '天福', '便利店', '深圳西乡固戍佳佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997722', '深圳市', '天福', '便利店', '深圳坂田和平天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997723', '深圳市', '天福', '便利店', 'S103深圳石岩政顺天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997725', '深圳市', '天福', '便利店', 'S2深圳西乡弘新天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997726', '深圳市', '天福', '便利店', '深圳福永诚兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997728', '深圳市', '天福', '便利店', 'S069深圳公明田寮龙新店(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997729', '深圳市', '天福', '便利店', 'S1深圳石岩南岗天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997730', '深圳市', '天福', '便利店', 'S263深圳民治龙塘天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997731', '深圳市', '天福', '便利店', 'S1深圳坪山三洋湖天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997732', '深圳市', '天福', '便利店', 'S1深圳横岗宏福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997733', '深圳市', '天福', '便利店', '深圳公明嘉豪天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997735', '深圳市', '天福', '便利店', '深圳坂田华为店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997736', '深圳市', '天福', '便利店', 'S272深圳福永美信天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997737', '深圳市', '天福', '便利店', 'S411深圳观澜佳信天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997738', '深圳市', '天福', '便利店', '深圳大浪同富天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997739', '深圳市', '天福', '便利店', 'S2深圳宝安伟伟天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997740', '深圳市', '天福', '便利店', 'S1深圳公明诚俊天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997741', '深圳市', '天福', '便利店', '深圳公明一帆天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997742', '深圳市', '天福', '便利店', '深圳松岗御景城鸿运天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997743', '深圳市', '天福', '便利店', 'J1深圳松岗潭头西部天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997745', '深圳市', '天福', '便利店', '深圳公明田寮港美天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997746', '深圳市', '天福', '便利店', '深圳坂田豪廷天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997747', '深圳市', '天福', '便利店', 'S4深圳福永东敏楼天福(小车)T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997748', '深圳市', '天福', '便利店', 'S064深圳松岗东方立业天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997749', '深圳市', '天福', '便利店', 'J1深圳福永佳佳天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997750', '深圳市', '天福', '便利店', '深圳盐田大梅沙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997751', '深圳市', '天福', '便利店', 'J1深圳沙井上星春风天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997752', '深圳市', '天福', '便利店', 'S2深圳宝安甲岸天乐天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997753', '深圳市', '天福', '便利店', 'J1深圳松岗东方和祥天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997755', '深圳市', '天福', '便利店', '深圳公明宝利来天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997756', '深圳市', '天福', '便利店', 'S2深圳福田石厦天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997757', '深圳市', '天福', '便利店', '深圳民治铭皓天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997758', '深圳市', '天福', '便利店', 'J1深圳沙井万丰正格天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997759', '深圳市', '天福', '便利店', '深圳石岩石龙仔美美天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997760', '深圳市', '天福', '便利店', '深圳沙井丹青天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997761', '深圳市', '天福', '便利店', 'S1深圳坪地怡园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997762', '深圳市', '天福', '便利店', 'S333深圳布吉新民天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997763', '深圳市', '天福', '便利店', 'S1深圳坂田如意天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997765', '深圳市', '天福', '便利店', 'S2深圳西乡固戍下围园天翔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997766', '深圳市', '天福', '便利店', 'S124深圳沙井沙一围仔得胜天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997767', '深圳市', '天福', '便利店', 'S517深圳龙岗锦龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997768', '深圳市', '天福', '便利店', 'S1深圳石岩老村天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997769', '深圳市', '天福', '便利店', 'J1深圳松岗罗田涵宇天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997770', '深圳市', '天福', '便利店', 'J1深圳沙井黄浦洪田佳旺天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997771', '深圳市', '天福', '便利店', '深圳横岗大凤新兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997772', '深圳市', '天福', '便利店', 'S2深圳宝安裕和花园洪姐天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997773', '深圳市', '天福', '便利店', 'S128深圳沙井民主华新天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997775', '深圳市', '天福', '便利店', 'J1深圳福永白石厦裕华天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997776', '深圳市', '天福', '便利店', 'S074深圳沙井新桥正能量天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997778', '深圳市', '天福', '便利店', '深圳西乡金睿天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997779', '深圳市', '天福', '便利店', 'S266深圳福永德丰天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997780', '深圳市', '天福', '便利店', 'S1深圳公明大围天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997781', '深圳市', '天福', '便利店', '深圳大浪春光天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997782', '深圳市', '天福', '便利店', 'S1深圳平湖兴银海天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997783', '深圳市', '天福', '便利店', 'S2深圳宝安岭下天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997785', '深圳市', '天福', '便利店', 'S502深圳福田新洲中心村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997786', '深圳市', '天福', '便利店', '深圳布吉南岭花园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997787', '深圳市', '天福', '便利店', 'S474深圳西乡鹤洲富源天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997788', '深圳市', '天福', '便利店', 'S1深圳石岩美好天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997789', '深圳市', '天福', '便利店', 'S528深圳南山润达天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997790', '深圳市', '天福', '便利店', '深圳西乡永丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997791', '深圳市', '天福', '便利店', '深圳宝安天悦龙庭6+1天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997792', '深圳市', '天福', '便利店', 'S469深圳龙岗龙城荣盛华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997793', '深圳市', '天福', '便利店', 'S376深圳西乡杨陈天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997795', '深圳市', '天福', '便利店', 'S349深圳布吉翠枫豪园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997796', '深圳市', '天福', '便利店', '深圳龙华骏龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997797', '深圳市', '天福', '便利店', '深圳石岩大众天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997798', '深圳市', '天福', '便利店', '深圳沙井黄埔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997799', '深圳市', '天福', '便利店', 'S2深圳福田欢乐峰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997800', '深圳市', '天福', '便利店', '深圳坪地萃丰天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997801', '深圳市', '天福', '便利店', 'S1深圳石岩青雅居天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997802', '深圳市', '天福', '便利店', '深圳坂田和堪天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997803', '深圳市', '天福', '便利店', 'J1深圳松岗嘉成天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997805', '深圳市', '天福', '便利店', 'S521深圳坪山新区宝珠天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997807', '深圳市', '天福', '便利店', '深圳沙井沙一万锦天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997808', '深圳市', '天福', '便利店', 'J1深圳松岗罗田运海天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997809', '深圳市', '天福', '便利店', 'S409深圳观澜有诚天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997810', '深圳市', '天福', '便利店', '深圳西乡簕竹角富来天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997811', '深圳市', '天福', '便利店', '深圳松岗罗田韵可天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997812', '深圳市', '天福', '便利店', '深圳龙华华盛天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997813', '深圳市', '天福', '便利店', 'S1深圳公明万福天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997815', '深圳市', '天福', '便利店', 'S485深圳龙岗桃花源天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997817', '深圳市', '天福', '便利店', 'C264深圳平湖南山天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997818', '深圳市', '天福', '便利店', '深圳平湖飛飛天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997819', '深圳市', '天福', '便利店', 'S2深圳宝安雅景天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997820', '深圳市', '天福', '便利店', '深圳平湖茗翠天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997821', '深圳市', '天福', '便利店', 'S1深圳民治水尾天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997822', '深圳市', '天福', '便利店', 'S4深圳西乡高树围天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997823', '深圳市', '天福', '便利店', 'J1深圳福永佳豪天福（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997825', '深圳市', '天福', '便利店', 'S028深圳松岗CoCo天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997827', '深圳市', '天福', '便利店', 'S1深圳大浪佰萨德天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997828', '深圳市', '天福', '便利店', 'S255深圳龙华富油天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997829', '深圳市', '天福', '便利店', '深圳石岩裕同天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997830', '深圳市', '天福', '便利店', 'J1深圳沙井新沙路港发天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997831', '深圳市', '天福', '便利店', 'S030深圳松岗金福天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997832', '深圳市', '天福', '便利店', 'J1深圳福永福海天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997833', '深圳市', '天福', '便利店', 'S1深圳横岗四海天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997835', '深圳市', '天福', '便利店', 'S1深圳观澜下围天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997836', '深圳市', '天福', '便利店', 'S1深圳公明新佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997837', '深圳市', '天福', '便利店', '深圳龙岗叠翠天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997838', '深圳市', '天福', '便利店', 'S211深圳大浪亮剑天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997839', '深圳市', '天福', '便利店', 'S1深圳大浪陶吓天福（小车）T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997840', '深圳市', '天福', '便利店', 'J1深圳沙井沙头三路松利天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997841', '深圳市', '天福', '便利店', 'S1深圳石岩老街天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997842', '深圳市', '天福', '便利店', 'S491深圳龙岗旭源天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997843', '深圳市', '天福', '便利店', 'S414深圳宝安39区天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997845', '深圳市', '天福', '便利店', 'S019深圳公明吉祥天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997846', '深圳市', '天福', '便利店', 'S000深圳西乡固戍辉煌天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997848', '深圳市', '天福', '便利店', 'J1深圳沙井后亭金亮天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997849', '深圳市', '天福', '便利店', '深圳福永和平天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997850', '深圳市', '天福', '便利店', 'J1深圳福永荣志发天福(小车）T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997851', '深圳市', '天福', '便利店', 'S294深圳福永下沙南天福(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997852', '深圳市', '天福', '便利店', 'S364深圳西乡永盛天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997853', '深圳市', '天福', '便利店', '深圳福永龙辉天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997855', '深圳市', '天福', '便利店', 'S1深圳公明怀松天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997856', '深圳市', '天福', '便利店', 'S1深圳布吉三联天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997857', '深圳市', '天福', '便利店', 'S2深圳南山西丽宝金天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997858', '深圳市', '天福', '便利店', 'S144深圳沙井大王山天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997859', '深圳市', '天福', '便利店', '深圳龙岗风临四季天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997860', '深圳市', '天福', '便利店', 'S442深圳宝安创业天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997861', '深圳市', '天福', '便利店', '深圳石岩水田璀华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997862', '深圳市', '天福', '便利店', 'S516深圳罗湖泥岗天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997863', '深圳市', '天福', '便利店', 'C332深圳平湖浸校塘天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997865', '深圳市', '天福', '便利店', 'J1深圳松岗花果山天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997866', '深圳市', '天福', '便利店', 'S1深圳大浪石凹天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997867', '深圳市', '天福', '便利店', 'S1深圳石岩小军天福(小车)T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997868', '深圳市', '天福', '便利店', 'S104深圳沙井新沙路万科翡丽郡天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997869', '深圳市', '天福', '便利店', 'J1深圳沙井黄浦村有琦天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997870', '深圳市', '天福', '便利店', 'S1深圳布吉怡和园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997871', '深圳市', '天福', '便利店', 'S1深圳公明完美天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997872', '深圳市', '天福', '便利店', 'J1深圳福永塘尾富源天福（小车）T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997873', '深圳市', '天福', '便利店', 'S1深圳龙华鲤鱼天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997875', '深圳市', '天福', '便利店', 'J1深圳沙井壆岗家家旺天福T(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997876', '深圳市', '天福', '便利店', '深圳石岩官田天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997877', '深圳市', '天福', '便利店', 'S1深圳公明长圳皓然天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997878', '深圳市', '天福', '便利店', 'S1深圳福永吉安泰天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997879', '深圳市', '天福', '便利店', 'C330深圳平湖有盛天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997880', '深圳市', '天福', '便利店', 'S129深圳石岩罗租民德居天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997881', '深圳市', '天福', '便利店', '深圳福永和平(玻璃围新村)天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997882', '深圳市', '天福', '便利店', '深圳沙井万丰晨光路天福（小车）T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997883', '深圳市', '天福', '便利店', 'S1深圳观澜大水坑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997885', '深圳市', '天福', '便利店', '深圳观澜樟坑径旺杰天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997886', '深圳市', '天福', '便利店', 'S1深圳石岩罗租宏发天福T（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997887', '深圳市', '天福', '便利店', 'S472深圳西乡凤凰岗宏福天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997888', '深圳市', '天福', '便利店', 'S1深圳横岗简一天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997889', '深圳市', '天福', '便利店', 'S2深圳平湖竹尾田天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997890', '深圳市', '天福', '便利店', '深圳沙井后亭新宝天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997891', '深圳市', '天福', '便利店', 'S405深圳横岗四联路金翔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997892', '深圳市', '天福', '便利店', 'S2深圳平湖竹尾田宝玲天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997893', '深圳市', '天福', '便利店', 'S2深圳西乡森福天福T（晚6点）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997895', '深圳市', '天福', '便利店', '深圳南山西丽老街天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997896', '深圳市', '天福', '便利店', 'S1深圳龙岗盛平天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997897', '深圳市', '天福', '便利店', '深圳沙井万家朗天福(小车)T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997898', '深圳市', '天福', '便利店', 'J1深圳松岗蚝涌天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997899', '深圳市', '天福', '便利店', 'S1深圳观澜金倡达天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997900', '深圳市', '天福', '便利店', '深圳西乡固戍花园天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997901', '深圳市', '天福', '便利店', 'S422深圳南山南山华府天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997902', '深圳市', '天福', '便利店', 'S2深圳西乡黄田百佳天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997903', '深圳市', '天福', '便利店', 'S1深圳大浪宝龙天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997905', '深圳市', '天福', '便利店', 'S299深圳坂田伟业天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997906', '深圳市', '天福', '便利店', 'S354深圳西乡固戍建安天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997907', '深圳市', '天福', '便利店', '深圳松岗东方天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997908', '深圳市', '天福', '便利店', 'J1深圳福永爱峰天福(小车)T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997909', '深圳市', '天福', '便利店', 'S2深圳平湖布心天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997910', '深圳市', '天福', '便利店', 'S1深圳民治白石龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997911', '深圳市', '天福', '便利店', 'S1深圳横岗天颂天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997912', '深圳市', '天福', '便利店', 'S045深圳公明东坑天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997913', '深圳市', '天福', '便利店', 'S025深圳公明合水口天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997915', '深圳市', '天福', '便利店', 'S186深圳福永明丽苑天福T（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997916', '深圳市', '天福', '便利店', 'S2深圳松岗御溪天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997917', '深圳市', '天福', '便利店', 'J1深圳福永桥南天福T(小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997918', '深圳市', '天福', '便利店', 'S2深圳南山西丽NO.1天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997919', '深圳市', '天福', '便利店', 'S1深圳坂田黄军山天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997920', '深圳市', '天福', '便利店', '深圳福永桥南骁燕天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997921', '深圳市', '天福', '便利店', 'S138深圳沙井和一得福天福T（小车）', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997922', '深圳市', '天福', '便利店', 'S2深圳沙井上南广汕天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997923', '深圳市', '天福', '便利店', 'S250深圳福永艾佳天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997925', '深圳市', '天福', '便利店', '深圳坂田晨皓天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997926', '深圳市', '天福', '便利店', 'J1深圳沙井共和鸿运天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997927', '深圳市', '天福', '便利店', 'S1深圳坂田米格烈天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997928', '深圳市', '天福', '便利店', 'J1深圳沙井嘉惠多天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997929', '深圳市', '天福', '便利店', 'S2深圳南山西丽丽苑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997930', '深圳市', '天福', '便利店', 'J1深圳松岗益华天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997931', '深圳市', '天福', '便利店', '深圳市布吉长龙天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997932', '深圳市', '天福', '便利店', 'S1深圳市龙岗区龙岗南联刘屋天福店T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997933', '深圳市', '天福', '便利店', 'S2深圳西乡明启天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997935', '深圳市', '天福', '便利店', 'J1深圳福永龙刚天福（小车）T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997936', '深圳市', '天福', '便利店', 'S356深圳西乡固戍好运来天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997937', '深圳市', '天福', '便利店', 'J1深圳福永聪聪天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997938', '深圳市', '天福', '便利店', 'S1深圳布吉金坑天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997939', '深圳市', '天福', '便利店', 'S1深圳龙岗南联天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997940', '深圳市', '天福', '便利店', 'S2深圳西乡固戍井湾天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997941', '深圳市', '天福', '便利店', 'S097深圳石岩泰安天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997942', '深圳市', '天福', '便利店', 'S1深圳公明塘尾芳芳天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997943', '深圳市', '天福', '便利店', 'S1深圳公明塘尾天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997945', '深圳市', '天福', '便利店', 'S1深圳横岗泰然兴天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997946', '深圳市', '天福', '便利店', 'S140深圳沙井和二和心天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997947', '深圳市', '天福', '便利店', '深圳平湖车站天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997948', '深圳市', '天福', '便利店', 'S4深圳宝安宝园天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997949', '深圳市', '天福', '便利店', 'S1深圳龙岗同心天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997950', '深圳市', '天福', '便利店', 'S399深圳横岗天荣福天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997951', '深圳市', '天福', '便利店', 'S000深圳福永福海科技工业园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997952', '深圳市', '天福', '便利店', 'S2深圳沙井共和天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997953', '深圳市', '天福', '便利店', 'S2深圳西乡万盛天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997955', '深圳市', '天福', '便利店', 'S317深圳布吉红门天福*', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997956', '深圳市', '天福', '便利店', 'J1深圳沙井秉承天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997957', '深圳市', '天福', '便利店', 'S490深圳南山南园天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997958', '深圳市', '天福', '便利店', 'S1深圳大浪华侨新村天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997959', '深圳市', '天福', '便利店', 'J1深圳福永同益天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997960', '深圳市', '天福', '便利店', 'S114深圳沙井步涌惠美天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997961', '深圳市', '天福', '便利店', '深圳沙井施世海天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997962', '深圳市', '天福', '便利店', 'J1深圳福永跨亿通天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997963', '深圳市', '天福', '便利店', 'S190深圳福永依嘉天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997965', '深圳市', '天福', '便利店', 'J1深圳沙井锦绣天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997966', '深圳市', '天福', '便利店', 'S013深圳公明上南天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997967', '深圳市', '天福', '便利店', 'J1深圳沙井欣欣天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997968', '深圳市', '天福', '便利店', 'S1深圳光明小军天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997969', '深圳市', '天福', '便利店', 'S2深圳横岗鸿发天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997970', '深圳市', '天福', '便利店', 'S2深圳宝安海诺天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997971', '深圳市', '天福', '便利店', 'S1深圳福永大洋田天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997972', '深圳市', '天福', '便利店', 'S2深圳观澜新田春晖天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997973', '深圳市', '天福', '便利店', '深圳南山南头古城天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997975', '深圳市', '天福', '便利店', 'S2深圳宝安御景湾天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997976', '深圳市', '天福', '便利店', 'S202深圳福永桥头顺意天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997977', '深圳市', '天福', '便利店', '深圳观澜永恒天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997978', '深圳市', '天福', '便利店', 'S2深圳宝安美加天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997979', '深圳市', '天福', '便利店', 'S373深圳布吉李朗天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997980', '深圳市', '天福', '便利店', '深圳宝安流塘李进天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997981', '深圳市', '天福', '便利店', 'S1深圳观澜源祥兴天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997982', '深圳市', '天福', '便利店', 'S1深圳公明玉律进兴天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997983', '深圳市', '天福', '便利店', 'S1深圳公明塘家自顺天福(小车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997985', '深圳市', '天福', '便利店', 'J1深圳松岗碧头天福(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997986', '深圳市', '天福', '便利店', 'S1深圳坂田宜客天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997987', '深圳市', '天福', '便利店', 'S1深圳坪山弘兴天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997988', '深圳市', '天福', '便利店', 'S292深圳福永龚翔天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997989', '深圳市', '天福', '便利店', 'J1深圳福永鸿兴天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997990', '深圳市', '天福', '便利店', 'S1深圳石岩彩虹天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997991', '深圳市', '天福', '便利店', 'S1深圳大浪宏图天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997992', '深圳市', '天福', '便利店', 'S037深圳公明大围天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997993', '深圳市', '天福', '便利店', 'J1深圳福永百福天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997995', '深圳市', '天福', '便利店', 'S1深圳公明万兴天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997996', '深圳市', '天福', '便利店', 'S1深圳龙岗中华天福', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997997', '深圳市', '天福', '便利店', 'S2深圳松岗红星湾头春晖天福T(大车)', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997998', '深圳市', '天福', '便利店', 'S1深圳公明好再来天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T997999', '深圳市', '天福', '便利店', 'S471深圳龙岗富菡天福T', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('T999076', '深圳市', '天福', '便利店', 'S2深圳布吉下水径财来也百货', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y101', '北京', '永辉', '大卖场', ' 山水文园店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y102', '北京', '永辉', '大卖场', ' 旧宫店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y103', '北京', '永辉', '大卖场', ' 双桥店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y104', '北京', '永辉', '大卖场', ' 垡头店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y105', '北京', '永辉', '大卖场', '百子湾店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y106', '北京', '永辉', '大卖场', ' 半壁店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y107', '北京', '永辉', '大卖场', ' 鸿坤理想城店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y108', '北京', '永辉', '大卖场', ' 万科店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y109', '北京', '永辉', '大卖场', ' 六里桥店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y110', '北京', '永辉', '大卖场', ' 草桥店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y111', '北京', '永辉', '大卖场', ' 千禧街店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y112', '北京', '永辉', '大卖场', '马家堡店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y113', '北京', '永辉', '大卖场', ' 鲁谷店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y114', '北京', '永辉', '大卖场', '金沟河店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y115', '北京', '永辉', '大卖场', '增光路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y116', '北京', '永辉', '大卖场', ' 文慧园店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y117', '北京', '永辉', '大卖场', ' 长阳半岛店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y118', '北京', '永辉', '大卖场', ' 恒基店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y119', '北京', '永辉', '大卖场', ' 喜隆多店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y120', '北京', '永辉', '大卖场', ' 温都水城广场店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y121', '北京', '永辉', '大卖场', ' 回龙观店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y122', '北京', '永辉', '大卖场', ' 绿地缤纷城店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y123', '北京', '永辉', '大卖场', ' 通州万达店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y124', '北京', '永辉', '大卖场', ' 新世界店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y125', '北京', '永辉', '大卖场', ' 太阳宫店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y126', '北京', '永辉', '大卖场', ' 龙湖长楹天街店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y127', '北京', '永辉', '大卖场', ' 后沙峪店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y128', '北京', '永辉', '大卖场', ' 世界村店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y129', '北京', '永辉', '大卖场', ' 金泉广场店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y130', '北京', '永辉', '大卖场', ' 清河店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y131', '北京', '永辉', '大卖场', ' 龙旗广场店 ', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y132', '北京', '永辉', '大卖场', '金域国际', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y133', '北京', '永辉', '大卖场', '康庄天健广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y134', '北京', '永辉', '大卖场', '望京西路店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y135', '北京', '永辉', '大卖场', '槐房万达广场店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y136', '北京', '永辉', '大卖场', '丰科万达店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y201', '广州市', '永辉', '大卖场', '汇珑新天地店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y202', '广州市', '永辉', '大卖场', '南沙万达店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y301', '深圳市', '永辉', '大卖场', '深圳宝安大道店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y302', '深圳市', '永辉', '大卖场', '深圳沙井店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y303', '深圳市', '永辉', '大卖场', '平湖店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y304', '深圳市', '永辉', '大卖场', '南山茂业店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y305', '深圳市', '永辉', '大卖场', '卓悦汇店', '0', null, null, null, null, null, null);
-INSERT INTO `t_new_shop` VALUES ('Y306', '深圳市', '永辉', '大卖场', ' 沙井市民广场店', '0', null, null, null, null, null, null);
+--
+-- Dumping data for table `t_new_shop`
+--
+
+INSERT INTO `t_new_shop` (`id`, `city`, `sm`, `type`, `name`, `flag`, `shop1`, `year1`, `month1`, `shop2`, `year2`, `month2`) VALUES
+('1011', '北京', '物美', '大卖场', 'BJHM古城店', 0, '1011', '2017', '07', '1011', '2017', '08'),
+('1012', '北京', '物美', '大卖场', 'BJSM西门店', 0, '1015', '2017', '07', '1015', '2017', '08'),
+('1014', '北京', '物美', '大卖场', 'BJSM八角北里店', 0, '1021', '2017', '07', '1021', '2017', '08'),
+('1015', '北京', '物美', '大卖场', 'BJHM新风店', 0, '1023', '2017', '07', '1023', '2017', '08'),
+('1016', '北京', '物美', '大卖场', 'BJSM昌平店', 0, '1024', '2017', '07', '1024', '2017', '08'),
+('1019', '北京', '物美', '大卖场', 'BJSM科大店', 0, '1025', '2017', '07', '1025', '2017', '08'),
+('1020', '北京', '物美', '大卖场', 'BJSM小云岗店', 0, '1027', '2017', '07', '1027', '2017', '08'),
+('1021', '北京', '物美', '大卖场', 'BJHM云岗店', 0, '1028', '2017', '07', '1028', '2017', '08'),
+('1023', '北京', '物美', '大卖场', 'BJHM新隆店', 0, '1035', '2017', '07', '1035', '2017', '08'),
+('1024', '北京', '物美', '大卖场', 'BJHM北大地店', 0, '1041', '2017', '07', '1041', '2017', '08'),
+('1025', '北京', '物美', '大卖场', 'BJHM旧宫店', 0, '1129', '2017', '07', '1129', '2017', '08'),
+('1027', '北京', '物美', '大卖场', 'BJHM建兴店', 0, '1163', '2017', '07', '1163', '2017', '08'),
+('1028', '北京', '物美', '大卖场', 'BJHM天通苑店', 0, '1164', '2017', '07', '1164', '2017', '08'),
+('1032', '北京', '物美', '大卖场', 'BJSM右安门店', 0, '1166', '2017', '07', '1166', '2017', '08'),
+('1033', '北京', '物美', '大卖场', 'BJSM榆垡店', 0, '1167', '2017', '07', '1167', '2017', '08'),
+('1035', '北京', '物美', '大卖场', 'BJHM潞苑店', 0, '1169', '2017', '07', '1169', '2017', '08'),
+('1036', '北京', '物美', '大卖场', 'BJSM方庄东', 0, '1170', '2017', '07', '1170', '2017', '08'),
+('1038', '北京', '物美', '大卖场', 'BJSM北洼路店', 0, '1171', '2017', '07', '1171', '2017', '08'),
+('1039', '北京', '物美', '大卖场', 'BJSM胜利店', 0, '1248', '2017', '07', '1248', '2017', '08'),
+('1041', '北京', '物美', '大卖场', 'BJHM宋庄店', 0, '1261', '2017', '07', '1261', '2017', '08'),
+('1044', '北京', '物美', '大卖场', 'BJSM西永乐店', 0, '1264', '2017', '07', '1264', '2017', '08'),
+('1045', '北京', '物美', '便利店', 'BJCVS高井店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1048', '北京', '物美', '便利店', 'BJCVS北路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1049', '北京', '物美', '便利店', 'BJCVS锅炉厂店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1055', '北京', '物美', '便利店', 'BJCVS金顶街店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1058', '北京', '物美', '大卖场', 'BJSM北大店', 0, '1267', '2017', '07', '1267', '2017', '08'),
+('1059', '北京', '物美', '便利店', 'BJCVS装备部店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1067', '北京', '物美', '大卖场', 'BJSM光大店', 0, '1279', '2017', '07', '1279', '2017', '08'),
+('1068', '北京', '物美', '大卖场', 'BJSM乐园店', 0, '1292', '2017', '07', '1292', '2017', '08'),
+('1069', '北京', '物美', '便利店', 'BJCVS马家堡店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1070', '北京', '物美', '便利店', 'BJCVS洋桥', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1071', '北京', '物美', '便利店', 'BJCVS太平桥店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1072', '北京', '物美', '便利店', 'BJCVS卢沟桥店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1073', '北京', '物美', '大卖场', 'BJSM长大街店', 0, '1309', '2017', '07', '1309', '2017', '08'),
+('1074', '北京', '物美', '大卖场', 'BJSM新华东店', 0, '1310', '2017', '07', '1310', '2017', '08'),
+('1075', '北京', '物美', '便利店', 'BJCVS北厂店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1077', '北京', '物美', '大卖场', 'BJSM燕南店', 0, '1312', '2017', '07', '1312', '2017', '08'),
+('1079', '北京', '物美', '便利店', 'BJCVS方星园店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1080', '北京', '物美', '大卖场', 'BJSM蒲黄榆店', 0, '1313', '2017', '07', '1313', '2017', '08'),
+('1081', '北京', '物美', '便利店', 'BJCVS光华店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1082', '北京', '物美', '便利店', 'BJCVS黑山店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1084', '北京', '物美', '大卖场', 'BJSM三家店', 0, '1314', '2017', '07', '1314', '2017', '08'),
+('1088', '北京', '物美', '便利店', 'BJCVS坡头店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1090', '北京', '物美', '大卖场', 'BJSM科大禾谷园店', 0, '1364', '2017', '07', '1364', '2017', '08'),
+('1091', '北京', '物美', '大卖场', 'BJSM北科大店', 0, '1370', '2017', '07', '1370', '2017', '08'),
+('1099', '北京', '物美', '大卖场', 'BJSM永乐店', 0, '1377', '2017', '07', '1377', '2017', '08'),
+('1100', '北京', '物美', '便利店', 'BJCVS柴厂屯店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1102', '北京', '物美', '便利店', 'BJCVS妇幼店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1103', '北京', '物美', '便利店', 'BJCVS通糖梨园店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1118', '北京', '物美', '便利店', 'BJCVS玉桥店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1122', '北京', '物美', '大卖场', 'BJSM甘棠店', 0, '1378', '2017', '07', '1378', '2017', '08'),
+('1129', '北京', '物美', '大卖场', 'BJHM密云鼓楼店', 0, '1389', '2017', '07', '1389', '2017', '08'),
+('1132', '北京', '物美', '便利店', 'BJCVS四惠店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1133', '北京', '物美', '便利店', 'BJCVS和平门店', 0, '1045', '2018', '03', '1045', '2018', '04'),
+('1135', '北京', '物美', '便利店', 'BJCVS东四店', 0, '1048', '2018', '03', '1048', '2018', '04'),
+('1144', '北京', '物美', '便利店', 'BJCVS万达店', 0, '1049', '2018', '03', '1049', '2018', '04'),
+('1146', '北京', '物美', '便利店', 'BJCVS民达园店', 0, '1055', '2018', '03', '1055', '2018', '04'),
+('1150', '北京', '物美', '便利店', 'BJCVS阔速达店', 0, '1059', '2018', '03', '1059', '2018', '04'),
+('1151', '北京', '物美', '便利店', 'BJCVS财满街店', 0, '1066', '2018', '03', '1066', '2018', '04'),
+('1154', '北京', '物美', '大卖场', 'BJSM崇文门店', 0, '1408', '2017', '07', '1408', '2017', '08'),
+('1156', '北京', '物美', '大卖场', 'BJSM天东店', 0, '1420', '2017', '07', '1420', '2017', '08'),
+('1163', '北京', '物美', '大卖场', 'BJHM惠新店', 0, '1427', '2017', '07', '1427', '2017', '08'),
+('1164', '北京', '物美', '大卖场', 'BJHM志新店', 0, '1433', '2017', '07', '1433', '2017', '08'),
+('1166', '北京', '物美', '大卖场', 'BJHM华天店', 0, '1434', '2017', '07', '1434', '2017', '08'),
+('1167', '北京', '物美', '大卖场', 'BJHM大兴店', 0, '1439', '2017', '07', '1439', '2017', '08'),
+('1169', '北京', '物美', '大卖场', 'BJHM北苑店', 0, '1443', '2017', '07', '1443', '2017', '08'),
+('1170', '北京', '物美', '大卖场', 'BJHM新街口店', 0, '1450', '2017', '07', '1450', '2017', '08'),
+('1171', '北京', '物美', '大卖场', 'BJHM海淀店', 0, '1451', '2017', '07', '1451', '2017', '08'),
+('1233', '北京', '物美', '便利店', 'BJCVS神州数码店', 0, '1069', '2018', '03', '1069', '2018', '04'),
+('1248', '北京', '物美', '大卖场', 'BJHM回龙观东店', 0, '1452', '2017', '07', '1452', '2017', '08'),
+('1251', '北京', '物美', '大卖场', 'BJSM奥士凯交道口店', 0, '1454', '2017', '07', '1454', '2017', '08'),
+('1252', '北京', '物美', '大卖场', 'BJSM奥士凯新兴里店', 0, '1456', '2017', '07', '1456', '2017', '08'),
+('1261', '北京', '物美', '大卖场', 'BJHM清河店', 0, '1457', '2017', '07', '1457', '2017', '08'),
+('1264', '北京', '物美', '大卖场', 'BJHM万源店', 0, '1464', '2017', '07', '1464', '2017', '08'),
+('1267', '北京', '物美', '大卖场', 'BJHM奥士凯朝内菜市场店', 0, '1465', '2017', '07', '1465', '2017', '08'),
+('1278', '北京', '物美', '便利店', 'BJCVS刘家窑店', 0, '1070', '2018', '03', '1070', '2018', '04'),
+('1279', '北京', '物美', '大卖场', 'BJHM通州梨园店', 0, '1469', '2017', '07', '1469', '2017', '08'),
+('1280', '北京', '物美', '便利店', 'BJCVS大幸福店', 0, '1071', '2018', '03', '1071', '2018', '04'),
+('1281', '北京', '物美', '便利店', 'BJCVS国瑞城店', 0, '1072', '2018', '03', '1072', '2018', '04'),
+('1282', '北京', '物美', '便利店', 'BJCVS西花市二店', 0, '1075', '2018', '03', '1075', '2018', '04'),
+('1284', '北京', '物美', '大卖场', 'BJSM总参店', 0, '1477', '2017', '07', '1477', '2017', '08'),
+('1292', '北京', '物美', '大卖场', 'BJHM新华联家园店', 0, '1482', '2017', '07', '1482', '2017', '08'),
+('1293', '北京', '物美', '便利店', 'BJCVS东蒲桥(新)店', 0, '1079', '2018', '03', '1079', '2018', '04'),
+('1294', '北京', '物美', '便利店', 'BJCVS郭庄店', 0, '1081', '2018', '03', '1081', '2018', '04'),
+('1295', '北京', '物美', '便利店', 'BJCVS正义路(新)店', 0, '1082', '2018', '03', '1082', '2018', '04'),
+('1299', '北京', '物美', '便利店', 'BJCVS湖光店', 0, '1088', '2018', '03', '1088', '2018', '04'),
+('1301', '北京', '物美', '大卖场', 'BJSM西山枫林店', 0, '1485', '2017', '07', '1485', '2017', '08'),
+('1304', '北京', '物美', '大卖场', 'BJSM航天大院店', 0, '1492', '2017', '07', '1492', '2017', '08'),
+('1309', '北京', '物美', '大卖场', 'BJHM丰体时代店', 0, '1505', '2017', '07', '1505', '2017', '08'),
+('1310', '北京', '物美', '大卖场', 'BJHM密云果园店', 0, '1512', '2017', '07', '1512', '2017', '08'),
+('1312', '北京', '物美', '大卖场', 'BJHM开阳桥店', 0, '1516', '2017', '07', '1516', '2017', '08'),
+('1313', '北京', '物美', '大卖场', 'BJHM玉蜓桥店', 0, '1530', '2017', '07', '1530', '2017', '08'),
+('1314', '北京', '物美', '大卖场', 'BJHM枣园店', 0, '1538', '2017', '07', '1538', '2017', '08'),
+('1322', '北京', '物美', '大卖场', 'BJSM五里坨店', 0, '1552', '2017', '07', '1552', '2017', '08'),
+('1323', '北京', '美廉美', '大卖场', 'BJHM花园路店', 0, '1011', '2017', '07', '1011', '2017', '08'),
+('1324', '北京', '美廉美', '大卖场', 'BJHM白纸坊店', 0, '1015', '2017', '07', '1015', '2017', '08'),
+('1325', '北京', '美廉美', '大卖场', 'BJHM马家堡店', 0, '1021', '2017', '07', '1021', '2017', '08'),
+('1326', '北京', '美廉美', '大卖场', 'BJSM角门店', 0, '1023', '2017', '07', '1023', '2017', '08'),
+('1328', '北京', '美廉美', '大卖场', 'BJHM德胜门店', 0, '1024', '2017', '07', '1024', '2017', '08'),
+('1330', '北京', '美廉美', '大卖场', 'BJHM三里河店', 0, '1025', '2017', '07', '1025', '2017', '08'),
+('1332', '北京', '美廉美', '大卖场', 'BJHM和平新城店', 0, '1027', '2017', '07', '1027', '2017', '08'),
+('1333', '北京', '美廉美', '大卖场', 'BJHM增光路店', 0, '1028', '2017', '07', '1028', '2017', '08'),
+('1334', '北京', '美廉美', '大卖场', 'BJHM安外店', 0, '1035', '2017', '07', '1035', '2017', '08'),
+('1335', '北京', '美廉美', '大卖场', 'BJHM亦庄店', 0, '1041', '2017', '07', '1041', '2017', '08'),
+('1336', '北京', '美廉美', '大卖场', 'BJHM百旺商城店', 0, '1129', '2017', '07', '1129', '2017', '08'),
+('1337', '北京', '美廉美', '大卖场', 'BJHM安宁庄店', 0, '1163', '2017', '07', '1163', '2017', '08'),
+('1339', '北京', '美廉美', '大卖场', 'BJHM时代风帆店', 0, '1164', '2017', '07', '1164', '2017', '08'),
+('1340', '北京', '美廉美', '大卖场', 'BJHM横一条店', 0, '1166', '2017', '07', '1166', '2017', '08'),
+('1341', '北京', '美廉美', '大卖场', 'BJHM管庄店', 0, '1167', '2017', '07', '1167', '2017', '08'),
+('1343', '北京', '美廉美', '大卖场', 'BJSM鲁谷店', 0, '1169', '2017', '07', '1169', '2017', '08'),
+('1344', '北京', '美廉美', '大卖场', 'BJHM新都店', 0, '1170', '2017', '07', '1170', '2017', '08'),
+('1345', '北京', '美廉美', '大卖场', 'BJHM西安门店', 0, '1171', '2017', '07', '1171', '2017', '08'),
+('1347', '北京', '美廉美', '大卖场', 'BJHM回龙观店', 0, '1248', '2017', '07', '1248', '2017', '08'),
+('1349', '北京', '美廉美', '大卖场', 'BJHM良庄店', 0, '1261', '2017', '07', '1261', '2017', '08'),
+('1350', '北京', '美廉美', '大卖场', 'BJHM南口店', 0, '1264', '2017', '07', '1264', '2017', '08'),
+('1352', '北京', '美廉美', '大卖场', 'BJHM新龙店', 0, '1267', '2017', '07', '1267', '2017', '08'),
+('1353', '北京', '美廉美', '大卖场', 'BJHM房山北关店', 0, '1279', '2017', '07', '1279', '2017', '08'),
+('1354', '北京', '美廉美', '大卖场', 'BJHM良乡店', 0, '1292', '2017', '07', '1292', '2017', '08'),
+('1356', '北京', '美廉美', '大卖场', 'BJHM燕山店', 0, '1309', '2017', '07', '1309', '2017', '08'),
+('1357', '北京', '美廉美', '大卖场', 'BJHM燕化星城店', 0, '1310', '2017', '07', '1310', '2017', '08'),
+('1358', '北京', '物美', '便利店', 'BJCVS华三店', 0, '1100', '2018', '03', '1100', '2018', '04'),
+('1362', '北京', '物美', '便利店', 'BJCVS十一学校店', 0, '1102', '2018', '03', '1102', '2018', '04'),
+('1364', '北京', '物美', '大卖场', 'BJHM北沙滩店', 0, '1562', '2017', '07', '1562', '2017', '08'),
+('1365', '北京', '美廉美', '大卖场', 'BJHM学清路店', 0, '1312', '2017', '07', '1312', '2017', '08'),
+('1366', '北京', '物美', '便利店', 'BJCVS珠江峰景店', 0, '1118', '2018', '03', '1118', '2018', '04'),
+('1369', '北京', '物美', '便利店', 'BJCVS公益西桥店', 0, '1132', '2018', '03', '1132', '2018', '04'),
+('1370', '北京', '物美', '大卖场', 'BJHM北太平庄店', 0, '1565', '2017', '07', '1565', '2017', '08'),
+('1373', '北京', '美廉美', '大卖场', 'BJHM顺义店', 0, '1313', '2017', '07', '1313', '2017', '08'),
+('1376', '北京', '物美', '便利店', 'BJCVS国家大剧院店', 0, '1133', '2018', '03', '1133', '2018', '04'),
+('1377', '北京', '物美', '大卖场', 'BJHM方恒国际店', 0, '1573', '2017', '07', '1573', '2017', '08'),
+('1378', '北京', '物美', '大卖场', 'BJHM双峪店', 0, '1574', '2017', '07', '1574', '2017', '08'),
+('1380', '北京', '物美', '便利店', 'BJCVS西下庄店', 0, '1135', '2018', '03', '1135', '2018', '04'),
+('1381', '北京', '物美', '便利店', 'BJCVS八大处军区店', 0, '1146', '2018', '03', '1146', '2018', '04'),
+('1384', '北京', '物美', '便利店', 'BJCVS方庄桥店', 0, '1150', '2018', '03', '1150', '2018', '04'),
+('1385', '北京', '物美', '便利店', 'BJCVS光华路SOHO店', 0, '1151', '2018', '03', '1151', '2018', '04'),
+('1386', '北京', '物美', '便利店', 'BJCVS和平里北街店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1387', '北京', '物美', '大卖场', 'BJSM龙湖店', 0, '1575', '2017', '07', '1575', '2017', '08'),
+('1389', '北京', '物美', '大卖场', 'BJHM北七家店', 0, '1579', '2017', '07', '1579', '2017', '08'),
+('1391', '北京', '物美', '大卖场', 'BJSM三间房店', 0, '1582', '2017', '07', '1582', '2017', '08'),
+('1398', '北京', '物美', '便利店', 'BJCVS刘家窑西', 0, '1280', '2018', '03', '1280', '2018', '04'),
+('1407', '北京', '物美', '便利店', 'BJCVS卢沟晓月店', 0, '1281', '2018', '03', '1281', '2018', '04'),
+('1408', '北京', '物美', '大卖场', 'BJHM物美甘露园', 0, '1593', '2017', '07', '1593', '2017', '08'),
+('1411', '北京', '物美', '大卖场', 'BJSM加州小镇店', 0, '1595', '2017', '07', '1595', '2017', '08'),
+('1413', '北京', '物美', '便利店', 'BJCVS现代一店', 0, '1282', '2018', '03', '1282', '2018', '04'),
+('1415', '北京', '物美', '便利店', 'BJCVS现代二店', 0, '1293', '2018', '03', '1293', '2018', '04'),
+('1420', '北京', '物美', '大卖场', 'BJHM西黄村二店', 0, '1617', '2017', '07', '1617', '2017', '08'),
+('1426', '北京', '物美', '便利店', 'BJCVS物美大厦店', 0, '1294', '2018', '03', '1294', '2018', '04'),
+('1427', '北京', '物美', '大卖场', 'BJHM兴华大街店', 0, '1624', '2017', '07', '1624', '2017', '08'),
+('1431', '北京', '物美', '大卖场', 'BJSM温都水城店', 0, '1628', '2017', '07', '1628', '2017', '08'),
+('1432', '北京', '物美', '便利店', 'BJCVS创意园店', 0, '1295', '2018', '03', '1295', '2018', '04'),
+('1433', '北京', '物美', '大卖场', 'BJHM明光桥西店', 0, '8501', '2017', '07', '8501', '2017', '08'),
+('1434', '北京', '物美', '大卖场', 'BJHM陶然亭店', 0, '1011', '2018', '06', '1011', '2018', '07'),
+('1439', '北京', '物美', '大卖场', 'BJHM京良路店', 0, '1015', '2018', '06', '1015', '2018', '07'),
+('1440', '北京', '物美', '大卖场', 'BJSM金顶阳光', 0, '1021', '2018', '06', '1021', '2018', '07'),
+('1441', '北京', '物美', '便利店', 'BJCVS天创大厦店', 0, '1299', '2018', '03', '1299', '2018', '04'),
+('1443', '北京', '物美', '大卖场', 'BJHM高米店北店', 0, '1023', '2018', '06', '1023', '2018', '07'),
+('1445', '北京', '物美', '便利店', '台湖爱心超市', 0, '1358', '2018', '03', '1358', '2018', '04'),
+('1446', '北京', '物美', '便利店', 'BJCVS华电大厦店', 0, '1366', '2018', '03', '1366', '2018', '04'),
+('1447', '北京', '物美', '大卖场', 'BJSM物美朝阳门店', 0, '1024', '2018', '06', '1024', '2018', '07'),
+('1449', '北京', '物美', '便利店', 'BJCVS紫金数码店', 0, '1376', '2018', '03', '1376', '2018', '04'),
+('1450', '北京', '物美', '大卖场', 'BJHM大成国际店', 0, '1025', '2018', '06', '1025', '2018', '07'),
+('1451', '北京', '物美', '大卖场', 'BJHM远洋一方店', 0, '1027', '2018', '06', '1027', '2018', '07'),
+('1452', '北京', '物美', '大卖场', 'BJHM望京东店', 0, '1028', '2018', '06', '1028', '2018', '07'),
+('1454', '北京', '物美', '大卖场', 'BJHM西三旗店', 0, '1035', '2018', '06', '1035', '2018', '07'),
+('1456', '北京', '物美', '大卖场', 'BJHM田村店', 0, '1041', '2018', '06', '1041', '2018', '07'),
+('1457', '北京', '物美', '大卖场', 'BJHM八角游乐园店(太阳岛）', 0, '1129', '2018', '06', '1129', '2018', '07'),
+('1458', '北京', '物美', '便利店', 'BJCVS交大南门店', 0, '1380', '2018', '03', '1380', '2018', '04'),
+('1459', '北京', '物美', '大卖场', 'BJSM远洋山水店', 0, '1163', '2018', '06', '1163', '2018', '07'),
+('1460', '北京', '物美', '便利店', 'BJCVS农行三店', 0, '1381', '2018', '03', '1381', '2018', '04'),
+('1461', '北京', '物美', '便利店', 'BJCVS静安里店', 0, '1384', '2018', '03', '1384', '2018', '04'),
+('1463', '北京', '物美', '大卖场', 'BJSM总参二店', 0, '1164', '2018', '06', '1164', '2018', '07'),
+('1464', '北京', '物美', '大卖场', 'BJHM土桥店', 0, '1166', '2018', '06', '1166', '2018', '07'),
+('1465', '北京', '物美', '大卖场', 'BJHM昌平东关店', 0, '1167', '2018', '06', '1167', '2018', '07'),
+('1466', '北京', '物美', '便利店', 'BJCVS瓷器口点', 0, '1385', '2018', '03', '1385', '2018', '04'),
+('1467', '北京', '物美', '便利店', 'BJCVS总参干休所店', 0, '1386', '2018', '03', '1386', '2018', '04'),
+('1469', '北京', '物美', '大卖场', 'BJHM海子角店', 0, '1169', '2018', '06', '1169', '2018', '07'),
+('1470', '北京', '物美', '便利店', 'BJCVS霍营店', 0, '1398', '2018', '03', '1398', '2018', '04'),
+('1471', '北京', '物美', '便利店', 'BJCVS金隅嘉华店', 0, '1407', '2018', '03', '1407', '2018', '04'),
+('1476', '北京', '物美', '便利店', 'BJCVS盈创店', 0, '1432', '2018', '03', '1432', '2018', '04'),
+('1477', '北京', '物美', '大卖场', 'BJHM联想桥店', 0, '1170', '2018', '06', '1170', '2018', '07'),
+('1478', '北京', '物美', '便利店', 'BJCVS上地软件园店', 0, '1441', '2018', '03', '1441', '2018', '04'),
+('1479', '北京', '物美', '便利店', 'BJCVS西杉店', 0, '1458', '2018', '03', '1458', '2018', '04'),
+('1480', '北京', '物美', '便利店', 'BJCVS钻河店', 0, '1470', '2018', '03', '1470', '2018', '04'),
+('1482', '北京', '物美', '大卖场', 'BJHM北苑东店', 0, '1171', '2018', '06', '1171', '2018', '07'),
+('1485', '北京', '物美', '大卖场', 'BJHM泰和园店', 0, '1248', '2018', '06', '1248', '2018', '07'),
+('1486', '北京', '物美', '便利店', 'BJCVS公益西桥二店', 0, '1471', '2018', '03', '1471', '2018', '04'),
+('1492', '北京', '物美', '大卖场', 'BJHM后沙峪店', 0, '1261', '2018', '06', '1261', '2018', '07'),
+('1493', '北京', '物美', '便利店', 'BJCVS现代四店', 0, '1478', '2018', '03', '1478', '2018', '04'),
+('1495', '北京', '物美', '便利店', 'BJCVS现代五店', 0, '1480', '2018', '03', '1480', '2018', '04'),
+('1496', '北京', '物美', '大卖场', 'BJSM大厅店', 0, '1264', '2018', '06', '1264', '2018', '07'),
+('1497', '北京', '物美', '便利店', 'BJCVS沙子口店', 0, '1486', '2018', '03', '1486', '2018', '04'),
+('1498', '北京', '物美', '便利店', 'BJCVS青尚小营店', 0, '1497', '2018', '03', '1497', '2018', '04'),
+('1501', '北京', '物美', '便利店', 'BJCVS东花市店', 0, '1498', '2018', '03', '1498', '2018', '04'),
+('1503', '北京', '物美', '便利店', 'BJCVS上地三街店', 0, '1501', '2018', '03', '1501', '2018', '04'),
+('1504', '北京', '物美', '便利店', 'BJCVS东大街店', 0, '1503', '2018', '03', '1503', '2018', '04'),
+('1505', '北京', '物美', '大卖场', 'BJHM草桥店', 0, '1267', '2018', '06', '1267', '2018', '07'),
+('1507', '北京', '物美', '大卖场', 'BJSM米拉小镇店', 0, '1279', '2018', '06', '1279', '2018', '07'),
+('1509', '北京', '物美', '大卖场', 'BJSM南海家园店', 0, '1292', '2018', '06', '1292', '2018', '07'),
+('1510', '北京', '物美', '大卖场', 'BJSM北大医学部店', 0, '1309', '2018', '06', '1309', '2018', '07'),
+('1511', '北京', '物美', '便利店', 'BJCVS农发行店', 0, '1504', '2018', '03', '1504', '2018', '04'),
+('1512', '北京', '物美', '大卖场', 'BJHM三旗百汇店', 0, '1310', '2018', '06', '1310', '2018', '07'),
+('1513', '北京', '物美', '便利店', 'BJCVS金融街鑫茂店', 0, '1519', '2018', '03', '1519', '2018', '04'),
+('1516', '北京', '物美', '大卖场', 'BJHM小汤山店', 0, '1312', '2018', '06', '1312', '2018', '07'),
+('1519', '北京', '物美', '便利店', 'BJCVS十字坡店', 0, '1536', '2018', '03', '1536', '2018', '04'),
+('1521', '北京', '物美', '便利店', 'BJCVS小屯路店', 0, '1543', '2018', '03', '1543', '2018', '04'),
+('1523', '北京', '物美', '便利店', 'BJCVS上地七街店', 0, '1549', '2018', '03', '1549', '2018', '04'),
+('1525', '北京', '物美', '大卖场', 'BJSM程庄路店', 0, '1313', '2018', '06', '1313', '2018', '07'),
+('1526', '北京', '物美', '大卖场', 'BJSM马驹桥店', 0, '1314', '2018', '06', '1314', '2018', '07'),
+('1527', '北京', '物美', '便利店', 'BJCVS百子湾店', 0, '1566', '2018', '03', '1566', '2018', '04'),
+('1528', '北京', '物美', '便利店', 'BJCVS文思海辉店', 0, '1578', '2018', '03', '1578', '2018', '04'),
+('1529', '北京', '物美', '便利店', 'BJCVS富凯大厦', 0, '1585', '2018', '03', '1585', '2018', '04'),
+('1530', '北京', '物美', '大卖场', 'BJHM安河桥北', 0, '1364', '2018', '06', '1364', '2018', '07'),
+('1533', '北京', '物美', '便利店', 'BJCVS瑞斯康达', 0, '1589', '2018', '03', '1589', '2018', '04'),
+('1536', '北京', '物美', '便利店', 'BJCVS总参51所', 0, '1590', '2018', '03', '1590', '2018', '04'),
+('1537', '北京', '物美', '大卖场', 'BJSM燕郊燕灵路店', 0, '1370', '2018', '06', '1370', '2018', '07'),
+('1538', '北京', '物美', '大卖场', 'BJHM冯村店', 0, '1377', '2018', '06', '1377', '2018', '07'),
+('1540', '北京', '物美', '便利店', 'BJCVS英大国际', 0, '1591', '2018', '03', '1591', '2018', '04'),
+('1543', '北京', '物美', '便利店', 'BJCVS木樨地店', 0, '1592', '2018', '03', '1592', '2018', '04'),
+('1544', '北京', '物美', '便利店', '永顺店', 0, '1594', '2018', '03', '1594', '2018', '04'),
+('1545', '北京', '物美', '便利店', 'BJCVS黄庄职业学校', 0, '1603', '2018', '03', '1603', '2018', '04'),
+('1547', '北京', '物美', '大卖场', 'BJSM花园东路店', 0, '1378', '2018', '06', '1378', '2018', '07'),
+('1549', '北京', '物美', '便利店', 'BJCVS金顶北路店', 0, '1607', '2018', '03', '1607', '2018', '04'),
+('1550', '北京', '物美', '便利店', 'BJCVS玲珑天地店', 0, '1608', '2018', '03', '1608', '2018', '04'),
+('1552', '北京', '物美', '大卖场', 'BJHM杜家坎店', 0, '1389', '2018', '06', '1389', '2018', '07'),
+('1554', '北京', '物美', '大卖场', 'BJSM彰化南路', 0, '1408', '2018', '06', '1408', '2018', '07'),
+('1555', '北京', '物美', '大卖场', 'BJSM石泉店', 0, '1420', '2018', '06', '1420', '2018', '07'),
+('1556', '北京', '物美', '大卖场', 'BJSM紫金店', 0, '1427', '2018', '06', '1427', '2018', '07'),
+('1557', '北京', '物美', '大卖场', 'BJSM石门营', 0, '1433', '2018', '06', '1433', '2018', '07'),
+('1558', '北京', '物美', '便利店', '安美路', 0, '1611', '2018', '03', '1611', '2018', '04'),
+('1562', '北京', '物美', '大卖场', 'BJHM万寿路店', 0, '1434', '2018', '06', '1434', '2018', '07'),
+('1564', '北京', '物美', '大卖场', 'BJSM后沙峪2店', 0, '1439', '2018', '06', '1439', '2018', '07'),
+('1565', '北京', '物美', '大卖场', 'BJHM中信城店', 0, '1443', '2018', '06', '1443', '2018', '07'),
+('1566', '北京', '物美', '便利店', '成仪路店', 0, '1612', '2018', '03', '1612', '2018', '04'),
+('1572', '北京', '物美', '便利店', '慈云寺北里', 0, '1625', '2018', '03', '1625', '2018', '04'),
+('1573', '北京', '物美', '大卖场', 'BJHM沙河店', 0, '1450', '2018', '06', '1450', '2018', '07'),
+('1574', '北京', '物美', '大卖场', 'BJHM昌平西关店', 0, '1451', '2018', '06', '1451', '2018', '07'),
+('1575', '北京', '物美', '大卖场', 'BJHM次渠店', 0, '1452', '2018', '06', '1452', '2018', '07'),
+('1576', '北京', '物美', '便利店', '西三环中路', 0, '1626', '2018', '03', '1626', '2018', '04'),
+('1578', '北京', '物美', '便利店', '建国门', 0, '1630', '2018', '03', '1630', '2018', '04'),
+('1579', '北京', '物美', '大卖场', 'BJHM沁山水店', 0, '1454', '2018', '06', '1454', '2018', '07'),
+('1581', '北京', '物美', '便利店', '科兴西路店', 0, '1636', '2018', '03', '1636', '2018', '04'),
+('1582', '北京', '物美', '大卖场', 'BJHM光明楼店', 0, '1456', '2018', '06', '1456', '2018', '07'),
+('1583', '北京', '物美', '大卖场', 'BJSM大兴芦城店', 0, '1457', '2018', '06', '1457', '2018', '07'),
+('1584', '北京', '物美', '便利店', '软通动力', 0, '1638', '2018', '03', '1638', '2018', '04'),
+('1585', '北京', '物美', '便利店', '西集店', 0, '1646', '2018', '03', '1646', '2018', '04'),
+('1587', '北京', '物美', '便利店', '中办店', 0, '1648', '2018', '03', '1648', '2018', '04'),
+('1589', '北京', '物美', '便利店', '小黄庄店', 0, '1649', '2018', '03', '1649', '2018', '04'),
+('1590', '北京', '物美', '便利店', '朝阳医院', 0, '1650', '2018', '03', '1650', '2018', '04'),
+('1591', '北京', '物美', '便利店', '防灾学院', 0, '1652', '2018', '03', '1652', '2018', '04'),
+('1592', '北京', '物美', '便利店', '东坝中路', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1593', '北京', '物美', '大卖场', 'BJHM大兴龙湖店', 0, '1464', '2018', '06', '1464', '2018', '07'),
+('1594', '北京', '物美', '便利店', '圣八便利店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1595', '北京', '物美', '大卖场', 'BJHM富兴国际', 0, '1011', '2018', '06', '1011', '2018', '07'),
+('1603', '北京', '物美', '便利店', '苹果园南路', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1604', '北京', '物美', '便利店', '杜家坎南路', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1605', '北京', '物美', '大卖场', 'BJHM昌平鼓楼南大街店', 0, '1469', '2018', '06', '1469', '2018', '07'),
+('1607', '北京', '物美', '便利店', '阳光新城一店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1608', '北京', '物美', '便利店', '阳光新城二店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1610', '北京', '物美', '便利店', '广渠门内大街', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1611', '北京', '物美', '便利店', '潞苑南里', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1612', '北京', '物美', '便利店', '军科院一店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1617', '北京', '物美', '大卖场', '大成东店（百子湾）', 0, '1477', '2018', '06', '1477', '2018', '07'),
+('1620', '北京', '物美', '便利店', '黑山大街', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1621', '北京', '物美', '大卖场', '河滩店', 0, '1482', '2018', '06', '1482', '2018', '07'),
+('1622', '北京', '物美', '大卖场', '立水桥品超市', 0, '1485', '2018', '06', '1485', '2018', '07'),
+('1624', '北京', '物美', '大卖场', '密云新中街', 0, '1492', '2018', '06', '1492', '2018', '07'),
+('1625', '北京', '物美', '便利店', '东土城店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1626', '北京', '物美', '便利店', '潞苑五街', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1628', '北京', '物美', '大卖场', '丽泽桥', 0, '1505', '2018', '06', '1505', '2018', '07'),
+('1630', '北京', '物美', '便利店', '总参三店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1631', '北京', '物美', '大卖场', '朝阳路店', 0, '1512', '2018', '06', '1512', '2018', '07'),
+('1632', '北京', '物美', '大卖场', '紫竹院店', 0, '1516', '2018', '06', '1516', '2018', '07'),
+('1633', '北京', '物美', '大卖场', '潘家园店', 0, '1530', '2018', '06', '1530', '2018', '07'),
+('1635', '北京', '物美', '大卖场', '金宝街店', 0, '1538', '2018', '06', '1538', '2018', '07'),
+('1636', '北京', '物美', '便利店', '通州新华西街', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1637', '北京', '物美', '便利店', '昌平府学路', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1638', '北京', '物美', '便利店', '前门东路', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1640', '北京', '物美', '便利店', '印刷学院1店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1641', '北京', '物美', '便利店', '印刷学院2店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1642', '北京', '物美', '便利店', '印刷学院3店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1644', '北京', '物美', '便利店', '国电电力', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1646', '北京', '物美', '便利店', '泰康创新中心', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1647', '北京', '物美', '大卖场', 'BJHM欣雅汇店', 0, '1552', '2018', '06', '1552', '2018', '07'),
+('1648', '北京', '物美', '便利店', '陆航学院', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1649', '北京', '物美', '便利店', '潭柘新区', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1650', '北京', '物美', '便利店', '新宫店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1651', '北京', '物美', '便利店', '农行南楼店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1652', '北京', '物美', '便利店', '燕顺路分店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1653', '北京', '物美', '便利店', '燕平路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1655', '北京', '物美', '便利店', '惠新西街北口店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1656', '北京', '物美', '便利店', '十一亦庄分校店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1657', '北京', '物美', '便利店', '鼓楼南街店 ', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1658', '北京', '物美', '大卖场', 'BJHM温泉店 ', 0, '1562', '2018', '06', '1562', '2018', '07'),
+('1659', '北京', '物美', '大卖场', '康庄店', 0, '1565', '2018', '06', '1565', '2018', '07'),
+('1660', '北京', '物美', '大卖场', '金色漫香苑', 0, '1573', '2018', '06', '1573', '2018', '07'),
+('1664', '北京', '物美', '便利店', '松榆里店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1665', '北京', '物美', '便利店', '国珍大厦', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1666', '北京', '物美', '大卖场', '樊羊路', 0, '1574', '2018', '06', '1574', '2018', '07'),
+('1669', '北京', '物美', '便利店', '军区后勤店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1670', '北京', '物美', '便利店', '东城金鱼池店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1672', '北京', '物美', '便利店', '中保大厦', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1673', '北京', '物美', '大卖场', '北京物美通州华业玫瑰店', 0, '1575', '2018', '06', '1575', '2018', '07'),
+('1675', '北京', '物美', '便利店', '莲花池西路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1676', '北京', '物美', '便利店', '香山南路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1677', '北京', '物美', '便利店', '泰康二店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1678', '北京', '物美', '便利店', '望京阿里店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1679', '北京', '物美', '大卖场', '华润万象汇店', 0, '1579', '2018', '06', '1579', '2018', '07'),
+('1680', '北京', '物美', '便利店', '农学院房山店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1681', '北京', '物美', '便利店', '广和路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1682', '北京', '物美', '便利店', '金海国际', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1683', '北京', '物美', '便利店', '光彩路', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1684', '北京', '物美', '便利店', '兴创大厦', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1686', '北京', '物美', '便利店', '中信银行', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1687', '北京', '物美', '便利店', '北大体育馆店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1688', '北京', '物美', '便利店', '北大五四体育场店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1689', '北京', '物美', '便利店', '西关路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1691', '北京', '物美', '大卖场', '庞各庄', 0, '1582', '2018', '06', '1582', '2018', '07'),
+('1693', '北京', '物美', '便利店', '配送中心', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1694', '北京', '物美', '便利店', '宁馨苑店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1695', '北京', '物美', '便利店', '泰安路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1697', '北京', '物美', '便利店', '昌平阿里', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1698', '北京', '物美', '便利店', '竞技大厦', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1699', '北京', '物美', '大卖场', '怀柔万达店', 0, '1593', '2018', '06', '1593', '2018', '07'),
+('1702', '北京', '物美', '便利店', '广宁村新', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1703', '北京', '物美', '便利店', '昌平东环路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1705', '北京', '物美', '便利店', '工商大学东店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1706', '北京', '物美', '便利店', '工商大学西店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1707', '北京', '物美', '便利店', '防灾学院三店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1708', '北京', '物美', '便利店', '北清路农行南楼店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1711', '北京', '物美', '便利店', '昌平北城根店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1712', '北京', '物美', '便利店', '昌平永安路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1713', '北京', '物美', '便利店', '北太平路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1714', '北京', '物美', '便利店', '南顶路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1715', '北京', '物美', '便利店', '拱辰南大街店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1717', '北京', '物美', '便利店', '南口北校店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1719', '北京', '物美', '便利店', '武警白马路店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1720', '北京', '物美', '便利店', '动物园新店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1722', '北京', '物美', '便利店', '六里桥东', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1723', '北京', '物美', '便利店', '唐家岭', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1724', '北京', '物美', '大卖场', '昌平南环路店', 0, '1595', '2018', '06', '1595', '2018', '07'),
+('1725', '北京', '物美', '便利店', '丰台岳各庄店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1726', '北京', '物美', '便利店', '华电煤业店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1727', '北京', '物美', '便利店', '太平桥西店', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1728', '北京', '物美', '便利店', '政法大学', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1732', '北京', '物美', '便利店', '金隅科技', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1733', '北京', '物美', '便利店', '万明路', 0, NULL, NULL, NULL, NULL, NULL, NULL),
+('1737', '北京', '物美', '大卖场', '鲁谷店', 0, '1617', '2018', '06', '1617', '2018', '07'),
+('1738', '北京', '物美', '大卖场', '京港城店', 0, '1624', '2018', '06', '1624', '2018', '07'),
+('1740', '北京', '物美', '大卖场', 'BJHM双井店', 0, '1628', '2018', '06', '1628', '2018', '07'),
+('1748', '北京', '物美', '大卖场', 'BJHM孙河店', 0, '8501', '2018', '06', '8501', '2018', '07'),
+('1754', '北京', '物美', '大卖场', '顺义马坡店', 0, '1015', '2018', '06', '1015', '2018', '07'),
+('1789', '北京', '物美', '大卖场', 'BJHM崇文门国瑞城店', 0, '1021', '2018', '06', '1021', '2018', '07'),
+('1795', '北京', '物美', '大卖场', '衙门口桥店', 0, '1023', '2018', '06', '1023', '2018', '07'),
+('1797', '北京', '物美', '大卖场', '洋桥店', 0, '1024', '2018', '06', '1024', '2018', '07'),
+('1798', '北京', '物美', '大卖场', 'BJHM上地店', 0, '1025', '2018', '06', '1025', '2018', '07'),
+('1800', '北京', '物美', '大卖场', '双清路店', 0, '1027', '2018', '06', '1027', '2018', '07'),
+('1801', '北京', '物美', '大卖场', 'BJHM十里堡店', 0, '1028', '2018', '06', '1028', '2018', '07'),
+('1804', '北京', '物美', '大卖场', 'BJHM安贞店', 0, '1035', '2018', '06', '1035', '2018', '07'),
+('1807', '北京', '物美', '大卖场', '乐天望京店', 0, '1041', '2018', '06', '1041', '2018', '07'),
+('1808', '北京', '物美', '大卖场', '公益西桥店', 0, '1129', '2018', '06', '1129', '2018', '07'),
+('1809', '北京', '物美', '大卖场', 'BJHM四道口店', 0, '1163', '2018', '06', '1163', '2018', '07'),
+('1882', '北京', '物美', '大卖场', '京平店', 0, '1164', '2018', '06', '1164', '2018', '07'),
+('1892', '北京', '物美', '大卖场', '窦店北路店', 0, '1166', '2018', '06', '1166', '2018', '07'),
+('8501', '北京', '物美', '大卖场', 'BJHM华茂城店', 0, '1167', '2018', '06', '1167', '2018', '07'),
+('9270', '重庆市', '永辉', '大卖场', '永辉-南岸区崇文店', 0, '1011', '2017', '04', '1011', '2017', '05'),
+('9284', '重庆市', '永辉', '大卖场', '永辉-渝北区兰馨大道店', 0, '1015', '2017', '04', '1015', '2017', '05'),
+('9286', '重庆市', '永辉', '大卖场', '永辉-忠县财富广场店', 0, '1021', '2017', '04', '1021', '2017', '05'),
+('9287', '重庆市', '永辉', '大卖场', '永辉-渝北区兴科大道店', 0, '1023', '2017', '04', '1023', '2017', '05'),
+('9289', '重庆市', '永辉', '大卖场', '永辉-渝北区红叶路店', 0, '1024', '2017', '04', '1024', '2017', '05'),
+('9290', '重庆市', '永辉', '大卖场', '永辉-南岸区腾龙大道店', 0, '1025', '2017', '04', '1025', '2017', '05'),
+('9299', '重庆市', '永辉', '大卖场', '永辉-璧山县金山广场店', 0, '1027', '2017', '04', '1027', '2017', '05'),
+('9300', '重庆市', '永辉', '大卖场', '永辉(重庆市永辉生活广场店)', 0, '1028', '2017', '04', '1028', '2017', '05'),
+('9308', '重庆市', '永辉', '大卖场', '永辉-重庆市酉阳县碧津广场店', 0, '1035', '2017', '04', '1035', '2017', '05'),
+('9316', '重庆市', '永辉', '大卖场', '永辉-重庆市江津区江洲大道店', 0, '1041', '2017', '04', '1041', '2017', '05'),
+('9317', '重庆市', '永辉', '大卖场', '永辉-万州区万达店', 0, '1129', '2017', '04', '1129', '2017', '05'),
+('9359', '重庆市', '永辉', '大卖场', '永辉-渝北区泰山大道店', 0, '1163', '2017', '04', '1163', '2017', '05'),
+('9360', '重庆市', '永辉', '大卖场', '永辉-南岸区茶园金科店', 0, '1164', '2017', '04', '1164', '2017', '05'),
+('9368', '重庆市', '永辉', '大卖场', '永辉-江北区国奥村店', 0, '1166', '2017', '04', '1166', '2017', '05'),
+('9369', '重庆市', '永辉', '大卖场', '永辉-南川区渝南大道店', 0, '1167', '2017', '04', '1167', '2017', '05'),
+('9384', '重庆市', '永辉', '大卖场', '永辉-九龙坡区华福金科店', 0, '1169', '2017', '04', '1169', '2017', '05'),
+('9385', '重庆市', '永辉', '大卖场', '永辉-合川区合川宝龙店', 0, '1170', '2017', '04', '1170', '2017', '05'),
+('9394', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区龙湖仟百汇店', 0, '1171', '2017', '04', '1171', '2017', '05'),
+('9404', '重庆市', '永辉', '大卖场', '永辉-北碚区双元大道店', 0, '1248', '2017', '04', '1248', '2017', '05'),
+('9447', '重庆市', '永辉', '大卖场', '永辉-巴南区巴南万达店', 0, '1261', '2017', '04', '1261', '2017', '05'),
+('9451', '重庆市', '永辉', '大卖场', '永辉-大渡口区中交丽景店', 0, '1264', '2017', '04', '1264', '2017', '05'),
+('9456', '重庆市', '永辉', '大卖场', '永辉-重庆渝中区--大坪协信店', 0, '1267', '2017', '04', '1267', '2017', '05'),
+('9460', '重庆市', '永辉', '大卖场', '永辉-重庆渝北区水木天地店', 0, '1279', '2017', '04', '1279', '2017', '05'),
+('9461', '重庆市', '永辉', '大卖场', '永辉-重庆永川区协信店', 0, '1292', '2017', '04', '1292', '2017', '05'),
+('9462', '重庆市', '永辉', '大卖场', '永辉(重庆市白市驿店)', 0, '1309', '2017', '04', '1309', '2017', '05'),
+('9467', '重庆市', '永辉', '大卖场', '永辉(重庆市渝州路店)', 0, '1310', '2017', '04', '1310', '2017', '05'),
+('9486', '重庆市', '永辉', '大卖场', '永辉(龙湖时代天街店)', 0, '1312', '2017', '04', '1312', '2017', '05'),
+('9501', '重庆市', '永辉', '大卖场', '永辉(康德中央大街店)', 0, '1313', '2017', '04', '1313', '2017', '05'),
+('9510', '重庆市', '永辉', '大卖场', '永辉(桃源路店)', 0, '1314', '2017', '04', '1314', '2017', '05'),
+('9517', '重庆市', '永辉', '大卖场', '永辉(爱琴海店)', 0, '1364', '2017', '04', '1364', '2017', '05'),
+('9532', '重庆市', '永辉', '大卖场', '永辉(喜悦汇店)', 0, '1370', '2017', '04', '1370', '2017', '05'),
+('9H01', '重庆市', '永辉', '大卖场', '永辉(优选东原D7店)', 0, '1377', '2017', '04', '1377', '2017', '05'),
+('9H02', '重庆市', '永辉', '大卖场', '永辉(优选洋河店)', 0, '1378', '2017', '04', '1378', '2017', '05'),
+('9H03', '重庆市', '永辉', '大卖场', '永辉(优选望海花市店)', 0, '1389', '2017', '04', '1389', '2017', '05'),
+('9H04', '重庆市', '永辉', '大卖场', '永辉(优选兴茂店)', 0, '1408', '2017', '04', '1408', '2017', '05'),
+('A004', '北京', '超市发', '综合超市', '双榆树', 0, '1169', '2018', '06', '1169', '2018', '07'),
+('A006', '北京', '超市发', '综合超市', '半壁店', 0, '1170', '2018', '06', '1170', '2018', '07'),
+('A007', '北京', '超市发', '综合超市', '羊坊店', 0, '1171', '2018', '06', '1171', '2018', '07'),
+('A008', '北京', '超市发', '综合超市', '朗秋园', 0, '1248', '2018', '06', '1248', '2018', '07'),
+('A010', '北京', '超市发', '综合超市', '玉海园', 0, '1261', '2018', '06', '1261', '2018', '07'),
+('A013', '北京', '超市发', '综合超市', '清河店', 0, '1264', '2018', '06', '1264', '2018', '07'),
+('A016', '北京', '超市发', '综合超市', '农大店', 0, '1267', '2018', '06', '1267', '2018', '07'),
+('A017', '北京', '超市发', '综合超市', '方圆店', 0, '1279', '2018', '06', '1279', '2018', '07'),
+('A020', '北京', '超市发', '综合超市', '万寿路', 0, '1292', '2018', '06', '1292', '2018', '07'),
+('A021', '北京', '超市发', '综合超市', '甘家口', 0, '1309', '2018', '06', '1309', '2018', '07'),
+('A022', '北京', '超市发', '综合超市', '北航店', 0, '1310', '2018', '06', '1310', '2018', '07'),
+('A023', '北京', '超市发', '综合超市', '四道口', 0, '1312', '2018', '06', '1312', '2018', '07'),
+('A026', '北京', '超市发', '综合超市', '玉泉路', 0, '1313', '2018', '06', '1313', '2018', '07'),
+('A027', '北京', '超市发', '综合超市', '厢红旗', 0, '1314', '2018', '06', '1314', '2018', '07'),
+('A031', '北京', '超市发', '综合超市', '科学城', 0, '1364', '2018', '06', '1364', '2018', '07'),
+('A034', '北京', '超市发', '综合超市', '清河大楼', 0, '1370', '2018', '06', '1370', '2018', '07'),
+('A035', '北京', '超市发', '综合超市', '学院路', 0, '1377', '2018', '06', '1377', '2018', '07'),
+('A037', '北京', '超市发', '综合超市', '月季园', 0, '1378', '2018', '06', '1378', '2018', '07'),
+('A040', '北京', '超市发', '综合超市', '万泉庄', 0, '1389', '2018', '06', '1389', '2018', '07'),
+('A042', '北京', '超市发', '综合超市', '魏公村', 0, '1408', '2018', '06', '1408', '2018', '07'),
+('A043', '北京', '超市发', '综合超市', '蓝润店', 0, '1420', '2018', '06', '1420', '2018', '07'),
+('A046', '北京', '超市发', '综合超市', '上地店', 0, '1427', '2018', '06', '1427', '2018', '07'),
+('A050', '北京', '超市发', '综合超市', '美欣店', 0, '1433', '2018', '06', '1433', '2018', '07'),
+('A053', '北京', '超市发', '综合超市', '曙光花园', 0, '1434', '2018', '06', '1434', '2018', '07'),
+('A055', '北京', '超市发', '综合超市', '天通苑东区', 0, '1439', '2018', '06', '1439', '2018', '07'),
+('A057', '北京', '超市发', '综合超市', '白颐路', 0, '1443', '2018', '06', '1443', '2018', '07'),
+('A059', '北京', '超市发', '综合超市', '万柳店', 0, '1450', '2018', '06', '1450', '2018', '07'),
+('A062', '北京', '超市发', '综合超市', '花园路', 0, '1451', '2018', '06', '1451', '2018', '07'),
+('A070', '北京', '超市发', '综合超市', '天通苑西区', 0, '1452', '2018', '06', '1452', '2018', '07'),
+('A071', '北京', '超市发', '综合超市', '电科院', 0, '1454', '2018', '06', '1454', '2018', '07'),
+('A073', '北京', '超市发', '综合超市', '北清路', 0, '1456', '2018', '06', '1456', '2018', '07'),
+('A074', '北京', '超市发', '综合超市', '蓟门店', 0, '1457', '2018', '06', '1457', '2018', '07'),
+('A079', '北京', '超市发', '综合超市', '青塔店', 0, '1464', '2018', '06', '1464', '2018', '07'),
+('A123', '北京', '超市发', '综合超市', '北坞嘉园', 0, '1465', '2018', '06', '1465', '2018', '07'),
+('A132', '北京', '超市发', '综合超市', '安定门', 0, '1469', '2018', '06', '1469', '2018', '07'),
+('A136', '北京', '超市发', '综合超市', '宝盛里', 0, '1477', '2018', '06', '1477', '2018', '07'),
+('A185', '北京', '超市发', '综合超市', '溪山嘉园', 0, '1482', '2018', '06', '1482', '2018', '07'),
+('A215', '北京', '超市发', '综合超市', '苹果园', 0, '1485', '2018', '06', '1485', '2018', '07'),
+('A233', '北京', '超市发', '综合超市', '车道沟', 0, '1492', '2018', '06', '1492', '2018', '07'),
+('A234', '北京', '超市发', '综合超市', '图景店', 0, '1505', '2018', '06', '1505', '2018', '07'),
+('A235', '北京', '超市发', '综合超市', '唐家岭', 0, '1512', '2018', '06', '1512', '2018', '07'),
+('A236', '北京', '超市发', '综合超市', '太舟坞', 0, '1516', '2018', '06', '1516', '2018', '07'),
+('A239', '北京', '超市发', '综合超市', '知春里', 0, '1530', '2018', '06', '1530', '2018', '07'),
+('A241', '北京', '超市发', '综合超市', '苏家坨', 0, '1538', '2018', '06', '1538', '2018', '07'),
+('A242', '北京', '超市发', '综合超市', '燕堤南路', 0, '1552', '2018', '06', '1552', '2018', '07'),
+('A243', '北京', '超市发', '综合超市', '鲁疃店', 0, '1562', '2018', '06', '1562', '2018', '07'),
+('A245', '北京', '超市发', '综合超市', '朱各庄', 0, '1565', '2018', '06', '1565', '2018', '07'),
+('A246', '北京', '超市发', '综合超市', '纪检学院店', 0, '1573', '2018', '06', '1573', '2018', '07'),
+('A248', '北京', '超市发', '综合超市', '颐源居', 0, '1574', '2018', '06', '1574', '2018', '07'),
+('A301', '北京', '超市发', '综合超市', '夕照寺', 0, '1575', '2018', '06', '1575', '2018', '07'),
+('A302', '北京', '超市发', '综合超市', '林萃路', 0, '1579', '2018', '06', '1579', '2018', '07'),
+('A303', '北京', '超市发', '综合超市', '右安门', 0, '1582', '2018', '06', '1582', '2018', '07'),
+('C001', '重庆市', '永辉', '大卖场', '永辉-渝北区加州店', 0, '1420', '2017', '04', '1420', '2017', '05'),
+('C002', '重庆市', '永辉', '大卖场', '永辉-重庆渝北区东和春天店', 0, '1427', '2017', '04', '1427', '2017', '05'),
+('C003', '重庆市', '永辉', '大卖场', '永辉-重庆江北区观音桥店', 0, '1433', '2017', '04', '1433', '2017', '05'),
+('C004', '重庆市', '永辉', '大卖场', '永辉-渝中区大坪店', 0, '1434', '2017', '04', '1434', '2017', '05'),
+('C005', '重庆市', '永辉', '大卖场', '永辉-九龙坡区西城天街店', 0, '1439', '2017', '04', '1439', '2017', '05'),
+('C007', '重庆市', '永辉', '大卖场', '永辉-江北区五里店', 0, '1443', '2017', '04', '1443', '2017', '05'),
+('C008', '重庆市', '永辉', '大卖场', '永辉-南岸区四公里店', 0, '1450', '2017', '04', '1450', '2017', '05'),
+('C009', '重庆市', '永辉', '大卖场', '永辉-渝北区黄泥塝店', 0, '1451', '2017', '04', '1451', '2017', '05'),
+('C010', '重庆市', '永辉', '大卖场', '永辉-长寿区协信店', 0, '1452', '2017', '04', '1452', '2017', '05'),
+('C011', '重庆市', '永辉', '大卖场', '永辉-渝北区双龙店', 0, '1454', '2017', '04', '1454', '2017', '05');
+INSERT INTO `t_new_shop` (`id`, `city`, `sm`, `type`, `name`, `flag`, `shop1`, `year1`, `month1`, `shop2`, `year2`, `month2`) VALUES
+('C012', '重庆市', '永辉', '大卖场', '永辉-大渡口区香港城店', 0, '1456', '2017', '04', '1456', '2017', '05'),
+('C013', '重庆市', '永辉', '大卖场', '永辉-梁平县大众店', 0, '1457', '2017', '04', '1457', '2017', '05'),
+('C014', '重庆市', '永辉', '大卖场', '永辉-南岸区南坪东路店', 0, '1464', '2017', '04', '1464', '2017', '05'),
+('C015', '重庆市', '永辉', '大卖场', '永辉-綦江县河西店', 0, '1465', '2017', '04', '1465', '2017', '05'),
+('C016', '重庆市', '永辉', '大卖场', '永辉-璧山县时代商都店', 0, '1469', '2017', '04', '1469', '2017', '05'),
+('C017', '重庆市', '永辉', '大卖场', '永辉-渝北区空港店', 0, '1477', '2017', '04', '1477', '2017', '05'),
+('C018', '重庆市', '永辉', '大卖场', '永辉-九龙坡区石桥铺店', 0, '1482', '2017', '04', '1482', '2017', '05'),
+('C019', '重庆市', '永辉', '大卖场', '永辉-万盛区民盛店', 0, '1485', '2017', '04', '1485', '2017', '05'),
+('C020', '重庆市', '永辉', '大卖场', '永辉-綦江县河东店', 0, '1492', '2017', '04', '1492', '2017', '05'),
+('C021', '重庆市', '永辉', '大卖场', '永辉-渝中区白象街店', 0, '1505', '2017', '04', '1505', '2017', '05'),
+('C022', '重庆市', '永辉', '大卖场', '永辉-万盛区万盛名都店', 0, '1512', '2017', '04', '1512', '2017', '05'),
+('C023', '重庆市', '永辉', '大卖场', '永辉-渝中区较场口店', 0, '1516', '2017', '04', '1516', '2017', '05'),
+('C025', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区天星桥店', 0, '1530', '2017', '04', '1530', '2017', '05'),
+('C026', '重庆市', '永辉', '大卖场', '永辉-江北区大石坝店', 0, '1538', '2017', '04', '1538', '2017', '05'),
+('C027', '重庆市', '永辉', '大卖场', '永辉-万州区王牌路店', 0, '1552', '2017', '04', '1552', '2017', '05'),
+('C028', '重庆市', '永辉', '大卖场', '永辉-渝北区龙头寺店', 0, '1562', '2017', '04', '1562', '2017', '05'),
+('C029', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区汉渝路店', 0, '1565', '2017', '04', '1565', '2017', '05'),
+('C030', '重庆市', '永辉', '大卖场', '永辉-北碚区天生丽街店', 0, '1573', '2017', '04', '1573', '2017', '05'),
+('C031', '重庆市', '永辉', '大卖场', '永辉-渝北区武陵路店', 0, '1574', '2017', '04', '1574', '2017', '05'),
+('C032', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区童家桥店', 0, '1575', '2017', '04', '1575', '2017', '05'),
+('C033', '重庆市', '永辉', '大卖场', '永辉-南岸区弹新街店', 0, '1579', '2017', '04', '1579', '2017', '05'),
+('C034', '重庆市', '永辉', '大卖场', '永辉-江北区建新东路店', 0, '1582', '2017', '04', '1582', '2017', '05'),
+('C035', '重庆市', '永辉', '大卖场', '永辉-万州区国贸广场店', 0, '1593', '2017', '04', '1593', '2017', '05'),
+('C036', '重庆市', '永辉', '大卖场', '永辉-开县新天地店', 0, '1595', '2017', '04', '1595', '2017', '05'),
+('C037', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区嘉茂购物中心店', 0, '1617', '2017', '04', '1617', '2017', '05'),
+('C038', '重庆市', '永辉', '大卖场', '永辉-渝北区宝圣西路店', 0, '1624', '2017', '04', '1624', '2017', '05'),
+('C039', '重庆市', '永辉', '大卖场', '永辉-垫江县西欧花园店', 0, '1628', '2017', '04', '1628', '2017', '05'),
+('C040', '重庆市', '永辉', '大卖场', '永辉-梁平县西池广场店', 0, '8501', '2017', '04', '8501', '2017', '05'),
+('C041', '重庆市', '永辉', '大卖场', '永辉-南岸区南湖花园店', 0, '1011', '2017', '09', '1011', '2017', '10'),
+('C042', '重庆市', '永辉', '大卖场', '永辉-铜梁县广龙明珠店', 0, '1015', '2017', '09', '1015', '2017', '10'),
+('C043', '重庆市', '永辉', '大卖场', '永辉-江北区金源时代购物中心店', 0, '1021', '2017', '09', '1021', '2017', '10'),
+('C044', '重庆市', '永辉', '大卖场', '永辉-忠县中博大道店', 0, '1023', '2017', '09', '1023', '2017', '10'),
+('C045', '重庆市', '永辉', '大卖场', '永辉-巴南区人民广场店', 0, '1024', '2017', '09', '1024', '2017', '10'),
+('C046', '重庆市', '永辉', '大卖场', '永辉-合川区金世纪广场店', 0, '1025', '2017', '09', '1025', '2017', '10'),
+('C047', '重庆市', '永辉', '大卖场', '永辉-渝中区人和街店', 0, '1027', '2017', '09', '1027', '2017', '10'),
+('C048', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区新桥店', 0, '1028', '2017', '09', '1028', '2017', '10'),
+('C049', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区双碑鼎盛店', 0, '1035', '2017', '09', '1035', '2017', '10'),
+('C050', '重庆市', '永辉', '大卖场', '永辉-武隆县南城中央广场店', 0, '1041', '2017', '09', '1041', '2017', '10'),
+('C051', '重庆市', '永辉', '大卖场', '永辉-南岸区万达广场店', 0, '1129', '2017', '09', '1129', '2017', '10'),
+('C052', '重庆市', '永辉', '大卖场', '永辉-南川区南大街店', 0, '1163', '2017', '09', '1163', '2017', '10'),
+('C053', '重庆市', '永辉', '大卖场', '永辉-大渡口区壹街购物中心店', 0, '1164', '2017', '09', '1164', '2017', '10'),
+('C054', '重庆市', '永辉', '大卖场', '永辉-北碚区文星湾旺德旺城店', 0, '1166', '2017', '09', '1166', '2017', '10'),
+('C055', '重庆市', '永辉', '大卖场', '永辉-巴南区土桥店', 0, '1167', '2017', '09', '1167', '2017', '10'),
+('C056', '重庆市', '永辉', '大卖场', '永辉-江北区望江店', 0, '1169', '2017', '09', '1169', '2017', '10'),
+('C057', '重庆市', '永辉', '大卖场', '永辉-荣昌县莲花广场店', 0, '1170', '2017', '09', '1170', '2017', '10'),
+('C058', '重庆市', '永辉', '大卖场', '永辉-秀山县秀山店', 0, '1171', '2017', '09', '1171', '2017', '10'),
+('C059', '重庆市', '永辉', '大卖场', '永辉-巴南区都和广场店', 0, '1248', '2017', '09', '1248', '2017', '10'),
+('C060', '重庆市', '永辉', '大卖场', '永辉-九龙坡区石坪桥店', 0, '1261', '2017', '09', '1261', '2017', '10'),
+('C061', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区陈家桥店', 0, '1264', '2017', '09', '1264', '2017', '10'),
+('C062', '重庆市', '永辉', '大卖场', '永辉-荣昌县沿河中路店', 0, '1267', '2017', '09', '1267', '2017', '10'),
+('C063', '重庆市', '永辉', '大卖场', '永辉-渝北区星湖路店', 0, '1279', '2017', '09', '1279', '2017', '10'),
+('C064', '重庆市', '永辉', '大卖场', '永辉-九龙坡区民生广场店', 0, '1292', '2017', '09', '1292', '2017', '10'),
+('C065', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区联芳桥店', 0, '1309', '2017', '09', '1309', '2017', '10'),
+('C067', '重庆市', '永辉', '大卖场', '永辉-璧山县青杠店', 0, '1310', '2017', '09', '1310', '2017', '10'),
+('C068', '重庆市', '永辉', '大卖场', '永辉-渝北区金渝大道店', 0, '1312', '2017', '09', '1312', '2017', '10'),
+('C069', '重庆市', '永辉', '大卖场', '永辉-渝北区星光天地店', 0, '1313', '2017', '09', '1313', '2017', '10'),
+('C070', '重庆市', '永辉', '大卖场', '永辉-长寿区盛世桃源店', 0, '1314', '2017', '09', '1314', '2017', '10'),
+('C071', '重庆市', '永辉', '大卖场', '永辉-渝北区金开大道店', 0, '1364', '2017', '09', '1364', '2017', '10'),
+('C072', '重庆市', '永辉', '大卖场', '永辉-大足县国梁店', 0, '1370', '2017', '09', '1370', '2017', '10'),
+('C073', '重庆市', '永辉', '大卖场', '永辉-南岸区风临路店', 0, '1377', '2017', '09', '1377', '2017', '10'),
+('C074', '重庆市', '永辉', '大卖场', '永辉-沙坪坝区大学城北路店', 0, '1378', '2017', '09', '1378', '2017', '10'),
+('J028', '广州市', '嘉荣', '便利店', '南沙华汇店', 1, '1045', '2018', '03', '1045', '2018', '04'),
+('J036', '广州市', '嘉荣', '便利店', '花都狮岭店', 1, '1048', '2018', '03', '1048', '2018', '04'),
+('P022', '北京', '卜蜂莲花', '大卖场', '六里桥店', 0, '1314', '2017', '07', '1314', '2017', '08'),
+('P025', '北京', '卜蜂莲花', '大卖场', '朝阳路店', 0, '1364', '2017', '07', '1364', '2017', '08'),
+('P030', '北京', '卜蜂莲花', '大卖场', '通州店', 0, '1370', '2017', '07', '1370', '2017', '08'),
+('P035', '北京', '卜蜂莲花', '大卖场', '金源店', 0, '1377', '2017', '07', '1377', '2017', '08'),
+('P057', '北京', '卜蜂莲花', '大卖场', ' 石佛营店', 0, '1378', '2017', '07', '1378', '2017', '08'),
+('P059', '北京', '卜蜂莲花', '大卖场', '成府路店', 0, '1389', '2017', '07', '1389', '2017', '08'),
+('P075', '北京', '卜蜂莲花', '大卖场', '北苑店', 0, '1408', '2017', '07', '1408', '2017', '08'),
+('P101', '广州市', '卜蜂莲花', '大卖场', '三元里店', 0, '1389', '2017', '09', '1389', '2017', '10'),
+('P102', '广州市', '卜蜂莲花', '大卖场', '天河店', 0, '1408', '2017', '09', '1408', '2017', '10'),
+('P103', '广州市', '卜蜂莲花', '大卖场', '长兴店', 0, '1420', '2017', '09', '1420', '2017', '10'),
+('P104', '广州市', '卜蜂莲花', '大卖场', '黄石店', 0, '1427', '2017', '09', '1427', '2017', '10'),
+('P201', '重庆市', '卜蜂莲花', '大卖场', '龙湖店', 0, '1433', '2017', '09', '1433', '2017', '10'),
+('P202', '重庆市', '卜蜂莲花', '大卖场', '洋河店', 0, '1434', '2017', '09', '1434', '2017', '10'),
+('P203', '重庆市', '卜蜂莲花', '大卖场', '日月光', 0, '1439', '2017', '09', '1439', '2017', '10'),
+('P204', '重庆市', '卜蜂莲花', '大卖场', '煌华店', 0, '1443', '2017', '09', '1443', '2017', '10'),
+('T0009', '广州市', '天福', '便利店', 'D2广州白云嘉禾豪泉天福店T', 1, '1049', '2018', '03', '1049', '2018', '04'),
+('T0172', '广州市', '天福', '便利店', 'D2增城永和天福T', 1, '1055', '2018', '03', '1055', '2018', '04'),
+('T0325', '广州市', '天福', '便利店', 'C2增城永和新庄新市场天福T', 1, '1059', '2018', '03', '1059', '2018', '04'),
+('T0528', '广州市', '天福', '便利店', 'C2增城新塘顶好大厦天福店T', 1, '1066', '2018', '03', '1066', '2018', '04'),
+('T0563', '广州市', '天福', '便利店', 'D2广州白云大源福安天福店T', 1, '1069', '2018', '03', '1069', '2018', '04'),
+('T0565', '广州市', '天福', '便利店', 'C2广州海珠海诚天福店T', 1, '1070', '2018', '03', '1070', '2018', '04'),
+('T0566', '广州市', '天福', '便利店', 'C2广州海珠天地荟天福店T', 1, '1071', '2018', '03', '1071', '2018', '04'),
+('T0567', '广州市', '天福', '便利店', '广州白云新市棠兴天福店T', 1, '1072', '2018', '03', '1072', '2018', '04'),
+('T0569', '广州市', '天福', '便利店', 'C2广州黄埔宏康天福店T', 1, '1075', '2018', '03', '1075', '2018', '04'),
+('T0571', '广州市', '天福', '便利店', 'C2广州海珠长兴天福店T', 1, '1079', '2018', '03', '1079', '2018', '04'),
+('T0573', '广州市', '天福', '便利店', 'Q1广州花都狮岭盘古中路天福店T', 1, '1081', '2018', '03', '1081', '2018', '04'),
+('T0575', '广州市', '天福', '便利店', 'D2广州白云京溪梅园天福店T', 1, '1082', '2018', '03', '1082', '2018', '04'),
+('T0576', '广州市', '天福', '便利店', '广州黄埔碧山天福店T', 1, '1088', '2018', '03', '1088', '2018', '04'),
+('T0580', '广州市', '天福', '便利店', 'Q1广州花都旗岭河滨路天福店T', 1, '1100', '2018', '03', '1100', '2018', '04'),
+('T0581', '广州市', '天福', '便利店', 'D2广州番禺石基华宇天福店T', 1, '1102', '2018', '03', '1102', '2018', '04'),
+('T0598', '广州市', '天福', '便利店', 'C2增城新塘鸿发天福店T', 1, '1118', '2018', '03', '1118', '2018', '04'),
+('T0630', '广州市', '天福', '便利店', 'D2广州白云嘉禾万嘉天福店T', 1, '1132', '2018', '03', '1132', '2018', '04'),
+('T0632', '广州市', '天福', '便利店', '广州天河万泰天福店T', 1, '1133', '2018', '03', '1133', '2018', '04'),
+('T0636', '广州市', '天福', '便利店', 'C2广州海珠石溪天福店T', 1, '1146', '2018', '03', '1146', '2018', '04'),
+('T0649', '广州市', '天福', '便利店', 'D2广州黄埔碧山天福店T', 1, '1150', '2018', '03', '1150', '2018', '04'),
+('T0650', '广州市', '天福', '便利店', 'D2广州白云新市棠兴天福店T', 1, '1151', '2018', '03', '1151', '2018', '04'),
+('T0651', '广州市', '天福', '便利店', 'C2广州海珠沥滘天福店T', 1, '1233', '2018', '03', '1233', '2018', '04'),
+('T0698', '广州市', '天福', '便利店', '广州荔湾富力天福店T', 1, '1280', '2018', '03', '1280', '2018', '04'),
+('T0700', '广州市', '天福', '便利店', '广州海珠鹭江易购天福店T', 1, '1281', '2018', '03', '1281', '2018', '04'),
+('T0732', '广州市', '天福', '便利店', '广州天河望月天福', 1, '1282', '2018', '03', '1282', '2018', '04'),
+('T0748', '广州市', '天福', '便利店', 'D074广州白云江高升业天福(大车)', 1, '1293', '2018', '03', '1293', '2018', '04'),
+('T0749', '广州市', '天福', '便利店', '广州白云萧岗宝凯天福', 1, '1294', '2018', '03', '1294', '2018', '04'),
+('T0770', '广州市', '天福', '便利店', '广州白云麦地仁仁天福', 1, '1295', '2018', '03', '1295', '2018', '04'),
+('T0778', '广州市', '天福', '便利店', '广州天河元岗天福', 1, '1299', '2018', '03', '1299', '2018', '04'),
+('T0786', '广州市', '天福', '便利店', '广州番禺石基傍东卓玉天福', 1, '1358', '2018', '03', '1358', '2018', '04'),
+('T0788', '广州市', '天福', '便利店', '广州人和香港街天福', 1, '1366', '2018', '03', '1366', '2018', '04'),
+('T0797', '广州市', '天福', '便利店', 'D032增城新塘发达岭春富天福', 1, '1380', '2018', '03', '1380', '2018', '04'),
+('T0829', '广州市', '天福', '便利店', 'D066广州白云萧岗怡心天福', 1, '1381', '2018', '03', '1381', '2018', '04'),
+('T0876', '广州市', '天福', '便利店', 'Q1增城荔城街园天福店T', 1, '1384', '2018', '03', '1384', '2018', '04'),
+('T0892', '广州市', '天福', '便利店', '广州天河林和东路品味天福', 1, '1385', '2018', '03', '1385', '2018', '04'),
+('T0898', '广州市', '天福', '便利店', 'D052广州萝岗建兴光电厂行天福', 1, '1386', '2018', '03', '1386', '2018', '04'),
+('T0911', '广州市', '天福', '便利店', '广州从化上城湾畔天福', 1, '1398', '2018', '03', '1398', '2018', '04'),
+('T0918', '广州市', '天福', '便利店', 'D030增城新塘豪亮天福', 1, '1407', '2018', '03', '1407', '2018', '04'),
+('T0920', '广州市', '天福', '便利店', '广州白云人和建利天福', 1, '1413', '2018', '03', '1413', '2018', '04'),
+('T0951', '广州市', '天福', '便利店', '广州天河长湴天福', 1, '1432', '2018', '03', '1432', '2018', '04'),
+('T0958', '广州市', '天福', '便利店', '从化雅居乐天福', 1, '1470', '2018', '03', '1470', '2018', '04'),
+('T0977', '广州市', '天福', '便利店', '广州白云金碧新城天福', 1, '1471', '2018', '03', '1471', '2018', '04'),
+('T0981', '广州市', '天福', '便利店', '广州萝岗科学城合景天福', 1, '1478', '2018', '03', '1478', '2018', '04'),
+('T0986', '广州市', '天福', '便利店', '广州棠下上社村家福天福', 1, '1486', '2018', '03', '1486', '2018', '04'),
+('T0995', '广州市', '天福', '便利店', '增城荔城园墩天福', 1, '1493', '2018', '03', '1493', '2018', '04'),
+('T1010', '广州市', '天福', '便利店', 'Q017增城荔城莲花天福店', 1, '1497', '2018', '03', '1497', '2018', '04'),
+('T1011', '广州市', '天福', '便利店', 'D062广州白云三元里松柏胜佳天福', 1, '1498', '2018', '03', '1498', '2018', '04'),
+('T1017', '广州市', '天福', '便利店', '增城新塘西洲天福', 1, '1501', '2018', '03', '1501', '2018', '04'),
+('T1021', '广州市', '天福', '便利店', '番禺锦绣生态园天福', 1, '1503', '2018', '03', '1503', '2018', '04'),
+('T1065', '广州市', '天福', '便利店', '广州花都雅居乐御宾府天福', 1, '1519', '2018', '03', '1519', '2018', '04'),
+('T1078', '广州市', '天福', '便利店', '广州白云祥景花园华威天福', 1, '1521', '2018', '03', '1521', '2018', '04'),
+('T1082', '广州市', '天福', '便利店', '增城石滩立新天福', 1, '1536', '2018', '03', '1536', '2018', '04'),
+('T1096', '广州市', '天福', '便利店', '广州花都建设北路御景花园天福', 1, '1543', '2018', '03', '1543', '2018', '04'),
+('T1115', '广州市', '天福', '便利店', 'D042增城新塘沙埔天福', 1, '1566', '2018', '03', '1566', '2018', '04'),
+('T1172', '广州市', '天福', '便利店', 'Q2广州番禺大石嘉嘉天福T', 1, '1578', '2018', '03', '1578', '2018', '04'),
+('T1175', '广州市', '天福', '便利店', '增城荔城富宁天福', 1, '1585', '2018', '03', '1585', '2018', '04'),
+('T1211', '广州市', '天福', '便利店', '增城新塘大敦天福', 1, '1589', '2018', '03', '1589', '2018', '04'),
+('T1221', '广州市', '天福', '便利店', '广州花都狮岭辉煌天福', 1, '1590', '2018', '03', '1590', '2018', '04'),
+('T1229', '广州市', '天福', '便利店', '增城荔城城丰天福', 1, '1592', '2018', '03', '1592', '2018', '04'),
+('T1233', '广州市', '天福', '便利店', '增城新塘东坑天福', 1, '1594', '2018', '03', '1594', '2018', '04'),
+('T1248', '广州市', '天福', '便利店', '广州花都区新华天福', 1, '1603', '2018', '03', '1603', '2018', '04'),
+('T1249', '广州市', '天福', '便利店', '增城荔城沙园天福', 1, '1607', '2018', '03', '1607', '2018', '04'),
+('T1256', '广州市', '天福', '便利店', '白云永泰国交天福', 1, '1608', '2018', '03', '1608', '2018', '04'),
+('T1262', '广州市', '天福', '便利店', 'D054广州黄埔埔南路天福', 1, '1610', '2018', '03', '1610', '2018', '04'),
+('T1278', '广州市', '天福', '便利店', 'D070广州白云永泰永康天福', 1, '1611', '2018', '03', '1611', '2018', '04'),
+('T1289', '广州市', '天福', '便利店', '增城新塘大王坑天福', 1, '1612', '2018', '03', '1612', '2018', '04'),
+('T1290', '广州市', '天福', '便利店', 'Q136广州海珠石溪天福', 1, '1620', '2018', '03', '1620', '2018', '04'),
+('T1291', '广州市', '天福', '便利店', '增城荔城碧桂园天福', 1, '1625', '2018', '03', '1625', '2018', '04'),
+('T1317', '广州市', '天福', '便利店', '广州花都狮岭益群天福', 1, '1630', '2018', '03', '1630', '2018', '04'),
+('T1326', '广州市', '天福', '便利店', '广州黄埔双岗大街崇德里天福', 1, '1636', '2018', '03', '1636', '2018', '04'),
+('T1329', '广州市', '天福', '便利店', 'D064广州白云新市海鲜天福', 1, '1638', '2018', '03', '1638', '2018', '04'),
+('T1349', '广州市', '天福', '便利店', '广州海珠康乐村天福', 1, '1640', '2018', '03', '1640', '2018', '04'),
+('T1350', '广州市', '天福', '便利店', '番禺区何贤天福', 1, '1641', '2018', '03', '1641', '2018', '04'),
+('T1351', '广州市', '天福', '便利店', '番禺大西路天福', 1, '1642', '2018', '03', '1642', '2018', '04'),
+('T1353', '广州市', '天福', '便利店', 'Q130广州番禺北亭天福', 1, '1646', '2018', '03', '1646', '2018', '04'),
+('T1386', '广州市', '天福', '便利店', 'Q1增城荔城西城天福T', 1, '1648', '2018', '03', '1648', '2018', '04'),
+('T1395', '广州市', '天福', '便利店', 'Q1增城增江华立天福店T', 1, '1649', '2018', '03', '1649', '2018', '04'),
+('T1397', '广州市', '天福', '便利店', '广州白云陈田南风天福T', 1, '1652', '2018', '03', '1652', '2018', '04'),
+('T1403', '广州市', '天福', '便利店', 'Q1广州花都美乐天福T', 1, '1655', '2018', '03', '1655', '2018', '04'),
+('T1405', '广州市', '天福', '便利店', 'Q128广州番禺大学城穗石天福T', 1, '1657', '2018', '03', '1657', '2018', '04'),
+('T1406', '广州市', '天福', '便利店', 'Q083广州花都狮岭雄狮天福T(大车)', 1, '1664', '2018', '03', '1664', '2018', '04'),
+('T1418', '广州市', '天福', '便利店', '广州天河棠下天福店T', 1, '1669', '2018', '03', '1669', '2018', '04'),
+('T1419', '广州市', '天福', '便利店', '番禺钟村锦绣花园翠屏苑天福T', 1, '1020', '2018', '03', '1020', '2018', '04'),
+('T1431', '广州市', '天福', '便利店', 'Q01增城朱村文明天福店T', 1, '1044', '2018', '03', '1044', '2018', '04'),
+('T1463', '广州市', '天福', '便利店', 'D2广州番禺钟村五羊茶叶城天福店T', 1, '1067', '2018', '03', '1067', '2018', '04'),
+('T1501', '广州市', '天福', '便利店', 'Q079广州花都新华街建设北路天福店T(大车)', 1, '1074', '2018', '03', '1074', '2018', '04'),
+('T1542', '广州市', '天福', '便利店', 'Q085广州花都狮岭金狮启荣天福店T(大车)', 1, '1077', '2018', '03', '1077', '2018', '04'),
+('T1552', '广州市', '天福', '便利店', 'D2广州白云新市汇侨天福店', 1, '1080', '2018', '03', '1080', '2018', '04'),
+('T1569', '广州市', '天福', '便利店', 'Q1增城荔城通园天福店T', 1, '1084', '2018', '03', '1084', '2018', '04'),
+('T1585', '广州市', '天福', '便利店', '广州海珠南新天福店T', 1, '1099', '2018', '03', '1099', '2018', '04'),
+('T1666', '广州市', '天福', '便利店', 'D2广州白云嘉禾翔鑫天福店', 1, '1122', '2018', '03', '1122', '2018', '04'),
+('T1672', '广州市', '天福', '便利店', 'Q077广州花都新华天福店T(大车)', 1, '1411', '2018', '03', '1411', '2018', '04'),
+('T1745', '广州市', '天福', '便利店', '广州海珠区文文天福店T', 1, '1496', '2018', '03', '1496', '2018', '04'),
+('T1777', '广州市', '天福', '便利店', 'D2广州番禺里仁洞天福店T', 1, '1510', '2018', '03', '1510', '2018', '04'),
+('T1786', '广州市', '天福', '便利店', 'Q1增城增江美洋洋天福店T', 1, '1537', '2018', '03', '1537', '2018', '04'),
+('T1796', '广州市', '天福', '便利店', 'C2广州海珠万信天福店T', 1, '1557', '2018', '03', '1557', '2018', '04'),
+('T1833', '广州市', '天福', '便利店', 'C2广州越秀区东山天福店T', 1, '1049', '2018', '03', '1049', '2018', '04'),
+('T1848', '广州市', '天福', '便利店', 'D2广州白云盛美天福店T', 1, '1055', '2018', '03', '1055', '2018', '04'),
+('T1881', '广州市', '天福', '便利店', 'Q000广州番禺钟村解放路天福店T', 1, '1072', '2018', '03', '1072', '2018', '04'),
+('T1900', '广州市', '天福', '便利店', 'D2广州白云淼杜天福店T', 1, '1075', '2018', '03', '1075', '2018', '04'),
+('T1901', '广州市', '天福', '便利店', 'Q04广州番禺大石会江地铁站天福店T', 1, '1088', '2018', '03', '1088', '2018', '04'),
+('T1920', '广州市', '天福', '便利店', 'D02广州白云红星天福店T', 1, '1100', '2018', '03', '1100', '2018', '04'),
+('T1930', '广州市', '天福', '便利店', 'D2广州番禺鸣翠苑天福店T', 1, '1118', '2018', '03', '1118', '2018', '04'),
+('T1931', '广州市', '天福', '便利店', 'Q2广州萝岗练发天福店T', 1, '1133', '2018', '03', '1133', '2018', '04'),
+('T1956', '广州市', '天福', '便利店', 'D2广州番禺自在城市花园天福店T', 1, '1135', '2018', '03', '1135', '2018', '04'),
+('T1960', '广州市', '天福', '便利店', 'C2广州越秀农讲所天福店T', 1, '1150', '2018', '03', '1150', '2018', '04'),
+('T1961', '广州市', '天福', '便利店', 'Q1增城万达天福店T', 1, '1151', '2018', '03', '1151', '2018', '04'),
+('T1962', '广州市', '天福', '便利店', 'C2广州天河中国移动天福店T', 1, '1386', '2018', '03', '1386', '2018', '04'),
+('T1973', '广州市', '天福', '便利店', 'D2广州番禺钟村望楼岗天福店T', 1, '1398', '2018', '03', '1398', '2018', '04'),
+('T1975', '广州市', '天福', '便利店', 'D2广州白云富嘉天福店T', 1, '1432', '2018', '03', '1432', '2018', '04'),
+('T1977', '广州市', '天福', '便利店', 'Q1增城豪园天福店T', 1, '1478', '2018', '03', '1478', '2018', '04'),
+('T1987', '广州市', '天福', '便利店', 'D2广州番禺大石岗东路天福店T', 1, '1486', '2018', '03', '1486', '2018', '04'),
+('T1989', '广州市', '天福', '便利店', 'D2广州白云鸦岗天福店T', 1, '1497', '2018', '03', '1497', '2018', '04'),
+('T2019', '广州市', '天福', '便利店', 'D2广州番禺洛溪地铁口天福店T', 1, '1498', '2018', '03', '1498', '2018', '04'),
+('T2032', '广州市', '天福', '便利店', 'C2广州黄埔海警基地天福店T', 1, '1501', '2018', '03', '1501', '2018', '04'),
+('T2039', '广州市', '天福', '便利店', 'D2广州番禺市侨丽骏天福店T', 1, '1504', '2018', '03', '1504', '2018', '04'),
+('T2042', '广州市', '天福', '便利店', 'D2广州白云阿信天福店T', 1, '1521', '2018', '03', '1521', '2018', '04'),
+('T2049', '广州市', '天福', '便利店', 'D2广州番禺市桥车站天福店（合资统管）T', 1, '1536', '2018', '03', '1536', '2018', '04'),
+('T2050', '广州市', '天福', '便利店', 'Q2广州番禺大石牌坊天福店T', 1, '1566', '2018', '03', '1566', '2018', '04'),
+('T2053', '广州市', '天福', '便利店', 'D2广州白云江夏地铁口天福店', 1, '1578', '2018', '03', '1578', '2018', '04'),
+('T2055', '广州市', '天福', '便利店', '广州番禺市桥晴晴天福店T', 1, '1585', '2018', '03', '1585', '2018', '04'),
+('T2059', '广州市', '天福', '便利店', 'D2广州白云小坪天福店T', 1, '1592', '2018', '03', '1592', '2018', '04'),
+('T2060', '广州市', '天福', '便利店', 'D2广州白云沙涌天福店T', 1, '1603', '2018', '03', '1603', '2018', '04'),
+('T2062', '广州市', '天福', '便利店', 'C2广州海珠台涌天福店T', 1, '1607', '2018', '03', '1607', '2018', '04'),
+('T2070', '广州市', '天福', '便利店', 'D2广州白云西岭天福店T', 1, '1608', '2018', '03', '1608', '2018', '04'),
+('T2075', '广州市', '天福', '便利店', 'D2广州番禺石楼音乐城天福店T', 1, '1612', '2018', '03', '1612', '2018', '04'),
+('T2076', '广州市', '天福', '便利店', 'Q1增城锦绣国际天福店T', 1, '1626', '2018', '03', '1626', '2018', '04'),
+('T2079', '广州市', '天福', '便利店', 'D2广州白云鹅掌坦天福店', 1, '1630', '2018', '03', '1630', '2018', '04'),
+('T2080', '广州市', '天福', '便利店', 'D2广州白云东平天福店T', 1, '1642', '2018', '03', '1642', '2018', '04'),
+('T2086', '广州市', '天福', '便利店', 'D2广州番禺市桥平康路天福店T', 1, '1648', '2018', '03', '1648', '2018', '04'),
+('T2088', '广州市', '天福', '便利店', 'D2广州白云黄庄天福店T', 1, '1649', '2018', '03', '1649', '2018', '04'),
+('T2091', '广州市', '天福', '便利店', 'C2广州天河地铁口天福店T(销）', 1, '1650', '2018', '03', '1650', '2018', '04'),
+('T2092', '广州市', '天福', '便利店', 'Q2广州黄埔李花天福店T', 1, '1652', '2018', '03', '1652', '2018', '04'),
+('T2096', '广州市', '天福', '便利店', 'D2广州番禺城市花园天福店T', 1, '1657', '2018', '03', '1657', '2018', '04'),
+('T2102', '广州市', '天福', '便利店', 'Q04广州海珠中山大学一号站天福店T', 1, '1664', '2018', '03', '1664', '2018', '04'),
+('T2106', '广州市', '天福', '便利店', '广州白云大源天福店T', 1, '1669', '2018', '03', '1669', '2018', '04'),
+('T2107', '广州市', '天福', '便利店', 'Q02广州南沙碧桂园天福店T(大车)', 0, '1135', '2017', '06', '1135', '2017', '12'),
+('T2111', '广州市', '天福', '便利店', 'D2广州番禺大石神话天福店T', 0, '1144', '2017', '06', '1144', '2017', '12'),
+('T2113', '广州市', '天福', '便利店', 'D2广州白云嘉禾上胜天福店T', 0, '1146', '2017', '06', '1146', '2017', '12'),
+('T2115', '广州市', '天福', '便利店', 'D2广州白云握山天福店T', 0, '1150', '2017', '06', '1150', '2017', '12'),
+('T2116', '广州市', '天福', '便利店', 'D2广州白云白山天福店T', 0, '1151', '2017', '06', '1151', '2017', '12'),
+('T2117', '广州市', '天福', '便利店', 'Q1增城荔城志勇天福店T', 0, '1233', '2017', '06', '1233', '2017', '12'),
+('T2120', '广州市', '天福', '便利店', 'C2荔湾西村地铁口天福店T', 0, '1278', '2017', '06', '1278', '2017', '12'),
+('T2123', '广州市', '天福', '便利店', 'Q1从化逸泉映翠天福店T', 0, '1280', '2017', '06', '1280', '2017', '12'),
+('T2127', '广州市', '天福', '便利店', 'Q2广州荔湾金宇花园天福店T', 0, '1282', '2017', '06', '1282', '2017', '12'),
+('T2128', '广州市', '天福', '便利店', 'C2广州海珠江海大道天福店T', 0, '1293', '2017', '06', '1293', '2017', '12'),
+('T2129', '广州市', '天福', '便利店', 'D2广州番禺大石植村天福店T', 0, '1294', '2017', '06', '1294', '2017', '12'),
+('T2130', '广州市', '天福', '便利店', 'D2广州番禺大石礼村天福店T', 0, '1295', '2017', '06', '1295', '2017', '12'),
+('T2132', '广州市', '天福', '便利店', 'D2广州白云广丰天福店T', 0, '1299', '2017', '06', '1299', '2017', '12'),
+('T2133', '广州市', '天福', '便利店', 'C2增城新塘宏城汇天福店T', 0, '1358', '2017', '06', '1358', '2017', '12'),
+('T2137', '广州市', '天福', '便利店', 'Q2广州黄埔云埔工业区方达路快乐天福店T', 0, '1366', '2017', '06', '1366', '2017', '12'),
+('T2138', '广州市', '天福', '便利店', 'D2广州白云太和龙归城天福店T', 0, '1376', '2017', '06', '1376', '2017', '12'),
+('T2139', '广州市', '天福', '便利店', 'D2广州白云谢家庄天福店T', 0, '1380', '2017', '06', '1380', '2017', '12'),
+('T2140', '广州市', '天福', '便利店', 'D2广州白云新市连元天福店T', 0, '1381', '2017', '06', '1381', '2017', '12'),
+('T2146', '广州市', '天福', '便利店', 'D2广州白云汇侨新城黄沙岗天福店T', 0, '1384', '2017', '06', '1384', '2017', '12'),
+('T2150', '广州市', '天福', '便利店', 'D2广州番禺市桥汀沙村天福店T', 0, '1385', '2017', '06', '1385', '2017', '12'),
+('T2155', '广州市', '天福', '便利店', 'D2广州白云钟落潭良田天福店T', 0, '1386', '2017', '06', '1386', '2017', '12'),
+('T2156', '广州市', '天福', '便利店', 'Q1广州花都新华嘉尔登天福店T', 0, '1398', '2017', '06', '1398', '2017', '12'),
+('T2158', '广州市', '天福', '便利店', 'D2广州番禺厦滘南路天福店T', 0, '1407', '2017', '06', '1407', '2017', '12'),
+('T2159', '广州市', '天福', '便利店', 'Q1广州花都新华云山天福店T', 0, '1413', '2017', '06', '1413', '2017', '12'),
+('T2160', '广州市', '天福', '便利店', 'Q2广州黄埔神舟天福店T', 0, '1415', '2017', '06', '1415', '2017', '12'),
+('T2161', '广州市', '天福', '便利店', 'D2广州番禺金怡天福店T', 0, '1426', '2017', '06', '1426', '2017', '12'),
+('T2162', '广州市', '天福', '便利店', 'C2广州天河车陂南天福店T', 0, '1432', '2017', '06', '1432', '2017', '12'),
+('T2163', '广州市', '天福', '便利店', 'D2广州番禺大石文明天福店T', 0, '1441', '2017', '06', '1441', '2017', '12'),
+('T2167', '广州市', '天福', '便利店', 'D02广州天河银锭塘天福店', 0, '1458', '2017', '06', '1458', '2017', '12'),
+('T2169', '广州市', '天福', '便利店', 'D2广州白云同和榕树头天福店T', 0, '1470', '2017', '06', '1470', '2017', '12'),
+('T2170', '广州市', '天福', '便利店', 'C2广州天河东圃陂东天福店T', 0, '1471', '2017', '06', '1471', '2017', '12'),
+('T2171', '广州市', '天福', '便利店', 'D2广州白云同和雄洲城天福店T', 0, '1478', '2017', '06', '1478', '2017', '12'),
+('T2173', '广州市', '天福', '便利店', 'D2广州白云嘉禾望岗地铁站天福店T', 0, '1480', '2017', '06', '1480', '2017', '12'),
+('T2179', '广州市', '天福', '便利店', 'C2广州天河车陂路站天福店T', 0, '1486', '2017', '06', '1486', '2017', '12'),
+('T2183', '广州市', '天福', '便利店', 'C2广州海珠晓港天福店T', 0, '1493', '2017', '06', '1493', '2017', '12'),
+('T2185', '广州市', '天福', '便利店', 'C2增城新塘坭紫天福店T', 0, '1497', '2017', '06', '1497', '2017', '12'),
+('T2188', '广州市', '天福', '便利店', 'D2广州白云江夏政昊天福店T', 0, '1498', '2017', '06', '1498', '2017', '12'),
+('T2190', '广州市', '天福', '便利店', 'D2广州番禺市桥港禺坊天福店T', 0, '1501', '2017', '06', '1501', '2017', '12'),
+('T2191', '广州市', '天福', '便利店', 'Q04广州海珠宝岗路天福店T', 0, '1503', '2017', '06', '1503', '2017', '12'),
+('T2192', '广州市', '天福', '便利店', 'C2广州海珠宝业路天福店T', 0, '1504', '2017', '06', '1504', '2017', '12'),
+('T2195', '广州市', '天福', '便利店', '广州白云太和大丰天福店', 0, '1519', '2017', '06', '1519', '2017', '12'),
+('T2196', '广州市', '天福', '便利店', 'D2广州白云嘉禾喜悦天福店T', 0, '1521', '2017', '06', '1521', '2017', '12'),
+('T2197', '广州市', '天福', '便利店', 'C2广州天河龙洞迎龙路天福店T', 0, '1523', '2017', '06', '1523', '2017', '12'),
+('T2200', '广州市', '天福', '便利店', 'D2广州白云江夏大塘天福店T', 0, '1536', '2017', '06', '1536', '2017', '12'),
+('T2213', '广州市', '天福', '便利店', 'D2广州番禺石基俊福天福店T', 0, '1543', '2017', '06', '1543', '2017', '12'),
+('T2217', '广州市', '天福', '便利店', 'C2广州越秀金贵天福店T', 0, '1549', '2017', '06', '1549', '2017', '12'),
+('T2219', '广州市', '天福', '便利店', 'C2广州天河体育东路金泽天福店T(JQ)', 0, '1566', '2017', '06', '1566', '2017', '12'),
+('T2225', '广州市', '天福', '便利店', 'D2广州白云石井广场天福店T', 0, '1578', '2017', '06', '1578', '2017', '12'),
+('T2227', '广州市', '天福', '便利店', '广州海珠晓港中天福店T', 0, '1585', '2017', '06', '1585', '2017', '12'),
+('T2232', '广州市', '天福', '便利店', 'C2广州海珠土华村华洲路天福店T', 0, '1587', '2017', '06', '1587', '2017', '12'),
+('T2235', '广州市', '天福', '便利店', 'D2广州白云人和东华天福店T', 0, '1589', '2017', '06', '1589', '2017', '12'),
+('T2236', '广州市', '天福', '便利店', 'Q1广州花都狮岭益和天福店T(大车)', 0, '1590', '2017', '06', '1590', '2017', '12'),
+('T2237', '广州市', '天福', '便利店', 'D2广州白云夏茅公园天福店T', 0, '1591', '2017', '06', '1591', '2017', '12'),
+('T2238', '广州市', '天福', '便利店', 'C2海珠江南大道南丰瀛天福店T', 0, '1592', '2017', '06', '1592', '2017', '12'),
+('T2240', '广州市', '天福', '便利店', 'Q2广州荔湾茶滘路恒朝天福店T', 0, '1594', '2017', '06', '1594', '2017', '12'),
+('T2241', '广州市', '天福', '便利店', 'D2广州番禺大石建华路天福店T', 0, '1603', '2017', '06', '1603', '2017', '12'),
+('T2245', '广州市', '天福', '便利店', 'D2广州白云金沙洲沙贝天福店T', 0, '1607', '2017', '06', '1607', '2017', '12'),
+('T2246', '广州市', '天福', '便利店', 'D2广州番禺易发天福店T', 0, '1608', '2017', '06', '1608', '2017', '12'),
+('T2247', '广州市', '天福', '便利店', 'D2广州番禺石基金桥湾天福店T', 0, '1610', '2017', '06', '1610', '2017', '12'),
+('T2248', '广州市', '天福', '便利店', 'D2广州白云太和大源林安天福店T', 0, '1611', '2017', '06', '1611', '2017', '12'),
+('T2249', '广州市', '天福', '便利店', 'C2广州天河东圃旺旺天福店T', 0, '1612', '2017', '06', '1612', '2017', '12'),
+('T2258', '广州市', '天福', '便利店', 'C2广州天河棠下汇鑫天福店T', 0, '1620', '2017', '06', '1620', '2017', '12'),
+('T2259', '广州市', '天福', '便利店', 'C2广州海珠康乐天福店T', 0, '1625', '2017', '06', '1625', '2017', '12'),
+('T2260', '广州市', '天福', '便利店', 'C2广州海珠康乐桥品新天福店T', 0, '1626', '2017', '06', '1626', '2017', '12'),
+('T2261', '广州市', '天福', '便利店', 'Q2广州黄埔康南路赢胜天福店T', 0, '1630', '2017', '06', '1630', '2017', '12'),
+('T2262', '广州市', '天福', '便利店', 'D2广州白云永平天福店T', 0, '1636', '2017', '06', '1636', '2017', '12'),
+('T2263', '广州市', '天福', '便利店', 'D2广州白云沙涌金来天福店T', 0, '1638', '2017', '06', '1638', '2017', '12'),
+('T2266', '广州市', '天福', '便利店', 'D2广州番禺市莲石岗东天福店T', 0, '1640', '2017', '06', '1640', '2017', '12'),
+('T2268', '广州市', '天福', '便利店', 'C2广州天河棠德南天福店T', 0, '1641', '2017', '06', '1641', '2017', '12'),
+('T2269', '广州市', '天福', '便利店', 'C2广州越秀农林下路天福店T', 0, '1642', '2017', '06', '1642', '2017', '12'),
+('T2270', '广州市', '天福', '便利店', 'C2广州南沙金洲地铁口天福店T', 0, '1646', '2017', '06', '1646', '2017', '12'),
+('T2271', '广州市', '天福', '便利店', 'C2广州海珠客运站天福店T', 0, '1648', '2017', '06', '1648', '2017', '12'),
+('T2277', '广州市', '天福', '便利店', 'Q2广州黄埔东联路天福店T', 0, '1649', '2017', '06', '1649', '2017', '12'),
+('T2279', '广州市', '天福', '便利店', 'C2增城新塘菜仔园天福店T', 0, '1650', '2017', '06', '1650', '2017', '12'),
+('T2280', '广州市', '天福', '便利店', 'D2广州白云太和天骄天福店T', 0, '1652', '2017', '06', '1652', '2017', '12'),
+('T2282', '广州市', '天福', '便利店', 'D2广州白云江夏广云天福店T', 0, '1653', '2017', '06', '1653', '2017', '12'),
+('T2283', '广州市', '天福', '便利店', 'D2广州番禺南郊市场天福店T', 0, '1657', '2017', '06', '1657', '2017', '12'),
+('T2285', '广州市', '天福', '便利店', 'C2广州天河车陂地铁口天福店T', 0, '1020', '2017', '06', '1020', '2017', '12'),
+('T2289', '广州市', '天福', '便利店', 'C2增城新塘官湖天福店T', 0, '1044', '2017', '06', '1044', '2017', '12'),
+('T2291', '广州市', '天福', '便利店', 'C2增城新塘呀客天福店T', 0, '1067', '2017', '06', '1067', '2017', '12'),
+('T2292', '广州市', '天福', '便利店', 'D2广州番禺禺山广场天福店T', 0, '1074', '2017', '06', '1074', '2017', '12'),
+('T2296', '广州市', '天福', '便利店', 'C2广州天河荷光路天福店T', 0, '1077', '2017', '06', '1077', '2017', '12'),
+('T2297', '广州市', '天福', '便利店', 'D2广州白云远景路顺景天福店T', 0, '1080', '2017', '06', '1080', '2017', '12'),
+('T2298', '广州市', '天福', '便利店', 'C2广州天河九龙城天福店T', 0, '1084', '2017', '06', '1084', '2017', '12'),
+('T2302', '广州市', '天福', '便利店', 'C2增城新塘世家天福店T', 0, '1099', '2017', '06', '1099', '2017', '12'),
+('T2303', '广州市', '天福', '便利店', 'D2广州白云环滘金铂天福店T', 0, '1122', '2017', '06', '1122', '2017', '12'),
+('T2305', '广州市', '天福', '便利店', 'C2广州海珠康乐长旺天福店T', 0, '1411', '2017', '06', '1411', '2017', '12'),
+('T2308', '广州市', '天福', '便利店', 'D2广州番禺市桥大发天福店T', 0, '1463', '2017', '06', '1463', '2017', '12'),
+('T2316', '广州市', '天福', '便利店', 'D2广州白云嘉禾市场天福店T', 0, '1496', '2017', '06', '1496', '2017', '12'),
+('T2320', '广州市', '天福', '便利店', 'D2广州白云嘉禾富安天福店T', 0, '1510', '2017', '06', '1510', '2017', '12'),
+('T2321', '广州市', '天福', '便利店', 'D2广州白云新市海德天福店T', 0, '1537', '2017', '06', '1537', '2017', '12'),
+('T2331', '广州市', '天福', '便利店', 'D2广州白云京溪达成天福店T', 0, '1557', '2017', '06', '1557', '2017', '12'),
+('T2335', '广州市', '天福', '便利店', 'D2广州白云人和地铁口天福店T', 0, '1045', '2017', '06', '1045', '2017', '12'),
+('T2336', '广州市', '天福', '便利店', 'Q1广州花都新华雅居乐汇通广场天福店T', 0, '1048', '2017', '06', '1048', '2017', '12'),
+('T2337', '广州市', '天福', '便利店', 'C2广州天河大片路永旺天福店T', 0, '1049', '2017', '06', '1049', '2017', '12'),
+('T2339', '广州市', '天福', '便利店', 'D2广州白云鹤边西周天福店T', 0, '1055', '2017', '06', '1055', '2017', '12'),
+('T2342', '广州市', '天福', '便利店', 'C2广州海珠鹭江旺财天福店T', 0, '1059', '2017', '06', '1059', '2017', '12'),
+('T2343', '广州市', '天福', '便利店', 'Q2广州黄埔宽利天福店T', 0, '1066', '2017', '06', '1066', '2017', '12'),
+('T2347', '广州市', '天福', '便利店', 'C2广州海珠鹭江华荣天福店T', 0, '1069', '2017', '06', '1069', '2017', '12'),
+('T2355', '广州市', '天福', '便利店', 'D2广州白云同和白水塘天福店T', 0, '1070', '2017', '06', '1070', '2017', '12'),
+('T2356', '广州市', '天福', '便利店', 'D2广州番禺大石大涌路天福店T', 0, '1071', '2017', '06', '1071', '2017', '12'),
+('T2363', '广州市', '天福', '便利店', 'D2广州番禺朝阳天福店T（小车）', 0, '1072', '2017', '06', '1072', '2017', '12'),
+('T2367', '广州市', '天福', '便利店', 'C2广州天河棠下牌坊天福店T', 0, '1075', '2017', '06', '1075', '2017', '12'),
+('T2368', '广州市', '天福', '便利店', 'D2广州番禺上漖天福店T', 0, '1079', '2017', '06', '1079', '2017', '12'),
+('T2372', '广州市', '天福', '便利店', 'C2广州海珠六顺天福店天福店T', 0, '1081', '2017', '06', '1081', '2017', '12'),
+('T2376', '广州市', '天福', '便利店', 'C2广州天河龙洞民乐天福店T', 0, '1082', '2017', '06', '1082', '2017', '12'),
+('T2377', '广州市', '天福', '便利店', 'B4广州天河龙洞商业街天福店T', 0, '1088', '2017', '06', '1088', '2017', '12'),
+('T2381', '广州市', '天福', '便利店', 'D2广州白云太和南岭龙岗天福店T', 0, '1100', '2017', '06', '1100', '2017', '12'),
+('T2382', '广州市', '天福', '便利店', 'D2广州番禺市莲路金禺龙天福店T', 0, '1102', '2017', '06', '1102', '2017', '12'),
+('T2387', '广州市', '天福', '便利店', 'C2广州荔湾西场地铁天福店T', 0, '1103', '2017', '06', '1103', '2017', '12'),
+('T2392', '广州市', '天福', '便利店', 'D2广州白云嘉禾荷木岭天福店T', 0, '1118', '2017', '06', '1118', '2017', '12'),
+('T2393', '广州市', '天福', '便利店', 'Q2广州白云嘉禾益民天福店T', 0, '1132', '2017', '06', '1132', '2017', '12'),
+('T2397', '广州市', '天福', '便利店', 'Q4广州白云鹤边鹤鸣天福店T', 0, '1133', '2017', '06', '1133', '2017', '12'),
+('T2403', '广州市', '天福', '便利店', 'C4增城新塘德燊天福店T', 0, '1135', '2017', '06', '1135', '2017', '12'),
+('T2406', '广州市', '天福', '便利店', 'Q4广州番禺金亿广场天福店T', 0, '1144', '2017', '06', '1144', '2017', '12'),
+('T2409', '广州市', '天福', '便利店', 'D2广州番禺市桥星海天福店T', 0, '1146', '2017', '06', '1146', '2017', '12'),
+('T2418', '广州市', '天福', '便利店', 'Q4广州海珠石溪顺发天福店T', 0, '1150', '2017', '06', '1150', '2017', '12'),
+('T2419', '广州市', '天福', '便利店', 'Q1增城荔城云山诗意天福店T', 0, '1151', '2017', '06', '1151', '2017', '12'),
+('T2428', '广州市', '天福', '便利店', 'Q4广州白云嘉禾竹仔园阳光天福店T', 0, '1233', '2017', '06', '1233', '2017', '12'),
+('T2429', '广州市', '天福', '便利店', 'Q4广州南沙四季荟分天福店T', 0, '1278', '2017', '06', '1278', '2017', '12'),
+('T2430', '广州市', '天福', '便利店', 'Q4广州白云人和富和天福店T', 0, '1280', '2017', '06', '1280', '2017', '12'),
+('T2436', '广州市', '天福', '便利店', 'Q4广州天河上社Ｅ家天福店T', 0, '1282', '2017', '06', '1282', '2017', '12'),
+('T2439', '广州市', '天福', '便利店', 'Q4广州番禺大龙昊信天福店T', 0, '1293', '2017', '06', '1293', '2017', '12'),
+('T2448', '广州市', '天福', '便利店', 'Q4广州白云太和彭城天福店T', 0, '1294', '2017', '06', '1294', '2017', '12'),
+('T2449', '广州市', '天福', '便利店', 'Q4广州白云长红双和天福店T', 0, '1295', '2017', '06', '1295', '2017', '12'),
+('T2450', '广州市', '天福', '便利店', 'Q2广州白云棠下棠景天福店T', 0, '1299', '2017', '06', '1299', '2017', '12'),
+('T2452', '广州市', '天福', '便利店', 'Q2广州天河龙洞地铁口天福店T', 0, '1358', '2017', '06', '1358', '2017', '12'),
+('T2453', '广州市', '天福', '便利店', 'Q2广州白云松柏东街汇客多天福店T(JQ)', 0, '1366', '2017', '06', '1366', '2017', '12'),
+('T2455', '广州市', '天福', '便利店', 'Q1广州花都狮岭城市广场天福店T', 0, '1376', '2017', '06', '1376', '2017', '12'),
+('T2456', '广州市', '天福', '便利店', 'Q3广州花都新华银燕天福店T', 0, '1380', '2017', '06', '1380', '2017', '12'),
+('T2457', '广州市', '天福', '便利店', 'Q2广州番禺祈福天福店T', 0, '1381', '2017', '06', '1381', '2017', '12'),
+('T2458', '广州市', '天福', '便利店', 'Q4广州越秀广园路天福店T（JQ）', 0, '1384', '2017', '06', '1384', '2017', '12'),
+('T2459', '广州市', '天福', '便利店', 'Q2广州白云松南骏景天福店T', 0, '1385', '2017', '06', '1385', '2017', '12'),
+('T2460', '广州市', '天福', '便利店', '广州番禺石岗天福店T', 0, '1386', '2017', '06', '1386', '2017', '12'),
+('T2461', '广州市', '天福', '便利店', 'Q2广州番禺君御酒店天福店T', 0, '1398', '2017', '06', '1398', '2017', '12'),
+('T2476', '广州市', '天福', '便利店', 'Q2广州番禺奥园天福店T', 0, '1407', '2017', '06', '1407', '2017', '12'),
+('T2477', '广州市', '天福', '便利店', 'Q2广州白云清湖村天福店T', 0, '1415', '2017', '06', '1415', '2017', '12'),
+('T2478', '广州市', '天福', '便利店', 'Q2广州白云永泰地铁口天福店T', 0, '1426', '2017', '06', '1426', '2017', '12'),
+('T2479', '广州市', '天福', '便利店', 'Q1广州花都新华团结天福店T', 0, '1432', '2017', '06', '1432', '2017', '12'),
+('T2480', '广州市', '天福', '便利店', 'Q2广州海珠文华天福店T', 0, '1458', '2017', '06', '1458', '2017', '12'),
+('T2481', '广州市', '天福', '便利店', 'Q2广州番禺大石惠民天福店T', 0, '1470', '2017', '06', '1470', '2017', '12'),
+('T2482', '广州市', '天福', '便利店', 'Q2广州白云鹤边广发天福店T', 0, '1471', '2017', '06', '1471', '2017', '12'),
+('T2483', '广州市', '天福', '便利店', 'Q2广州天河车陂地铁Ｃ出口天福店T', 0, '1478', '2017', '06', '1478', '2017', '12'),
+('T2485', '广州市', '天福', '便利店', 'Q2广州海珠江燕路天福店T', 0, '1480', '2017', '06', '1480', '2017', '12'),
+('T2486', '广州市', '天福', '便利店', 'Q2广州番禺南村鑫隆天福店T', 0, '1486', '2017', '06', '1486', '2017', '12'),
+('T2489', '广州市', '天福', '便利店', 'Q2广州黄埔荔联天福店T', 0, '1493', '2017', '06', '1493', '2017', '12'),
+('T2550', '广州市', '天福', '便利店', 'Q2广州越秀三育路天福店T(JQ)', 0, '1497', '2017', '06', '1497', '2017', '12'),
+('T2551', '广州市', '天福', '便利店', 'Q2广州白云京溪德裕天福店T', 0, '1498', '2017', '06', '1498', '2017', '12'),
+('T2552', '广州市', '天福', '便利店', 'Q1广州花都狮岭丽莎广场天福店T', 0, '1501', '2017', '06', '1501', '2017', '12'),
+('T2553', '广州市', '天福', '便利店', 'Q2广州海珠张春元天福店T', 0, '1503', '2017', '06', '1503', '2017', '12'),
+('T2555', '广州市', '天福', '便利店', 'Q1广州花都狮岭益民天福店T', 0, '1504', '2017', '06', '1504', '2017', '12'),
+('T2556', '广州市', '天福', '便利店', 'B2广州白云石井庆丰广场天福店T', 0, '1519', '2017', '06', '1519', '2017', '12'),
+('T2557', '广州市', '天福', '便利店', 'Q2广州番禺榄塘村景茂天福店T', 0, '1521', '2017', '06', '1521', '2017', '12'),
+('T2558', '广州市', '天福', '便利店', 'Q2广州白云祥岗家旺天福店T', 0, '1523', '2017', '06', '1523', '2017', '12'),
+('T2559', '广州市', '天福', '便利店', 'Q2广州白云太和镇大源德鑫天福店T', 0, '1536', '2017', '06', '1536', '2017', '12'),
+('T2560', '广州市', '天福', '便利店', 'Q1广州花都狮岭阳光广场天福店T', 0, '1543', '2017', '06', '1543', '2017', '12'),
+('T2561', '广州市', '天福', '便利店', 'Q2广州白云沙涌世纪天福店T', 0, '1549', '2017', '06', '1549', '2017', '12'),
+('T2562', '广州市', '天福', '便利店', 'Q2广州天河龙洞北门天福店T', 0, '1566', '2017', '06', '1566', '2017', '12'),
+('T2580', '广州市', '天福', '便利店', 'Q2广州天河长兴路天福店T', 0, '1578', '2017', '06', '1578', '2017', '12'),
+('T2581', '广州市', '天福', '便利店', 'Q2广州海珠盈丰路天福店T', 0, '1585', '2017', '06', '1585', '2017', '12'),
+('T2582', '广州市', '天福', '便利店', 'Q2广州白云棠溪鸿盛天福店T', 0, '1587', '2017', '06', '1587', '2017', '12'),
+('T2583', '广州市', '天福', '便利店', 'Q2广州海珠翠宝路天福店T', 0, '1589', '2017', '06', '1589', '2017', '12'),
+('T2585', '广州市', '天福', '便利店', 'Q2广州白云平沙富力天福店T', 0, '1590', '2017', '06', '1590', '2017', '12'),
+('T2586', '广州市', '天福', '便利店', 'Q2广州白云萧岗光明天福店T', 0, '1591', '2017', '06', '1591', '2017', '12'),
+('T2587', '广州市', '天福', '便利店', 'Q2广州萝岗珠江嘉园天福店T', 0, '1592', '2017', '06', '1592', '2017', '12'),
+('T2588', '广州市', '天福', '便利店', 'Q2广州白云嘉禾广场天福店T', 0, '1594', '2017', '06', '1594', '2017', '12'),
+('T2589', '广州市', '天福', '便利店', 'Q2广州天河中山大道天福店T', 0, '1045', '2017', '06', '1045', '2017', '12'),
+('T2590', '广州市', '天福', '便利店', 'B02广州天河华观路天福店T', 0, '1607', '2017', '06', '1607', '2017', '12'),
+('T2591', '广州市', '天福', '便利店', 'B4广州天河石牌东天福店T(CWDS)', 0, '1608', '2017', '06', '1608', '2017', '12'),
+('T2592', '广州市', '天福', '便利店', 'Q1广州花都区狮岭金程天福店T', 0, '1610', '2017', '06', '1610', '2017', '12'),
+('T2593', '广州市', '天福', '便利店', 'B2广州番禺厦滘芒果天福店T', 0, '1611', '2017', '06', '1611', '2017', '12'),
+('T2595', '广州市', '天福', '便利店', 'Q2广州越秀富港天福店T', 0, '1612', '2017', '06', '1612', '2017', '12');
+INSERT INTO `t_new_shop` (`id`, `city`, `sm`, `type`, `name`, `flag`, `shop1`, `year1`, `month1`, `shop2`, `year2`, `month2`) VALUES
+('T2606', '广州市', '天福', '便利店', 'Q2广州白云嘉禾七星岗星悦天福店T', 0, '1620', '2017', '06', '1620', '2017', '12'),
+('T2608', '广州市', '天福', '便利店', 'Q2广州番禺洛浦街南浦沿沙天福店T', 0, '1625', '2017', '06', '1625', '2017', '12'),
+('T2609', '广州市', '天福', '便利店', 'Q2广州番禺傍江天福店T', 0, '1626', '2017', '06', '1626', '2017', '12'),
+('T2610', '广州市', '天福', '便利店', 'Q2广州白云永泰永康天福店T', 0, '1630', '2017', '06', '1630', '2017', '12'),
+('T2611', '广州市', '天福', '便利店', 'B4广州天河石马大街天福店T（CWDS）', 0, '1636', '2017', '06', '1636', '2017', '12'),
+('T2612', '广州市', '天福', '便利店', 'Q2广州天河员村东城花苑天福T', 0, '1638', '2017', '06', '1638', '2017', '12'),
+('T2613', '广州市', '天福', '便利店', 'C4广州番禺南大路百世家居天福店T', 0, '1640', '2017', '06', '1640', '2017', '12'),
+('T2615', '广州市', '天福', '便利店', 'B4广州花都狮岭振兴天福店T', 0, '1641', '2017', '06', '1641', '2017', '12'),
+('T2616', '广州市', '天福', '便利店', 'Q2广州白云棠溪斯特威天福店T', 0, '1642', '2017', '06', '1642', '2017', '12'),
+('T2637', '广州市', '天福', '便利店', 'Q2广州萝岗迪诺天福店T', 0, '1646', '2017', '06', '1646', '2017', '12'),
+('T2639', '广州市', '天福', '便利店', 'Q2增城永和刘慧慧天福店T', 0, '1648', '2017', '06', '1648', '2017', '12'),
+('T2646', '广州市', '天福', '便利店', 'B4广州白云新市乐嘉广场天福店T', 0, '1649', '2017', '06', '1649', '2017', '12'),
+('T2678', '广州市', '天福', '便利店', 'B2广州番禺沙西幸福天福店T', 0, '1650', '2017', '06', '1650', '2017', '12'),
+('T2679', '广州市', '天福', '便利店', 'B4广州海珠区江南大道南天福店T', 0, '1048', '2017', '06', '1048', '2017', '12'),
+('T2680', '广州市', '天福', '便利店', 'B4广州白云京溪云景天福店T', 0, '1653', '2017', '06', '1653', '2017', '12'),
+('T2681', '广州市', '天福', '便利店', 'B4广州天河盈紫天福店T', 0, '1049', '2017', '06', '1049', '2017', '12'),
+('T2682', '广州市', '天福', '便利店', 'C4广州黄埔下沙天福店T', 0, '1055', '2017', '06', '1055', '2017', '12'),
+('T2683', '广州市', '天福', '便利店', 'B4广州天河学燕街广隆天福店T', 0, '1059', '2017', '06', '1059', '2017', '12'),
+('T2685', '广州市', '天福', '便利店', 'B3广州花都狮岭联合天福店T', 0, '1066', '2017', '06', '1066', '2017', '12'),
+('T2686', '广州市', '天福', '便利店', 'B3广州花都新华公园前天福店T', 0, '1020', '2017', '06', '1020', '2017', '12'),
+('T2687', '广州市', '天福', '便利店', 'B3广州花都狮岭友田天福店T', 0, '1044', '2017', '06', '1044', '2017', '12'),
+('T2689', '广州市', '天福', '便利店', 'C4广州荔湾东方街市天福店T', 0, '1067', '2017', '06', '1067', '2017', '12'),
+('T2690', '广州市', '天福', '便利店', 'B4广州天河车陂荔枝园天福店T', 0, '1074', '2017', '06', '1074', '2017', '12'),
+('T2691', '广州市', '天福', '便利店', 'B4广州白云永泰翔云天福店T', 0, '1077', '2017', '06', '1077', '2017', '12'),
+('T2692', '广州市', '天福', '便利店', 'B4广州白云集贤庄百世天福店T', 0, '1080', '2017', '06', '1080', '2017', '12'),
+('T2738', '广州市', '天福', '便利店', 'C4增城新塘星晴天福店T', 0, '1084', '2017', '06', '1084', '2017', '12'),
+('T2741', '广州市', '天福', '便利店', 'B2广州天河棠下上社天福店T', 0, '1099', '2017', '06', '1099', '2017', '12'),
+('T2757', '广州市', '天福', '便利店', 'B2广州天河棠东东路天福店T', 0, '1122', '2017', '06', '1122', '2017', '12'),
+('T2758', '广州市', '天福', '便利店', 'B1广州花都新华曙光天福店T', 0, '1411', '2017', '06', '1411', '2017', '12'),
+('T2759', '广州市', '天福', '便利店', 'B1广州花都新华桂花天福店T', 0, '1463', '2017', '06', '1463', '2017', '12'),
+('T2760', '广州市', '天福', '便利店', 'B2广州南沙金洲天福店T', 0, '1496', '2017', '06', '1496', '2017', '12'),
+('T2761', '广州市', '天福', '便利店', 'B2广州番禺豪盛天福店T', 0, '1510', '2017', '06', '1510', '2017', '12'),
+('T2762', '广州市', '天福', '便利店', 'Q1广州花都新华碧秀花园天福店T', 0, '1537', '2017', '06', '1537', '2017', '12'),
+('T2763', '广州市', '天福', '便利店', 'B2广州白云沙涌景秀天福店T', 0, '1557', '2017', '06', '1557', '2017', '12'),
+('T2765', '广州市', '天福', '便利店', 'B2广州番禺桥富华天福店T', 0, '1069', '2017', '06', '1069', '2017', '12'),
+('T2766', '广州市', '天福', '便利店', 'B2广州海珠赤岗天福店T', 0, '1070', '2017', '06', '1070', '2017', '12'),
+('T2767', '广州市', '天福', '便利店', 'B1广州花都新华云港天福店T', 0, '1071', '2017', '06', '1071', '2017', '12'),
+('T2768', '广州市', '天福', '便利店', 'B2广州黄埔汇客多天福店T', 0, '1072', '2017', '06', '1072', '2017', '12'),
+('T2769', '广州市', '天福', '便利店', 'B2广州番禺环城天福店T', 0, '1075', '2017', '06', '1075', '2017', '12'),
+('T2770', '广州市', '天福', '便利店', 'B2广州南沙滨海天福店T', 0, '1079', '2017', '06', '1079', '2017', '12'),
+('T2771', '广州市', '天福', '便利店', '广州天河龙洞迎福路天福店T', 0, '1081', '2017', '06', '1081', '2017', '12'),
+('T2772', '广州市', '天福', '便利店', 'B1广州花都新华龙珠天福店T', 0, '1082', '2017', '06', '1082', '2017', '12'),
+('T2773', '广州市', '天福', '便利店', 'B2广州黄埔锐丰广场天福店T', 0, '1088', '2017', '06', '1088', '2017', '12'),
+('T2775', '广州市', '天福', '便利店', 'B2广州白云鹤边鹤龙天福店T', 0, '1100', '2017', '06', '1100', '2017', '12'),
+('T2827', '广州市', '天福', '便利店', 'B2广州天河文昌天福店T', 0, '1102', '2017', '06', '1102', '2017', '12'),
+('T2828', '广州市', '天福', '便利店', 'B2广州海珠万胜围天福店T', 0, '1103', '2017', '06', '1103', '2017', '12'),
+('T2829', '广州市', '天福', '便利店', 'B2广州白云京溪春兰花园天福店T', 0, '1118', '2017', '06', '1118', '2017', '12'),
+('T2830', '广州市', '天福', '便利店', 'B1广州花都新华万达天福店T', 0, '1132', '2017', '06', '1132', '2017', '12'),
+('T2831', '广州市', '天福', '便利店', 'B2广州白云同和兴辉天福店T', 0, '1133', '2017', '06', '1133', '2017', '12'),
+('T2832', '广州市', '天福', '便利店', 'B2广州番禺顺鑫天福店T', 0, '1135', '2017', '06', '1135', '2017', '12'),
+('T2833', '广州市', '天福', '便利店', 'B1广州花都狮岭合成天福店T', 0, '1144', '2017', '06', '1144', '2017', '12'),
+('T2835', '广州市', '天福', '便利店', 'B2广州番禺沙溪东华天福店T', 0, '1146', '2017', '06', '1146', '2017', '12'),
+('T2836', '广州市', '天福', '便利店', 'B2广州白云人和鸿程天福店T', 0, '1150', '2017', '06', '1150', '2017', '12'),
+('T2837', '广州市', '天福', '便利店', 'B2广州白云钟落潭钟升路天福店T(CWDS)', 0, '1151', '2017', '06', '1151', '2017', '12'),
+('T2838', '广州市', '天福', '便利店', 'B2广州天河世佳天福店T', 0, '1233', '2017', '06', '1233', '2017', '12'),
+('T2839', '广州市', '天福', '便利店', 'B2广州黄埔大沙地天福店T', 0, '1278', '2017', '06', '1278', '2017', '12'),
+('T2840', '广州市', '天福', '便利店', 'C2广州天河兴华DL天福店T', 0, '1280', '2017', '06', '1280', '2017', '12'),
+('T2841', '广州市', '天福', '便利店', 'B02广州天河员村天福店T', 0, '1281', '2017', '06', '1281', '2017', '12'),
+('T2842', '广州市', '天福', '便利店', 'B2广州天河美林天福店T', 0, '1282', '2017', '06', '1282', '2017', '12'),
+('T2843', '广州市', '天福', '便利店', 'B02广州黄埔苏宁天福店T', 0, '1293', '2017', '06', '1293', '2017', '12'),
+('T2845', '广州市', '天福', '便利店', 'B2广州番禺塘步天福店T', 0, '1294', '2017', '06', '1294', '2017', '12'),
+('T2846', '广州市', '天福', '便利店', 'B2广州海珠大塘天福店T', 0, '1295', '2017', '06', '1295', '2017', '12'),
+('T2850', '广州市', '天福', '便利店', 'B2广州白云陈田中街天福店T', 0, '1299', '2017', '06', '1299', '2017', '12'),
+('T2851', '广州市', '天福', '便利店', 'B2广州南沙海傍A出口天福店T', 0, '1358', '2017', '06', '1358', '2017', '12'),
+('T2852', '广州市', '天福', '便利店', 'B02广州白云太和敏捷科创天福店T', 0, '1366', '2017', '06', '1366', '2017', '12'),
+('T2853', '广州市', '天福', '便利店', 'B02广州南沙万达广场天福店T', 0, '1376', '2017', '06', '1376', '2017', '12'),
+('T2855', '广州市', '天福', '便利店', 'B2广州番禺大石城天福店T', 0, '1380', '2017', '06', '1380', '2017', '12'),
+('T2886', '广州市', '天福', '便利店', 'B02广州海珠哇迪天福店T', 0, '1381', '2017', '06', '1381', '2017', '12'),
+('T2888', '广州市', '天福', '便利店', 'B02广州越秀双利天福店T', 0, '1384', '2017', '06', '1384', '2017', '12'),
+('T2889', '广州市', '天福', '便利店', 'B02广州天河水晶天福店T', 0, '1385', '2017', '06', '1385', '2017', '12'),
+('T2891', '广州市', '天福', '便利店', 'B02广州天河友谊天福店T', 0, '1386', '2017', '06', '1386', '2017', '12'),
+('T2892', '广州市', '天福', '便利店', 'C2广州天河玉富天福店T', 0, '1398', '2017', '06', '1398', '2017', '12'),
+('T2893', '广州市', '天福', '便利店', 'B02广州海珠金丰花园天福店T', 0, '1407', '2017', '06', '1407', '2017', '12'),
+('T2895', '广州市', '天福', '便利店', 'C2广州荔湾荣立天福店T', 0, '1413', '2017', '06', '1413', '2017', '12'),
+('T2896', '广州市', '天福', '便利店', 'B02广州天河荷光天福店T', 0, '1415', '2017', '06', '1415', '2017', '12'),
+('T2897', '广州市', '天福', '便利店', 'B02广州花都新华秀林天福店T', 0, '1426', '2017', '06', '1426', '2017', '12'),
+('T2898', '广州市', '天福', '便利店', 'B02广州海珠恒铁天福店T', 0, '1432', '2017', '06', '1432', '2017', '12'),
+('T2899', '广州市', '天福', '便利店', 'B02广州黄埔下沙西街天福店T', 0, '1441', '2017', '06', '1441', '2017', '12'),
+('T2900', '广州市', '天福', '便利店', 'B02广州白云彭边纪梵天福店T', 0, '1458', '2017', '06', '1458', '2017', '12'),
+('T2901', '广州市', '天福', '便利店', 'B02广州天河金来天福店T', 0, '1470', '2017', '06', '1470', '2017', '12'),
+('T2902', '广州市', '天福', '便利店', 'D2广州白云夏茅拾社天福店T', 0, '1471', '2017', '06', '1471', '2017', '12'),
+('T2903', '广州市', '天福', '便利店', 'C2广州南沙盛世天福店T', 0, '1478', '2017', '06', '1478', '2017', '12'),
+('T2905', '广州市', '天福', '便利店', 'C2广州天河沙东天福店T（13点后）', 0, '1480', '2017', '06', '1480', '2017', '12'),
+('T2919', '广州市', '天福', '便利店', 'B02广州白云萝岗村中源天福店T', 0, '1486', '2017', '06', '1486', '2017', '12'),
+('T2920', '广州市', '天福', '便利店', 'D1广州白云同和合一天福店T', 0, '1493', '2017', '06', '1493', '2017', '12'),
+('T2921', '广州市', '天福', '便利店', 'C2广州天河百合天福店T', 0, '1497', '2017', '06', '1497', '2017', '12'),
+('T2922', '广州市', '天福', '便利店', 'C2广州天河发江天福店T', 0, '1498', '2017', '06', '1498', '2017', '12'),
+('T2923', '广州市', '天福', '便利店', '广州白云欣凯天福店T', 0, '1501', '2017', '06', '1501', '2017', '12'),
+('T2927', '广州市', '天福', '便利店', 'B02增城新塘东坑天福店T', 0, '1503', '2017', '06', '1503', '2017', '12'),
+('T2928', '广州市', '天福', '便利店', 'B02增城新塘新沙天福店T', 0, '1504', '2017', '06', '1504', '2017', '12'),
+('T2950', '广州市', '天福', '便利店', 'C2增城新塘牛仔城天福店T', 0, '1519', '2017', '06', '1519', '2017', '12'),
+('T2979', '广州市', '天福', '便利店', 'D2广州番禺沙圩市场天福店T', 0, '1521', '2017', '06', '1521', '2017', '12'),
+('T2980', '广州市', '天福', '便利店', 'D2广州白云永泰金骊天福店T', 0, '1523', '2017', '06', '1523', '2017', '12'),
+('T2981', '广州市', '天福', '便利店', 'D2广州番禺里仁洞彬彬天福店T', 0, '1536', '2017', '06', '1536', '2017', '12'),
+('T2982', '广州市', '天福', '便利店', 'Q1广州花都花东中花天福店T', 0, '1543', '2017', '06', '1543', '2017', '12'),
+('T2983', '广州市', '天福', '便利店', 'D2广州白云嘉禾望岗德馨天福店T', 0, '1549', '2017', '06', '1549', '2017', '12'),
+('T2985', '广州市', '天福', '便利店', 'C2广州海珠福政天福店T', 0, '1566', '2017', '06', '1566', '2017', '12'),
+('T2986', '广州市', '天福', '便利店', 'C2广州天河星东天福店T', 0, '1578', '2017', '06', '1578', '2017', '12'),
+('T2987', '广州市', '天福', '便利店', 'D2广州白云横滘清平天福店T', 0, '1585', '2017', '06', '1585', '2017', '12'),
+('T2988', '广州市', '天福', '便利店', 'D2广州白云棠溪新鸿运天福店T', 0, '1587', '2017', '06', '1587', '2017', '12'),
+('T2989', '广州市', '天福', '便利店', 'Q1广州花都新华嘉逸华庭天福店T', 0, '1589', '2017', '06', '1589', '2017', '12'),
+('T2991', '广州市', '天福', '便利店', 'Q1广州花都新华凤华天福店T', 0, '1590', '2017', '06', '1590', '2017', '12'),
+('T990239', '深圳市', '天福', '便利店', '深圳福永新田天福', 0, '1591', '2017', '07', '1591', '2017', '08'),
+('T990255', '深圳市', '天福', '便利店', 'S459深圳龙岗塞纳时光天福', 0, '1592', '2017', '07', '1592', '2017', '08'),
+('T990271', '深圳市', '天福', '便利店', '深圳沙井西环天福', 0, '1594', '2017', '07', '1594', '2017', '08'),
+('T990507', '深圳市', '天福', '便利店', '深圳公明锦鸿天福店T', 0, '1603', '2017', '07', '1603', '2017', '08'),
+('T990508', '深圳市', '天福', '便利店', 'S2深圳西乡南昌天福T', 0, '1607', '2017', '07', '1607', '2017', '08'),
+('T990509', '深圳市', '天福', '便利店', 'J1深圳沙井友诚天福T', 0, '1608', '2017', '07', '1608', '2017', '08'),
+('T990510', '深圳市', '天福', '便利店', 'S2深圳西乡客隆天福T', 0, '1610', '2017', '07', '1610', '2017', '08'),
+('T990540', '深圳市', '天福', '便利店', 'J1深圳沙井锦锋天福店T', 0, '1611', '2017', '07', '1611', '2017', '08'),
+('T990542', '深圳市', '天福', '便利店', '深圳福永永福天福店T', 0, '1612', '2017', '07', '1612', '2017', '08'),
+('T990545', '深圳市', '天福', '便利店', 'S2深圳宝安兴旺天福T', 0, '1620', '2017', '07', '1620', '2017', '08'),
+('T990546', '深圳市', '天福', '便利店', '深圳龙华幸福天福店T', 0, '1625', '2017', '07', '1625', '2017', '08'),
+('T990547', '深圳市', '天福', '便利店', '深圳坂田雨琪天福T', 0, '1626', '2017', '07', '1626', '2017', '08'),
+('T990720', '深圳市', '天福', '便利店', '深圳大鹏同富天福店T', 0, '1630', '2017', '07', '1630', '2017', '08'),
+('T990721', '深圳市', '天福', '便利店', '深圳横岗西坑宏发天福T', 0, '1636', '2017', '07', '1636', '2017', '08'),
+('T990723', '深圳市', '天福', '便利店', '深圳福永阳光天福T', 0, '1638', '2017', '07', '1638', '2017', '08'),
+('T991896', '深圳市', '天福', '便利店', 'S1深圳公明东城天福店T', 0, '1640', '2017', '07', '1640', '2017', '08'),
+('T992488', '深圳市', '天福', '便利店', 'S1深圳公明祥韵天福店T', 0, '1641', '2017', '07', '1641', '2017', '08'),
+('T992490', '深圳市', '天福', '便利店', 'S1深圳石岩石龙仔天福店T', 0, '1642', '2017', '07', '1642', '2017', '08'),
+('T992491', '深圳市', '天福', '便利店', 'J1深圳沙井嘉濠天福店T', 0, '1646', '2017', '07', '1646', '2017', '08'),
+('T992492', '深圳市', '天福', '便利店', 'S2深圳宝安上川天福店T', 0, '1648', '2017', '07', '1648', '2017', '08'),
+('T992493', '深圳市', '天福', '便利店', 'S1深圳龙华伍屋天福店T', 0, '1649', '2017', '07', '1649', '2017', '08'),
+('T992495', '深圳市', '天福', '便利店', 'S1深圳石岩福景天福店T', 0, '1650', '2017', '07', '1650', '2017', '08'),
+('T992496', '深圳市', '天福', '便利店', 'J1深圳沙井麒麟天福店T', 0, '1652', '2017', '07', '1652', '2017', '08'),
+('T992536', '深圳市', '天福', '便利店', 'J1深圳福永合成业天福店T', 0, '1653', '2017', '07', '1653', '2017', '08'),
+('T992537', '深圳市', '天福', '便利店', 'J1深圳福永桥塘天福店T', 0, '1655', '2017', '07', '1655', '2017', '08'),
+('T992538', '深圳市', '天福', '便利店', 'J1深圳沙井皇朝天福店T', 0, '1657', '2017', '07', '1657', '2017', '08'),
+('T992539', '深圳市', '天福', '便利店', 'S1深圳龙岗蓝钻富盈天福店T', 0, '1664', '2017', '07', '1664', '2017', '08'),
+('T992540', '深圳市', '天福', '便利店', 'S1深圳横岗小林天福店T', 0, '1669', '2017', '07', '1669', '2017', '08'),
+('T992541', '深圳市', '天福', '便利店', 'J1深圳沙井新桥豪苑天福T', 0, '1020', '2017', '07', '1020', '2017', '08'),
+('T992542', '深圳市', '天福', '便利店', 'S1深圳石岩华仔天福店T', 0, '1044', '2017', '07', '1044', '2017', '08'),
+('T992543', '深圳市', '天福', '便利店', 'S1深圳坪地东兴天福店T', 0, '1067', '2017', '07', '1067', '2017', '08'),
+('T992545', '深圳市', '天福', '便利店', 'S1深圳光明新学海天福T', 0, '1074', '2017', '07', '1074', '2017', '08'),
+('T992546', '深圳市', '天福', '便利店', 'S1深圳坂田富佳天福店T', 0, '1077', '2017', '07', '1077', '2017', '08'),
+('T992547', '深圳市', '天福', '便利店', 'S1深圳坂田发达天福店T', 0, '1080', '2017', '07', '1080', '2017', '08'),
+('T992548', '深圳市', '天福', '便利店', 'S1深圳龙华宝湖天福店T', 0, '1084', '2017', '07', '1084', '2017', '08'),
+('T992549', '深圳市', '天福', '便利店', 'S2深圳西乡固戍和谐天福店T', 0, '1099', '2017', '07', '1099', '2017', '08'),
+('T992607', '深圳市', '天福', '便利店', 'S1深圳石岩万信达天福店T', 0, '1122', '2017', '07', '1122', '2017', '08'),
+('T992649', '深圳市', '天福', '便利店', 'S1深圳坪山沙博天福店T', 0, '1411', '2017', '07', '1411', '2017', '08'),
+('T992650', '深圳市', '天福', '便利店', 'S1深圳公明秋园雅苑天福店T', 0, '1463', '2017', '07', '1463', '2017', '08'),
+('T992651', '深圳市', '天福', '便利店', 'S1深圳龙华上油松天福店T', 0, '1496', '2017', '07', '1496', '2017', '08'),
+('T992652', '深圳市', '天福', '便利店', 'S2深圳西乡九五天福店T', 0, '1510', '2017', '07', '1510', '2017', '08'),
+('T992653', '深圳市', '天福', '便利店', 'J1深圳福永世坤天福店T', 0, '1537', '2017', '07', '1537', '2017', '08'),
+('T992655', '深圳市', '天福', '便利店', 'S2深圳西乡鸿业天福店T', 0, '1557', '2017', '07', '1557', '2017', '08'),
+('T992656', '深圳市', '天福', '便利店', 'J1深圳松岗南岸天福店T', 0, '1045', '2017', '07', '1045', '2017', '08'),
+('T992698', '深圳市', '天福', '便利店', 'J1深圳沙井汇聚天福T', 0, '1048', '2017', '07', '1048', '2017', '08'),
+('T992699', '深圳市', '天福', '便利店', 'S1深圳观澜新田天福T', 0, '1049', '2017', '07', '1049', '2017', '08'),
+('T992700', '深圳市', '天福', '便利店', 'S1深圳观澜河东天福店T', 0, '1055', '2017', '07', '1055', '2017', '08'),
+('T992701', '深圳市', '天福', '便利店', 'S1深圳龙岗惠民天福店T', 0, '1059', '2017', '07', '1059', '2017', '08'),
+('T992702', '深圳市', '天福', '便利店', 'S2深圳宝安宝民二路天福店T', 0, '1066', '2017', '07', '1066', '2017', '08'),
+('T992703', '深圳市', '天福', '便利店', 'J1深圳沙井合一天福店T', 0, '1069', '2017', '07', '1069', '2017', '08'),
+('T992705', '深圳市', '天福', '便利店', 'S2深圳西乡固戍茶树天福店T', 0, '1070', '2017', '07', '1070', '2017', '08'),
+('T992706', '深圳市', '天福', '便利店', 'S2深圳南山世纪天福店T', 0, '1071', '2017', '07', '1071', '2017', '08'),
+('T992707', '深圳市', '天福', '便利店', 'S1深圳龙岗龙福天福T', 0, '1072', '2017', '07', '1072', '2017', '08'),
+('T992708', '深圳市', '天福', '便利店', 'S2深圳西乡华盛辉天福店T', 0, '1075', '2017', '07', '1075', '2017', '08'),
+('T992709', '深圳市', '天福', '便利店', 'S1深圳大鹏海边天福店', 0, '1079', '2017', '07', '1079', '2017', '08'),
+('T992783', '深圳市', '天福', '便利店', 'S1深圳大鹏康顺天福T', 0, '1081', '2017', '07', '1081', '2017', '08'),
+('T992785', '深圳市', '天福', '便利店', 'S2深圳西乡天天天福T', 0, '1082', '2017', '07', '1082', '2017', '08'),
+('T992786', '深圳市', '天福', '便利店', 'S2深圳西乡固戍超虹天福T', 0, '1088', '2017', '07', '1088', '2017', '08'),
+('T992788', '深圳市', '天福', '便利店', 'J1深圳松岗平安天福店T', 0, '1100', '2017', '07', '1100', '2017', '08'),
+('T992789', '深圳市', '天福', '便利店', 'S1深圳民治创业天福店T', 0, '1102', '2017', '07', '1102', '2017', '08'),
+('T992790', '深圳市', '天福', '便利店', 'J1深圳沙井幸福天福T', 0, '1103', '2017', '07', '1103', '2017', '08'),
+('T992791', '深圳市', '天福', '便利店', 'J1深圳松岗琥珀天福T', 0, '1118', '2017', '07', '1118', '2017', '08'),
+('T992793', '深圳市', '天福', '便利店', 'J1深圳福永新华天福T', 0, '1132', '2017', '07', '1132', '2017', '08'),
+('T992819', '深圳市', '天福', '便利店', 'S2深圳宝安乐安天福T', 0, '1133', '2017', '07', '1133', '2017', '08'),
+('T992820', '深圳市', '天福', '便利店', 'S1深圳龙华玉翠天福T', 0, '1135', '2017', '07', '1135', '2017', '08'),
+('T992821', '深圳市', '天福', '便利店', 'S2深圳南山地铁站天福店T', 0, '1144', '2017', '07', '1144', '2017', '08'),
+('T992822', '深圳市', '天福', '便利店', 'S2深圳西乡固戍红湾天福店T', 0, '1146', '2017', '07', '1146', '2017', '08'),
+('T992823', '深圳市', '天福', '便利店', 'S01深圳公明中记天福T', 0, '1150', '2017', '07', '1150', '2017', '08'),
+('T992825', '深圳市', '天福', '便利店', 'S1深圳公明榕新天福T', 0, '1151', '2017', '07', '1151', '2017', '08'),
+('T992826', '深圳市', '天福', '便利店', 'S2深圳宝安灵芝地铁站天福T', 0, '1045', '2017', '07', '1045', '2017', '08'),
+('T992878', '深圳市', '天福', '便利店', 'S01深圳公明金宝天福T', 0, '1278', '2017', '07', '1278', '2017', '08'),
+('T992879', '深圳市', '天福', '便利店', 'S1深圳石岩新合发天福店T', 0, '1280', '2017', '07', '1280', '2017', '08'),
+('T992880', '深圳市', '天福', '便利店', 'S01深圳民治万众天福T', 0, '1281', '2017', '07', '1281', '2017', '08'),
+('T992881', '深圳市', '天福', '便利店', 'J1深圳福永塘尾荔园天福T', 0, '1282', '2017', '07', '1282', '2017', '08'),
+('T992882', '深圳市', '天福', '便利店', 'S01深圳石岩喜源天福T', 0, '1293', '2017', '07', '1293', '2017', '08'),
+('T992883', '深圳市', '天福', '便利店', 'J1深圳松岗宏海天福T', 0, '1294', '2017', '07', '1294', '2017', '08'),
+('T992885', '深圳市', '天福', '便利店', 'S01深圳公明家好天福T', 0, '1295', '2017', '07', '1295', '2017', '08'),
+('T992930', '深圳市', '天福', '便利店', 'J1深圳福永永红天福店T', 0, '1299', '2017', '07', '1299', '2017', '08'),
+('T992931', '深圳市', '天福', '便利店', 'S1深圳石岩名久天福店T', 0, '1358', '2017', '07', '1358', '2017', '08'),
+('T992932', '深圳市', '天福', '便利店', 'S1深圳龙岗添财天福T', 0, '1366', '2017', '07', '1366', '2017', '08'),
+('T992933', '深圳市', '天福', '便利店', 'S1深圳龙岗银生天福店T', 0, '1376', '2017', '07', '1376', '2017', '08'),
+('T992935', '深圳市', '天福', '便利店', 'S1深圳公明旭洋天福店T', 0, '1380', '2017', '07', '1380', '2017', '08'),
+('T992936', '深圳市', '天福', '便利店', 'J1深圳松岗友善天福店T', 0, '1381', '2017', '07', '1381', '2017', '08'),
+('T992937', '深圳市', '天福', '便利店', 'S1深圳石岩福景晟睿天福店T', 0, '1384', '2017', '07', '1384', '2017', '08'),
+('T992938', '深圳市', '天福', '便利店', 'S1深圳公明楼村天福店T', 0, '1385', '2017', '07', '1385', '2017', '08'),
+('T992939', '深圳市', '天福', '便利店', 'S1深圳公明美域天福店T', 0, '1386', '2017', '07', '1386', '2017', '08'),
+('T992940', '深圳市', '天福', '便利店', 'S2深圳宝安盛世天福T', 0, '1398', '2017', '07', '1398', '2017', '08'),
+('T995161', '深圳市', '天福', '便利店', '深圳横岗发财天福T', 0, '1407', '2017', '07', '1407', '2017', '08'),
+('T995162', '深圳市', '天福', '便利店', '深圳南山增运天福店T', 0, '1413', '2017', '07', '1413', '2017', '08'),
+('T997001', '深圳市', '天福', '便利店', 'S1深圳民治地铁站天福店T', 0, '1415', '2017', '07', '1415', '2017', '08'),
+('T997002', '深圳市', '天福', '便利店', 'S1深圳龙岗南联龙园天福店T', 0, '1426', '2017', '07', '1426', '2017', '08'),
+('T997003', '深圳市', '天福', '便利店', 'S2深圳西乡瑞尚居天福店T', 0, '1432', '2017', '07', '1432', '2017', '08'),
+('T997007', '深圳市', '天福', '便利店', 'S1深圳布吉长盛天福T', 0, '1441', '2017', '07', '1441', '2017', '08'),
+('T997008', '深圳市', '天福', '便利店', 'S000深圳南山西丽天福', 0, '1458', '2017', '07', '1458', '2017', '08'),
+('T997009', '深圳市', '天福', '便利店', '深圳布吉西门街天福', 0, '1470', '2017', '07', '1470', '2017', '08'),
+('T997010', '深圳市', '天福', '便利店', 'S2深圳罗湖田心天福', 0, '1471', '2017', '07', '1471', '2017', '08'),
+('T997011', '深圳市', '天福', '便利店', '深圳福永龙翔天福', 0, '1478', '2017', '07', '1478', '2017', '08'),
+('T997012', '深圳市', '天福', '便利店', '深圳松岗曙光天福', 0, '1480', '2017', '07', '1480', '2017', '08'),
+('T997013', '深圳市', '天福', '便利店', 'S518深圳福田新兴天福', 0, '1486', '2017', '07', '1486', '2017', '08'),
+('T997015', '深圳市', '天福', '便利店', 'S514深圳罗湖湘薇天福', 0, '1493', '2017', '07', '1493', '2017', '08'),
+('T997016', '深圳市', '天福', '便利店', '深圳布吉长龙天福', 0, '1497', '2017', '07', '1497', '2017', '08'),
+('T997017', '深圳市', '天福', '便利店', 'J1深圳福永下十围天福T', 0, '1498', '2017', '07', '1498', '2017', '08'),
+('T997018', '深圳市', '天福', '便利店', '深圳南山永丰天福', 0, '1501', '2017', '07', '1501', '2017', '08'),
+('T997020', '深圳市', '天福', '便利店', '深圳坂田雪象天福', 0, '1503', '2017', '07', '1503', '2017', '08'),
+('T997022', '深圳市', '天福', '便利店', '深圳布吉龙岭天福', 0, '1504', '2017', '07', '1504', '2017', '08'),
+('T997023', '深圳市', '天福', '便利店', '深圳福永金域豪庭天福', 0, '1519', '2017', '07', '1519', '2017', '08'),
+('T997026', '深圳市', '天福', '便利店', '深圳罗湖长排天福', 0, '1521', '2017', '07', '1521', '2017', '08'),
+('T997027', '深圳市', '天福', '便利店', '深圳布吉沙塘布天福', 0, '1523', '2017', '07', '1523', '2017', '08'),
+('T997028', '深圳市', '天福', '便利店', '深圳沙井大王山诚信天福', 0, '1536', '2017', '07', '1536', '2017', '08'),
+('T997029', '深圳市', '天福', '便利店', '深圳罗湖马山天福', 0, '1543', '2017', '07', '1543', '2017', '08'),
+('T997030', '深圳市', '天福', '便利店', 'S1深圳龙华鹊山天福', 0, '1549', '2017', '07', '1549', '2017', '08'),
+('T997031', '深圳市', '天福', '便利店', '深圳布吉锦绣新村天福', 0, '1566', '2017', '07', '1566', '2017', '08'),
+('T997032', '深圳市', '天福', '便利店', '深圳平湖吉平天福', 0, '1578', '2017', '07', '1578', '2017', '08'),
+('T997033', '深圳市', '天福', '便利店', '深圳布吉三联天福', 0, '1585', '2017', '07', '1585', '2017', '08'),
+('T997035', '深圳市', '天福', '便利店', 'S2深圳南山俊辉天福', 0, '1587', '2017', '07', '1587', '2017', '08'),
+('T997036', '深圳市', '天福', '便利店', 'J1深圳松岗罗田天福(大车)', 0, '1589', '2017', '07', '1589', '2017', '08'),
+('T997038', '深圳市', '天福', '便利店', '深圳坪地振鹏天福', 0, '1590', '2017', '07', '1590', '2017', '08'),
+('T997039', '深圳市', '天福', '便利店', 'J1深圳福永芳华天福(小车）', 0, '1591', '2017', '07', '1591', '2017', '08'),
+('T997041', '深圳市', '天福', '便利店', 'S1深圳布吉龙发天福店T', 0, '1592', '2017', '07', '1592', '2017', '08'),
+('T997042', '深圳市', '天福', '便利店', '深圳布吉吉盛天福', 0, '1594', '2017', '07', '1594', '2017', '08'),
+('T997043', '深圳市', '天福', '便利店', '深圳福永湘益天福', 0, '1603', '2017', '07', '1603', '2017', '08'),
+('T997045', '深圳市', '天福', '便利店', '深圳福永如意天福', 0, '1607', '2017', '07', '1607', '2017', '08'),
+('T997046', '深圳市', '天福', '便利店', '深圳福永新和天福', 0, '1608', '2017', '07', '1608', '2017', '08'),
+('T997047', '深圳市', '天福', '便利店', '深圳横岗和平天福', 0, '1610', '2017', '07', '1610', '2017', '08'),
+('T997048', '深圳市', '天福', '便利店', 'S2深圳松岗天泰天福(大车)', 0, '1611', '2017', '07', '1611', '2017', '08'),
+('T997049', '深圳市', '天福', '便利店', 'S1深圳石岩新村天福', 0, '1612', '2017', '07', '1612', '2017', '08'),
+('T997050', '深圳市', '天福', '便利店', '深圳横岗贤东天福', 0, '1620', '2017', '07', '1620', '2017', '08'),
+('T997051', '深圳市', '天福', '便利店', 'J1深圳福永欢欢天福(大车)', 0, '1625', '2017', '07', '1625', '2017', '08'),
+('T997052', '深圳市', '天福', '便利店', 'S419深圳观澜锦鲤天福', 0, '1626', '2017', '07', '1626', '2017', '08'),
+('T997053', '深圳市', '天福', '便利店', '深圳布吉大靓花园天福', 0, '1630', '2017', '07', '1630', '2017', '08'),
+('T997055', '深圳市', '天福', '便利店', 'S1深圳平湖慧灵天福', 0, '1636', '2017', '07', '1636', '2017', '08'),
+('T997056', '深圳市', '天福', '便利店', '深圳福永机场天福', 0, '1638', '2017', '07', '1638', '2017', '08'),
+('T997057', '深圳市', '天福', '便利店', '深圳宝安上合天福', 0, '1640', '2017', '07', '1640', '2017', '08'),
+('T997058', '深圳市', '天福', '便利店', '深圳福永塘尾金海天福', 0, '1642', '2017', '07', '1642', '2017', '08'),
+('T997059', '深圳市', '天福', '便利店', 'S1深圳龙岗金桥天福T', 0, '1646', '2017', '07', '1646', '2017', '08'),
+('T997060', '深圳市', '天福', '便利店', '深圳沙井美邦天福', 0, '1648', '2017', '07', '1648', '2017', '08'),
+('T997061', '深圳市', '天福', '便利店', '深圳沙井东塘天福', 0, '1649', '2017', '07', '1649', '2017', '08'),
+('T997062', '深圳市', '天福', '便利店', '深圳坂田雅园天福', 0, '1650', '2017', '07', '1650', '2017', '08'),
+('T997063', '深圳市', '天福', '便利店', '深圳石岩塘头大道繁荣天福', 0, '1652', '2017', '07', '1652', '2017', '08'),
+('T997065', '深圳市', '天福', '便利店', '深圳龙华富豪新村天福', 0, '1653', '2017', '07', '1653', '2017', '08'),
+('T997066', '深圳市', '天福', '便利店', 'S1深圳布吉守业天福', 0, '1655', '2017', '07', '1655', '2017', '08'),
+('T997067', '深圳市', '天福', '便利店', '深圳观澜旭玫天福', 0, '1657', '2017', '07', '1657', '2017', '08'),
+('T997068', '深圳市', '天福', '便利店', '深圳龙岗福林天福', 0, '1664', '2017', '07', '1664', '2017', '08'),
+('T997069', '深圳市', '天福', '便利店', 'S2深圳宝安好百事天福T', 0, '1669', '2017', '07', '1669', '2017', '08'),
+('T997070', '深圳市', '天福', '便利店', '深圳龙华谭罗天福', 0, '1020', '2017', '07', '1020', '2017', '08'),
+('T997072', '深圳市', '天福', '便利店', '深圳布吉俊业天福', 0, '1044', '2017', '07', '1044', '2017', '08'),
+('T997073', '深圳市', '天福', '便利店', 'S392深圳宝安宝石天福', 0, '1067', '2017', '07', '1067', '2017', '08'),
+('T997075', '深圳市', '天福', '便利店', 'S446深圳宝安布心天福', 0, '1074', '2017', '07', '1074', '2017', '08'),
+('T997076', '深圳市', '天福', '便利店', '深圳福永阿王天福', 0, '1077', '2017', '07', '1077', '2017', '08'),
+('T997077', '深圳市', '天福', '便利店', '深圳宝安兴华天福', 0, '1080', '2017', '07', '1080', '2017', '08'),
+('T997078', '深圳市', '天福', '便利店', 'J1深圳福永翠岗天福（小车）', 0, '1084', '2017', '07', '1084', '2017', '08'),
+('T997079', '深圳市', '天福', '便利店', '深圳宝安流塘三友天福', 0, '1099', '2017', '07', '1099', '2017', '08'),
+('T997080', '深圳市', '天福', '便利店', '深圳宝安海乐天福', 0, '1122', '2017', '07', '1122', '2017', '08'),
+('T997081', '深圳市', '天福', '便利店', '深圳龙岗三和天福', 0, '1411', '2017', '07', '1411', '2017', '08'),
+('T997082', '深圳市', '天福', '便利店', '深圳布吉三联龙颈新村红翻天天福', 0, '1048', '2017', '07', '1048', '2017', '08'),
+('T997083', '深圳市', '天福', '便利店', '深圳公明玉律天福', 0, '1496', '2017', '07', '1496', '2017', '08'),
+('T997085', '深圳市', '天福', '便利店', '深圳龙岗坪山六联天福', 0, '1510', '2017', '07', '1510', '2017', '08'),
+('T997086', '深圳市', '天福', '便利店', 'S1深圳布吉下水径新村文静天福', 0, '1557', '2017', '07', '1557', '2017', '08'),
+('T997087', '深圳市', '天福', '便利店', '深圳西乡共乐天福', 0, '1049', '2017', '07', '1049', '2017', '08'),
+('T997088', '深圳市', '天福', '便利店', '深圳松岗富塘天福', 0, '1055', '2017', '07', '1055', '2017', '08'),
+('T997089', '深圳市', '天福', '便利店', 'S2深圳南山西丽平山天福T', 0, '1059', '2017', '07', '1059', '2017', '08'),
+('T997090', '深圳市', '天福', '便利店', '深圳福永塘尾万昌隆天福', 0, '1066', '2017', '07', '1066', '2017', '08'),
+('T997091', '深圳市', '天福', '便利店', 'S2深圳南山西丽大磡村轩琪天福', 0, '1069', '2017', '07', '1069', '2017', '08'),
+('T997092', '深圳市', '天福', '便利店', '深圳龙岗龙富花园天福', 0, '1070', '2017', '07', '1070', '2017', '08'),
+('T997093', '深圳市', '天福', '便利店', '深圳坂田天顺天福', 0, '1071', '2017', '07', '1071', '2017', '08'),
+('T997095', '深圳市', '天福', '便利店', '深圳光明圳美同发天福', 0, '1072', '2017', '07', '1072', '2017', '08'),
+('T997096', '深圳市', '天福', '便利店', 'S2深圳南山西丽文光天福', 0, '1075', '2017', '07', '1075', '2017', '08'),
+('T997097', '深圳市', '天福', '便利店', '深圳坂田天安天福', 0, '1079', '2017', '07', '1079', '2017', '08'),
+('T997098', '深圳市', '天福', '便利店', 'S331深圳布吉三联出头龙天福', 0, '1081', '2017', '07', '1081', '2017', '08'),
+('T997099', '深圳市', '天福', '便利店', 'S1深圳龙华腾龙天福', 0, '1082', '2017', '07', '1082', '2017', '08'),
+('T9971000', '深圳市', '天福', '便利店', 'S1深圳公明启航天福T', 0, '1088', '2017', '07', '1088', '2017', '08'),
+('T9971001', '深圳市', '天福', '便利店', 'S1深圳公明玉律天福T', 0, '1100', '2017', '07', '1100', '2017', '08'),
+('T9971002', '深圳市', '天福', '便利店', 'S2深圳宝安宝福天福', 0, '1102', '2017', '07', '1102', '2017', '08'),
+('T9971003', '深圳市', '天福', '便利店', 'S1深圳龙岗深裕兴天福T', 0, '1103', '2017', '07', '1103', '2017', '08'),
+('T9971005', '深圳市', '天福', '便利店', 'J1深圳福永怀德天福', 0, '1118', '2017', '07', '1118', '2017', '08'),
+('T9971006', '深圳市', '天福', '便利店', 'S1深圳石岩黎光天福T', 0, '1132', '2017', '07', '1132', '2017', '08'),
+('T9971007', '深圳市', '天福', '便利店', 'S1深圳公明鑫旺天福T', 0, '1133', '2017', '07', '1133', '2017', '08'),
+('T9971008', '深圳市', '天福', '便利店', 'S1深圳公明麒麟天福店T', 0, '1135', '2017', '07', '1135', '2017', '08'),
+('T9971009', '深圳市', '天福', '便利店', 'S06深圳福永凤凰小学天福(大车)', 0, '1144', '2017', '07', '1144', '2017', '08'),
+('T997101', '深圳市', '天福', '便利店', '深圳观澜大水坑劭君天福', 0, '1146', '2017', '07', '1146', '2017', '08'),
+('T9971010', '深圳市', '天福', '便利店', 'S216深圳福永塘尾得旺天福T', 0, '1150', '2017', '07', '1150', '2017', '08'),
+('T9971011', '深圳市', '天福', '便利店', 'S016深圳松岗山门天福T', 0, '1151', '2017', '07', '1151', '2017', '08'),
+('T9971012', '深圳市', '天福', '便利店', 'J1深圳沙井上南万福天福（T）(大车)', 0, '1233', '2017', '07', '1233', '2017', '08'),
+('T9971013', '深圳市', '天福', '便利店', 'J1深圳松岗鑫鑫天福T(大车)', 0, '1278', '2017', '07', '1278', '2017', '08'),
+('T9971015', '深圳市', '天福', '便利店', 'S2深圳西乡常盛天福T', 0, '1280', '2017', '07', '1280', '2017', '08'),
+('T9971016', '深圳市', '天福', '便利店', 'S023深圳公明根竹园天福', 0, '1281', '2017', '07', '1281', '2017', '08'),
+('T9971017', '深圳市', '天福', '便利店', 'S360深圳西乡智谷天福T', 0, '1282', '2017', '07', '1282', '2017', '08'),
+('T9971018', '深圳市', '天福', '便利店', 'S1深圳公明圳美家家乐天福T', 0, '1293', '2017', '07', '1293', '2017', '08'),
+('T9971019', '深圳市', '天福', '便利店', 'J1深圳福永白石厦汉永天福T', 0, '1294', '2017', '07', '1294', '2017', '08'),
+('T997102', '深圳市', '天福', '便利店', '深圳西乡茂业天福', 0, '1295', '2017', '07', '1295', '2017', '08'),
+('T9971020', '深圳市', '天福', '便利店', 'S239深圳龙华腾龙天福T', 0, '1299', '2017', '07', '1299', '2017', '08'),
+('T9971021', '深圳市', '天福', '便利店', 'S146深圳沙井金沙天福T', 0, '1358', '2017', '07', '1358', '2017', '08'),
+('T9971022', '深圳市', '天福', '便利店', 'S2深圳宝安永联天福', 0, '1366', '2017', '07', '1366', '2017', '08'),
+('T9971023', '深圳市', '天福', '便利店', 'S1深圳平湖裕和天福T', 0, '1376', '2017', '07', '1376', '2017', '08'),
+('T9971025', '深圳市', '天福', '便利店', 'S1深圳公明万家福天福T', 0, '1380', '2017', '07', '1380', '2017', '08'),
+('T9971026', '深圳市', '天福', '便利店', 'S1深圳龙岗南联利源天福T', 0, '1381', '2017', '07', '1381', '2017', '08'),
+('T9971027', '深圳市', '天福', '便利店', '深圳观澜超兴天天旺天福', 0, '1384', '2017', '07', '1384', '2017', '08'),
+('T9971028', '深圳市', '天福', '便利店', 'S1深圳石岩车站天福T', 0, '1385', '2017', '07', '1385', '2017', '08'),
+('T9971029', '深圳市', '天福', '便利店', 'S1深圳大浪景顺天福T', 0, '1386', '2017', '07', '1386', '2017', '08'),
+('T997103', '深圳市', '天福', '便利店', '深圳布吉新民天福', 0, '1398', '2017', '07', '1398', '2017', '08'),
+('T9971030', '深圳市', '天福', '便利店', '深圳公明李松朗天福T', 0, '1407', '2017', '07', '1407', '2017', '08'),
+('T9971031', '深圳市', '天福', '便利店', 'S1深圳坂田光发天福', 0, '1413', '2017', '07', '1413', '2017', '08'),
+('T9971032', '深圳市', '天福', '便利店', 'S048深圳松岗南岸天福T(大车)', 0, '1415', '2017', '07', '1415', '2017', '08'),
+('T9971033', '深圳市', '天福', '便利店', 'S1深圳公明塘尾后底园天福T', 0, '1426', '2017', '07', '1426', '2017', '08'),
+('T9971035', '深圳市', '天福', '便利店', 'S156深圳沙井金李天福T(小车）', 0, '1432', '2017', '07', '1432', '2017', '08'),
+('T9971036', '深圳市', '天福', '便利店', 'J1深圳松岗鑫鑫天福T(大车)', 0, '1441', '2017', '07', '1441', '2017', '08'),
+('T9971037', '深圳市', '天福', '便利店', 'S2深圳西乡黄田草围天福T', 0, '1458', '2017', '07', '1458', '2017', '08'),
+('T9971038', '深圳市', '天福', '便利店', 'S2深圳南山丁头天福T', 0, '1470', '2017', '07', '1470', '2017', '08'),
+('T9971039', '深圳市', '天福', '便利店', 'S1深圳坪山新区坑梓金田风华苑天福', 0, '1471', '2017', '07', '1471', '2017', '08'),
+('T9971040', '深圳市', '天福', '便利店', 'S2深圳宝安流塘佳豪天福', 0, '1478', '2017', '07', '1478', '2017', '08'),
+('T9971041', '深圳市', '天福', '便利店', 'S1深圳龙岗南联城南雅筑天福T', 0, '1480', '2017', '07', '1480', '2017', '08'),
+('T9971042', '深圳市', '天福', '便利店', 'S1深圳公明新围长乐天福T', 0, '1486', '2017', '07', '1486', '2017', '08'),
+('T9971043', '深圳市', '天福', '便利店', '深圳石岩塘头天福(大车)', 0, '1493', '2017', '07', '1493', '2017', '08'),
+('T9971045', '深圳市', '天福', '便利店', 'S2深圳西乡万菱天福店T', 0, '1497', '2017', '07', '1497', '2017', '08'),
+('T9971047', '深圳市', '天福', '便利店', 'J1深圳沙井阳新天福T(大车)', 0, '1498', '2017', '07', '1498', '2017', '08'),
+('T9971048', '深圳市', '天福', '便利店', 'S1深圳民治白石龙一区天福店T', 0, '1501', '2017', '07', '1501', '2017', '08'),
+('T9971049', '深圳市', '天福', '便利店', 'J1深圳沙井恒源天福T(（小车）', 0, '1503', '2017', '07', '1503', '2017', '08'),
+('T997105', '深圳市', '天福', '便利店', '深圳坂田中心围天福', 0, '1504', '2017', '07', '1504', '2017', '08'),
+('T9971050', '深圳市', '天福', '便利店', 'S108深圳沙井传承天福T(大车)', 0, '1519', '2017', '07', '1519', '2017', '08'),
+('T9971051', '深圳市', '天福', '便利店', 'S1深圳平湖利君天福T(大车)', 0, '1521', '2017', '07', '1521', '2017', '08'),
+('T9971052', '深圳市', '天福', '便利店', 'S2深圳西乡铁岗好运来天福T', 0, '1523', '2017', '07', '1523', '2017', '08'),
+('T9971053', '深圳市', '天福', '便利店', 'S1深圳坪山竹坑天福T', 0, '1536', '2017', '07', '1536', '2017', '08'),
+('T9971055', '深圳市', '天福', '便利店', 'S1深圳公明塘家王记天福T', 0, '1543', '2017', '07', '1543', '2017', '08'),
+('T9971056', '深圳市', '天福', '便利店', 'S077深圳公明田寮新新天福(大车)', 0, '1549', '2017', '07', '1549', '2017', '08'),
+('T9971057', '深圳市', '天福', '便利店', 'S1深圳公明合水口天福T', 0, '1566', '2017', '07', '1566', '2017', '08'),
+('T9971059', '深圳市', '天福', '便利店', 'S4深圳福永第一外国语学校天福T', 0, '1578', '2017', '07', '1578', '2017', '08'),
+('T997106', '深圳市', '天福', '便利店', 'S1深圳布吉沙湾蓝天天福T', 0, '1585', '2017', '07', '1585', '2017', '08'),
+('T9971061', '深圳市', '天福', '便利店', 'S1深圳平湖中学天福', 0, '1587', '2017', '07', '1587', '2017', '08'),
+('T9971062', '深圳市', '天福', '便利店', 'J1深圳松岗盛世天福', 0, '1589', '2017', '07', '1589', '2017', '08'),
+('T9971063', '深圳市', '天福', '便利店', 'S1深圳公明一兴天福T', 0, '1590', '2017', '07', '1590', '2017', '08'),
+('T9971065', '深圳市', '天福', '便利店', 'S1深圳公明正标天福T', 0, '1591', '2017', '07', '1591', '2017', '08'),
+('T9971066', '深圳市', '天福', '便利店', 'J1深圳沙井龍记天福(小车）', 0, '1592', '2017', '07', '1592', '2017', '08'),
+('T9971067', '深圳市', '天福', '便利店', '深圳福永凤凰学校天福T(大车)', 0, '1594', '2017', '07', '1594', '2017', '08'),
+('T9971068', '深圳市', '天福', '便利店', 'S01深圳公明田寮文明天福(大车)', 0, '1603', '2017', '07', '1603', '2017', '08'),
+('T9971069', '深圳市', '天福', '便利店', 'S2深圳西乡金雅园天福T', 0, '1607', '2017', '07', '1607', '2017', '08'),
+('T997107', '深圳市', '天福', '便利店', 'S112深圳沙井步涌福鑫天福(大车)', 0, '1608', '2017', '07', '1608', '2017', '08'),
+('T9971070', '深圳市', '天福', '便利店', 'S1深圳龙岗飞扬天福T', 0, '1610', '2017', '07', '1610', '2017', '08'),
+('T9971071', '深圳市', '天福', '便利店', 'S2深圳西乡九围天福', 0, '1611', '2017', '07', '1611', '2017', '08'),
+('T9971072', '深圳市', '天福', '便利店', 'S1深圳坂田麒麟天福T', 0, '1612', '2017', '07', '1612', '2017', '08'),
+('T9971073', '深圳市', '天福', '便利店', 'J1深圳沙井北亭天福T(大车)', 0, '1620', '2017', '07', '1620', '2017', '08'),
+('T9971075', '深圳市', '天福', '便利店', 'J1深圳沙井星城天福T(小车)', 0, '1625', '2017', '07', '1625', '2017', '08'),
+('T9971076', '深圳市', '天福', '便利店', 'S2深圳西乡鹤州新村天福T', 0, '1626', '2017', '07', '1626', '2017', '08'),
+('T9971077', '深圳市', '天福', '便利店', 'J1深圳福永凤凰天福T(大车)', 0, '1630', '2017', '07', '1630', '2017', '08'),
+('T9971078', '深圳市', '天福', '便利店', 'S2深圳西乡固戍佑天天福', 0, '1636', '2017', '07', '1636', '2017', '08'),
+('T9971079', '深圳市', '天福', '便利店', 'S1深圳石岩塘头路口天福(小车）', 0, '1638', '2017', '07', '1638', '2017', '08'),
+('T997108', '深圳市', '天福', '便利店', '深圳沙井和一新村天福', 0, '1640', '2017', '07', '1640', '2017', '08'),
+('T9971080', '深圳市', '天福', '便利店', 'S1深圳公明东隆天福T', 0, '1641', '2017', '07', '1641', '2017', '08'),
+('T9971081', '深圳市', '天福', '便利店', 'S1深圳观澜金湖湾天福T', 0, '1642', '2017', '07', '1642', '2017', '08'),
+('T9971082', '深圳市', '天福', '便利店', 'S2深圳南山大冲天福店T', 0, '1646', '2017', '07', '1646', '2017', '08'),
+('T9971083', '深圳市', '天福', '便利店', 'J1深圳沙井兴华鸿天福', 0, '1648', '2017', '07', '1648', '2017', '08'),
+('T9971085', '深圳市', '天福', '便利店', 'S1深圳龙华汇海天福T', 0, '1649', '2017', '07', '1649', '2017', '08'),
+('T9971086', '深圳市', '天福', '便利店', 'S2深圳西乡共乐天福T', 0, '1650', '2017', '07', '1650', '2017', '08'),
+('T9971087', '深圳市', '天福', '便利店', 'S1深圳布吉三联天福T', 0, '1652', '2017', '07', '1652', '2017', '08'),
+('T9971088', '深圳市', '天福', '便利店', 'S1深圳龙华山咀头天福T', 0, '1653', '2017', '07', '1653', '2017', '08'),
+('T9971089', '深圳市', '天福', '便利店', 'J1深圳福永凤凰天福店T(大车)', 0, '1045', '2017', '07', '1045', '2017', '08'),
+('T997109', '深圳市', '天福', '便利店', 'S359深圳布吉宏业新村天福', 0, '1048', '2017', '07', '1048', '2017', '08'),
+('T9971090', '深圳市', '天福', '便利店', 'S2深圳西乡银田天福T', 0, '1049', '2017', '07', '1049', '2017', '08'),
+('T9971091', '深圳市', '天福', '便利店', 'S2深圳南山西丽宝明天福T', 0, '1055', '2017', '07', '1055', '2017', '08'),
+('T9971092', '深圳市', '天福', '便利店', 'S2深圳罗湖莲塘佑米天福店', 0, '1020', '2017', '07', '1020', '2017', '08'),
+('T9971093', '深圳市', '天福', '便利店', 'J1深圳福永恒荣天福店T', 0, '1044', '2017', '07', '1044', '2017', '08'),
+('T9971095', '深圳市', '天福', '便利店', 'S1深圳坂田利金城天福店T', 0, '1067', '2017', '07', '1067', '2017', '08'),
+('T9971097', '深圳市', '天福', '便利店', 'S1深圳民治樟坑天福店T', 0, '1074', '2017', '07', '1074', '2017', '08'),
+('T9971098', '深圳市', '天福', '便利店', 'S1深圳公明楼村小学天福店T', 0, '1077', '2017', '07', '1077', '2017', '08'),
+('T9971099', '深圳市', '天福', '便利店', 'J1深圳沙井马安山天福店T(小车）', 0, '1080', '2017', '07', '1080', '2017', '08'),
+('T997110', '深圳市', '天福', '便利店', 'S107深圳石岩田心阿牛天福(大车)', 0, '1084', '2017', '07', '1084', '2017', '08'),
+('T9971100', '深圳市', '天福', '便利店', 'S2深圳西乡固戍绵商大厦天福店T', 0, '1099', '2017', '07', '1099', '2017', '08'),
+('T9971101', '深圳市', '天福', '便利店', 'S1深圳盐田海滨假日天福店T', 0, '1122', '2017', '07', '1122', '2017', '08'),
+('T9971102', '深圳市', '天福', '便利店', 'S2深圳福永福园天福店T(大车)', 0, '1411', '2017', '07', '1411', '2017', '08'),
+('T9971103', '深圳市', '天福', '便利店', 'S14深圳南山城市花园天福店T', 0, '1463', '2017', '07', '1463', '2017', '08'),
+('T9971105', '深圳市', '天福', '便利店', 'S2深圳西乡盐田天福店T', 0, '1496', '2017', '07', '1496', '2017', '08'),
+('T9971106', '深圳市', '天福', '便利店', 'J1深圳福永桥南地铁口天福店T', 0, '1510', '2017', '07', '1510', '2017', '08'),
+('T9971107', '深圳市', '天福', '便利店', 'S1深圳石岩青年天福店T', 0, '1537', '2017', '07', '1537', '2017', '08'),
+('T9971108', '深圳市', '天福', '便利店', 'S1深圳龙岗联和天福店T', 0, '1557', '2017', '07', '1557', '2017', '08'),
+('T9971109', '深圳市', '天福', '便利店', 'S1深圳龙华乐华天福店T', 0, '1059', '2017', '07', '1059', '2017', '08'),
+('T997111', '深圳市', '天福', '便利店', 'S1深圳石岩昌盛天福(大车)T', 0, '1066', '2017', '07', '1066', '2017', '08'),
+('T9971110', '深圳市', '天福', '便利店', 'S1深圳公明好根天福店T', 0, '1069', '2017', '07', '1069', '2017', '08'),
+('T9971111', '深圳市', '天福', '便利店', 'J1深圳福永仙一品天福店T(大车)', 0, '1070', '2017', '07', '1070', '2017', '08'),
+('T9971113', '深圳市', '天福', '便利店', 'S1深圳公明雄伟天福店T', 0, '1071', '2017', '07', '1071', '2017', '08'),
+('T9971115', '深圳市', '天福', '便利店', 'S2深圳西乡中信领航天福店T', 0, '1072', '2017', '07', '1072', '2017', '08'),
+('T9971116', '深圳市', '天福', '便利店', 'S1深圳公明南庄天福店T', 0, '1075', '2017', '07', '1075', '2017', '08'),
+('T9971117', '深圳市', '天福', '便利店', 'S1深圳龙华旺中旺天福店T', 0, '1079', '2017', '07', '1079', '2017', '08'),
+('T9971118', '深圳市', '天福', '便利店', 'S1深圳公明甲子塘天福店T', 0, '1081', '2017', '07', '1081', '2017', '08'),
+('T9971119', '深圳市', '天福', '便利店', 'J1深圳沙井千福天福店T', 0, '1082', '2017', '07', '1082', '2017', '08');
+INSERT INTO `t_new_shop` (`id`, `city`, `sm`, `type`, `name`, `flag`, `shop1`, `year1`, `month1`, `shop2`, `year2`, `month2`) VALUES
+('T997112', '深圳市', '天福', '便利店', 'S488深圳南山西丽茶光天福', 0, '1088', '2017', '07', '1088', '2017', '08'),
+('T9971120', '深圳市', '天福', '便利店', 'J1深圳沙井凤凰大厦天福店T(大车)', 0, '1100', '2017', '07', '1100', '2017', '08'),
+('T9971121', '深圳市', '天福', '便利店', 'S1深圳坂田五和地铁口天福店T（坡）', 0, '1102', '2017', '07', '1102', '2017', '08'),
+('T9971122', '深圳市', '天福', '便利店', '深圳布吉恒源天福店T', 0, '1103', '2017', '07', '1103', '2017', '08'),
+('T9971123', '深圳市', '天福', '便利店', 'J1深圳沙井鸿鹏天福店T(大车)', 0, '1118', '2017', '07', '1118', '2017', '08'),
+('T9971126', '深圳市', '天福', '便利店', 'S1深圳大浪同胜小区天福店T', 0, '1132', '2017', '07', '1132', '2017', '08'),
+('T9971127', '深圳市', '天福', '便利店', 'S04深圳沙井千禧天福店T(大车)', 0, '1133', '2017', '07', '1133', '2017', '08'),
+('T9971128', '深圳市', '天福', '便利店', 'S01深圳公明贵源天福店T(大车)', 0, '1135', '2017', '07', '1135', '2017', '08'),
+('T9971129', '深圳市', '天福', '便利店', 'S2深圳西乡鼎鼎天福店T', 0, '1144', '2017', '07', '1144', '2017', '08'),
+('T997113', '深圳市', '天福', '便利店', '深圳福永福海天福', 0, '1146', '2017', '07', '1146', '2017', '08'),
+('T9971130', '深圳市', '天福', '便利店', 'S1深圳平湖北门街天福店T', 0, '1150', '2017', '07', '1150', '2017', '08'),
+('T9971131', '深圳市', '天福', '便利店', 'S1深圳平湖平园天福店T', 0, '1151', '2017', '07', '1151', '2017', '08'),
+('T9971132', '深圳市', '天福', '便利店', 'S1深圳平湖高原天福店T', 0, '1233', '2017', '07', '1233', '2017', '08'),
+('T9971133', '深圳市', '天福', '便利店', 'J1深圳沙井新凯佳天福店T(大车)', 0, '1278', '2017', '07', '1278', '2017', '08'),
+('T9971136', '深圳市', '天福', '便利店', 'S2深圳西乡钟屋天福店T', 0, '1280', '2017', '07', '1280', '2017', '08'),
+('T9971137', '深圳市', '天福', '便利店', 'S1深圳公明玉律众兴隆天福店T(带小车)', 0, '1281', '2017', '07', '1281', '2017', '08'),
+('T9971138', '深圳市', '天福', '便利店', 'S1深圳民治岁宝天福店T', 0, '1282', '2017', '07', '1282', '2017', '08'),
+('T9971139', '深圳市', '天福', '便利店', 'S1深圳龙岗信息职业技术学院1号天福店T', 0, '1293', '2017', '07', '1293', '2017', '08'),
+('T9971140', '深圳市', '天福', '便利店', 'S1深圳龙岗信息职业技术学院2号天福店T', 0, '1294', '2017', '07', '1294', '2017', '08'),
+('T9971141', '深圳市', '天福', '便利店', 'S1深圳龙岗信息职业技术学院3号天福店T', 0, '1295', '2017', '07', '1295', '2017', '08'),
+('T9971142', '深圳市', '天福', '便利店', 'S1深圳盐田蓝郡西堤天福店T', 0, '1299', '2017', '07', '1299', '2017', '08'),
+('T9971143', '深圳市', '天福', '便利店', 'S2深圳宝安流塘阳光旗舰天福店T', 0, '1358', '2017', '07', '1358', '2017', '08'),
+('T9971145', '深圳市', '天福', '便利店', '深圳龙华共和天福店T', 0, '1366', '2017', '07', '1366', '2017', '08'),
+('T9971146', '深圳市', '天福', '便利店', 'S2深圳沙井万丰天福店T(大车)', 0, '1376', '2017', '07', '1376', '2017', '08'),
+('T9971147', '深圳市', '天福', '便利店', 'S2深圳西乡固戍宏兴天福店T', 0, '1380', '2017', '07', '1380', '2017', '08'),
+('T9971148', '深圳市', '天福', '便利店', '深圳西乡盐田金海天福店T', 0, '1381', '2017', '07', '1381', '2017', '08'),
+('T9971149', '深圳市', '天福', '便利店', 'S08深圳西乡华侨新村天福店T', 0, '1384', '2017', '07', '1384', '2017', '08'),
+('T997115', '深圳市', '天福', '便利店', 'S2深圳宝安流塘阳光天福T', 0, '1385', '2017', '07', '1385', '2017', '08'),
+('T9971150', '深圳市', '天福', '便利店', 'J1深圳沙井芙蓉天福店T(大车)', 0, '1386', '2017', '07', '1386', '2017', '08'),
+('T9971152', '深圳市', '天福', '便利店', 'J1深圳松岗福兴天福店T(大车)', 0, '1398', '2017', '07', '1398', '2017', '08'),
+('T9971153', '深圳市', '天福', '便利店', '深圳南山西丽丽河天福店T', 0, '1407', '2017', '07', '1407', '2017', '08'),
+('T9971155', '深圳市', '天福', '便利店', 'S3深圳公明圳美天福店T', 0, '1413', '2017', '07', '1413', '2017', '08'),
+('T9971156', '深圳市', '天福', '便利店', 'S1深圳大鹏新区佳兆业天福店T', 0, '1415', '2017', '07', '1415', '2017', '08'),
+('T9971157', '深圳市', '天福', '便利店', 'S1深圳观澜华富天福店T', 0, '1426', '2017', '07', '1426', '2017', '08'),
+('T9971158', '深圳市', '天福', '便利店', 'S1深圳横岗六约天福天福店T', 0, '1432', '2017', '07', '1432', '2017', '08'),
+('T9971159', '深圳市', '天福', '便利店', 'S1深圳公明国文天福店T', 0, '1441', '2017', '07', '1441', '2017', '08'),
+('T997116', '深圳市', '天福', '便利店', '深圳福永马鞍山社区天福（小车）', 0, '1458', '2017', '07', '1458', '2017', '08'),
+('T9971160', '深圳市', '天福', '便利店', 'S1深圳公明易达天福店T', 0, '1470', '2017', '07', '1470', '2017', '08'),
+('T9971161', '深圳市', '天福', '便利店', 'S1深圳坂田佳兆业天福店T', 0, '1471', '2017', '07', '1471', '2017', '08'),
+('T9971162', '深圳市', '天福', '便利店', 'S06深圳福永桥头青年公寓天福店T(小车)', 0, '1478', '2017', '07', '1478', '2017', '08'),
+('T9971163', '深圳市', '天福', '便利店', 'S2深圳宝安上合天福店T', 0, '1480', '2017', '07', '1480', '2017', '08'),
+('T9971165', '深圳市', '天福', '便利店', 'S1深圳公明华旺天福店T', 0, '1486', '2017', '07', '1486', '2017', '08'),
+('T9971166', '深圳市', '天福', '便利店', 'S1深圳石岩官田康平天福店T(小车)', 0, '1493', '2017', '07', '1493', '2017', '08'),
+('T9971167', '深圳市', '天福', '便利店', 'S2深圳西乡云轻天福店T', 0, '1497', '2017', '07', '1497', '2017', '08'),
+('T9971168', '深圳市', '天福', '便利店', 'S2深圳西乡利群天福店T', 0, '1498', '2017', '07', '1498', '2017', '08'),
+('T9971169', '深圳市', '天福', '便利店', 'S1深圳平湖新木天福店T', 0, '1501', '2017', '07', '1501', '2017', '08'),
+('T997117', '深圳市', '天福', '便利店', 'S157深圳石岩塘头又一村天福T(大车)', 0, '1503', '2017', '07', '1503', '2017', '08'),
+('T9971170', '深圳市', '天福', '便利店', 'S2深圳西乡荟翠天福店T', 0, '1504', '2017', '07', '1504', '2017', '08'),
+('T9971171', '深圳市', '天福', '便利店', 'S2深圳西乡固戍塘西天福店T', 0, '1519', '2017', '07', '1519', '2017', '08'),
+('T9971172', '深圳市', '天福', '便利店', 'S1深圳龙岗明光天福店T', 0, '1521', '2017', '07', '1521', '2017', '08'),
+('T9971173', '深圳市', '天福', '便利店', 'J1深圳沙井新沙路天福店T(大车)', 0, '1523', '2017', '07', '1523', '2017', '08'),
+('T9971175', '深圳市', '天福', '便利店', 'S2深圳西乡睿福天福店T', 0, '1536', '2017', '07', '1536', '2017', '08'),
+('T9971176', '深圳市', '天福', '便利店', 'S1深圳公明新元天福店T', 0, '1543', '2017', '07', '1543', '2017', '08'),
+('T9971177', '深圳市', '天福', '便利店', 'S1深圳坪山帝王天福店T', 0, '1549', '2017', '07', '1549', '2017', '08'),
+('T9971178', '深圳市', '天福', '便利店', 'S1深圳横岗龙苑天福店T', 0, '1566', '2017', '07', '1566', '2017', '08'),
+('T9971179', '深圳市', '天福', '便利店', 'S1深圳坂田南坑天福店T', 0, '1578', '2017', '07', '1578', '2017', '08'),
+('T997118', '深圳市', '天福', '便利店', 'S353深圳布吉桔子坑蔡兴天福', 0, '1585', '2017', '07', '1585', '2017', '08'),
+('T9971180', '深圳市', '天福', '便利店', 'S1深圳平湖宏泰天福店T', 0, '1587', '2017', '07', '1587', '2017', '08'),
+('T9971183', '深圳市', '天福', '便利店', 'S1深圳布吉金沙天福店T', 0, '1589', '2017', '07', '1589', '2017', '08'),
+('T9971185', '深圳市', '天福', '便利店', 'S1深圳公明思敏天福店T', 0, '1590', '2017', '07', '1590', '2017', '08'),
+('T9971186', '深圳市', '天福', '便利店', 'S1深圳横岗供电所天福店T', 0, '1591', '2017', '07', '1591', '2017', '08'),
+('T9971187', '深圳市', '天福', '便利店', 'J1深圳福永俊韬天福店T', 0, '1592', '2017', '07', '1592', '2017', '08'),
+('T9971188', '深圳市', '天福', '便利店', 'S2深圳宝安上华天福店T', 0, '1594', '2017', '07', '1594', '2017', '08'),
+('T9971189', '深圳市', '天福', '便利店', 'J1深圳松岗星港城天福店T', 0, '1603', '2017', '07', '1603', '2017', '08'),
+('T997119', '深圳市', '天福', '便利店', 'S062深圳松岗树边坑美心天福T(大车)', 0, '1607', '2017', '07', '1607', '2017', '08'),
+('T9971190', '深圳市', '天福', '便利店', 'J1深圳福永海鲜天福店T', 0, '1608', '2017', '07', '1608', '2017', '08'),
+('T9971191', '深圳市', '天福', '便利店', 'S1深圳龙华油松天福店T', 0, '1610', '2017', '07', '1610', '2017', '08'),
+('T9971192', '深圳市', '天福', '便利店', 'S1深圳龙岗惠佳乐天福店T', 0, '1611', '2017', '07', '1611', '2017', '08'),
+('T9971193', '深圳市', '天福', '便利店', 'S2深圳宝安布心天福店T', 0, '1612', '2017', '07', '1612', '2017', '08'),
+('T9971195', '深圳市', '天福', '便利店', 'J1深圳福永和平天福店T', 0, '1620', '2017', '07', '1620', '2017', '08'),
+('T9971196', '深圳市', '天福', '便利店', 'S2深圳西乡固戍春风天福店T', 0, '1625', '2017', '07', '1625', '2017', '08'),
+('T9971197', '深圳市', '天福', '便利店', 'S1深圳龙岗添旺天福店T', 0, '1626', '2017', '07', '1626', '2017', '08'),
+('T9971198', '深圳市', '天福', '便利店', 'S1深圳坪山招商天福店T', 0, '1630', '2017', '07', '1630', '2017', '08'),
+('T997120', '深圳市', '天福', '便利店', 'S511深圳龙岗玛丽天福', 0, '1636', '2017', '07', '1636', '2017', '08'),
+('T9971200', '深圳市', '天福', '便利店', 'J1深圳福永凤城天福店T', 0, '1638', '2017', '07', '1638', '2017', '08'),
+('T9971201', '深圳市', '天福', '便利店', 'J1深圳沙井禧园天福店T(小车)', 0, '1640', '2017', '07', '1640', '2017', '08'),
+('T9971202', '深圳市', '天福', '便利店', 'S1深圳大浪三合华侨天福店T', 0, '1641', '2017', '07', '1641', '2017', '08'),
+('T9971203', '深圳市', '天福', '便利店', 'S1深圳龙岗金龙天福店T', 0, '1642', '2017', '07', '1642', '2017', '08'),
+('T9971205', '深圳市', '天福', '便利店', 'S1深圳公明碧桂园天福店T（18点）', 0, '1646', '2017', '07', '1646', '2017', '08'),
+('T9971206', '深圳市', '天福', '便利店', 'S1深圳大鹏建设路天福店T', 0, '1648', '2017', '07', '1648', '2017', '08'),
+('T9971207', '深圳市', '天福', '便利店', 'J1深圳沙井金华天福店T', 0, '1649', '2017', '07', '1649', '2017', '08'),
+('T9971208', '深圳市', '天福', '便利店', 'S1深圳龙华松和天福店T', 0, '1650', '2017', '07', '1650', '2017', '08'),
+('T9971209', '深圳市', '天福', '便利店', 'S1深圳龙岗振华天福店T', 0, '1652', '2017', '07', '1652', '2017', '08'),
+('T997121', '深圳市', '天福', '便利店', '深圳松岗鹏飞天福', 0, '1653', '2017', '07', '1653', '2017', '08'),
+('T9971210', '深圳市', '天福', '便利店', 'S2深圳西乡海城天福店T', 0, '1655', '2017', '07', '1655', '2017', '08'),
+('T9971211', '深圳市', '天福', '便利店', 'S1深圳横岗永兴天福店T', 0, '1657', '2017', '07', '1657', '2017', '08'),
+('T9971212', '深圳市', '天福', '便利店', 'S2深圳宝安翻身天福店T', 0, '1664', '2017', '07', '1664', '2017', '08'),
+('T9971213', '深圳市', '天福', '便利店', 'J1深圳福永森公寓天福店T(小车)', 0, '1669', '2017', '07', '1669', '2017', '08'),
+('T9971215', '深圳市', '天福', '便利店', 'S1深圳布吉西环路天福店T', 0, '1020', '2017', '07', '1020', '2017', '08'),
+('T9971216', '深圳市', '天福', '便利店', 'J1深圳福永儒佳天福店T', 0, '1044', '2017', '07', '1044', '2017', '08'),
+('T9971217', '深圳市', '天福', '便利店', 'S2深圳南山西丽茶光天福店T', 0, '1067', '2017', '07', '1067', '2017', '08'),
+('T9971218', '深圳市', '天福', '便利店', 'J1深圳沙井维也纳天福店T', 0, '1074', '2017', '07', '1074', '2017', '08'),
+('T9971219', '深圳市', '天福', '便利店', 'J1深圳松岗怡情天福店T', 0, '1077', '2017', '07', '1077', '2017', '08'),
+('T997122', '深圳市', '天福', '便利店', '深圳福永和民天福', 0, '1080', '2017', '07', '1080', '2017', '08'),
+('T9971220', '深圳市', '天福', '便利店', 'S1深圳公明秋谊天福店T', 0, '1084', '2017', '07', '1084', '2017', '08'),
+('T9971221', '深圳市', '天福', '便利店', 'S1深圳坪山坑梓天福店T', 0, '1099', '2017', '07', '1099', '2017', '08'),
+('T9971222', '深圳市', '天福', '便利店', 'S1深圳布吉夏添天福店T', 0, '1122', '2017', '07', '1122', '2017', '08'),
+('T9971223', '深圳市', '天福', '便利店', 'S2深圳西乡固戍研发大厦天福店T', 0, '1411', '2017', '07', '1411', '2017', '08'),
+('T9971225', '深圳市', '天福', '便利店', 'S1深圳光明新地中央天福店T', 0, '1463', '2017', '07', '1463', '2017', '08'),
+('T9971226', '深圳市', '天福', '便利店', 'S1深圳坂田岗头天福店T', 0, '1496', '2017', '07', '1496', '2017', '08'),
+('T9971227', '深圳市', '天福', '便利店', 'S1深圳平湖平吉上苑天福店T', 0, '1510', '2017', '07', '1510', '2017', '08'),
+('T9971228', '深圳市', '天福', '便利店', 'S1深圳龙华富康天福店T', 0, '1537', '2017', '07', '1537', '2017', '08'),
+('T9971229', '深圳市', '天福', '便利店', 'J1深圳松岗众万佳天福店T', 0, '1557', '2017', '07', '1557', '2017', '08'),
+('T997123', '深圳市', '天福', '便利店', 'J1深圳沙井沙一新村明珠天福（小车）', 0, '1045', '2017', '07', '1045', '2017', '08'),
+('T9971230', '深圳市', '天福', '便利店', 'S2深圳南山向南天福店T', 0, '1048', '2017', '07', '1048', '2017', '08'),
+('T9971232', '深圳市', '天福', '便利店', 'S2深圳宝安华美居天福店T', 0, '1049', '2017', '07', '1049', '2017', '08'),
+('T9971233', '深圳市', '天福', '便利店', 'S2深圳西乡前程天福店T', 0, '1055', '2017', '07', '1055', '2017', '08'),
+('T9971235', '深圳市', '天福', '便利店', 'S1深圳坂田金裕城天福店T', 0, '1059', '2017', '07', '1059', '2017', '08'),
+('T9971236', '深圳市', '天福', '便利店', 'S1民治利客多天福店T', 0, '1066', '2017', '07', '1066', '2017', '08'),
+('T9971237', '深圳市', '天福', '便利店', 'J1深圳松岗鑫鑫天福店T', 0, '1069', '2017', '07', '1069', '2017', '08'),
+('T9971238', '深圳市', '天福', '便利店', 'S1深圳龙岗洪力天福店T', 0, '1070', '2017', '07', '1070', '2017', '08'),
+('T9971239', '深圳市', '天福', '便利店', 'S1深圳公明田寮夜市天福店T(小车）', 0, '1071', '2017', '07', '1071', '2017', '08'),
+('T9971240', '深圳市', '天福', '便利店', 'J1深圳福永下沙南天福店T', 0, '1072', '2017', '07', '1072', '2017', '08'),
+('T9971241', '深圳市', '天福', '便利店', 'S1深圳布吉富璟天福店T', 0, '1075', '2017', '07', '1075', '2017', '08'),
+('T9971242', '深圳市', '天福', '便利店', 'S1深圳大浪新百丽天福店T', 0, '1079', '2017', '07', '1079', '2017', '08'),
+('T9971243', '深圳市', '天福', '便利店', 'S2深圳宝安创业天福店T', 0, '1081', '2017', '07', '1081', '2017', '08'),
+('T9971245', '深圳市', '天福', '便利店', 'S1深圳坪山玉华天福店T', 0, '1082', '2017', '07', '1082', '2017', '08'),
+('T9971246', '深圳市', '天福', '便利店', 'S1深圳公明星源天福店T', 0, '1088', '2017', '07', '1088', '2017', '08'),
+('T9971247', '深圳市', '天福', '便利店', 'S1深圳石岩宏域天福T', 0, '1100', '2017', '07', '1100', '2017', '08'),
+('T9971248', '深圳市', '天福', '便利店', 'J1深圳沙井青云天福店T', 0, '1102', '2017', '07', '1102', '2017', '08'),
+('T9971249', '深圳市', '天福', '便利店', 'S1深圳布吉沙岭天福店T', 0, '1103', '2017', '07', '1103', '2017', '08'),
+('T997125', '深圳市', '天福', '便利店', '深圳南山珠光东香槟天福', 0, '1118', '2017', '07', '1118', '2017', '08'),
+('T9971250', '深圳市', '天福', '便利店', 'S1深圳平湖柏豪天福店T', 0, '1132', '2017', '07', '1132', '2017', '08'),
+('T9971251', '深圳市', '天福', '便利店', 'J1深圳沙井京基百纳天福店T', 0, '1133', '2017', '07', '1133', '2017', '08'),
+('T997126', '深圳市', '天福', '便利店', '深圳福永福长天福(小车）', 0, '1135', '2017', '07', '1135', '2017', '08'),
+('T997127', '深圳市', '天福', '便利店', '深圳观澜大水坑一村吉利店', 0, '1144', '2017', '07', '1144', '2017', '08'),
+('T997128', '深圳市', '天福', '便利店', 'S1深圳龙岗大运天福', 0, '1146', '2017', '07', '1146', '2017', '08'),
+('T997129', '深圳市', '天福', '便利店', '深圳宝安西乡鹤洲泰和天福', 0, '1150', '2017', '07', '1150', '2017', '08'),
+('T997130', '深圳市', '天福', '便利店', '深圳西乡固戍永兴天福', 0, '1151', '2017', '07', '1151', '2017', '08'),
+('T997132', '深圳市', '天福', '便利店', 'S1深圳龙华东环吉祥天福', 0, '1233', '2017', '07', '1233', '2017', '08'),
+('T997133', '深圳市', '天福', '便利店', '深圳松岗三少天福', 0, '1278', '2017', '07', '1278', '2017', '08'),
+('T997135', '深圳市', '天福', '便利店', '深圳石岩步步旺天福', 0, '1280', '2017', '07', '1280', '2017', '08'),
+('T997136', '深圳市', '天福', '便利店', 'S532深圳南山西丽塘朗天福', 0, '1281', '2017', '07', '1281', '2017', '08'),
+('T997137', '深圳市', '天福', '便利店', '深圳布吉吉政路教育新村天福', 0, '1282', '2017', '07', '1282', '2017', '08'),
+('T997138', '深圳市', '天福', '便利店', '深圳龙岗南联刘屋南联天福', 0, '1293', '2017', '07', '1293', '2017', '08'),
+('T997139', '深圳市', '天福', '便利店', '深圳沙井后亭金鑫天福', 0, '1294', '2017', '07', '1294', '2017', '08'),
+('T997140', '深圳市', '天福', '便利店', '深圳大浪谭罗龙鑫天福', 0, '1295', '2017', '07', '1295', '2017', '08'),
+('T997141', '深圳市', '天福', '便利店', '深圳公明新围嘉昌天福', 0, '1299', '2017', '07', '1299', '2017', '08'),
+('T997142', '深圳市', '天福', '便利店', '深圳龙华人民北路风和日丽天福', 0, '1358', '2017', '07', '1358', '2017', '08'),
+('T997143', '深圳市', '天福', '便利店', '深圳松岗南岸村明辉天福', 0, '1366', '2017', '07', '1366', '2017', '08'),
+('T997145', '深圳市', '天福', '便利店', '深圳沙井海上天园百利西城天福', 0, '1376', '2017', '07', '1376', '2017', '08'),
+('T997146', '深圳市', '天福', '便利店', 'S318深圳西乡三围中路天福', 0, '1380', '2017', '07', '1380', '2017', '08'),
+('T997147', '深圳市', '天福', '便利店', '深圳龙华大浪新围玲哲天福', 0, '1381', '2017', '07', '1381', '2017', '08'),
+('T997148', '深圳市', '天福', '便利店', 'S479深圳龙岗中心城东都花园天福', 0, '1384', '2017', '07', '1384', '2017', '08'),
+('T997149', '深圳市', '天福', '便利店', '深圳石岩龙仔新村龙仔天福', 0, '1385', '2017', '07', '1385', '2017', '08'),
+('T997150', '深圳市', '天福', '便利店', '深圳西乡鹤洲永丰天福', 0, '1386', '2017', '07', '1386', '2017', '08'),
+('T997151', '深圳市', '天福', '便利店', '深圳石岩上屋园岭达华天福', 0, '1398', '2017', '07', '1398', '2017', '08'),
+('T997152', '深圳市', '天福', '便利店', 'S1深圳横岗六约牛始埔友好天福', 0, '1407', '2017', '07', '1407', '2017', '08'),
+('T997153', '深圳市', '天福', '便利店', '深圳福永塘尾新塘天福', 0, '1413', '2017', '07', '1413', '2017', '08'),
+('T997155', '深圳市', '天福', '便利店', 'S308深圳福永白石厦东区天福', 0, '1415', '2017', '07', '1415', '2017', '08'),
+('T997156', '深圳市', '天福', '便利店', '深圳龙华共和花园共和天福', 0, '1432', '2017', '07', '1432', '2017', '08'),
+('T997157', '深圳市', '天福', '便利店', '深圳大浪鹊山中兴天福（小车）', 0, '1441', '2017', '07', '1441', '2017', '08'),
+('T997158', '深圳市', '天福', '便利店', 'S448深圳宝安布心心仪天褔', 0, '1458', '2017', '07', '1458', '2017', '08'),
+('T997159', '深圳市', '天福', '便利店', 'S334深圳西乡固戍红湾天福', 0, '1470', '2017', '07', '1470', '2017', '08'),
+('T997160', '深圳市', '天福', '便利店', '深圳沙井后亭新村奥德城天福', 0, '1471', '2017', '07', '1471', '2017', '08'),
+('T997161', '深圳市', '天福', '便利店', '深圳松岗松园大厦生活园天福', 0, '1478', '2017', '07', '1478', '2017', '08'),
+('T997162', '深圳市', '天福', '便利店', '深圳石岩石景花园石景天福（小车）', 0, '1480', '2017', '07', '1480', '2017', '08'),
+('T997163', '深圳市', '天福', '便利店', '深圳宝安水口花园天福', 0, '1486', '2017', '07', '1486', '2017', '08'),
+('T997165', '深圳市', '天福', '便利店', 'S507深圳龙岗福宁天福', 0, '1493', '2017', '07', '1493', '2017', '08'),
+('T997166', '深圳市', '天福', '便利店', '深圳沙井新桥天福', 0, '1497', '2017', '07', '1497', '2017', '08'),
+('T997167', '深圳市', '天福', '便利店', '深圳西乡钟屋天福', 0, '1498', '2017', '07', '1498', '2017', '08'),
+('T997168', '深圳市', '天福', '便利店', '深圳松岗花果山天福', 0, '1501', '2017', '07', '1501', '2017', '08'),
+('T997169', '深圳市', '天福', '便利店', '深圳龙岗爱联润灏天福', 0, '1503', '2017', '07', '1503', '2017', '08'),
+('T997170', '深圳市', '天福', '便利店', '深圳龙华大浪元芬帝一天福', 0, '1504', '2017', '07', '1504', '2017', '08'),
+('T997171', '深圳市', '天福', '便利店', '深圳龙华油园畅享天福', 0, '1519', '2017', '07', '1519', '2017', '08'),
+('T997172', '深圳市', '天福', '便利店', 'S378深圳西乡鸿兴天福', 0, '1521', '2017', '07', '1521', '2017', '08'),
+('T997173', '深圳市', '天福', '便利店', '深圳公明合水口上屯华诚天福', 0, '1523', '2017', '07', '1523', '2017', '08'),
+('T997175', '深圳市', '天福', '便利店', '深圳大浪奥港天福', 0, '1536', '2017', '07', '1536', '2017', '08'),
+('T997176', '深圳市', '天福', '便利店', '深圳观澜挂花社区桂花天福', 0, '1543', '2017', '07', '1543', '2017', '08'),
+('T997177', '深圳市', '天福', '便利店', '深圳南山西丽龙井天福', 0, '1549', '2017', '07', '1549', '2017', '08'),
+('T997178', '深圳市', '天福', '便利店', '深圳观澜大水坑一一天福', 0, '1566', '2017', '07', '1566', '2017', '08'),
+('T997179', '深圳市', '天福', '便利店', 'S165深圳石岩麻布好好天福', 0, '1578', '2017', '07', '1578', '2017', '08'),
+('T997180', '深圳市', '天福', '便利店', '深圳福永福安天福', 0, '1585', '2017', '07', '1585', '2017', '08'),
+('T997181', '深圳市', '天福', '便利店', '深圳公明西田广场天福', 0, '1587', '2017', '07', '1587', '2017', '08'),
+('T997182', '深圳市', '天福', '便利店', '深圳大浪三联河背合兴天福', 0, '1589', '2017', '07', '1589', '2017', '08'),
+('T997183', '深圳市', '天福', '便利店', '深圳龙华羊台山庄又一间天福', 0, '1590', '2017', '07', '1590', '2017', '08'),
+('T997185', '深圳市', '天福', '便利店', '深圳板田和磡天福', 0, '1591', '2017', '07', '1591', '2017', '08'),
+('T997186', '深圳市', '天福', '便利店', '深圳观澜君子布龙兴天福', 0, '1592', '2017', '07', '1592', '2017', '08'),
+('T997187', '深圳市', '天福', '便利店', '深圳龙岗南约来有天福', 0, '1594', '2017', '07', '1594', '2017', '08'),
+('T997188', '深圳市', '天福', '便利店', '深圳福永凤凰工业区顺兴天福', 0, '1603', '2017', '07', '1603', '2017', '08'),
+('T997189', '深圳市', '天福', '便利店', '深圳龙华水围鑫磊天福', 0, '1607', '2017', '07', '1607', '2017', '08'),
+('T997190', '深圳市', '天福', '便利店', '深圳龙岗南约荣宝天福', 0, '1608', '2017', '07', '1608', '2017', '08'),
+('T997192', '深圳市', '天福', '便利店', '深圳民治民乐天福', 0, '1610', '2017', '07', '1610', '2017', '08'),
+('T997193', '深圳市', '天福', '便利店', '深圳宝安开屏市场天福', 0, '1611', '2017', '07', '1611', '2017', '08'),
+('T997195', '深圳市', '天福', '便利店', 'S450深圳宝安布心金坊天福', 0, '1612', '2017', '07', '1612', '2017', '08'),
+('T997196', '深圳市', '天福', '便利店', '深圳沙井万丰天福（小车）', 0, '1620', '2017', '07', '1620', '2017', '08'),
+('T997197', '深圳市', '天福', '便利店', '深圳福永兴围天福', 0, '1625', '2017', '07', '1625', '2017', '08'),
+('T997198', '深圳市', '天福', '便利店', '深圳沙井亿强天福', 0, '1626', '2017', '07', '1626', '2017', '08'),
+('T997199', '深圳市', '天福', '便利店', '深圳福永凤凰天福', 0, '1630', '2017', '07', '1630', '2017', '08'),
+('T997200', '深圳市', '天福', '便利店', 'S2深圳西乡固戍下围园天福', 0, '1636', '2017', '07', '1636', '2017', '08'),
+('T997201', '深圳市', '天福', '便利店', '深圳南山西丽官龙天福', 0, '1638', '2017', '07', '1638', '2017', '08'),
+('T997202', '深圳市', '天福', '便利店', '深圳西乡三围欢乐天福', 0, '1640', '2017', '07', '1640', '2017', '08'),
+('T997203', '深圳市', '天福', '便利店', '深圳松岗楼岗楼村天福', 0, '1641', '2017', '07', '1641', '2017', '08'),
+('T997205', '深圳市', '天福', '便利店', '深圳龙华富联天福', 0, '1642', '2017', '07', '1642', '2017', '08'),
+('T997206', '深圳市', '天福', '便利店', '深圳松岗东方天福', 0, '1646', '2017', '07', '1646', '2017', '08'),
+('T997208', '深圳市', '天福', '便利店', 'S121深圳石岩上屋双爱天福(小车）', 0, '1648', '2017', '07', '1648', '2017', '08'),
+('T997209', '深圳市', '天福', '便利店', '深圳布吉德兴天福', 0, '1649', '2017', '07', '1649', '2017', '08'),
+('T997210', '深圳市', '天福', '便利店', 'S1深圳横岗隆盛天福', 0, '1650', '2017', '07', '1650', '2017', '08'),
+('T997211', '深圳市', '天福', '便利店', '深圳龙华景华天福', 0, '1652', '2017', '07', '1652', '2017', '08'),
+('T997212', '深圳市', '天福', '便利店', 'S229深圳龙华郭吓天福', 0, '1653', '2017', '07', '1653', '2017', '08'),
+('T997213', '深圳市', '天福', '便利店', 'S207深圳大浪新围伊可禾天福', 0, '1655', '2017', '07', '1655', '2017', '08'),
+('T997215', '深圳市', '天福', '便利店', 'S1深圳龙岗罗福天福T', 0, '1657', '2017', '07', '1657', '2017', '08'),
+('T997216', '深圳市', '天福', '便利店', '深圳龙华清湖顺佳天福', 0, '1664', '2017', '07', '1664', '2017', '08'),
+('T997217', '深圳市', '天福', '便利店', '深圳公明合水口富发天福', 0, '1669', '2017', '07', '1669', '2017', '08'),
+('T997218', '深圳市', '天福', '便利店', '深圳福永塘尾广场天福', 0, '1020', '2017', '07', '1020', '2017', '08'),
+('T997219', '深圳市', '天福', '便利店', '深圳龙岗平南天福', 0, '1044', '2017', '07', '1044', '2017', '08'),
+('T997220', '深圳市', '天福', '便利店', 'S1深圳横岗坝心天福', 0, '1067', '2017', '07', '1067', '2017', '08'),
+('T997221', '深圳市', '天福', '便利店', 'J1深圳松岗车站天福(大车)', 0, '1074', '2017', '07', '1074', '2017', '08'),
+('T997222', '深圳市', '天福', '便利店', '深圳观澜大水坑华林天福', 0, '1077', '2017', '07', '1077', '2017', '08'),
+('T997223', '深圳市', '天福', '便利店', '深圳松岗恒美天福(小车)', 0, '1080', '2017', '07', '1080', '2017', '08'),
+('T997225', '深圳市', '天福', '便利店', '深圳沙井上星天福(小车）', 0, '1084', '2017', '07', '1084', '2017', '08'),
+('T997226', '深圳市', '天福', '便利店', '深圳沙井和一巴黎天福', 0, '1099', '2017', '07', '1099', '2017', '08'),
+('T997227', '深圳市', '天福', '便利店', '深圳龙岗龙城兴海天福', 0, '1122', '2017', '07', '1122', '2017', '08'),
+('T997228', '深圳市', '天福', '便利店', '深圳龙岗南联鸿达天福', 0, '1411', '2017', '07', '1411', '2017', '08'),
+('T997229', '深圳市', '天福', '便利店', '深圳石岩上新天福', 0, '1045', '2017', '07', '1045', '2017', '08'),
+('T997230', '深圳市', '天福', '便利店', '深圳松岗楼岗忠意天福', 0, '1496', '2017', '07', '1496', '2017', '08'),
+('T997231', '深圳市', '天福', '便利店', 'S1深圳公明下南天福T', 0, '1510', '2017', '07', '1510', '2017', '08'),
+('T997232', '深圳市', '天福', '便利店', 'S1深圳石岩好运来天福T', 0, '1537', '2017', '07', '1537', '2017', '08'),
+('T997233', '深圳市', '天福', '便利店', 'S1深圳龙岗罗瑞合天福T', 0, '1557', '2017', '07', '1557', '2017', '08'),
+('T997235', '深圳市', '天福', '便利店', 'S499深圳龙岗南联家园天福', 0, '1048', '2017', '07', '1048', '2017', '08'),
+('T997236', '深圳市', '天福', '便利店', '深圳横岗臻臻天福', 0, '1049', '2017', '07', '1049', '2017', '08'),
+('T997237', '深圳市', '天福', '便利店', 'S1深圳沙井南洞天福(大车)', 0, '1055', '2017', '07', '1055', '2017', '08'),
+('T997238', '深圳市', '天福', '便利店', '深圳坂田春华四季园天福', 0, '1059', '2017', '07', '1059', '2017', '08'),
+('T997239', '深圳市', '天福', '便利店', '深圳公明李松朗云亭天福', 0, '1066', '2017', '07', '1066', '2017', '08'),
+('T997240', '深圳市', '天福', '便利店', '深圳大浪谭罗盛记天福（小车）', 0, '1069', '2017', '07', '1069', '2017', '08'),
+('T997241', '深圳市', '天福', '便利店', '深圳龙岗邱屋兴和天福', 0, '1070', '2017', '07', '1070', '2017', '08'),
+('T997242', '深圳市', '天福', '便利店', '深圳龙华玉翠创新天福', 0, '1071', '2017', '07', '1071', '2017', '08'),
+('T997243', '深圳市', '天福', '便利店', 'S2深圳宝安流塘金达天福', 0, '1072', '2017', '07', '1072', '2017', '08'),
+('T997245', '深圳市', '天福', '便利店', '深圳福永黄田百佳天福', 0, '1075', '2017', '07', '1075', '2017', '08'),
+('T997246', '深圳市', '天福', '便利店', 'S2深圳宝安宝乐乐发天福', 0, '1079', '2017', '07', '1079', '2017', '08'),
+('T997247', '深圳市', '天福', '便利店', '深圳石岩官田天福', 0, '1081', '2017', '07', '1081', '2017', '08'),
+('T997248', '深圳市', '天福', '便利店', '深圳龙岗坑梓光祖天福', 0, '1082', '2017', '07', '1082', '2017', '08'),
+('T997249', '深圳市', '天福', '便利店', '深圳龙岗新生美信佳天福', 0, '1088', '2017', '07', '1088', '2017', '08'),
+('T997250', '深圳市', '天福', '便利店', '深圳观澜新田村好佳天福', 0, '1100', '2017', '07', '1100', '2017', '08'),
+('T997251', '深圳市', '天福', '便利店', '深圳龙华赖屋裕丰天福', 0, '1102', '2017', '07', '1102', '2017', '08'),
+('T997252', '深圳市', '天福', '便利店', '深圳西乡南昌乾丰天福', 0, '1103', '2017', '07', '1103', '2017', '08'),
+('T997253', '深圳市', '天福', '便利店', 'S2深圳西乡固戍长江天福', 0, '1118', '2017', '07', '1118', '2017', '08'),
+('T997255', '深圳市', '天福', '便利店', 'J1深圳福永美信心天福', 0, '1132', '2017', '07', '1132', '2017', '08'),
+('T997256', '深圳市', '天福', '便利店', '深圳龙岗南联龙园天福', 0, '1133', '2017', '07', '1133', '2017', '08'),
+('T997257', '深圳市', '天福', '便利店', 'S1深圳坂田雪象晟裕天福T', 0, '1135', '2017', '07', '1135', '2017', '08'),
+('T997258', '深圳市', '天福', '便利店', '深圳龙岗新生水岸新都创龙天福', 0, '1144', '2017', '07', '1144', '2017', '08'),
+('T997259', '深圳市', '天福', '便利店', '深圳龙华景华嘉旺天福', 0, '1146', '2017', '07', '1146', '2017', '08'),
+('T997260', '深圳市', '天福', '便利店', '深圳龙岗东大埔顺利天福', 0, '1150', '2017', '07', '1150', '2017', '08'),
+('T997261', '深圳市', '天福', '便利店', 'S1深圳龙岗洪围鑫鑫天福', 0, '1151', '2017', '07', '1151', '2017', '08'),
+('T997262', '深圳市', '天福', '便利店', '深圳龙华横岭天福', 0, '1278', '2017', '07', '1278', '2017', '08'),
+('T997263', '深圳市', '天福', '便利店', '深圳福永福围万茂隆天福', 0, '1280', '2017', '07', '1280', '2017', '08'),
+('T997265', '深圳市', '天福', '便利店', 'S289深圳板田长发天福', 0, '1281', '2017', '07', '1281', '2017', '08'),
+('T997266', '深圳市', '天福', '便利店', 'S538深圳南山西丽白芒福鑫天福', 0, '1282', '2017', '07', '1282', '2017', '08'),
+('T997267', '深圳市', '天福', '便利店', '深圳西乡诚信天福', 0, '1293', '2017', '07', '1293', '2017', '08'),
+('T997268', '深圳市', '天福', '便利店', '深圳龙岗欧意轩家乐天福', 0, '1294', '2017', '07', '1294', '2017', '08'),
+('T997269', '深圳市', '天福', '便利店', 'S1深圳大浪上横朗天福店T', 0, '1295', '2017', '07', '1295', '2017', '08'),
+('T997270', '深圳市', '天福', '便利店', 'S1深圳观澜田背天福', 0, '1299', '2017', '07', '1299', '2017', '08'),
+('T997271', '深圳市', '天福', '便利店', 'J1深圳松岗蚝涌兴和天福(大车)', 0, '1358', '2017', '07', '1358', '2017', '08'),
+('T997272', '深圳市', '天福', '便利店', '深圳松岗东新佳佳旺天福', 0, '1366', '2017', '07', '1366', '2017', '08'),
+('T997273', '深圳市', '天福', '便利店', '深圳西乡麻布老海天福', 0, '1376', '2017', '07', '1376', '2017', '08'),
+('T997275', '深圳市', '天福', '便利店', 'S1深圳横岗先进天福', 0, '1380', '2017', '07', '1380', '2017', '08'),
+('T997276', '深圳市', '天福', '便利店', '深圳西乡鸣乐天福', 0, '1381', '2017', '07', '1381', '2017', '08'),
+('T997277', '深圳市', '天福', '便利店', 'S410深圳宝安海兴天福', 0, '1384', '2017', '07', '1384', '2017', '08'),
+('T997278', '深圳市', '天福', '便利店', 'S2深圳西乡河西蚝业天福', 0, '1385', '2017', '07', '1385', '2017', '08'),
+('T997279', '深圳市', '天福', '便利店', 'S307深圳坂田岗头鑫源天福', 0, '1386', '2017', '07', '1386', '2017', '08'),
+('T997280', '深圳市', '天福', '便利店', '深圳西乡和乐天福', 0, '1398', '2017', '07', '1398', '2017', '08'),
+('T997281', '深圳市', '天福', '便利店', '深圳龙华盘龙天福T', 0, '1407', '2017', '07', '1407', '2017', '08'),
+('T997282', '深圳市', '天福', '便利店', 'J1深圳福永机场后瑞金达天福', 0, '1413', '2017', '07', '1413', '2017', '08'),
+('T997283', '深圳市', '天福', '便利店', 'S1深圳大浪逸昌天福', 0, '1415', '2017', '07', '1415', '2017', '08'),
+('T997285', '深圳市', '天福', '便利店', '深圳民治民乐科弘天福', 0, '1426', '2017', '07', '1426', '2017', '08'),
+('T997286', '深圳市', '天福', '便利店', 'S1深圳坪地雅骏天福店（8点前）', 0, '1432', '2017', '07', '1432', '2017', '08'),
+('T997287', '深圳市', '天福', '便利店', '深圳南山西丽珠江源天福', 0, '1441', '2017', '07', '1441', '2017', '08'),
+('T997288', '深圳市', '天福', '便利店', 'S523深圳坪山睿毅天福', 0, '1458', '2017', '07', '1458', '2017', '08'),
+('T997289', '深圳市', '天福', '便利店', 'S358深圳西乡银田百家天福', 0, '1470', '2017', '07', '1470', '2017', '08'),
+('T997290', '深圳市', '天福', '便利店', 'S2深圳宝安32区上川深泰天福', 0, '1471', '2017', '07', '1471', '2017', '08'),
+('T997291', '深圳市', '天福', '便利店', 'S1深圳龙华福茂新村壹壹天福', 0, '1478', '2017', '07', '1478', '2017', '08'),
+('T997292', '深圳市', '天福', '便利店', '深圳福永富桥工业区丽君天福', 0, '1480', '2017', '07', '1480', '2017', '08'),
+('T997293', '深圳市', '天福', '便利店', 'J1深圳沙井福景天福', 0, '1486', '2017', '07', '1486', '2017', '08'),
+('T997295', '深圳市', '天福', '便利店', 'J1深圳松岗桥头毛鹏飞天福(大车)', 0, '1493', '2017', '07', '1493', '2017', '08'),
+('T997296', '深圳市', '天福', '便利店', 'S1深圳横岗安良天福', 0, '1497', '2017', '07', '1497', '2017', '08'),
+('T997297', '深圳市', '天福', '便利店', '深圳龙华香缇雅苑忠义天福', 0, '1498', '2017', '07', '1498', '2017', '08'),
+('T997298', '深圳市', '天福', '便利店', 'S2深圳宝安创业一村兴东天福', 0, '1501', '2017', '07', '1501', '2017', '08'),
+('T997299', '深圳市', '天福', '便利店', 'S2深圳南山西丽平山一区天福', 0, '1503', '2017', '07', '1503', '2017', '08'),
+('T997300', '深圳市', '天福', '便利店', 'S2深圳西乡凤凰岗天福', 0, '1504', '2017', '07', '1504', '2017', '08'),
+('T997301', '深圳市', '天福', '便利店', 'S2深圳西乡庄边天福', 0, '1519', '2017', '07', '1519', '2017', '08'),
+('T997302', '深圳市', '天福', '便利店', 'S2深圳西乡宏顺天福店T', 0, '1521', '2017', '07', '1521', '2017', '08'),
+('T997303', '深圳市', '天福', '便利店', 'S000深圳松岗洪桥头光明天福', 0, '1523', '2017', '07', '1523', '2017', '08'),
+('T997305', '深圳市', '天福', '便利店', '深圳石岩水田新村嘉乐天福(小车）', 0, '1536', '2017', '07', '1536', '2017', '08'),
+('T997306', '深圳市', '天福', '便利店', '深圳石岩罗祖中新村天福(小车）', 0, '1543', '2017', '07', '1543', '2017', '08'),
+('T997307', '深圳市', '天福', '便利店', '深圳公明东坑鸿运天福', 0, '1549', '2017', '07', '1549', '2017', '08'),
+('T997308', '深圳市', '天福', '便利店', 'S1深圳坂田大发埔嘉怡天福', 0, '1566', '2017', '07', '1566', '2017', '08'),
+('T997309', '深圳市', '天福', '便利店', '深圳龙岗爱联卓然天福', 0, '1578', '2017', '07', '1578', '2017', '08'),
+('T997310', '深圳市', '天福', '便利店', 'J1深圳松岗塘下涌世海天福(大车)', 0, '1585', '2017', '07', '1585', '2017', '08'),
+('T997311', '深圳市', '天福', '便利店', 'S1深圳布吉南岭沙湾嘉园天福T', 0, '1587', '2017', '07', '1587', '2017', '08'),
+('T997312', '深圳市', '天福', '便利店', 'S265深圳民治东泉新村天福', 0, '1589', '2017', '07', '1589', '2017', '08'),
+('T997313', '深圳市', '天福', '便利店', '深圳南山荔芳新荣天福', 0, '1590', '2017', '07', '1590', '2017', '08'),
+('T997315', '深圳市', '天福', '便利店', 'S219深圳大浪凯滨新村天福', 0, '1591', '2017', '07', '1591', '2017', '08'),
+('T997316', '深圳市', '天福', '便利店', '深圳龙华南源天福', 0, '1592', '2017', '07', '1592', '2017', '08'),
+('T997317', '深圳市', '天福', '便利店', 'S1深圳平湖新风天福', 0, '1594', '2017', '07', '1594', '2017', '08'),
+('T997318', '深圳市', '天福', '便利店', '深圳宝安上合滨城新村天福', 0, '1603', '2017', '07', '1603', '2017', '08'),
+('T997319', '深圳市', '天福', '便利店', '深圳福永静英天福', 0, '1607', '2017', '07', '1607', '2017', '08'),
+('T997320', '深圳市', '天福', '便利店', '深圳坂田永明天福', 0, '1608', '2017', '07', '1608', '2017', '08'),
+('T997321', '深圳市', '天福', '便利店', 'S2深圳西乡铁岗吉祥天福', 0, '1610', '2017', '07', '1610', '2017', '08'),
+('T997322', '深圳市', '天福', '便利店', '深圳公明将石社区顺兴天福', 0, '1611', '2017', '07', '1611', '2017', '08'),
+('T997323', '深圳市', '天福', '便利店', '深圳龙岗百川天福', 0, '1612', '2017', '07', '1612', '2017', '08'),
+('T997325', '深圳市', '天福', '便利店', '深圳龙华三联锦绣新村阿磊天福', 0, '1620', '2017', '07', '1620', '2017', '08'),
+('T997326', '深圳市', '天福', '便利店', '深圳坂田7区华讯天福', 0, '1625', '2017', '07', '1625', '2017', '08'),
+('T997327', '深圳市', '天福', '便利店', 'J1深圳沙井上南天福(大车)', 0, '1626', '2017', '07', '1626', '2017', '08'),
+('T997328', '深圳市', '天福', '便利店', 'S2深圳宝安新城新乐天福', 0, '1630', '2017', '07', '1630', '2017', '08'),
+('T997329', '深圳市', '天福', '便利店', '深圳龙岗三和村益群天福', 0, '1636', '2017', '07', '1636', '2017', '08'),
+('T997330', '深圳市', '天福', '便利店', '深圳布吉上水径中联天福', 0, '1638', '2017', '07', '1638', '2017', '08'),
+('T997331', '深圳市', '天福', '便利店', 'S537深圳龙岗五联移民新村天福', 0, '1640', '2017', '07', '1640', '2017', '08'),
+('T997332', '深圳市', '天福', '便利店', '深圳西乡盐田沃尔天福', 0, '1641', '2017', '07', '1641', '2017', '08'),
+('T997333', '深圳市', '天福', '便利店', '深圳龙华元芬天福（小车）', 0, '1642', '2017', '07', '1642', '2017', '08'),
+('T997335', '深圳市', '天福', '便利店', '深圳龙华大发天福', 0, '1646', '2017', '07', '1646', '2017', '08'),
+('T997336', '深圳市', '天福', '便利店', '深圳布吉南岭鸿海天福', 0, '1648', '2017', '07', '1648', '2017', '08'),
+('T997337', '深圳市', '天福', '便利店', '深圳民治宏发天福', 0, '1649', '2017', '07', '1649', '2017', '08'),
+('T997338', '深圳市', '天福', '便利店', '深圳龙华水斗泰丰天福', 0, '1650', '2017', '07', '1650', '2017', '08'),
+('T997339', '深圳市', '天福', '便利店', 'S078深圳沙井名苑天福（小车）', 0, '1652', '2017', '07', '1652', '2017', '08'),
+('T997340', '深圳市', '天福', '便利店', '深圳民治祥发天福', 0, '1653', '2017', '07', '1653', '2017', '08'),
+('T997341', '深圳市', '天福', '便利店', 'S1深圳龙岗爱联岗贝万荣天福', 0, '1655', '2017', '07', '1655', '2017', '08'),
+('T997342', '深圳市', '天福', '便利店', '深圳南山西丽光前天缘天福', 0, '1657', '2017', '07', '1657', '2017', '08'),
+('T997343', '深圳市', '天福', '便利店', 'S1深圳民治白石龙旺角天福', 0, '1664', '2017', '07', '1664', '2017', '08'),
+('T997345', '深圳市', '天福', '便利店', 'S1深圳公明南北通天福', 0, '1669', '2017', '07', '1669', '2017', '08'),
+('T997346', '深圳市', '天福', '便利店', 'S2深圳西乡固戍上围园天福', 0, '1020', '2017', '07', '1020', '2017', '08'),
+('T997347', '深圳市', '天福', '便利店', '深圳福永龙腾阁永润发天福', 0, '1044', '2017', '07', '1044', '2017', '08'),
+('T997348', '深圳市', '天福', '便利店', '深圳民治阿昊天福', 0, '1067', '2017', '07', '1067', '2017', '08'),
+('T997349', '深圳市', '天福', '便利店', 'S034深圳松岗中海天福（小车）', 0, '1074', '2017', '07', '1074', '2017', '08'),
+('T997350', '深圳市', '天福', '便利店', '深圳布吉丽湖丽和天福', 0, '1077', '2017', '07', '1077', '2017', '08'),
+('T997351', '深圳市', '天福', '便利店', '深圳坂田南坑金旺角天福', 0, '1080', '2017', '07', '1080', '2017', '08'),
+('T997352', '深圳市', '天福', '便利店', 'S2深圳宝安甲岸村天福', 0, '1084', '2017', '07', '1084', '2017', '08'),
+('T997353', '深圳市', '天福', '便利店', 'S1深圳龙华富泉天福', 0, '1099', '2017', '07', '1099', '2017', '08'),
+('T997355', '深圳市', '天福', '便利店', 'S1深圳大浪福轩明惠天福(小车）', 0, '1122', '2017', '07', '1122', '2017', '08'),
+('T997356', '深圳市', '天福', '便利店', 'S1深圳龙岗南联吓岗一村日新天福', 0, '1411', '2017', '07', '1411', '2017', '08'),
+('T997357', '深圳市', '天福', '便利店', '深圳龙华富联则成天福', 0, '1463', '2017', '07', '1463', '2017', '08'),
+('T997358', '深圳市', '天福', '便利店', 'S1深圳民治朝阳四友天福', 0, '1496', '2017', '07', '1496', '2017', '08'),
+('T997359', '深圳市', '天福', '便利店', 'J1深圳福永塘尾成海天福（小车）', 0, '1510', '2017', '07', '1510', '2017', '08'),
+('T997360', '深圳市', '天福', '便利店', 'S1深圳龙华富泉新村龙泉天福', 0, '1537', '2017', '07', '1537', '2017', '08'),
+('T997361', '深圳市', '天福', '便利店', 'S2深圳宝安有威天福店', 0, '1557', '2017', '07', '1557', '2017', '08'),
+('T997362', '深圳市', '天福', '便利店', 'S1深圳龙岗家乐源天福', 0, '1045', '2017', '07', '1045', '2017', '08'),
+('T997363', '深圳市', '天福', '便利店', '深圳公明泥围新村日佳天福', 0, '1048', '2017', '07', '1048', '2017', '08'),
+('T997365', '深圳市', '天福', '便利店', 'J1深圳福永荔园天福(大车)', 0, '1049', '2017', '07', '1049', '2017', '08'),
+('T997366', '深圳市', '天福', '便利店', '深圳福永塘尾风塘天福', 0, '1055', '2017', '07', '1055', '2017', '08'),
+('T997367', '深圳市', '天福', '便利店', 'S017深圳公明顺兴天福', 0, '1059', '2017', '07', '1059', '2017', '08'),
+('T997368', '深圳市', '天福', '便利店', '深圳福田梅林浩萱天福', 0, '1066', '2017', '07', '1066', '2017', '08'),
+('T997369', '深圳市', '天福', '便利店', '深圳石岩杰出天福（小车）', 0, '1069', '2017', '07', '1069', '2017', '08'),
+('T997370', '深圳市', '天福', '便利店', '深圳龙华君发天福', 0, '1070', '2017', '07', '1070', '2017', '08'),
+('T997371', '深圳市', '天福', '便利店', 'S425深圳观澜创新天福', 0, '1071', '2017', '07', '1071', '2017', '08'),
+('T997372', '深圳市', '天福', '便利店', '深圳福永同益天福(大车)', 0, '1072', '2017', '07', '1072', '2017', '08'),
+('T997375', '深圳市', '天福', '便利店', '深圳石岩山城天福', 0, '1075', '2017', '07', '1075', '2017', '08'),
+('T997376', '深圳市', '天福', '便利店', 'S160深圳沙井长丰天福（小车)', 0, '1079', '2017', '07', '1079', '2017', '08'),
+('T997377', '深圳市', '天福', '便利店', 'S2深圳宝安46区怡华天福', 0, '1081', '2017', '07', '1081', '2017', '08'),
+('T997378', '深圳市', '天福', '便利店', '深圳公明雄发天福', 0, '1082', '2017', '07', '1082', '2017', '08'),
+('T997379', '深圳市', '天福', '便利店', 'S240深圳福永翠兴和平天福(大车)', 0, '1088', '2017', '07', '1088', '2017', '08'),
+('T997380', '深圳市', '天福', '便利店', '深圳沙井步涌光临天福', 0, '1100', '2017', '07', '1100', '2017', '08'),
+('T997381', '深圳市', '天福', '便利店', '深圳宝安41区乐购天福', 0, '1102', '2017', '07', '1102', '2017', '08'),
+('T997382', '深圳市', '天福', '便利店', '深圳龙岗年景天福', 0, '1103', '2017', '07', '1103', '2017', '08'),
+('T997383', '深圳市', '天福', '便利店', '深圳西乡瑞村信成天福', 0, '1118', '2017', '07', '1118', '2017', '08'),
+('T997385', '深圳市', '天福', '便利店', '深圳宝安23区智宸天福', 0, '1132', '2017', '07', '1132', '2017', '08'),
+('T997386', '深圳市', '天福', '便利店', '深圳西乡575天福', 0, '1133', '2017', '07', '1133', '2017', '08'),
+('T997387', '深圳市', '天福', '便利店', '深圳松岗中海西岸诚惠达天福', 0, '1135', '2017', '07', '1135', '2017', '08'),
+('T997388', '深圳市', '天福', '便利店', '深圳西乡渔业世纪天福', 0, '1144', '2017', '07', '1144', '2017', '08'),
+('T997389', '深圳市', '天福', '便利店', 'S1深圳布吉坡头村天福T', 0, '1146', '2017', '07', '1146', '2017', '08'),
+('T997390', '深圳市', '天福', '便利店', '深圳民治沙田天福', 0, '1150', '2017', '07', '1150', '2017', '08'),
+('T997391', '深圳市', '天福', '便利店', '深圳平湖新丰天福', 0, '1151', '2017', '07', '1151', '2017', '08'),
+('T997392', '深圳市', '天福', '便利店', 'S233深圳龙华山咀头绿源天福', 0, '1233', '2017', '07', '1233', '2017', '08'),
+('T997393', '深圳市', '天福', '便利店', '深圳西乡固戍文涛天福', 0, '1278', '2017', '07', '1278', '2017', '08'),
+('T997395', '深圳市', '天福', '便利店', 'S352深圳西乡固戍宏源天福T', 0, '1280', '2017', '07', '1280', '2017', '08'),
+('T997396', '深圳市', '天福', '便利店', '深圳福永锦珠天福（小车）', 0, '1281', '2017', '07', '1281', '2017', '08'),
+('T997397', '深圳市', '天福', '便利店', '深圳西乡固戍南昌创业天福', 0, '1282', '2017', '07', '1282', '2017', '08'),
+('T997398', '深圳市', '天福', '便利店', '深圳福永兴隆天福', 0, '1293', '2017', '07', '1293', '2017', '08'),
+('T997399', '深圳市', '天福', '便利店', 'S296深圳福永兴围兴业天福(小车)', 0, '1294', '2017', '07', '1294', '2017', '08'),
+('T997400', '深圳市', '天福', '便利店', '深圳大浪百斯特天福', 0, '1295', '2017', '07', '1295', '2017', '08'),
+('T997401', '深圳市', '天福', '便利店', 'S014深圳松岗柏峯天福（小车）', 0, '1299', '2017', '07', '1299', '2017', '08'),
+('T997402', '深圳市', '天福', '便利店', '深圳平湖华丽天福', 0, '1358', '2017', '07', '1358', '2017', '08'),
+('T997405', '深圳市', '天福', '便利店', '深圳西乡劳动鑫鑫天福', 0, '1366', '2017', '07', '1366', '2017', '08'),
+('T997406', '深圳市', '天福', '便利店', '深圳光明公明南庄天福', 0, '1376', '2017', '07', '1376', '2017', '08'),
+('T997407', '深圳市', '天福', '便利店', '深圳西乡共乐百益佳天福', 0, '1380', '2017', '07', '1380', '2017', '08'),
+('T997408', '深圳市', '天福', '便利店', '深圳西乡共乐佳乐天福', 0, '1381', '2017', '07', '1381', '2017', '08'),
+('T997409', '深圳市', '天福', '便利店', 'S2深圳西乡福中福天福T', 0, '1384', '2017', '07', '1384', '2017', '08'),
+('T997410', '深圳市', '天福', '便利店', 'S095深圳石岩卓越天福(大车)', 0, '1385', '2017', '07', '1385', '2017', '08'),
+('T997411', '深圳市', '天福', '便利店', '深圳大浪旺嘉天福', 0, '1386', '2017', '07', '1386', '2017', '08'),
+('T997412', '深圳市', '天福', '便利店', '深圳宝安宝兴花园天福', 0, '1398', '2017', '07', '1398', '2017', '08'),
+('T997413', '深圳市', '天福', '便利店', 'S2深圳福永凤凰三峡天福(大车)', 0, '1407', '2017', '07', '1407', '2017', '08'),
+('T997415', '深圳市', '天福', '便利店', '深圳布吉业业兴天福', 0, '1413', '2017', '07', '1413', '2017', '08'),
+('T997416', '深圳市', '天福', '便利店', '深圳福永新和宏明天福', 0, '1415', '2017', '07', '1415', '2017', '08');
+INSERT INTO `t_new_shop` (`id`, `city`, `sm`, `type`, `name`, `flag`, `shop1`, `year1`, `month1`, `shop2`, `year2`, `month2`) VALUES
+('T997417', '深圳市', '天福', '便利店', '深圳公明南庄村南城天福', 0, '1426', '2017', '07', '1426', '2017', '08'),
+('T997418', '深圳市', '天福', '便利店', '深圳布吉吉富天福', 0, '1432', '2017', '07', '1432', '2017', '08'),
+('T997419', '深圳市', '天福', '便利店', 'S1深圳石岩料坑天福T', 0, '1441', '2017', '07', '1441', '2017', '08'),
+('T997420', '深圳市', '天福', '便利店', 'J1深圳沙井恒晖苑天福（小车）', 0, '1458', '2017', '07', '1458', '2017', '08'),
+('T997422', '深圳市', '天福', '便利店', 'S1深圳大浪金典天福', 0, '1470', '2017', '07', '1470', '2017', '08'),
+('T997423', '深圳市', '天福', '便利店', 'S2深圳南山西丽明乐天福T', 0, '1471', '2017', '07', '1471', '2017', '08'),
+('T997425', '深圳市', '天福', '便利店', '深圳坂田九八天福', 0, '1478', '2017', '07', '1478', '2017', '08'),
+('T997426', '深圳市', '天福', '便利店', '深圳福永万福天福(小车）', 0, '1480', '2017', '07', '1480', '2017', '08'),
+('T997427', '深圳市', '天福', '便利店', 'S180深圳沙井上南欢乐多天福(大车)', 0, '1486', '2017', '07', '1486', '2017', '08'),
+('T997428', '深圳市', '天福', '便利店', 'S2深圳西乡黄田华丰天福店T', 0, '1493', '2017', '07', '1493', '2017', '08'),
+('T997429', '深圳市', '天福', '便利店', 'S361深圳布吉木棉湾天福', 0, '1497', '2017', '07', '1497', '2017', '08'),
+('T997430', '深圳市', '天福', '便利店', 'S221深圳大浪志霞天福', 0, '1498', '2017', '07', '1498', '2017', '08'),
+('T997431', '深圳市', '天福', '便利店', '深圳龙岗南联裕隆天福', 0, '1501', '2017', '07', '1501', '2017', '08'),
+('T997432', '深圳市', '天福', '便利店', '深圳龙华盛辉天福', 0, '1503', '2017', '07', '1503', '2017', '08'),
+('T997433', '深圳市', '天福', '便利店', 'S2深圳西乡劳动村天福', 0, '1504', '2017', '07', '1504', '2017', '08'),
+('T997435', '深圳市', '天福', '便利店', '深圳福永桥南新村光明天福', 0, '1519', '2017', '07', '1519', '2017', '08'),
+('T997436', '深圳市', '天福', '便利店', 'S151深圳石岩应人石新村天福（小车）', 0, '1521', '2017', '07', '1521', '2017', '08'),
+('T997437', '深圳市', '天福', '便利店', 'S2深圳南山西丽官龙鸿华天福', 0, '1523', '2017', '07', '1523', '2017', '08'),
+('T997438', '深圳市', '天福', '便利店', '深圳民治创业天福', 0, '1536', '2017', '07', '1536', '2017', '08'),
+('T997439', '深圳市', '天福', '便利店', 'J1深圳松岗红星民泰天福T(大车)', 0, '1543', '2017', '07', '1543', '2017', '08'),
+('T997440', '深圳市', '天福', '便利店', '深圳观澜阿英天福', 0, '1549', '2017', '07', '1549', '2017', '08'),
+('T997441', '深圳市', '天福', '便利店', '深圳大浪永利天福', 0, '1566', '2017', '07', '1566', '2017', '08'),
+('T997442', '深圳市', '天福', '便利店', 'S278深圳福永白石厦永安天福（小车）', 0, '1578', '2017', '07', '1578', '2017', '08'),
+('T997443', '深圳市', '天福', '便利店', '深圳松岗凤梨天福', 0, '1585', '2017', '07', '1585', '2017', '08'),
+('T997445', '深圳市', '天福', '便利店', '深圳松岗楼岗天福', 0, '1587', '2017', '07', '1587', '2017', '08'),
+('T997446', '深圳市', '天福', '便利店', '深圳松岗益华天福', 0, '1589', '2017', '07', '1589', '2017', '08'),
+('T997447', '深圳市', '天福', '便利店', 'S189深圳大浪顺欣天福', 0, '1590', '2017', '07', '1590', '2017', '08'),
+('T997448', '深圳市', '天福', '便利店', '深圳石岩旺福天福', 0, '1591', '2017', '07', '1591', '2017', '08'),
+('T997449', '深圳市', '天福', '便利店', '深圳龙华天天福天福', 0, '1592', '2017', '07', '1592', '2017', '08'),
+('T997450', '深圳市', '天福', '便利店', 'S2深圳宝安流塘开心天福', 0, '1594', '2017', '07', '1594', '2017', '08'),
+('T997451', '深圳市', '天福', '便利店', '深圳龙岗黄阁坑中海康城炳坑天福', 0, '1603', '2017', '07', '1603', '2017', '08'),
+('T997452', '深圳市', '天福', '便利店', '深圳公明福顺天福', 0, '1607', '2017', '07', '1607', '2017', '08'),
+('T997453', '深圳市', '天福', '便利店', '深圳龙岗京兆福天福', 0, '1608', '2017', '07', '1608', '2017', '08'),
+('T997455', '深圳市', '天福', '便利店', 'S196深圳福永塘尾杰少天福', 0, '1610', '2017', '07', '1610', '2017', '08'),
+('T997456', '深圳市', '天福', '便利店', '深圳石岩同富裕诚业天福', 0, '1611', '2017', '07', '1611', '2017', '08'),
+('T997457', '深圳市', '天福', '便利店', '深圳坪山梓兴天福', 0, '1612', '2017', '07', '1612', '2017', '08'),
+('T997458', '深圳市', '天福', '便利店', '深圳龙华树龙天福', 0, '1620', '2017', '07', '1620', '2017', '08'),
+('T997459', '深圳市', '天福', '便利店', 'S1深圳布吉盈发天福', 0, '1625', '2017', '07', '1625', '2017', '08'),
+('T997460', '深圳市', '天福', '便利店', 'S421深圳观澜永鸿森天福', 0, '1626', '2017', '07', '1626', '2017', '08'),
+('T997461', '深圳市', '天福', '便利店', '深圳石岩惠丰天福', 0, '1630', '2017', '07', '1630', '2017', '08'),
+('T997462', '深圳市', '天福', '便利店', 'S1深圳龙华高坳佳盈天福', 0, '1636', '2017', '07', '1636', '2017', '08'),
+('T997463', '深圳市', '天福', '便利店', '深圳沙井和二天福', 0, '1638', '2017', '07', '1638', '2017', '08'),
+('T997465', '深圳市', '天福', '便利店', '深圳福田海霞天福', 0, '1640', '2017', '07', '1640', '2017', '08'),
+('T997466', '深圳市', '天福', '便利店', 'J1深圳福永和平大富天福(大车)', 0, '1641', '2017', '07', '1641', '2017', '08'),
+('T997467', '深圳市', '天福', '便利店', '深圳公明意合天福', 0, '1642', '2017', '07', '1642', '2017', '08'),
+('T997468', '深圳市', '天福', '便利店', 'S119深圳石岩欢乐天福', 0, '1646', '2017', '07', '1646', '2017', '08'),
+('T997469', '深圳市', '天福', '便利店', '深圳公明吉祥天福', 0, '1648', '2017', '07', '1648', '2017', '08'),
+('T997471', '深圳市', '天福', '便利店', 'S2深圳西乡盛强天福', 0, '1649', '2017', '07', '1649', '2017', '08'),
+('T997472', '深圳市', '天福', '便利店', '深圳龙岗嘉禾天福', 0, '1650', '2017', '07', '1650', '2017', '08'),
+('T997473', '深圳市', '天福', '便利店', '深圳南山西丽高职院天福', 0, '1652', '2017', '07', '1652', '2017', '08'),
+('T997475', '深圳市', '天福', '便利店', 'S1深圳布吉兴佳天福', 0, '1653', '2017', '07', '1653', '2017', '08'),
+('T997476', '深圳市', '天福', '便利店', '深圳南山西丽转霞天福', 0, '1655', '2017', '07', '1655', '2017', '08'),
+('T997477', '深圳市', '天福', '便利店', 'S279深圳民治樟坑新华天福', 0, '1657', '2017', '07', '1657', '2017', '08'),
+('T997478', '深圳市', '天福', '便利店', '深圳福永吉祥天福', 0, '1664', '2017', '07', '1664', '2017', '08'),
+('T997479', '深圳市', '天福', '便利店', 'S498深圳南山安玘天福', 0, '1669', '2017', '07', '1669', '2017', '08'),
+('T997480', '深圳市', '天福', '便利店', '深圳罗湖草埔欣慰天福', 0, '1020', '2017', '07', '1020', '2017', '08'),
+('T997481', '深圳市', '天福', '便利店', 'S043深圳公明东坑金日天福', 0, '1044', '2017', '07', '1044', '2017', '08'),
+('T997482', '深圳市', '天福', '便利店', '深圳福永龙王庙天福', 0, '1067', '2017', '07', '1067', '2017', '08'),
+('T997483', '深圳市', '天福', '便利店', '深圳西乡钟屋天福', 0, '1074', '2017', '07', '1074', '2017', '08'),
+('T997485', '深圳市', '天福', '便利店', '深圳松岗御岭天福', 0, '1077', '2017', '07', '1077', '2017', '08'),
+('T997486', '深圳市', '天福', '便利店', 'S1深圳坂田桥联西天福', 0, '1080', '2017', '07', '1080', '2017', '08'),
+('T997487', '深圳市', '天福', '便利店', 'J1深圳沙井辛养天福T(小车)', 0, '1084', '2017', '07', '1084', '2017', '08'),
+('T997488', '深圳市', '天福', '便利店', '深圳福永兴围兴华天福', 0, '1099', '2017', '07', '1099', '2017', '08'),
+('T997489', '深圳市', '天福', '便利店', 'S01深圳大浪天赐天福T', 0, '1122', '2017', '07', '1122', '2017', '08'),
+('T997490', '深圳市', '天福', '便利店', '深圳沙井万丰鸿运天福(小车）', 0, '1411', '2017', '07', '1411', '2017', '08'),
+('T997491', '深圳市', '天福', '便利店', '深圳宝安41区安乐村裕兴天福', 0, '1496', '2017', '07', '1496', '2017', '08'),
+('T997492', '深圳市', '天福', '便利店', 'J1深圳福永善喜天福T(小车)', 0, '1510', '2017', '07', '1510', '2017', '08'),
+('T997493', '深圳市', '天福', '便利店', '深圳松岗塘下涌雄宇天福', 0, '1537', '2017', '07', '1537', '2017', '08'),
+('T997495', '深圳市', '天福', '便利店', 'S1深圳民治兴旺天福T', 0, '1557', '2017', '07', '1557', '2017', '08'),
+('T997496', '深圳市', '天福', '便利店', '深圳龙华民治创业花园天福', 0, '1045', '2017', '07', '1045', '2017', '08'),
+('T997497', '深圳市', '天福', '便利店', 'S536深圳南山西丽白芒合兴天福', 0, '1048', '2017', '07', '1048', '2017', '08'),
+('T997498', '深圳市', '天福', '便利店', '深圳松岗潭头艳桃天福', 0, '1049', '2017', '07', '1049', '2017', '08'),
+('T997499', '深圳市', '天福', '便利店', '深圳龙华草埔吓围小学天福', 0, '1055', '2017', '07', '1055', '2017', '08'),
+('T997500', '深圳市', '天福', '便利店', '深圳沙井兴泰天福', 0, '1059', '2017', '07', '1059', '2017', '08'),
+('T997501', '深圳市', '天福', '便利店', 'S475深圳龙岗余岭天福', 0, '1066', '2017', '07', '1066', '2017', '08'),
+('T997502', '深圳市', '天福', '便利店', 'S285深圳民治新村如意天福', 0, '1069', '2017', '07', '1069', '2017', '08'),
+('T997503', '深圳市', '天福', '便利店', '深圳罗湖超兴旺天福', 0, '1070', '2017', '07', '1070', '2017', '08'),
+('T997505', '深圳市', '天福', '便利店', '深圳宝安沙井华兴发天福', 0, '1071', '2017', '07', '1071', '2017', '08'),
+('T997506', '深圳市', '天福', '便利店', '深圳福永喜多多天福', 0, '1072', '2017', '07', '1072', '2017', '08'),
+('T997507', '深圳市', '天福', '便利店', 'S275深圳民治东龙升天福', 0, '1075', '2017', '07', '1075', '2017', '08'),
+('T997508', '深圳市', '天福', '便利店', 'S494深圳南山升阳天福', 0, '1079', '2017', '07', '1079', '2017', '08'),
+('T997509', '深圳市', '天福', '便利店', '深圳福永重美天福', 0, '1081', '2017', '07', '1081', '2017', '08'),
+('T997510', '深圳市', '天福', '便利店', '深圳平湖腾铭天福', 0, '1082', '2017', '07', '1082', '2017', '08'),
+('T997511', '深圳市', '天福', '便利店', '深圳南山白领天福', 0, '1088', '2017', '07', '1088', '2017', '08'),
+('T997512', '深圳市', '天福', '便利店', '深圳沙井驿站天福', 0, '1100', '2017', '07', '1100', '2017', '08'),
+('T997513', '深圳市', '天福', '便利店', 'S2深圳西乡固戍社区正奇隆天福', 0, '1102', '2017', '07', '1102', '2017', '08'),
+('T997515', '深圳市', '天福', '便利店', '深圳龙华福樟坑国光天福', 0, '1118', '2017', '07', '1118', '2017', '08'),
+('T997516', '深圳市', '天福', '便利店', 'S513深圳龙岗双龙天福', 0, '1132', '2017', '07', '1132', '2017', '08'),
+('T997517', '深圳市', '天福', '便利店', 'S101深圳石岩顺意天福', 0, '1133', '2017', '07', '1133', '2017', '08'),
+('T997518', '深圳市', '天福', '便利店', 'S2深圳西乡坪洲天福', 0, '1135', '2017', '07', '1135', '2017', '08'),
+('T997519', '深圳市', '天福', '便利店', '深圳民治晨阳天福', 0, '1144', '2017', '07', '1144', '2017', '08'),
+('T997520', '深圳市', '天福', '便利店', '深圳布吉南和天福', 0, '1146', '2017', '07', '1146', '2017', '08'),
+('T997521', '深圳市', '天福', '便利店', '深圳龙华旺发天福', 0, '1150', '2017', '07', '1150', '2017', '08'),
+('T997522', '深圳市', '天福', '便利店', '深圳西乡兴达华府天福', 0, '1151', '2017', '07', '1151', '2017', '08'),
+('T997523', '深圳市', '天福', '便利店', '深圳龙华大浪金盈天福', 0, '1233', '2017', '07', '1233', '2017', '08'),
+('T997525', '深圳市', '天福', '便利店', '深圳龙华民治腾辉天福', 0, '1280', '2017', '07', '1280', '2017', '08'),
+('T997526', '深圳市', '天福', '便利店', 'S470深圳西乡凤凰天福', 0, '1281', '2017', '07', '1281', '2017', '08'),
+('T997527', '深圳市', '天福', '便利店', '深圳龙岗爱联嶂背天福', 0, '1282', '2017', '07', '1282', '2017', '08'),
+('T997528', '深圳市', '天福', '便利店', 'S2深圳西乡固戍天鑫天福', 0, '1293', '2017', '07', '1293', '2017', '08'),
+('T997529', '深圳市', '天福', '便利店', 'J1深圳沙井万丰家豪天福', 0, '1294', '2017', '07', '1294', '2017', '08'),
+('T997530', '深圳市', '天福', '便利店', 'S1深圳大浪龙翔天福', 0, '1295', '2017', '07', '1295', '2017', '08'),
+('T997531', '深圳市', '天福', '便利店', 'S117深圳石岩公学天福(大车)', 0, '1299', '2017', '07', '1299', '2017', '08'),
+('T997532', '深圳市', '天福', '便利店', '深圳光明圳美佳美天福', 0, '1358', '2017', '07', '1358', '2017', '08'),
+('T997533', '深圳市', '天福', '便利店', 'J1深圳松岗万多福天福(大车)', 0, '1366', '2017', '07', '1366', '2017', '08'),
+('T997535', '深圳市', '天福', '便利店', 'S230深圳福永兴旺天福(大车)', 0, '1376', '2017', '07', '1376', '2017', '08'),
+('T997537', '深圳市', '天福', '便利店', 'S149深圳石岩宇方天福（小车）', 0, '1380', '2017', '07', '1380', '2017', '08'),
+('T997539', '深圳市', '天福', '便利店', 'S457深圳龙岗黄阁坑中海康城欣汇天福', 0, '1381', '2017', '07', '1381', '2017', '08'),
+('T997540', '深圳市', '天福', '便利店', '深圳松岗朝阳天福', 0, '1384', '2017', '07', '1384', '2017', '08'),
+('T997541', '深圳市', '天福', '便利店', '深圳宝安福永恒辉天福（小车）', 0, '1385', '2017', '07', '1385', '2017', '08'),
+('T997542', '深圳市', '天福', '便利店', '深圳宝安龙华大浪祥瑞天福', 0, '1386', '2017', '07', '1386', '2017', '08'),
+('T997543', '深圳市', '天福', '便利店', '深圳平湖众鑫天福', 0, '1398', '2017', '07', '1398', '2017', '08'),
+('T997545', '深圳市', '天福', '便利店', '深圳公明同富天福', 0, '1407', '2017', '07', '1407', '2017', '08'),
+('T997546', '深圳市', '天福', '便利店', '深圳光明公明石围新村东风天福', 0, '1413', '2017', '07', '1413', '2017', '08'),
+('T997547', '深圳市', '天福', '便利店', 'S381深圳横岗来福天福', 0, '1415', '2017', '07', '1415', '2017', '08'),
+('T997548', '深圳市', '天福', '便利店', 'S1深圳平湖辅城喜悦天福', 0, '1045', '2018', '06', '1045', '2018', '07'),
+('T997549', '深圳市', '天福', '便利店', '深圳宝安龙华东二新村罗亮天福', 0, '1432', '2017', '07', '1432', '2017', '08'),
+('T997550', '深圳市', '天福', '便利店', 'S204深圳福永金阳光天福(大车)', 0, '1441', '2017', '07', '1441', '2017', '08'),
+('T997551', '深圳市', '天福', '便利店', 'S098深圳沙井坣岗乐福天福(大车)', 0, '1458', '2017', '07', '1458', '2017', '08'),
+('T997552', '深圳市', '天福', '便利店', '深圳横岗贤合天福', 0, '1470', '2017', '07', '1470', '2017', '08'),
+('T997553', '深圳市', '天福', '便利店', 'S2深圳西乡固戍雅丽天福', 0, '1471', '2017', '07', '1471', '2017', '08'),
+('T997555', '深圳市', '天福', '便利店', '深圳布吉左庭右院天福', 0, '1478', '2017', '07', '1478', '2017', '08'),
+('T997557', '深圳市', '天福', '便利店', 'S133深圳石岩罗租八号天福(大车)', 0, '1480', '2017', '07', '1480', '2017', '08'),
+('T997558', '深圳市', '天福', '便利店', 'J1深圳沙井上星小山天福T（小车）', 0, '1486', '2017', '07', '1486', '2017', '08'),
+('T997559', '深圳市', '天福', '便利店', '深圳西乡鸿辉天福', 0, '1493', '2017', '07', '1493', '2017', '08'),
+('T997560', '深圳市', '天福', '便利店', '深圳宝安福永丫丫天福(小车）', 0, '1497', '2017', '07', '1497', '2017', '08'),
+('T997561', '深圳市', '天福', '便利店', 'S026深圳松岗碧头天福(大车)', 0, '1498', '2017', '07', '1498', '2017', '08'),
+('T997562', '深圳市', '天福', '便利店', '深圳宝安新村鸿利天福', 0, '1501', '2017', '07', '1501', '2017', '08'),
+('T997563', '深圳市', '天福', '便利店', '深圳大浪罗屋围全平烙天福(小车)', 0, '1503', '2017', '07', '1503', '2017', '08'),
+('T997565', '深圳市', '天福', '便利店', 'S367深圳布吉南湾惠农天福', 0, '1504', '2017', '07', '1504', '2017', '08'),
+('T997566', '深圳市', '天福', '便利店', 'S1深圳布吉上水径东区天T', 0, '1519', '2017', '07', '1519', '2017', '08'),
+('T997567', '深圳市', '天福', '便利店', 'S2深圳公明玉律鸿生天福(大车)', 0, '1521', '2017', '07', '1521', '2017', '08'),
+('T997568', '深圳市', '天福', '便利店', 'S000深圳南山白石洲琪俊天福', 0, '1048', '2018', '06', '1048', '2018', '07'),
+('T997569', '深圳市', '天福', '便利店', '深圳西乡固戍顺发天福', 0, '1536', '2017', '07', '1536', '2017', '08'),
+('T997570', '深圳市', '天福', '便利店', '深圳西乡腾达天福', 0, '1543', '2017', '07', '1543', '2017', '08'),
+('T997571', '深圳市', '天福', '便利店', '深圳宝安沙井和福天福(小车）', 0, '1549', '2017', '07', '1549', '2017', '08'),
+('T997572', '深圳市', '天福', '便利店', '深圳松岗兴隆天福', 0, '1566', '2017', '07', '1566', '2017', '08'),
+('T997573', '深圳市', '天福', '便利店', 'S1深圳公明小四天福(大车)', 0, '1578', '2017', '07', '1578', '2017', '08'),
+('T997575', '深圳市', '天福', '便利店', '深圳福永雄兴天福（小车）', 0, '1585', '2017', '07', '1585', '2017', '08'),
+('T997576', '深圳市', '天福', '便利店', 'S1深圳布吉宏业天福', 0, '1587', '2017', '07', '1587', '2017', '08'),
+('T997577', '深圳市', '天福', '便利店', '深圳石岩佳和天福', 0, '1589', '2017', '07', '1589', '2017', '08'),
+('T997578', '深圳市', '天福', '便利店', 'S259深圳民治福临门天福', 0, '1590', '2017', '07', '1590', '2017', '08'),
+('T997579', '深圳市', '天福', '便利店', 'S341深圳布吉吉华天福', 0, '1591', '2017', '07', '1591', '2017', '08'),
+('T997580', '深圳市', '天福', '便利店', '深圳龙岗好宜家天福', 0, '1592', '2017', '07', '1592', '2017', '08'),
+('T997581', '深圳市', '天福', '便利店', 'J1深圳福永塘尾顺利天福T（小车）', 0, '1594', '2017', '07', '1594', '2017', '08'),
+('T997582', '深圳市', '天福', '便利店', 'S1深圳坂田春生天福T', 0, '1603', '2017', '07', '1603', '2017', '08'),
+('T997583', '深圳市', '天福', '便利店', 'J1深圳沙井文汇天福T（大车）', 0, '1607', '2017', '07', '1607', '2017', '08'),
+('T997585', '深圳市', '天福', '便利店', 'S1深圳石岩香象天福(小车）', 0, '1608', '2017', '07', '1608', '2017', '08'),
+('T997586', '深圳市', '天福', '便利店', 'S1深圳石岩恩斯迈天福', 0, '1610', '2017', '07', '1610', '2017', '08'),
+('T997587', '深圳市', '天福', '便利店', 'J1深圳松岗政萱天福T(大车)', 0, '1611', '2017', '07', '1611', '2017', '08'),
+('T997589', '深圳市', '天福', '便利店', 'J1深圳福永麒麟天福T（小车）', 0, '1612', '2017', '07', '1612', '2017', '08'),
+('T997590', '深圳市', '天福', '便利店', '深圳南山西丽宝馨苑天福', 0, '1620', '2017', '07', '1620', '2017', '08'),
+('T997591', '深圳市', '天福', '便利店', '深圳西乡固戍双和天福', 0, '1625', '2017', '07', '1625', '2017', '08'),
+('T997592', '深圳市', '天福', '便利店', '深圳坂田旺塘天福', 0, '1626', '2017', '07', '1626', '2017', '08'),
+('T997593', '深圳市', '天福', '便利店', '深圳横岗红润天福', 0, '1630', '2017', '07', '1630', '2017', '08'),
+('T997595', '深圳市', '天福', '便利店', '深圳罗湖鹏程天福', 0, '1636', '2017', '07', '1636', '2017', '08'),
+('T997596', '深圳市', '天福', '便利店', '深圳公明顺景天福', 0, '1638', '2017', '07', '1638', '2017', '08'),
+('T997597', '深圳市', '天福', '便利店', 'S1深圳石岩福民天福(小车）', 0, '1640', '2017', '07', '1640', '2017', '08'),
+('T997598', '深圳市', '天福', '便利店', 'S2深圳沙井永发天福(大车)', 0, '1641', '2017', '07', '1641', '2017', '08'),
+('T997599', '深圳市', '天福', '便利店', 'S328深圳西乡固戍合作创业天福', 0, '1642', '2017', '07', '1642', '2017', '08'),
+('T997600', '深圳市', '天福', '便利店', 'S2深圳西乡固戍享业天福', 0, '1646', '2017', '07', '1646', '2017', '08'),
+('T997601', '深圳市', '天福', '便利店', 'J1深圳福永新和二村天福(大车)', 0, '1648', '2017', '07', '1648', '2017', '08'),
+('T997602', '深圳市', '天福', '便利店', 'J1深圳福永天美天福（小车）', 0, '1649', '2017', '07', '1649', '2017', '08'),
+('T997603', '深圳市', '天福', '便利店', '深圳石岩同福天福', 0, '1650', '2017', '07', '1650', '2017', '08'),
+('T997605', '深圳市', '天福', '便利店', 'S1深圳龙华博进天福店T', 0, '1652', '2017', '07', '1652', '2017', '08'),
+('T997606', '深圳市', '天福', '便利店', '深圳石岩英才天福', 0, '1653', '2017', '07', '1653', '2017', '08'),
+('T997607', '深圳市', '天福', '便利店', '深圳南山西丽心悦天福', 0, '1655', '2017', '07', '1655', '2017', '08'),
+('T997609', '深圳市', '天福', '便利店', '深圳布吉心灵天福', 0, '1657', '2017', '07', '1657', '2017', '08'),
+('T997610', '深圳市', '天福', '便利店', '深圳横岗双龙天福', 0, '1664', '2017', '07', '1664', '2017', '08'),
+('T997611', '深圳市', '天福', '便利店', '深圳坪地文华天福', 0, '1669', '2017', '07', '1669', '2017', '08'),
+('T997612', '深圳市', '天福', '便利店', 'J1深圳福永红运天福(大车)', 0, '1020', '2017', '07', '1020', '2017', '08'),
+('T997613', '深圳市', '天福', '便利店', '深圳福永凤凰南区天福', 0, '1044', '2017', '07', '1044', '2017', '08'),
+('T997615', '深圳市', '天福', '便利店', 'S1深圳龙岗九州家园天福', 0, '1067', '2017', '07', '1067', '2017', '08'),
+('T997616', '深圳市', '天福', '便利店', '深圳公明冠城天福', 0, '1074', '2017', '07', '1074', '2017', '08'),
+('T997617', '深圳市', '天福', '便利店', '深圳福永益晖天福', 0, '1077', '2017', '07', '1077', '2017', '08'),
+('T997618', '深圳市', '天福', '便利店', 'S1深圳石岩富华天福', 0, '1080', '2017', '07', '1080', '2017', '08'),
+('T997619', '深圳市', '天福', '便利店', 'S000深圳沙井南埔路佳福天福', 0, '1084', '2017', '07', '1084', '2017', '08'),
+('T997620', '深圳市', '天福', '便利店', 'S1深圳平湖白鸽湖天福', 0, '1099', '2017', '07', '1099', '2017', '08'),
+('T997621', '深圳市', '天福', '便利店', 'S1深圳公明佳乐天福(大车)', 0, '1122', '2017', '07', '1122', '2017', '08'),
+('T997622', '深圳市', '天福', '便利店', '深圳公明琴峯天福', 0, '1411', '2017', '07', '1411', '2017', '08'),
+('T997623', '深圳市', '天福', '便利店', '深圳民治民乐一区天福', 0, '1496', '2017', '07', '1496', '2017', '08'),
+('T997625', '深圳市', '天福', '便利店', 'S201深圳大浪吉祥天福（小车）', 0, '1510', '2017', '07', '1510', '2017', '08'),
+('T997626', '深圳市', '天福', '便利店', 'S467深圳龙岗爱联蒲鹏天福', 0, '1537', '2017', '07', '1537', '2017', '08'),
+('T997628', '深圳市', '天福', '便利店', '深圳西乡后瑞天福', 0, '1557', '2017', '07', '1557', '2017', '08'),
+('T997629', '深圳市', '天福', '便利店', '深圳南山大新天福', 0, '1049', '2018', '06', '1049', '2018', '07'),
+('T997630', '深圳市', '天福', '便利店', '深圳大浪金盈新村天福', 0, '1059', '2018', '06', '1059', '2018', '07'),
+('T997631', '深圳市', '天福', '便利店', 'S2深圳沙井上寮天福（小车）', 0, '1066', '2018', '06', '1066', '2018', '07'),
+('T997632', '深圳市', '天福', '便利店', 'S1深圳龙华弓村天福T', 0, '1069', '2018', '06', '1069', '2018', '07'),
+('T997633', '深圳市', '天福', '便利店', '深圳南山西丽华华明天福', 0, '1070', '2018', '06', '1070', '2018', '07'),
+('T997635', '深圳市', '天福', '便利店', '深圳沙井惠佳天福（小车）', 0, '1071', '2018', '06', '1071', '2018', '07'),
+('T997636', '深圳市', '天福', '便利店', '深圳民治创业1号天福', 0, '1072', '2018', '06', '1072', '2018', '07'),
+('T997637', '深圳市', '天福', '便利店', 'S1深圳龙岗岗贝天福', 0, '1075', '2018', '06', '1075', '2018', '07'),
+('T997638', '深圳市', '天福', '便利店', '深圳福永林记天福', 0, '1079', '2018', '06', '1079', '2018', '07'),
+('T997639', '深圳市', '天福', '便利店', '深圳石岩创福天福', 0, '1081', '2018', '06', '1081', '2018', '07'),
+('T997640', '深圳市', '天福', '便利店', '深圳福永新时代天福', 0, '1082', '2018', '06', '1082', '2018', '07'),
+('T997641', '深圳市', '天福', '便利店', 'S003深圳公明怀松天福', 0, '1088', '2018', '06', '1088', '2018', '07'),
+('T997642', '深圳市', '天福', '便利店', 'J1深圳福永凤凰真美天福(大车)', 0, '1100', '2018', '06', '1100', '2018', '07'),
+('T997643', '深圳市', '天福', '便利店', 'J1深圳福永凤凰旭升天福(大车)', 0, '1102', '2018', '06', '1102', '2018', '07'),
+('T997645', '深圳市', '天福', '便利店', 'J1深圳沙井和一得宝天福(大车)', 0, '1118', '2018', '06', '1118', '2018', '07'),
+('T997646', '深圳市', '天福', '便利店', 'S1深圳大浪芸熙天福（小车）', 0, '1132', '2018', '06', '1132', '2018', '07'),
+('T997647', '深圳市', '天福', '便利店', '深圳龙岗新秀天福', 0, '1133', '2018', '06', '1133', '2018', '07'),
+('T997648', '深圳市', '天福', '便利店', '深圳宝安流塘诚信天福', 0, '1135', '2018', '06', '1135', '2018', '07'),
+('T997649', '深圳市', '天福', '便利店', 'S210深圳福永育龙天福(大车)', 0, '1146', '2018', '06', '1146', '2018', '07'),
+('T997650', '深圳市', '天福', '便利店', 'S1深圳大浪宏达天福', 0, '1150', '2018', '06', '1150', '2018', '07'),
+('T997651', '深圳市', '天福', '便利店', '深圳龙华誉星天福', 0, '1151', '2018', '06', '1151', '2018', '07'),
+('T997652', '深圳市', '天福', '便利店', '深圳福永凤城花园天福', 0, '1233', '2018', '06', '1233', '2018', '07'),
+('T997653', '深圳市', '天福', '便利店', '深圳西乡固戍丰稔天福', 0, '1278', '2018', '06', '1278', '2018', '07'),
+('T997655', '深圳市', '天福', '便利店', '深圳龙岗永新天福', 0, '1280', '2018', '06', '1280', '2018', '07'),
+('T997656', '深圳市', '天福', '便利店', 'S1深圳龙岗好运来天福', 0, '1281', '2018', '06', '1281', '2018', '07'),
+('T997658', '深圳市', '天福', '便利店', 'S1深圳石岩惠源天福(大车)', 0, '1282', '2018', '06', '1282', '2018', '07'),
+('T997659', '深圳市', '天福', '便利店', 'S2深圳福田佳佳天福', 0, '1293', '2018', '06', '1293', '2018', '07'),
+('T997660', '深圳市', '天福', '便利店', 'J1深圳沙井步涌盛华天福T(大车)', 0, '1294', '2018', '06', '1294', '2018', '07'),
+('T997661', '深圳市', '天福', '便利店', 'S388深圳西乡永兴天福', 0, '1295', '2018', '06', '1295', '2018', '07'),
+('T997662', '深圳市', '天福', '便利店', '深圳西乡盐田天福', 0, '1299', '2018', '06', '1299', '2018', '07'),
+('T997663', '深圳市', '天福', '便利店', '深圳固戍永旺天福', 0, '1358', '2018', '06', '1358', '2018', '07'),
+('T997665', '深圳市', '天福', '便利店', '深圳宝安辉煌天福', 0, '1366', '2018', '06', '1366', '2018', '07'),
+('T997666', '深圳市', '天福', '便利店', 'S2深圳福永华丰天福(大车)', 0, '1376', '2018', '06', '1376', '2018', '07'),
+('T997667', '深圳市', '天福', '便利店', '深圳福永塘尾创业天福', 0, '1380', '2018', '06', '1380', '2018', '07'),
+('T997668', '深圳市', '天福', '便利店', 'S1深圳石岩创新天福', 0, '1381', '2018', '06', '1381', '2018', '07'),
+('T997670', '深圳市', '天福', '便利店', 'S1深圳龙岗追尚生活天福店', 0, '1384', '2018', '06', '1384', '2018', '07'),
+('T997671', '深圳市', '天福', '便利店', '深圳坂田亿源通店', 0, '1385', '2018', '06', '1385', '2018', '07'),
+('T997672', '深圳市', '天福', '便利店', 'S1深圳坂田黄军山天福店', 0, '1386', '2018', '06', '1386', '2018', '07'),
+('T997673', '深圳市', '天福', '便利店', 'S1深圳坂田佳永天福店', 0, '1398', '2018', '06', '1398', '2018', '07'),
+('T997675', '深圳市', '天福', '便利店', 'S2深圳沙井民主天福(大车)', 0, '1407', '2018', '06', '1407', '2018', '07'),
+('T997676', '深圳市', '天福', '便利店', 'S473深圳龙岗广发天福', 0, '1432', '2018', '06', '1432', '2018', '07'),
+('T997677', '深圳市', '天福', '便利店', '深圳光明新区公明丰明店', 0, '1441', '2018', '06', '1441', '2018', '07'),
+('T997678', '深圳市', '天福', '便利店', '深圳石岩晗晗乐店(小店)', 0, '1458', '2018', '06', '1458', '2018', '07'),
+('T997679', '深圳市', '天福', '便利店', '深圳龙岗南联陈屋店', 0, '1470', '2018', '06', '1470', '2018', '07'),
+('T997680', '深圳市', '天福', '便利店', 'S063深圳公明塘家天福店', 0, '1471', '2018', '06', '1471', '2018', '07'),
+('T997681', '深圳市', '天福', '便利店', '深圳松岗东方店', 0, '1478', '2018', '06', '1478', '2018', '07'),
+('T997682', '深圳市', '天福', '便利店', '深圳光明新区公明元山店', 0, '1480', '2018', '06', '1480', '2018', '07'),
+('T997683', '深圳市', '天福', '便利店', 'S203深圳大浪华霆天福店', 0, '1486', '2018', '06', '1486', '2018', '07'),
+('T997685', '深圳市', '天福', '便利店', 'S1深圳公明兴隆天福店', 0, '1497', '2018', '06', '1497', '2018', '07'),
+('T997686', '深圳市', '天福', '便利店', 'S1深圳横岗伯乐天福店', 0, '1498', '2018', '06', '1498', '2018', '07'),
+('T997687', '深圳市', '天福', '便利店', 'S000深圳南山宏发店', 0, '1501', '2018', '06', '1501', '2018', '07'),
+('T997688', '深圳市', '天福', '便利店', '深圳公明东盛店', 0, '1503', '2018', '06', '1503', '2018', '07'),
+('T997689', '深圳市', '天福', '便利店', 'S194深圳福永塘尾雄雄店(小车）', 0, '1519', '2018', '06', '1519', '2018', '07'),
+('T997690', '深圳市', '天福', '便利店', 'S2深圳西乡固戍南昌公园天福', 0, '1521', '2018', '06', '1521', '2018', '07'),
+('T997691', '深圳市', '天福', '便利店', '深圳松岗南边头店', 0, '1536', '2018', '06', '1536', '2018', '07'),
+('T997692', '深圳市', '天福', '便利店', 'S000深圳松岗晨远天福', 0, '1543', '2018', '06', '1543', '2018', '07'),
+('T997693', '深圳市', '天福', '便利店', 'S2深圳西乡固戍天顺天福T', 0, '1549', '2018', '06', '1549', '2018', '07'),
+('T997695', '深圳市', '天福', '便利店', 'S1深圳龙华雪峰天福', 0, '1566', '2018', '06', '1566', '2018', '07'),
+('T997696', '深圳市', '天福', '便利店', '深圳宝安后瑞百佳天福', 0, '1578', '2018', '06', '1578', '2018', '07'),
+('T997697', '深圳市', '天福', '便利店', 'S1深圳横岗大康天福', 0, '1585', '2018', '06', '1585', '2018', '07'),
+('T997698', '深圳市', '天福', '便利店', '深圳沙井怡心天福', 0, '1589', '2018', '06', '1589', '2018', '07'),
+('T997699', '深圳市', '天福', '便利店', '深圳福永俊发天福(小车)', 0, '1590', '2018', '06', '1590', '2018', '07'),
+('T997700', '深圳市', '天福', '便利店', 'S512深圳罗湖国贸店', 0, '1591', '2018', '06', '1591', '2018', '07'),
+('T997701', '深圳市', '天福', '便利店', 'S179深圳大浪谭罗伟业天福', 0, '1592', '2018', '06', '1592', '2018', '07'),
+('T997702', '深圳市', '天福', '便利店', 'S396深圳宝安富华天福', 0, '1594', '2018', '06', '1594', '2018', '07'),
+('T997703', '深圳市', '天福', '便利店', 'S170深圳沙井南洞新兴天福(大车)', 0, '1603', '2018', '06', '1603', '2018', '07'),
+('T997705', '深圳市', '天福', '便利店', 'S1深圳民治街道西头天福', 0, '1607', '2018', '06', '1607', '2018', '07'),
+('T997706', '深圳市', '天福', '便利店', 'S089深圳公明玉律顺兴天福(大车)', 0, '1608', '2018', '06', '1608', '2018', '07'),
+('T997708', '深圳市', '天福', '便利店', '深圳宝安熙龙湾天福', 0, '1611', '2018', '06', '1611', '2018', '07'),
+('T997709', '深圳市', '天福', '便利店', 'S1深圳公明广源天福T', 0, '1612', '2018', '06', '1612', '2018', '07'),
+('T997710', '深圳市', '天福', '便利店', 'S1深圳布吉黄金天福T', 0, '1625', '2018', '06', '1625', '2018', '07'),
+('T997711', '深圳市', '天福', '便利店', '深圳西乡固戍南昌村二店天福', 0, '1626', '2018', '06', '1626', '2018', '07'),
+('T997712', '深圳市', '天福', '便利店', 'S276深圳福永白石厦清华天福(小车)', 0, '1630', '2018', '06', '1630', '2018', '07'),
+('T997713', '深圳市', '天福', '便利店', 'J1深圳福永塘尾业勇天福(大车)', 0, '1636', '2018', '06', '1636', '2018', '07'),
+('T997715', '深圳市', '天福', '便利店', '深圳公明阳光天福', 0, '1638', '2018', '06', '1638', '2018', '07'),
+('T997716', '深圳市', '天福', '便利店', '深圳西乡双龙天福', 0, '1640', '2018', '06', '1640', '2018', '07'),
+('T997717', '深圳市', '天福', '便利店', '深圳福永桥头万佳天福', 0, '1641', '2018', '06', '1641', '2018', '07'),
+('T997718', '深圳市', '天福', '便利店', 'S1深圳民治逸秀天福', 0, '1642', '2018', '06', '1642', '2018', '07'),
+('T997719', '深圳市', '天福', '便利店', '深圳平湖昌平天福', 0, '1646', '2018', '06', '1646', '2018', '07'),
+('T997720', '深圳市', '天福', '便利店', '深圳沙井马鞍山梓洋天福', 0, '1648', '2018', '06', '1648', '2018', '07'),
+('T997721', '深圳市', '天福', '便利店', '深圳西乡固戍佳佳天福', 0, '1649', '2018', '06', '1649', '2018', '07'),
+('T997722', '深圳市', '天福', '便利店', '深圳坂田和平天福', 0, '1650', '2018', '06', '1650', '2018', '07'),
+('T997723', '深圳市', '天福', '便利店', 'S103深圳石岩政顺天福(小车）', 0, '1652', '2018', '06', '1652', '2018', '07'),
+('T997725', '深圳市', '天福', '便利店', 'S2深圳西乡弘新天福', 0, '1653', '2018', '06', '1653', '2018', '07'),
+('T997726', '深圳市', '天福', '便利店', '深圳福永诚兴天福', 0, '1655', '2018', '06', '1655', '2018', '07'),
+('T997728', '深圳市', '天福', '便利店', 'S069深圳公明田寮龙新店(大车)', 0, '1657', '2018', '06', '1657', '2018', '07'),
+('T997729', '深圳市', '天福', '便利店', 'S1深圳石岩南岗天福(大车)', 0, '1664', '2018', '06', '1664', '2018', '07'),
+('T997730', '深圳市', '天福', '便利店', 'S263深圳民治龙塘天福', 0, '1669', '2018', '06', '1669', '2018', '07'),
+('T997731', '深圳市', '天福', '便利店', 'S1深圳坪山三洋湖天福', 0, '1020', '2018', '06', '1020', '2018', '07'),
+('T997732', '深圳市', '天福', '便利店', 'S1深圳横岗宏福天福', 0, '1044', '2018', '06', '1044', '2018', '07'),
+('T997733', '深圳市', '天福', '便利店', '深圳公明嘉豪天福', 0, '1067', '2018', '06', '1067', '2018', '07'),
+('T997735', '深圳市', '天福', '便利店', '深圳坂田华为店', 0, '1074', '2018', '06', '1074', '2018', '07'),
+('T997736', '深圳市', '天福', '便利店', 'S272深圳福永美信天福T', 0, '1077', '2018', '06', '1077', '2018', '07'),
+('T997737', '深圳市', '天福', '便利店', 'S411深圳观澜佳信天福', 0, '1080', '2018', '06', '1080', '2018', '07'),
+('T997738', '深圳市', '天福', '便利店', '深圳大浪同富天福', 0, '1084', '2018', '06', '1084', '2018', '07'),
+('T997739', '深圳市', '天福', '便利店', 'S2深圳宝安伟伟天福', 0, '1099', '2018', '06', '1099', '2018', '07'),
+('T997740', '深圳市', '天福', '便利店', 'S1深圳公明诚俊天福T', 0, '1122', '2018', '06', '1122', '2018', '07'),
+('T997741', '深圳市', '天福', '便利店', '深圳公明一帆天福', 0, '1411', '2018', '06', '1411', '2018', '07'),
+('T997742', '深圳市', '天福', '便利店', '深圳松岗御景城鸿运天福', 0, '1496', '2018', '06', '1496', '2018', '07'),
+('T997743', '深圳市', '天福', '便利店', 'J1深圳松岗潭头西部天福T(大车)', 0, '1510', '2018', '06', '1510', '2018', '07'),
+('T997745', '深圳市', '天福', '便利店', '深圳公明田寮港美天福', 0, '1537', '2018', '06', '1537', '2018', '07'),
+('T997746', '深圳市', '天福', '便利店', '深圳坂田豪廷天福', 0, '1557', '2018', '06', '1557', '2018', '07'),
+('T997747', '深圳市', '天福', '便利店', 'S4深圳福永东敏楼天福(小车)T', 0, '1045', '2018', '03', '1045', '2018', '04'),
+('T997748', '深圳市', '天福', '便利店', 'S064深圳松岗东方立业天福(大车)', 0, '1048', '2018', '03', '1048', '2018', '04'),
+('T997749', '深圳市', '天福', '便利店', 'J1深圳福永佳佳天福（小车）', 0, '1049', '2018', '03', '1049', '2018', '04'),
+('T997750', '深圳市', '天福', '便利店', '深圳盐田大梅沙天福', 0, '1059', '2018', '03', '1059', '2018', '04'),
+('T997751', '深圳市', '天福', '便利店', 'J1深圳沙井上星春风天福（小车）', 0, '1066', '2018', '03', '1066', '2018', '04'),
+('T997752', '深圳市', '天福', '便利店', 'S2深圳宝安甲岸天乐天福', 0, '1069', '2018', '03', '1069', '2018', '04'),
+('T997753', '深圳市', '天福', '便利店', 'J1深圳松岗东方和祥天福(大车)', 0, '1070', '2018', '03', '1070', '2018', '04'),
+('T997755', '深圳市', '天福', '便利店', '深圳公明宝利来天福', 0, '1071', '2018', '03', '1071', '2018', '04'),
+('T997756', '深圳市', '天福', '便利店', 'S2深圳福田石厦天福', 0, '1072', '2018', '03', '1072', '2018', '04'),
+('T997757', '深圳市', '天福', '便利店', '深圳民治铭皓天福', 0, '1075', '2018', '03', '1075', '2018', '04'),
+('T997758', '深圳市', '天福', '便利店', 'J1深圳沙井万丰正格天福（小车）', 0, '1079', '2018', '03', '1079', '2018', '04'),
+('T997759', '深圳市', '天福', '便利店', '深圳石岩石龙仔美美天福(小车）', 0, '1081', '2018', '03', '1081', '2018', '04'),
+('T997760', '深圳市', '天福', '便利店', '深圳沙井丹青天福（小车）', 0, '1082', '2018', '03', '1082', '2018', '04'),
+('T997761', '深圳市', '天福', '便利店', 'S1深圳坪地怡园天福', 0, '1088', '2018', '03', '1088', '2018', '04'),
+('T997762', '深圳市', '天福', '便利店', 'S333深圳布吉新民天福', 0, '1100', '2018', '03', '1100', '2018', '04'),
+('T997763', '深圳市', '天福', '便利店', 'S1深圳坂田如意天福', 0, '1102', '2018', '03', '1102', '2018', '04'),
+('T997765', '深圳市', '天福', '便利店', 'S2深圳西乡固戍下围园天翔天福', 0, '1118', '2018', '03', '1118', '2018', '04'),
+('T997766', '深圳市', '天福', '便利店', 'S124深圳沙井沙一围仔得胜天福(大车)', 0, '1132', '2018', '03', '1132', '2018', '04'),
+('T997767', '深圳市', '天福', '便利店', 'S517深圳龙岗锦龙天福', 0, '1133', '2018', '03', '1133', '2018', '04'),
+('T997768', '深圳市', '天福', '便利店', 'S1深圳石岩老村天福(小车)', 0, '1135', '2018', '03', '1135', '2018', '04'),
+('T997769', '深圳市', '天福', '便利店', 'J1深圳松岗罗田涵宇天福(大车)', 0, '1146', '2018', '03', '1146', '2018', '04'),
+('T997770', '深圳市', '天福', '便利店', 'J1深圳沙井黄浦洪田佳旺天福(大车)', 0, '1150', '2018', '03', '1150', '2018', '04'),
+('T997771', '深圳市', '天福', '便利店', '深圳横岗大凤新兴天福', 0, '1151', '2018', '03', '1151', '2018', '04'),
+('T997772', '深圳市', '天福', '便利店', 'S2深圳宝安裕和花园洪姐天福T', 0, '1233', '2018', '03', '1233', '2018', '04'),
+('T997773', '深圳市', '天福', '便利店', 'S128深圳沙井民主华新天福(大车)', 0, '1278', '2018', '03', '1278', '2018', '04'),
+('T997775', '深圳市', '天福', '便利店', 'J1深圳福永白石厦裕华天福(小车)', 0, '1280', '2018', '03', '1280', '2018', '04'),
+('T997776', '深圳市', '天福', '便利店', 'S074深圳沙井新桥正能量天福', 0, '1281', '2018', '03', '1281', '2018', '04'),
+('T997778', '深圳市', '天福', '便利店', '深圳西乡金睿天福', 0, '1282', '2018', '03', '1282', '2018', '04'),
+('T997779', '深圳市', '天福', '便利店', 'S266深圳福永德丰天福(小车)', 0, '1293', '2018', '03', '1293', '2018', '04'),
+('T997780', '深圳市', '天福', '便利店', 'S1深圳公明大围天福', 0, '1294', '2018', '03', '1294', '2018', '04'),
+('T997781', '深圳市', '天福', '便利店', '深圳大浪春光天福', 0, '1295', '2018', '03', '1295', '2018', '04'),
+('T997782', '深圳市', '天福', '便利店', 'S1深圳平湖兴银海天福', 0, '1299', '2018', '03', '1299', '2018', '04'),
+('T997783', '深圳市', '天福', '便利店', 'S2深圳宝安岭下天福', 0, '1358', '2018', '03', '1358', '2018', '04'),
+('T997785', '深圳市', '天福', '便利店', 'S502深圳福田新洲中心村天福', 0, '1366', '2018', '03', '1366', '2018', '04'),
+('T997786', '深圳市', '天福', '便利店', '深圳布吉南岭花园天福', 0, '1376', '2018', '03', '1376', '2018', '04'),
+('T997787', '深圳市', '天福', '便利店', 'S474深圳西乡鹤洲富源天福', 0, '1380', '2018', '03', '1380', '2018', '04'),
+('T997788', '深圳市', '天福', '便利店', 'S1深圳石岩美好天福（小车）', 0, '1381', '2018', '03', '1381', '2018', '04'),
+('T997789', '深圳市', '天福', '便利店', 'S528深圳南山润达天福', 0, '1384', '2018', '03', '1384', '2018', '04'),
+('T997790', '深圳市', '天福', '便利店', '深圳西乡永丰天福', 0, '1385', '2018', '03', '1385', '2018', '04'),
+('T997791', '深圳市', '天福', '便利店', '深圳宝安天悦龙庭6+1天福', 0, '1386', '2018', '03', '1386', '2018', '04'),
+('T997792', '深圳市', '天福', '便利店', 'S469深圳龙岗龙城荣盛华天福', 0, '1398', '2018', '03', '1398', '2018', '04'),
+('T997793', '深圳市', '天福', '便利店', 'S376深圳西乡杨陈天福', 0, '1407', '2018', '03', '1407', '2018', '04'),
+('T997795', '深圳市', '天福', '便利店', 'S349深圳布吉翠枫豪园天福', 0, '1432', '2018', '03', '1432', '2018', '04'),
+('T997796', '深圳市', '天福', '便利店', '深圳龙华骏龙天福', 0, '1441', '2018', '03', '1441', '2018', '04'),
+('T997797', '深圳市', '天福', '便利店', '深圳石岩大众天福', 0, '1458', '2018', '03', '1458', '2018', '04'),
+('T997798', '深圳市', '天福', '便利店', '深圳沙井黄埔天福', 0, '1470', '2018', '03', '1470', '2018', '04'),
+('T997799', '深圳市', '天福', '便利店', 'S2深圳福田欢乐峰天福', 0, '1471', '2018', '03', '1471', '2018', '04'),
+('T997800', '深圳市', '天福', '便利店', '深圳坪地萃丰天福', 0, '1478', '2018', '03', '1478', '2018', '04'),
+('T997801', '深圳市', '天福', '便利店', 'S1深圳石岩青雅居天福(大车)', 0, '1480', '2018', '03', '1480', '2018', '04'),
+('T997802', '深圳市', '天福', '便利店', '深圳坂田和堪天福', 0, '1486', '2018', '03', '1486', '2018', '04'),
+('T997803', '深圳市', '天福', '便利店', 'J1深圳松岗嘉成天福(大车)', 0, '1497', '2018', '03', '1497', '2018', '04'),
+('T997805', '深圳市', '天福', '便利店', 'S521深圳坪山新区宝珠天福', 0, '1498', '2018', '03', '1498', '2018', '04'),
+('T997807', '深圳市', '天福', '便利店', '深圳沙井沙一万锦天福（小车）', 0, '1501', '2018', '03', '1501', '2018', '04'),
+('T997808', '深圳市', '天福', '便利店', 'J1深圳松岗罗田运海天福T(大车)', 0, '1503', '2018', '03', '1503', '2018', '04'),
+('T997809', '深圳市', '天福', '便利店', 'S409深圳观澜有诚天福', 0, '1519', '2018', '03', '1519', '2018', '04'),
+('T997810', '深圳市', '天福', '便利店', '深圳西乡簕竹角富来天福', 0, '1521', '2018', '03', '1521', '2018', '04'),
+('T997811', '深圳市', '天福', '便利店', '深圳松岗罗田韵可天福(大车)', 0, '1536', '2018', '03', '1536', '2018', '04'),
+('T997812', '深圳市', '天福', '便利店', '深圳龙华华盛天福', 0, '1543', '2018', '03', '1543', '2018', '04'),
+('T997813', '深圳市', '天福', '便利店', 'S1深圳公明万福天福(小车）', 0, '1549', '2018', '03', '1549', '2018', '04'),
+('T997815', '深圳市', '天福', '便利店', 'S485深圳龙岗桃花源天福', 0, '1566', '2018', '03', '1566', '2018', '04'),
+('T997817', '深圳市', '天福', '便利店', 'C264深圳平湖南山天福(大车)', 0, '1578', '2018', '03', '1578', '2018', '04'),
+('T997818', '深圳市', '天福', '便利店', '深圳平湖飛飛天福', 0, '1585', '2018', '03', '1585', '2018', '04'),
+('T997819', '深圳市', '天福', '便利店', 'S2深圳宝安雅景天福', 0, '1589', '2018', '03', '1589', '2018', '04'),
+('T997820', '深圳市', '天福', '便利店', '深圳平湖茗翠天福', 0, '1590', '2018', '03', '1590', '2018', '04'),
+('T997821', '深圳市', '天福', '便利店', 'S1深圳民治水尾天福', 0, '1591', '2018', '03', '1591', '2018', '04'),
+('T997822', '深圳市', '天福', '便利店', 'S4深圳西乡高树围天福T', 0, '1592', '2018', '03', '1592', '2018', '04'),
+('T997823', '深圳市', '天福', '便利店', 'J1深圳福永佳豪天福（小车）', 0, '1594', '2018', '03', '1594', '2018', '04'),
+('T997825', '深圳市', '天福', '便利店', 'S028深圳松岗CoCo天福(大车)', 0, '1603', '2018', '03', '1603', '2018', '04'),
+('T997827', '深圳市', '天福', '便利店', 'S1深圳大浪佰萨德天福店T', 0, '1607', '2018', '03', '1607', '2018', '04'),
+('T997828', '深圳市', '天福', '便利店', 'S255深圳龙华富油天福', 0, '1608', '2018', '03', '1608', '2018', '04'),
+('T997829', '深圳市', '天福', '便利店', '深圳石岩裕同天福(小车)', 0, '1611', '2018', '03', '1611', '2018', '04'),
+('T997830', '深圳市', '天福', '便利店', 'J1深圳沙井新沙路港发天福(小车)', 0, '1612', '2018', '03', '1612', '2018', '04'),
+('T997831', '深圳市', '天福', '便利店', 'S030深圳松岗金福天福(大车)', 0, '1625', '2018', '03', '1625', '2018', '04'),
+('T997832', '深圳市', '天福', '便利店', 'J1深圳福永福海天福(大车)', 0, '1626', '2018', '03', '1626', '2018', '04'),
+('T997833', '深圳市', '天福', '便利店', 'S1深圳横岗四海天福', 0, '1630', '2018', '03', '1630', '2018', '04'),
+('T997835', '深圳市', '天福', '便利店', 'S1深圳观澜下围天福', 0, '1636', '2018', '03', '1636', '2018', '04'),
+('T997836', '深圳市', '天福', '便利店', 'S1深圳公明新佳天福', 0, '1638', '2018', '03', '1638', '2018', '04'),
+('T997837', '深圳市', '天福', '便利店', '深圳龙岗叠翠天福', 0, '1640', '2018', '03', '1640', '2018', '04'),
+('T997838', '深圳市', '天福', '便利店', 'S211深圳大浪亮剑天福', 0, '1641', '2018', '03', '1641', '2018', '04'),
+('T997839', '深圳市', '天福', '便利店', 'S1深圳大浪陶吓天福（小车）T', 0, '1642', '2018', '03', '1642', '2018', '04'),
+('T997840', '深圳市', '天福', '便利店', 'J1深圳沙井沙头三路松利天福(小车)', 0, '1646', '2018', '03', '1646', '2018', '04'),
+('T997841', '深圳市', '天福', '便利店', 'S1深圳石岩老街天福(小车)', 0, '1648', '2018', '03', '1648', '2018', '04'),
+('T997842', '深圳市', '天福', '便利店', 'S491深圳龙岗旭源天福', 0, '1649', '2018', '03', '1649', '2018', '04'),
+('T997843', '深圳市', '天福', '便利店', 'S414深圳宝安39区天福', 0, '1650', '2018', '03', '1650', '2018', '04'),
+('T997845', '深圳市', '天福', '便利店', 'S019深圳公明吉祥天福', 0, '1652', '2018', '03', '1652', '2018', '04'),
+('T997846', '深圳市', '天福', '便利店', 'S000深圳西乡固戍辉煌天福', 0, '1653', '2018', '03', '1653', '2018', '04'),
+('T997848', '深圳市', '天福', '便利店', 'J1深圳沙井后亭金亮天福T(大车)', 0, '1655', '2018', '03', '1655', '2018', '04'),
+('T997849', '深圳市', '天福', '便利店', '深圳福永和平天福(大车)', 0, '1657', '2018', '03', '1657', '2018', '04'),
+('T997850', '深圳市', '天福', '便利店', 'J1深圳福永荣志发天福(小车）T', 0, '1664', '2018', '03', '1664', '2018', '04'),
+('T997851', '深圳市', '天福', '便利店', 'S294深圳福永下沙南天福(小车）', 0, '1669', '2018', '03', '1669', '2018', '04'),
+('T997852', '深圳市', '天福', '便利店', 'S364深圳西乡永盛天福', 0, '1020', '2018', '03', '1020', '2018', '04'),
+('T997853', '深圳市', '天福', '便利店', '深圳福永龙辉天福', 0, '1044', '2018', '03', '1044', '2018', '04'),
+('T997855', '深圳市', '天福', '便利店', 'S1深圳公明怀松天福', 0, '1067', '2018', '03', '1067', '2018', '04'),
+('T997856', '深圳市', '天福', '便利店', 'S1深圳布吉三联天福', 0, '1074', '2018', '03', '1074', '2018', '04'),
+('T997857', '深圳市', '天福', '便利店', 'S2深圳南山西丽宝金天福', 0, '1077', '2018', '03', '1077', '2018', '04'),
+('T997858', '深圳市', '天福', '便利店', 'S144深圳沙井大王山天福T(大车)', 0, '1080', '2018', '03', '1080', '2018', '04'),
+('T997859', '深圳市', '天福', '便利店', '深圳龙岗风临四季天福T', 0, '1084', '2018', '03', '1084', '2018', '04'),
+('T997860', '深圳市', '天福', '便利店', 'S442深圳宝安创业天福', 0, '1099', '2018', '03', '1099', '2018', '04'),
+('T997861', '深圳市', '天福', '便利店', '深圳石岩水田璀华天福', 0, '1122', '2018', '03', '1122', '2018', '04'),
+('T997862', '深圳市', '天福', '便利店', 'S516深圳罗湖泥岗天福T', 0, '1411', '2018', '03', '1411', '2018', '04'),
+('T997863', '深圳市', '天福', '便利店', 'C332深圳平湖浸校塘天福(大车)', 0, '1496', '2018', '03', '1496', '2018', '04');
+INSERT INTO `t_new_shop` (`id`, `city`, `sm`, `type`, `name`, `flag`, `shop1`, `year1`, `month1`, `shop2`, `year2`, `month2`) VALUES
+('T997865', '深圳市', '天福', '便利店', 'J1深圳松岗花果山天福(大车)', 0, '1510', '2018', '03', '1510', '2018', '04'),
+('T997866', '深圳市', '天福', '便利店', 'S1深圳大浪石凹天福T', 0, '1537', '2018', '03', '1537', '2018', '04'),
+('T997867', '深圳市', '天福', '便利店', 'S1深圳石岩小军天福(小车)T', 0, '1557', '2018', '03', '1557', '2018', '04'),
+('T997868', '深圳市', '天福', '便利店', 'S104深圳沙井新沙路万科翡丽郡天福T(大车)', 0, '1045', '2018', '03', '1045', '2018', '04'),
+('T997869', '深圳市', '天福', '便利店', 'J1深圳沙井黄浦村有琦天福T(大车)', 0, '1048', '2018', '03', '1048', '2018', '04'),
+('T997870', '深圳市', '天福', '便利店', 'S1深圳布吉怡和园天福', 0, '1049', '2018', '03', '1049', '2018', '04'),
+('T997871', '深圳市', '天福', '便利店', 'S1深圳公明完美天福T', 0, '1055', '2018', '03', '1055', '2018', '04'),
+('T997872', '深圳市', '天福', '便利店', 'J1深圳福永塘尾富源天福（小车）T', 0, '1059', '2018', '03', '1059', '2018', '04'),
+('T997873', '深圳市', '天福', '便利店', 'S1深圳龙华鲤鱼天福', 0, '1066', '2018', '03', '1066', '2018', '04'),
+('T997875', '深圳市', '天福', '便利店', 'J1深圳沙井壆岗家家旺天福T(小车)', 0, '1069', '2018', '03', '1069', '2018', '04'),
+('T997876', '深圳市', '天福', '便利店', '深圳石岩官田天福T', 0, '1070', '2018', '03', '1070', '2018', '04'),
+('T997877', '深圳市', '天福', '便利店', 'S1深圳公明长圳皓然天福T', 0, '1071', '2018', '03', '1071', '2018', '04'),
+('T997878', '深圳市', '天福', '便利店', 'S1深圳福永吉安泰天福(大车)', 0, '1072', '2018', '03', '1072', '2018', '04'),
+('T997879', '深圳市', '天福', '便利店', 'C330深圳平湖有盛天福', 0, '1075', '2018', '03', '1075', '2018', '04'),
+('T997880', '深圳市', '天福', '便利店', 'S129深圳石岩罗租民德居天福(小车)', 0, '1079', '2018', '03', '1079', '2018', '04'),
+('T997881', '深圳市', '天福', '便利店', '深圳福永和平(玻璃围新村)天福T', 0, '1081', '2018', '03', '1081', '2018', '04'),
+('T997882', '深圳市', '天福', '便利店', '深圳沙井万丰晨光路天福（小车）T', 0, '1082', '2018', '03', '1082', '2018', '04'),
+('T997883', '深圳市', '天福', '便利店', 'S1深圳观澜大水坑天福T', 0, '1088', '2018', '03', '1088', '2018', '04'),
+('T997885', '深圳市', '天福', '便利店', '深圳观澜樟坑径旺杰天福T', 0, '1100', '2018', '03', '1100', '2018', '04'),
+('T997886', '深圳市', '天福', '便利店', 'S1深圳石岩罗租宏发天福T（小车）', 0, '1102', '2018', '03', '1102', '2018', '04'),
+('T997887', '深圳市', '天福', '便利店', 'S472深圳西乡凤凰岗宏福天福T', 0, '1118', '2018', '03', '1118', '2018', '04'),
+('T997888', '深圳市', '天福', '便利店', 'S1深圳横岗简一天福', 0, '1132', '2018', '03', '1132', '2018', '04'),
+('T997889', '深圳市', '天福', '便利店', 'S2深圳平湖竹尾田天福T(大车)', 0, '1133', '2018', '03', '1133', '2018', '04'),
+('T997890', '深圳市', '天福', '便利店', '深圳沙井后亭新宝天福T', 0, '1135', '2018', '03', '1135', '2018', '04'),
+('T997891', '深圳市', '天福', '便利店', 'S405深圳横岗四联路金翔天福', 0, '1146', '2018', '03', '1146', '2018', '04'),
+('T997892', '深圳市', '天福', '便利店', 'S2深圳平湖竹尾田宝玲天福T(大车)', 0, '1150', '2018', '03', '1150', '2018', '04'),
+('T997893', '深圳市', '天福', '便利店', 'S2深圳西乡森福天福T（晚6点）', 0, '1151', '2018', '03', '1151', '2018', '04'),
+('T997895', '深圳市', '天福', '便利店', '深圳南山西丽老街天福T', 0, '1233', '2018', '03', '1233', '2018', '04'),
+('T997896', '深圳市', '天福', '便利店', 'S1深圳龙岗盛平天福T', 0, '1280', '2018', '03', '1280', '2018', '04'),
+('T997897', '深圳市', '天福', '便利店', '深圳沙井万家朗天福(小车)T', 0, '1281', '2018', '03', '1281', '2018', '04'),
+('T997898', '深圳市', '天福', '便利店', 'J1深圳松岗蚝涌天福T(大车)', 0, '1282', '2018', '03', '1282', '2018', '04'),
+('T997899', '深圳市', '天福', '便利店', 'S1深圳观澜金倡达天福T', 0, '1293', '2018', '03', '1293', '2018', '04'),
+('T997900', '深圳市', '天福', '便利店', '深圳西乡固戍花园天福T', 0, '1294', '2018', '03', '1294', '2018', '04'),
+('T997901', '深圳市', '天福', '便利店', 'S422深圳南山南山华府天福', 0, '1295', '2018', '03', '1295', '2018', '04'),
+('T997902', '深圳市', '天福', '便利店', 'S2深圳西乡黄田百佳天福', 0, '1299', '2018', '03', '1299', '2018', '04'),
+('T997903', '深圳市', '天福', '便利店', 'S1深圳大浪宝龙天福T', 0, '1358', '2018', '03', '1358', '2018', '04'),
+('T997905', '深圳市', '天福', '便利店', 'S299深圳坂田伟业天福T', 0, '1366', '2018', '03', '1366', '2018', '04'),
+('T997906', '深圳市', '天福', '便利店', 'S354深圳西乡固戍建安天福T', 0, '1376', '2018', '03', '1376', '2018', '04'),
+('T997907', '深圳市', '天福', '便利店', '深圳松岗东方天福T(大车)', 0, '1380', '2018', '03', '1380', '2018', '04'),
+('T997908', '深圳市', '天福', '便利店', 'J1深圳福永爱峰天福(小车)T', 0, '1381', '2018', '03', '1381', '2018', '04'),
+('T997909', '深圳市', '天福', '便利店', 'S2深圳平湖布心天福T(大车)', 0, '1384', '2018', '03', '1384', '2018', '04'),
+('T997910', '深圳市', '天福', '便利店', 'S1深圳民治白石龙天福', 0, '1385', '2018', '03', '1385', '2018', '04'),
+('T997911', '深圳市', '天福', '便利店', 'S1深圳横岗天颂天福T', 0, '1386', '2018', '03', '1386', '2018', '04'),
+('T997912', '深圳市', '天福', '便利店', 'S045深圳公明东坑天福', 0, '1398', '2018', '03', '1398', '2018', '04'),
+('T997913', '深圳市', '天福', '便利店', 'S025深圳公明合水口天福', 0, '1407', '2018', '03', '1407', '2018', '04'),
+('T997915', '深圳市', '天福', '便利店', 'S186深圳福永明丽苑天福T（小车）', 0, '1432', '2018', '03', '1432', '2018', '04'),
+('T997916', '深圳市', '天福', '便利店', 'S2深圳松岗御溪天福T(大车)', 0, '1441', '2018', '03', '1441', '2018', '04'),
+('T997917', '深圳市', '天福', '便利店', 'J1深圳福永桥南天福T(小车）', 0, '1458', '2018', '03', '1458', '2018', '04'),
+('T997918', '深圳市', '天福', '便利店', 'S2深圳南山西丽NO.1天福T', 0, '1470', '2018', '03', '1470', '2018', '04'),
+('T997919', '深圳市', '天福', '便利店', 'S1深圳坂田黄军山天福T', 0, '1471', '2018', '03', '1471', '2018', '04'),
+('T997920', '深圳市', '天福', '便利店', '深圳福永桥南骁燕天福', 0, '1478', '2018', '03', '1478', '2018', '04'),
+('T997921', '深圳市', '天福', '便利店', 'S138深圳沙井和一得福天福T（小车）', 0, '1480', '2018', '03', '1480', '2018', '04'),
+('T997922', '深圳市', '天福', '便利店', 'S2深圳沙井上南广汕天福T(大车)', 0, '1486', '2018', '03', '1486', '2018', '04'),
+('T997923', '深圳市', '天福', '便利店', 'S250深圳福永艾佳天福(大车)', 0, '1497', '2018', '03', '1497', '2018', '04'),
+('T997925', '深圳市', '天福', '便利店', '深圳坂田晨皓天福T', 0, '1498', '2018', '03', '1498', '2018', '04'),
+('T997926', '深圳市', '天福', '便利店', 'J1深圳沙井共和鸿运天福T(大车)', 0, '1501', '2018', '03', '1501', '2018', '04'),
+('T997927', '深圳市', '天福', '便利店', 'S1深圳坂田米格烈天福T', 0, '1503', '2018', '03', '1503', '2018', '04'),
+('T997928', '深圳市', '天福', '便利店', 'J1深圳沙井嘉惠多天福(大车)', 0, '1504', '2018', '03', '1504', '2018', '04'),
+('T997929', '深圳市', '天福', '便利店', 'S2深圳南山西丽丽苑天福T', 0, '1519', '2018', '03', '1519', '2018', '04'),
+('T997930', '深圳市', '天福', '便利店', 'J1深圳松岗益华天福T(大车)', 0, '1536', '2018', '03', '1536', '2018', '04'),
+('T997931', '深圳市', '天福', '便利店', '深圳市布吉长龙天福', 0, '1543', '2018', '03', '1543', '2018', '04'),
+('T997932', '深圳市', '天福', '便利店', 'S1深圳市龙岗区龙岗南联刘屋天福店T', 0, '1549', '2018', '03', '1549', '2018', '04'),
+('T997933', '深圳市', '天福', '便利店', 'S2深圳西乡明启天福T', 0, '1566', '2018', '03', '1566', '2018', '04'),
+('T997935', '深圳市', '天福', '便利店', 'J1深圳福永龙刚天福（小车）T', 0, '1578', '2018', '03', '1578', '2018', '04'),
+('T997936', '深圳市', '天福', '便利店', 'S356深圳西乡固戍好运来天福', 0, '1585', '2018', '03', '1585', '2018', '04'),
+('T997937', '深圳市', '天福', '便利店', 'J1深圳福永聪聪天福T', 0, '1589', '2018', '03', '1589', '2018', '04'),
+('T997938', '深圳市', '天福', '便利店', 'S1深圳布吉金坑天福T', 0, '1590', '2018', '03', '1590', '2018', '04'),
+('T997939', '深圳市', '天福', '便利店', 'S1深圳龙岗南联天福T', 0, '1591', '2018', '03', '1591', '2018', '04'),
+('T997940', '深圳市', '天福', '便利店', 'S2深圳西乡固戍井湾天福T', 0, '1592', '2018', '03', '1592', '2018', '04'),
+('T997941', '深圳市', '天福', '便利店', 'S097深圳石岩泰安天福T(大车)', 0, '1594', '2018', '03', '1594', '2018', '04'),
+('T997942', '深圳市', '天福', '便利店', 'S1深圳公明塘尾芳芳天福T', 0, '1603', '2018', '03', '1603', '2018', '04'),
+('T997943', '深圳市', '天福', '便利店', 'S1深圳公明塘尾天福T', 0, '1607', '2018', '03', '1607', '2018', '04'),
+('T997945', '深圳市', '天福', '便利店', 'S1深圳横岗泰然兴天福T', 0, '1608', '2018', '03', '1608', '2018', '04'),
+('T997946', '深圳市', '天福', '便利店', 'S140深圳沙井和二和心天福(小车)', 0, '1611', '2018', '03', '1611', '2018', '04'),
+('T997947', '深圳市', '天福', '便利店', '深圳平湖车站天福', 0, '1612', '2018', '03', '1612', '2018', '04'),
+('T997948', '深圳市', '天福', '便利店', 'S4深圳宝安宝园天福T', 0, '1625', '2018', '03', '1625', '2018', '04'),
+('T997949', '深圳市', '天福', '便利店', 'S1深圳龙岗同心天福T', 0, '1626', '2018', '03', '1626', '2018', '04'),
+('T997950', '深圳市', '天福', '便利店', 'S399深圳横岗天荣福天福', 0, '1630', '2018', '03', '1630', '2018', '04'),
+('T997951', '深圳市', '天福', '便利店', 'S000深圳福永福海科技工业园天福', 0, '1636', '2018', '03', '1636', '2018', '04'),
+('T997952', '深圳市', '天福', '便利店', 'S2深圳沙井共和天福T(大车)', 0, '1638', '2018', '03', '1638', '2018', '04'),
+('T997953', '深圳市', '天福', '便利店', 'S2深圳西乡万盛天福T', 0, '1646', '2018', '03', '1646', '2018', '04'),
+('T997955', '深圳市', '天福', '便利店', 'S317深圳布吉红门天福', 0, '1648', '2018', '03', '1648', '2018', '04'),
+('T997956', '深圳市', '天福', '便利店', 'J1深圳沙井秉承天福T(大车)', 0, '1649', '2018', '03', '1649', '2018', '04'),
+('T997957', '深圳市', '天福', '便利店', 'S490深圳南山南园天福', 0, '1650', '2018', '03', '1650', '2018', '04'),
+('T997958', '深圳市', '天福', '便利店', 'S1深圳大浪华侨新村天福', 0, '1652', '2018', '03', '1652', '2018', '04'),
+('T997959', '深圳市', '天福', '便利店', 'J1深圳福永同益天福T(大车)', 0, '1653', '2018', '03', '1653', '2018', '04'),
+('T997960', '深圳市', '天福', '便利店', 'S114深圳沙井步涌惠美天福(大车)', 0, '1655', '2018', '03', '1655', '2018', '04'),
+('T997961', '深圳市', '天福', '便利店', '深圳沙井施世海天福', 0, '1657', '2018', '03', '1657', '2018', '04'),
+('T997962', '深圳市', '天福', '便利店', 'J1深圳福永跨亿通天福T(大车)', 0, '1664', '2018', '03', '1664', '2018', '04'),
+('T997963', '深圳市', '天福', '便利店', 'S190深圳福永依嘉天福T', 0, '1669', '2018', '03', '1669', '2018', '04'),
+('T997965', '深圳市', '天福', '便利店', 'J1深圳沙井锦绣天福(大车)', 0, '1020', '2018', '03', '1020', '2018', '04'),
+('T997966', '深圳市', '天福', '便利店', 'S013深圳公明上南天福', 0, '1044', '2018', '03', '1044', '2018', '04'),
+('T997967', '深圳市', '天福', '便利店', 'J1深圳沙井欣欣天福T(大车)', 0, '1067', '2018', '03', '1067', '2018', '04'),
+('T997968', '深圳市', '天福', '便利店', 'S1深圳光明小军天福T', 0, '1074', '2018', '03', '1074', '2018', '04'),
+('T997969', '深圳市', '天福', '便利店', 'S2深圳横岗鸿发天福T', 0, '1077', '2018', '03', '1077', '2018', '04'),
+('T997970', '深圳市', '天福', '便利店', 'S2深圳宝安海诺天福T', 0, '1080', '2018', '03', '1080', '2018', '04'),
+('T997971', '深圳市', '天福', '便利店', 'S1深圳福永大洋田天福T(大车)', 0, '1084', '2018', '03', '1084', '2018', '04'),
+('T997972', '深圳市', '天福', '便利店', 'S2深圳观澜新田春晖天福T', 0, '1099', '2018', '03', '1099', '2018', '04'),
+('T997973', '深圳市', '天福', '便利店', '深圳南山南头古城天福T', 0, '1122', '2018', '03', '1122', '2018', '04'),
+('T997975', '深圳市', '天福', '便利店', 'S2深圳宝安御景湾天福T', 0, '1411', '2018', '03', '1411', '2018', '04'),
+('T997976', '深圳市', '天福', '便利店', 'S202深圳福永桥头顺意天福(大车)', 0, '1496', '2018', '03', '1496', '2018', '04'),
+('T997977', '深圳市', '天福', '便利店', '深圳观澜永恒天福T', 0, '1510', '2018', '03', '1510', '2018', '04'),
+('T997978', '深圳市', '天福', '便利店', 'S2深圳宝安美加天福T', 0, '1537', '2018', '03', '1537', '2018', '04'),
+('T997979', '深圳市', '天福', '便利店', 'S373深圳布吉李朗天福T', 0, '1557', '2018', '03', '1557', '2018', '04'),
+('T997980', '深圳市', '天福', '便利店', '深圳宝安流塘李进天福T', 0, '1045', '2018', '03', '1045', '2018', '04'),
+('T997981', '深圳市', '天福', '便利店', 'S1深圳观澜源祥兴天福T', 0, '1048', '2018', '03', '1048', '2018', '04'),
+('T997982', '深圳市', '天福', '便利店', 'S1深圳公明玉律进兴天福T', 0, '1049', '2018', '03', '1049', '2018', '04'),
+('T997983', '深圳市', '天福', '便利店', 'S1深圳公明塘家自顺天福(小车)', 0, '1055', '2018', '03', '1055', '2018', '04'),
+('T997985', '深圳市', '天福', '便利店', 'J1深圳松岗碧头天福(大车)', 0, '1059', '2018', '03', '1059', '2018', '04'),
+('T997986', '深圳市', '天福', '便利店', 'S1深圳坂田宜客天福T', 0, '1066', '2018', '03', '1066', '2018', '04'),
+('T997987', '深圳市', '天福', '便利店', 'S1深圳坪山弘兴天福T', 0, '1069', '2018', '03', '1069', '2018', '04'),
+('T997988', '深圳市', '天福', '便利店', 'S292深圳福永龚翔天福', 0, '1070', '2018', '03', '1070', '2018', '04'),
+('T997989', '深圳市', '天福', '便利店', 'J1深圳福永鸿兴天福', 0, '1071', '2018', '03', '1071', '2018', '04'),
+('T997990', '深圳市', '天福', '便利店', 'S1深圳石岩彩虹天福T(大车)', 0, '1072', '2018', '03', '1072', '2018', '04'),
+('T997991', '深圳市', '天福', '便利店', 'S1深圳大浪宏图天福T', 0, '1075', '2018', '03', '1075', '2018', '04'),
+('T997992', '深圳市', '天福', '便利店', 'S037深圳公明大围天福', 0, '1079', '2018', '03', '1079', '2018', '04'),
+('T997993', '深圳市', '天福', '便利店', 'J1深圳福永百福天福T(大车)', 0, '1081', '2018', '03', '1081', '2018', '04'),
+('T997995', '深圳市', '天福', '便利店', 'S1深圳公明万兴天福T', 0, '1082', '2018', '03', '1082', '2018', '04'),
+('T997996', '深圳市', '天福', '便利店', 'S1深圳龙岗中华天福', 0, '1088', '2018', '03', '1088', '2018', '04'),
+('T997997', '深圳市', '天福', '便利店', 'S2深圳松岗红星湾头春晖天福T(大车)', 0, '1100', '2018', '03', '1100', '2018', '04'),
+('T997998', '深圳市', '天福', '便利店', 'S1深圳公明好再来天福T', 0, '1102', '2018', '03', '1102', '2018', '04'),
+('T997999', '深圳市', '天福', '便利店', 'S471深圳龙岗富菡天福T', 0, '1118', '2018', '03', '1118', '2018', '04'),
+('T999076', '深圳市', '天福', '便利店', 'S2深圳布吉下水径财来也百货', 0, '1132', '2018', '03', '1132', '2018', '04'),
+('Y101', '北京', '永辉', '大卖场', ' 山水文园店 ', 0, '1420', '2017', '07', '1420', '2017', '08'),
+('Y102', '北京', '永辉', '大卖场', ' 旧宫店 ', 0, '1427', '2017', '07', '1427', '2017', '08'),
+('Y103', '北京', '永辉', '大卖场', ' 双桥店 ', 0, '1433', '2017', '07', '1433', '2017', '08'),
+('Y104', '北京', '永辉', '大卖场', ' 垡头店 ', 0, '1434', '2017', '07', '1434', '2017', '08'),
+('Y105', '北京', '永辉', '大卖场', '百子湾店', 0, '1439', '2017', '07', '1439', '2017', '08'),
+('Y106', '北京', '永辉', '大卖场', ' 半壁店 ', 0, '1443', '2017', '07', '1443', '2017', '08'),
+('Y107', '北京', '永辉', '大卖场', ' 鸿坤理想城店 ', 0, '1450', '2017', '07', '1450', '2017', '08'),
+('Y108', '北京', '永辉', '大卖场', ' 万科店 ', 0, '1451', '2017', '07', '1451', '2017', '08'),
+('Y109', '北京', '永辉', '大卖场', ' 六里桥店 ', 0, '1452', '2017', '07', '1452', '2017', '08'),
+('Y110', '北京', '永辉', '大卖场', ' 草桥店 ', 0, '1454', '2017', '07', '1454', '2017', '08'),
+('Y111', '北京', '永辉', '大卖场', ' 千禧街店 ', 0, '1456', '2017', '07', '1456', '2017', '08'),
+('Y112', '北京', '永辉', '大卖场', '马家堡店', 0, '1457', '2017', '07', '1457', '2017', '08'),
+('Y113', '北京', '永辉', '大卖场', ' 鲁谷店 ', 0, '1464', '2017', '07', '1464', '2017', '08'),
+('Y114', '北京', '永辉', '大卖场', '金沟河店', 0, '1465', '2017', '07', '1465', '2017', '08'),
+('Y115', '北京', '永辉', '大卖场', '增光路店', 0, '1469', '2017', '07', '1469', '2017', '08'),
+('Y116', '北京', '永辉', '大卖场', ' 文慧园店 ', 0, '1477', '2017', '07', '1477', '2017', '08'),
+('Y117', '北京', '永辉', '大卖场', ' 长阳半岛店 ', 0, '1482', '2017', '07', '1482', '2017', '08'),
+('Y118', '北京', '永辉', '大卖场', ' 恒基店 ', 0, '1485', '2017', '07', '1485', '2017', '08'),
+('Y119', '北京', '永辉', '大卖场', ' 喜隆多店 ', 0, '1492', '2017', '07', '1492', '2017', '08'),
+('Y120', '北京', '永辉', '大卖场', ' 温都水城广场店 ', 0, '1505', '2017', '07', '1505', '2017', '08'),
+('Y121', '北京', '永辉', '大卖场', ' 回龙观店 ', 0, '1512', '2017', '07', '1512', '2017', '08'),
+('Y122', '北京', '永辉', '大卖场', ' 绿地缤纷城店 ', 0, '1516', '2017', '07', '1516', '2017', '08'),
+('Y123', '北京', '永辉', '大卖场', ' 通州万达店 ', 0, '1530', '2017', '07', '1530', '2017', '08'),
+('Y124', '北京', '永辉', '大卖场', ' 新世界店 ', 0, '1538', '2017', '07', '1538', '2017', '08'),
+('Y125', '北京', '永辉', '大卖场', ' 太阳宫店 ', 0, '1552', '2017', '07', '1552', '2017', '08'),
+('Y126', '北京', '永辉', '大卖场', ' 龙湖长楹天街店 ', 0, '1562', '2017', '07', '1562', '2017', '08'),
+('Y127', '北京', '永辉', '大卖场', ' 后沙峪店 ', 0, '1565', '2017', '07', '1565', '2017', '08'),
+('Y128', '北京', '永辉', '大卖场', ' 世界村店 ', 0, '1573', '2017', '07', '1573', '2017', '08'),
+('Y129', '北京', '永辉', '大卖场', ' 金泉广场店 ', 0, '1574', '2017', '07', '1574', '2017', '08'),
+('Y130', '北京', '永辉', '大卖场', ' 清河店 ', 0, '1575', '2017', '07', '1575', '2017', '08'),
+('Y131', '北京', '永辉', '大卖场', ' 龙旗广场店 ', 0, '1579', '2017', '07', '1579', '2017', '08'),
+('Y132', '北京', '永辉', '大卖场', '金域国际', 0, '1582', '2017', '07', '1582', '2017', '08'),
+('Y133', '北京', '永辉', '大卖场', '康庄天健广场店', 0, '1593', '2017', '07', '1593', '2017', '08'),
+('Y134', '北京', '永辉', '大卖场', '望京西路店', 0, '1595', '2017', '07', '1595', '2017', '08'),
+('Y135', '北京', '永辉', '大卖场', '槐房万达广场店', 0, '1617', '2017', '07', '1617', '2017', '08'),
+('Y136', '北京', '永辉', '大卖场', '丰科万达店', 0, '1624', '2017', '07', '1624', '2017', '08'),
+('Y201', '广州市', '永辉', '大卖场', '汇珑新天地店', 0, '1450', '2017', '09', '1450', '2017', '10'),
+('Y202', '广州市', '永辉', '大卖场', '南沙万达店', 0, '1451', '2017', '09', '1451', '2017', '10'),
+('Y301', '深圳市', '永辉', '大卖场', '深圳宝安大道店', 0, '1452', '2017', '09', '1452', '2017', '10'),
+('Y302', '深圳市', '永辉', '大卖场', '深圳沙井店', 0, '1454', '2017', '09', '1454', '2017', '10'),
+('Y303', '深圳市', '永辉', '大卖场', '平湖店', 0, '1456', '2017', '09', '1456', '2017', '10'),
+('Y304', '深圳市', '永辉', '大卖场', '南山茂业店', 0, '1457', '2017', '09', '1457', '2017', '10'),
+('Y305', '深圳市', '永辉', '大卖场', '卓悦汇店', 0, '1464', '2017', '09', '1464', '2017', '10'),
+('Y306', '深圳市', '永辉', '大卖场', ' 沙井市民广场店', 0, '1465', '2017', '09', '1465', '2017', '10');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

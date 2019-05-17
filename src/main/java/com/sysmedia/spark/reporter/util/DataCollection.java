@@ -215,16 +215,28 @@ public class DataCollection {
         ArrayList<ArrayList<String>> lists = new ArrayList<ArrayList<String>>();
         ArrayList<String> list;
         int i = 0;
+        String total = "";
+        String normal = "";
         for(String customerType: customerTypeList) {
             list = new ArrayList<String>();
             list.add("净值等级");
             list.add(level.get(i));
-            i++;
+
             for (String type : typeList) {
                 for (String year : yearList) {
-                    list.add(getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, type, customerType));
+                    if(type.equals("周末") && level.get(i).equals("高级净值") ) {
+                        total = getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, "全部", customerType);
+                        normal = getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, "工作日", customerType);
+                        if(StringUtils.isEmptyOrWhitespaceOnly(total)) total = "0";
+                        if(StringUtils.isEmptyOrWhitespaceOnly(normal)) normal = "0";
+                        list.add(String.valueOf(Integer.parseInt(total) - Integer.parseInt(normal)));
+                    } else {
+                        list.add(getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, type, customerType));
+                    }
+
                 }
             }
+            i++;
             lists.add(list);
         }
         return lists;
@@ -254,16 +266,27 @@ public class DataCollection {
         ArrayList<ArrayList<String>> lists = new ArrayList<ArrayList<String>>();
         ArrayList<String> list;
         int i = 0;
+        String total = "";
+        String normal = "";
         for(String customerConcerns: customerConcernsList) {
             list = new ArrayList<String>();
             list.add("关注划分");
             list.add(level.get(i));
-            i++;
+
             for (String type : typeList) {
                 for (String year : yearList) {
-                    list.add(getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, type, customerConcerns));
+                    if(customerConcerns.equals("品质关注型") && type.equals("周末")){
+                        total = getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, "全部", customerConcerns);
+                        normal = getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, "工作日", customerConcerns);
+                        if(StringUtils.isEmptyOrWhitespaceOnly(total)) total = "0";
+                        if(StringUtils.isEmptyOrWhitespaceOnly(normal)) normal = "0";
+                        list.add(String.valueOf(Integer.parseInt(total) - Integer.parseInt(normal)));
+                    } else {
+                        list.add(getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, type, customerConcerns));
+                    }
                 }
             }
+            i++;
             lists.add(list);
         }
         return lists;

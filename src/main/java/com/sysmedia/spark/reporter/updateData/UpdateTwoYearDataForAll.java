@@ -15,7 +15,7 @@ public class UpdateTwoYearDataForAll {
         System.out.println("args length is " + args.length);
 
         String shopId =  "888888";
-        float ratio = 1.39f;
+        float ratio = 1.21f;
 
         updateTwoYearSaleDate(shopId,ratio);
 

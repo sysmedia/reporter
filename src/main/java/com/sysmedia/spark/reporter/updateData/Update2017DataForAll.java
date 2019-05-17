@@ -15,7 +15,7 @@ public class Update2017DataForAll {
         DataBaseConnection conn = new DataBaseConnection();
         DataCollection collection = new DataCollection();
         String shopId =  "888888";
-        float ratio = 0.83f;
+        float ratio = 1.15f;
         String sql;
 
         //销售额  t_shop_count	totalPrice

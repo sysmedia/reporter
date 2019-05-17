@@ -21,7 +21,7 @@ public class UpdateYearMonthForAll {
         //1313 2018 04 2018 05 2017 11 2018 11
         //1313 2018 08 2018 09 2017 11 2018 11
         String old_year1 = "2018";
-        String old_month1 = "3";
+        String old_month1 = "06";
       /*  String old_year2 = args[3];
         String old_month2 = args[4];*/
         String new_year1 = "2018";

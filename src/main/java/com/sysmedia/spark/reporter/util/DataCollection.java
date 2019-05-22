@@ -224,12 +224,24 @@ public class DataCollection {
 
             for (String type : typeList) {
                 for (String year : yearList) {
-                    if(type.equals("周末") && level.get(i).equals("高级净值") ) {
+                    if(type.equals("工作日") && level.get(i).equals("高级净值") ) {
+                        total = getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, "全部", customerType);
+                        normal = getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, "工作日", customerType);
+                        if (StringUtils.isEmptyOrWhitespaceOnly(total)) total = "0";
+                        if (StringUtils.isEmptyOrWhitespaceOnly(normal)) normal = "0";
+                        if(Integer.parseInt(total ) < Integer.parseInt(normal))
+                            list.add(total);
+                        else
+                            list.add(normal);
+                    } else if(type.equals("周末") && level.get(i).equals("高级净值") ) {
                         total = getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, "全部", customerType);
                         normal = getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, "工作日", customerType);
                         if(StringUtils.isEmptyOrWhitespaceOnly(total)) total = "0";
                         if(StringUtils.isEmptyOrWhitespaceOnly(normal)) normal = "0";
-                        list.add(String.valueOf(Integer.parseInt(total) - Integer.parseInt(normal)));
+                        if(Integer.parseInt(total ) < Integer.parseInt(normal))
+                            list.add("0");
+                        else
+                            list.add(String.valueOf(Integer.parseInt(total) - Integer.parseInt(normal)));
                     } else {
                         list.add(getSingleCustomerTypeInfoByCumstomerType(table, column, shopId, year, type, customerType));
                     }
@@ -275,12 +287,24 @@ public class DataCollection {
 
             for (String type : typeList) {
                 for (String year : yearList) {
-                    if(customerConcerns.equals("品质关注型") && type.equals("周末")){
+                    if(customerConcerns.equals("品质关注型") && type.equals("工作日")){
                         total = getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, "全部", customerConcerns);
                         normal = getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, "工作日", customerConcerns);
                         if(StringUtils.isEmptyOrWhitespaceOnly(total)) total = "0";
                         if(StringUtils.isEmptyOrWhitespaceOnly(normal)) normal = "0";
-                        list.add(String.valueOf(Integer.parseInt(total) - Integer.parseInt(normal)));
+                        if(Integer.parseInt(total) < Integer.parseInt(normal)  )
+                            list.add(total);
+                        else
+                            list.add(normal);
+                    } else if(customerConcerns.equals("品质关注型") && type.equals("周末")){
+                        total = getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, "全部", customerConcerns);
+                        normal = getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, "工作日", customerConcerns);
+                        if(StringUtils.isEmptyOrWhitespaceOnly(total)) total = "0";
+                        if(StringUtils.isEmptyOrWhitespaceOnly(normal)) normal = "0";
+                        if(Integer.parseInt(total) < Integer.parseInt(normal)  )
+                            list.add("0");
+                        else
+                            list.add(String.valueOf(Integer.parseInt(total) - Integer.parseInt(normal)));
                     } else {
                         list.add(getSingleCustomerConcernsInfoByCumstomerConcerns(table, column, shopId, year, type, customerConcerns));
                     }

@@ -6,11 +6,11 @@ import java.util.Map;
 
 public class FileTest {
     public static void main(String[] args) {
-        File root = new File("C:\\project\\new\\ip.csv");
+        File root = new File("C:\\project\\new\\ip-list.txt");
         String str  = null;
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         try {
-            BufferedReader br=new BufferedReader(new FileReader("C:\\project\\new\\ip.csv"));
+            BufferedReader br=new BufferedReader(new FileReader("C:\\project\\new\\ip-list.txt"));
             do{
                 str = br.readLine();
                 if(map.get(str) != null) {
@@ -29,7 +29,7 @@ public class FileTest {
 
 
         try {
-            FileOutputStream out = new FileOutputStream("C:\\project\\new\\result.txt");
+            FileOutputStream out = new FileOutputStream("C:\\project\\new\\result1.txt");
             OutputStreamWriter outWriter = new OutputStreamWriter(out, "UTF-8");
             BufferedWriter bufWrite = new BufferedWriter(outWriter);
             for(Map.Entry entry : map.entrySet()){
